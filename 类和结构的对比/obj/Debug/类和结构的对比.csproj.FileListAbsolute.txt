@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\类和结构的对比\bin\Debug\类和结构的对比.exe.config
+E:\repository\TestSynCompany\类和结构的对比\bin\Debug\类和结构的对比.exe
+E:\repository\TestSynCompany\类和结构的对比\bin\Debug\类和结构的对比.pdb
+E:\repository\TestSynCompany\类和结构的对比\obj\Debug\类和结构的对比.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\类和结构的对比\obj\Debug\类和结构的对比.exe
+E:\repository\TestSynCompany\类和结构的对比\obj\Debug\类和结构的对比.pdb

@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\Regex\MyLib\bin\Debug\MyLib.dll
+E:\repository\TestSynCompany\Regex\MyLib\bin\Debug\MyLib.pdb
+E:\repository\TestSynCompany\Regex\MyLib\obj\Debug\MyLib.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\Regex\MyLib\obj\Debug\MyLib.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Regex\MyLib\obj\Debug\MyLib.dll
+E:\repository\TestSynCompany\Regex\MyLib\obj\Debug\MyLib.pdb

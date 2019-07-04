@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\Test\ProtectClass\obj\Debug\ClassAccessLevel.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Test\ProtectClass\obj\Debug\ProtectClass.exe
+E:\repository\TestSynCompany\Test\ProtectClass\obj\Debug\ProtectClass.pdb
+E:\repository\TestSynCompany\Test\ProtectClass\bin\Debug\ProtectClass.exe.config
+E:\repository\TestSynCompany\Test\ProtectClass\bin\Debug\ProtectClass.exe
+E:\repository\TestSynCompany\Test\ProtectClass\bin\Debug\ProtectClass.pdb

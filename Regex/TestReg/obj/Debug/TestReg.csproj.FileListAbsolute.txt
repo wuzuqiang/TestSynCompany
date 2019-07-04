@@ -1,0 +1,10 @@
+E:\repository\TestSynCompany\Regex\TestReg\bin\Debug\TestReg.exe.config
+E:\repository\TestSynCompany\Regex\TestReg\bin\Debug\TestReg.exe
+E:\repository\TestSynCompany\Regex\TestReg\bin\Debug\TestReg.pdb
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.Form1.resources
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.Properties.Resources.resources
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.csproj.GenerateResource.cache
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.exe
+E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.pdb

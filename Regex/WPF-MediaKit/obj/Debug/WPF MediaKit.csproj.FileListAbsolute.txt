@@ -1,0 +1,16 @@
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\bin\Debug\WPFMediaKit.dll
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\bin\Debug\WPFMediaKit.pdb
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\bin\Debug\DirectShowLib-2005.dll
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit_MarkupCompile.cache
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit_MarkupCompile.lref
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\Themes\Generic.baml
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\Themes\MediaDetectorGeneric.baml
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.g.resources
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.Properties.Resources.resources
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.GenerateResource.cache
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.CopyComplete
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.dll
+E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.pdb

@@ -1,0 +1,7 @@
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\bin\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe.config
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\bin\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\bin\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.pdb
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe
+E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.pdb

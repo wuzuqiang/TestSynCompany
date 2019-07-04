@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\Regex\数组作为函数参数时的传递问题\bin\Debug\数组作为函数参数时的传递问题.exe.config
+E:\repository\TestSynCompany\Regex\数组作为函数参数时的传递问题\bin\Debug\数组作为函数参数时的传递问题.exe
+E:\repository\TestSynCompany\Regex\数组作为函数参数时的传递问题\bin\Debug\数组作为函数参数时的传递问题.pdb
+E:\repository\TestSynCompany\Regex\数组作为函数参数时的传递问题\obj\Debug\数组作为函数参数时的传递问题.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Regex\数组作为函数参数时的传递问题\obj\Debug\数组作为函数参数时的传递问题.exe
+E:\repository\TestSynCompany\Regex\数组作为函数参数时的传递问题\obj\Debug\数组作为函数参数时的传递问题.pdb

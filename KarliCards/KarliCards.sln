@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarliCards GUI", "KarliCards GUI\KarliCards GUI.csproj", "{5D5575D1-BE0C-4E5C-81C1-8A80F9157BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlStyling", "ControlStyling\ControlStyling.csproj", "{6C2AD8B6-6D48-4657-93D6-4B6458DEAAE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch13CardLib", "..\..\UsefulDocument\wpf\C#入门经典.C# 6.0\Chapter13code\Chapter13_code\Chapter13\Ch13CardLib\Ch13CardLib.csproj", "{4BE3860C-7006-4765-B605-9EB954F8230B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D5575D1-BE0C-4E5C-81C1-8A80F9157BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D5575D1-BE0C-4E5C-81C1-8A80F9157BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D5575D1-BE0C-4E5C-81C1-8A80F9157BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D5575D1-BE0C-4E5C-81C1-8A80F9157BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2AD8B6-6D48-4657-93D6-4B6458DEAAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C2AD8B6-6D48-4657-93D6-4B6458DEAAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C2AD8B6-6D48-4657-93D6-4B6458DEAAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C2AD8B6-6D48-4657-93D6-4B6458DEAAE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BE3860C-7006-4765-B605-9EB954F8230B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE3860C-7006-4765-B605-9EB954F8230B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE3860C-7006-4765-B605-9EB954F8230B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE3860C-7006-4765-B605-9EB954F8230B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F147880-07DA-4E17-80EF-BB5E3B51F579}
+	EndGlobalSection
+EndGlobal

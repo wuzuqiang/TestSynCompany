@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\委托的使用\bin\Debug\委托的使用.dll
+E:\repository\TestSynCompany\委托的使用\bin\Debug\委托的使用.pdb
+E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.dll
+E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.pdb

@@ -1,0 +1,7 @@
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\bin\Debug\深拷贝浅拷贝.exe.config
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\bin\Debug\深拷贝浅拷贝.exe
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\bin\Debug\深拷贝浅拷贝.pdb
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\obj\Debug\深拷贝浅拷贝.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\obj\Debug\深拷贝浅拷贝.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\obj\Debug\深拷贝浅拷贝.exe
+E:\repository\TestSynCompany\Test\深拷贝浅拷贝\obj\Debug\深拷贝浅拷贝.pdb

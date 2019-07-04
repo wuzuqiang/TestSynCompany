@@ -1,0 +1,10 @@
+E:\repository\TestSynCompany\默写算法\bin\Debug\默写算法.exe.config
+E:\repository\TestSynCompany\默写算法\bin\Debug\默写算法.exe
+E:\repository\TestSynCompany\默写算法\bin\Debug\默写算法.pdb
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.Form1.resources
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.Properties.Resources.resources
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.csproj.GenerateResource.cache
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.exe
+E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.pdb

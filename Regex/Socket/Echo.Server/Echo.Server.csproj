@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F20220E2-F7B0-47E4-B99D-220979250D79}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Echo.Server</RootNamespace>
+    <AssemblyName>Echo.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetty.Buffers, Version=0.4.9.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\DotNetty.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Codecs, Version=0.4.9.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\DotNetty.Codecs.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Common, Version=0.4.9.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\DotNetty.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Handlers, Version=0.4.9.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\DotNetty.Handlers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Transport, Version=0.4.9.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\DotNetty.Transport.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetty.Transport.Libuv, Version=0.4.9.0, Culture=neutral, PublicKeyToken=bc13ca065fa06c29, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\DotNetty.Transport.Libuv.dll</HintPath>
+    </Reference>
+    <Reference Include="Examples.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Examples.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=1.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared\Assembly\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EchoServerHandler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shared\dotnetty.com.pfx">
+      <Link>dotnetty.com.pfx</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config" />
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\shared\Assembly\DotNetty.Buffers.dll">
+      <Link>Assembly\DotNetty.Buffers.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Buffers.pdb">
+      <Link>Assembly\DotNetty.Buffers.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Buffers.xml">
+      <Link>Assembly\DotNetty.Buffers.xml</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Codecs.dll">
+      <Link>Assembly\DotNetty.Codecs.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Codecs.pdb">
+      <Link>Assembly\DotNetty.Codecs.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Codecs.xml">
+      <Link>Assembly\DotNetty.Codecs.xml</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Common.dll">
+      <Link>Assembly\DotNetty.Common.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Common.pdb">
+      <Link>Assembly\DotNetty.Common.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Common.xml">
+      <Link>Assembly\DotNetty.Common.xml</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Handlers.dll">
+      <Link>Assembly\DotNetty.Handlers.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Handlers.pdb">
+      <Link>Assembly\DotNetty.Handlers.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Handlers.xml">
+      <Link>Assembly\DotNetty.Handlers.xml</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Transport.dll">
+      <Link>Assembly\DotNetty.Transport.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Transport.Libuv.dll">
+      <Link>Assembly\DotNetty.Transport.Libuv.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Transport.Libuv.pdb">
+      <Link>Assembly\DotNetty.Transport.Libuv.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Transport.Libuv.xml">
+      <Link>Assembly\DotNetty.Transport.Libuv.xml</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Transport.pdb">
+      <Link>Assembly\DotNetty.Transport.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\DotNetty.Transport.xml">
+      <Link>Assembly\DotNetty.Transport.xml</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Examples.Common.dll">
+      <Link>Assembly\Examples.Common.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Examples.Common.pdb">
+      <Link>Assembly\Examples.Common.pdb</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\libuv.dll">
+      <Link>Assembly\libuv.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Configuration.Abstractions.dll">
+      <Link>Assembly\Microsoft.Extensions.Configuration.Abstractions.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Configuration.dll">
+      <Link>Assembly\Microsoft.Extensions.Configuration.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Configuration.FileExtensions.dll">
+      <Link>Assembly\Microsoft.Extensions.Configuration.FileExtensions.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Configuration.Json.dll">
+      <Link>Assembly\Microsoft.Extensions.Configuration.Json.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
+      <Link>Assembly\Microsoft.Extensions.DependencyInjection.Abstractions.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.FileProviders.Abstractions.dll">
+      <Link>Assembly\Microsoft.Extensions.FileProviders.Abstractions.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.FileProviders.Physical.dll">
+      <Link>Assembly\Microsoft.Extensions.FileProviders.Physical.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.FileSystemGlobbing.dll">
+      <Link>Assembly\Microsoft.Extensions.FileSystemGlobbing.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Logging.Abstractions.dll">
+      <Link>Assembly\Microsoft.Extensions.Logging.Abstractions.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Logging.Console.dll">
+      <Link>Assembly\Microsoft.Extensions.Logging.Console.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Logging.dll">
+      <Link>Assembly\Microsoft.Extensions.Logging.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Microsoft.Extensions.Primitives.dll">
+      <Link>Assembly\Microsoft.Extensions.Primitives.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\Newtonsoft.Json.dll">
+      <Link>Assembly\Newtonsoft.Json.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\System.Collections.Immutable.dll">
+      <Link>Assembly\System.Collections.Immutable.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\System.Runtime.CompilerServices.Unsafe.dll">
+      <Link>Assembly\System.Runtime.CompilerServices.Unsafe.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\System.Runtime.InteropServices.RuntimeInformation.dll">
+      <Link>Assembly\System.Runtime.InteropServices.RuntimeInformation.dll</Link>
+    </Content>
+    <Content Include="..\shared\Assembly\System.Threading.Tasks.Extensions.dll">
+      <Link>Assembly\System.Threading.Tasks.Extensions.dll</Link>
+    </Content>
+    <Content Include="libuv.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

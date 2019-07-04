@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.exe.config
+E:\repository\TestSynCompany\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.exe
+E:\repository\TestSynCompany\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.pdb
+E:\repository\TestSynCompany\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.exe
+E:\repository\TestSynCompany\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.pdb

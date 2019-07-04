@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.BorderControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="BorderControl" Height="450" Width="800">
+    <Border Margin="0,6,4,6" BorderBrush="SteelBlue" BorderThickness="3,3,3,3" CornerRadius="3"
+            VerticalAlignment="Top">
+        <Label Content="Normal" Name="lable1" Background="White" VerticalContentAlignment="Center"
+               HorizontalAlignment="Center" Height="30" VerticalAlignment="Center"></Label>
+        
+    </Border>
+    <!--<Border Margin="5" Padding="5" Background="LightYellow" BorderBrush="SteelBlue"
+            BorderThickness="3,5,3,5" CornerRadius="3" VerticalAlignment="Top">
+        <StackPanel>
+            <Button Margin="3">One</Button>
+            <Button Margin="3">Two</Button>
+            <Button Margin="3">Three</Button>
+        </StackPanel>
+    </Border>-->
+</Window>
