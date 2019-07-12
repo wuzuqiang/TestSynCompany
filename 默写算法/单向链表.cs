@@ -8,7 +8,7 @@ namespace 默写算法
 {
     class 单向链表
     {
-    }
+    } 
     class LinkNode
     { }
 }
