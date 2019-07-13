@@ -1,0 +1,6 @@
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
