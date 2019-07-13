@@ -1,3 +1,4 @@
 .vs/*
 Regex/.vs/*
 */obj/*
+*/bin/*
