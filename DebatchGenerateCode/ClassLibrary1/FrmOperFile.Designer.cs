@@ -55,10 +55,13 @@
             // 
             // txtFiles
             // 
+            this.txtFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFiles.Location = new System.Drawing.Point(38, 83);
             this.txtFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFiles.Name = "txtFiles";
-            this.txtFiles.Size = new System.Drawing.Size(454, 150);
+            this.txtFiles.Size = new System.Drawing.Size(551, 266);
             this.txtFiles.TabIndex = 2;
             this.txtFiles.Text = "";
             // 
@@ -84,6 +87,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmOperFile";
             this.Text = "FrmOperFile";
+            this.Load += new System.EventHandler(this.FrmOperFile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
