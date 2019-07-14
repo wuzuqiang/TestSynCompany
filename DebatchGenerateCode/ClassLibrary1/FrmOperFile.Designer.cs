@@ -32,6 +32,8 @@
             this.txtFolder = new System.Windows.Forms.TextBox();
             this.txtFiles = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFileNameNeedContain = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -61,7 +63,7 @@
             this.txtFiles.Location = new System.Drawing.Point(38, 83);
             this.txtFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFiles.Name = "txtFiles";
-            this.txtFiles.Size = new System.Drawing.Size(551, 266);
+            this.txtFiles.Size = new System.Drawing.Size(852, 321);
             this.txtFiles.TabIndex = 2;
             this.txtFiles.Text = "";
             // 
@@ -75,11 +77,29 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "目录下文件：";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(578, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 12);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "文件名要包含：";
+            // 
+            // txtFileNameNeedContain
+            // 
+            this.txtFileNameNeedContain.Location = new System.Drawing.Point(673, 35);
+            this.txtFileNameNeedContain.Name = "txtFileNameNeedContain";
+            this.txtFileNameNeedContain.Size = new System.Drawing.Size(112, 21);
+            this.txtFileNameNeedContain.TabIndex = 5;
+            // 
             // FrmOperFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 360);
+            this.ClientSize = new System.Drawing.Size(901, 415);
+            this.Controls.Add(this.txtFileNameNeedContain);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFiles);
             this.Controls.Add(this.txtFolder);
@@ -99,5 +119,7 @@
         private System.Windows.Forms.TextBox txtFolder;
         private System.Windows.Forms.RichTextBox txtFiles;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtFileNameNeedContain;
     }
 }

@@ -36,6 +36,12 @@ namespace ClassLibrary1
             return directoryInfo.GetFiles("*", SearchOption.AllDirectories);
         }
 
+        public FileInfo[] getAllFile(string path, string contained)
+        {
+            DirectoryInfo directoryInfo = new DirectoryInfo(path);
+            return directoryInfo.GetFiles("*"+contained+"*", SearchOption.AllDirectories);
+        }
+
         public DirectoryInfo[] getAllDir(string path)
         {
             return (new DirectoryInfo(path)).GetDirectories("*", SearchOption.AllDirectories);
