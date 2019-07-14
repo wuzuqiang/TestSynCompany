@@ -1,0 +1,14 @@
+E:\useful\Thkj-Resource\origin\Fussion\src\Application\Fusion.Context.BasicInfo.Application\Models\Product\Brand1s\Brand1Model.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\Application\Fusion.Context.BasicInfo.Application\Services\Interfaces\Product\IBrand1Service.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\Application\Fusion.Context.BasicInfo.Application\Services\Product\Brand1Service.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\Domain\Fusion.Context.BasicInfo.Domain\Models\Product\Brand1s\Brand1.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\Domain\Fusion.Context.BasicInfo.Domain\Repositories\Product\IBrand1Repository.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\Infrastructure\Fusion.Infrastructure.Mapping.BasicInfo\Models\Product\Brand1s\Brand1Map.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\Infrastructure\Fusion.Infrastructure.Repository.BasicInfo\Repositories\Product\Brand1Repository.cs;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\model\Product\Brand1s\Brand1Model.js;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\store\Product\Brand1s\Brand1Store.js;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1.js;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1Controller.js;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1Toolbar.js;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\FindBrand1.js;
+E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\ModifyBrand1.js;
