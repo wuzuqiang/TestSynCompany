@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationTemplate\ApplicationModel.cs" />
+    <Compile Include="ApplicationTemplate\Application.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DirUtil.cs" />
     <Compile Include="FileUtils.cs" />
@@ -73,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Brand1在框架中的文件列表.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeTemplate.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
