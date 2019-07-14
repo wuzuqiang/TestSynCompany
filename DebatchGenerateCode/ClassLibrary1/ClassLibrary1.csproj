@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DirUtil.cs" />
+    <Compile Include="FileUtils.cs" />
     <Compile Include="FrmOperFile.cs">
       <SubType>Form</SubType>
     </Compile>

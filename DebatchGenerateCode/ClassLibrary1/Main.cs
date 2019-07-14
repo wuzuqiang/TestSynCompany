@@ -25,5 +25,12 @@ namespace ClassLibrary1
         {
             (new FrmOperFile()).ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string file1 = AppDomain.CurrentDomain.BaseDirectory + @"Fussion\src\Application\Fusion.Context.BasicInfo.Application\Models\Product\Brand1s\Brand1Model.cs";
+            string content = @"hanzi汉子123\##@#@())@))@)(@#328$(3209$(32";
+            (new FileUtils()).writeToFile(file1, content);
+        }
     }
 }
