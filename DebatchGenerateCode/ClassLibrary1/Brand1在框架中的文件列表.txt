@@ -12,3 +12,25 @@ E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\cl
 E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1Toolbar.js;
 E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\FindBrand1.js;
 E:\useful\Thkj-Resource\origin\Fussion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\ModifyBrand1.js;
+
+
+
+
+D:\workspace\Fusion\src\Application\Fusion.Context.BasicInfo.Application\Models\Product\Brand1s\Brand1Model.cs;
+D:\workspace\Fusion\src\Application\Fusion.Context.BasicInfo.Application\Services\Interfaces\Product\IBrand1Service.cs;
+D:\workspace\Fusion\src\Application\Fusion.Context.BasicInfo.Application\Services\Product\Brand1Service.cs;
+D:\workspace\Fusion\src\Domain\Fusion.Context.BasicInfo.Domain\Models\Product\Brand1s\Brand1.cs;
+D:\workspace\Fusion\src\Domain\Fusion.Context.BasicInfo.Domain\Repositories\Product\IBrand1Repository.cs;
+D:\workspace\Fusion\src\Infrastructure\Fusion.Infrastructure.Mapping.BasicInfo\Models\Product\Brand1s\Brand1Map.cs;
+D:\workspace\Fusion\src\Infrastructure\Fusion.Infrastructure.Repository.BasicInfo\Repositories\Product\Brand1Repository.cs;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\model\Product\Brand1s\Brand1Model.js;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\store\Product\Brand1s\Brand1Store.js;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1.js;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1Controller.js;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\Brand1Toolbar.js;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\FindBrand1.js;
+D:\workspace\Fusion\src\User Interface\Fusion\Extjs\Fusion\classic\src\BasicInfo\view\Product\Brand1s\ModifyBrand1.js;
+D:\workspace\Fusion\src\User Interface\Fusion.WebApi.BasicInfo\Controllers\Product\Brand1Controller.cs;
+D:\workspace\Fusion\src\User Interface\Fusion.WebApi.BasicInfo\Reports\Product\Brand1\Brand1Report.cs;
+D:\workspace\Fusion\src\User Interface\Fusion.WebApi.BasicInfo\Reports\Product\Brand1\Brand1ReportView.cs;
+D:\workspace\Fusion\src\User Interface\Fusion.WebApi.BasicInfo\Reports\Product\Brand1\Brand1ReportView.Designer.cs;
