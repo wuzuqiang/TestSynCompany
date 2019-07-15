@@ -30,6 +30,11 @@ namespace ClassLibrary1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            RegUtils.Test();
+            string input = @"E:\useful\Thkj-Resource\origin\Fussion\src\Application\Fusion.Context.BasicInfo.Application\Services\Product\Brand1Service.cs;";
+            string ret = (new RegUtils()).replaceAllBeforeFirststring(input, @"\Fussion", "AA_");
+            return;
+
             //先这里构建原始数据，后期再动态
             string cN = txtClassName.Text;
             List<MemberFromInfo> listMember = new List<MemberFromInfo>();
@@ -152,7 +157,6 @@ namespace ClassLibrary1
             (new FileUtils()).writeToFile(file, content);
             System.Diagnostics.Process.Start(file);
             #endregion
-            #region 
 
         }
     }

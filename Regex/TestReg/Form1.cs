@@ -55,6 +55,18 @@ namespace TestReg
                 txtResult.Text += string.Format("匹配到的第{0}个邮箱结果是{1}，对应用户名是{2}", i + 1, matchs[i], matchs[i].Groups[1]) + "\n";
             }
         }
+
+        private void btnRegMatch_Click(object sender, EventArgs e)
+        {
+            string input = txtInput.Text;
+            string pattern = txtPattern.Text;
+            txtResult.Text = "";
+            foreach(Match match in Regex.Matches(input, pattern))
+            {
+                txtResult.Text += string.Format("匹配到的字符串是{0};", match.Value) + "\n";
+            }
+            //如果有记录，就将其写入文件
+        }
     }
     public class cA_hB : cB
     {
