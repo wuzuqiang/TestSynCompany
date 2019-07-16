@@ -7,7 +7,7 @@ using System.IO;
 
 namespace BaseClassUtils
 {
-    class FileUtils
+    public class FileUtils
     {
         /// <summary>
         /// 清空文件，并写入内容
@@ -51,6 +51,18 @@ namespace BaseClassUtils
                 return;
             }
             System.Diagnostics.Process.Start(fileCopyDestPath);
+        }
+
+
+        /// <summary>
+        /// 向文件中写入内容
+        /// </summary>
+        /// <param name="fileFullName"></param>
+        /// <param name="content"></param>
+        public void writeAppendFile(string fileFullName, string[] contents)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
+            File.AppendAllLines(fileFullName, contents, Encoding.UTF8);
         }
     }
 }

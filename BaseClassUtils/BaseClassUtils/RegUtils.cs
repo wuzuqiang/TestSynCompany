@@ -20,9 +20,9 @@ namespace BaseClassUtils
         {
             string ret = "";
             string pattern = @"\w*^(" + firstOccur.Replace("\\", @"\\") + @")" + firstOccur.Replace("\\", @"\\");
-            pattern = @"\S*(?=\\Fussion\\)\\Fussion\\";
+            pattern = @".*?\\Fussion\\";
             if (Regex.Matches(input, pattern).Count > 0)
-                ret = Regex.Replace(input, pattern, replacement);
+                ret = input.Replace(Regex.Matches(input, pattern)[0].Value, replacement);
             return ret;
         }
 

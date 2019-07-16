@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using BaseClassUtils;
 
 namespace TestReg
 {
@@ -20,52 +21,83 @@ namespace TestReg
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string input = "Warning" + '\u0007';
-            string input2 = "a b111c d; b2222" + "aa\b" + "\\u008";
-            string str1 = "Warning\u98989990007";
-            MatchCollection matchCollect = new Regex("", RegexOptions.IgnoreCase).Matches("");
-            //new Regex.Opt
-            string expr = @"\040b";
-            Regex _regex = new Regex("");
-            //MatchCollection _matchCollect = _regex.Matches("");
-            MatchCollection _matchCollect =  Regex.Matches(input, expr);
-            string[] strArray = Regex.Split(input, expr);
-
-
-            //string content = "23794大富科世纪东方了djfkasdl@qq.com9548dhf28340385@163.comsdfjsd  2349@sina.com305983*&*&*2";//声明匹配规则对象，并设定匹配规则
-            //Regex regex = new Regex(@"[a-zA-Z0-9]+@[a-zA-z0-9]+\.com");//构造方法里面的参数就是匹配规则。
-            //MatchCollection matchs; //声明匹配结果集对象
-            ////调用匹配多个出多个结果的方法进行匹配，将返回的匹配结果集对象赋值给matchs
-            //matchs = regex.Matches(content);
-            ////输出所有匹配结果
-            //foreach (Match match in matchs)
-            //{
-            //    txtResult.Text += match.Value + ";\n";
-            //}
-
-            //定义匹配规则
-            Regex regex = new Regex(@"([a-zA-Z0-9_]+)@([a-zA-Z0-9])+\.com");
-            //定义要被匹配的字符串
-            string content = "nihao123@qq.com   myemail@163.comasjdfjsdf";
-            //进行匹配，并返回结果集
-            MatchCollection matchs = regex.Matches(content);
-            //输出结果
-            for (int i = 0; i < matchs.Count; i++)
-            {
-                txtResult.Text += string.Format("匹配到的第{0}个邮箱结果是{1}，对应用户名是{2}", i + 1, matchs[i], matchs[i].Groups[1]) + "\n";
-            }
+            txtInput.Text = @"23794大富科世纪东方了djfkasdl@qq.com9548dhf28340385@163.comsdfjsd  2349@sina.com305983*&*&*2";
+            txtPattern.Text = @"[a-zA-Z0-9]+@[a-zA-z0-9]+\.com";
+            TestMustUseCode();
         }
 
         private void btnRegMatch_Click(object sender, EventArgs e)
         {
+            string recordPath = AppDomain.CurrentDomain.BaseDirectory + "RegTestResult.txt";
             string input = txtInput.Text;
             string pattern = txtPattern.Text;
             txtResult.Text = "";
-            foreach(Match match in Regex.Matches(input, pattern))
+            MatchCollection matchCollection;
+            try
             {
-                txtResult.Text += string.Format("匹配到的字符串是{0};", match.Value) + "\n";
+                matchCollection = Regex.Matches(input, pattern);
+                foreach (Match match in matchCollection)
+                {
+                    txtResult.Text += string.Format("匹配到的字符串是{0};", match.Value) + "\n";
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+
             //如果有记录，就将其写入文件
+            (new FileUtils()).writeAppendFile(recordPath, new string[] { string.Format("{2}\r\n对字符串：\"{0}\"\r\n使用正则表达式：\"{1}\"的结果是"
+                , input, pattern, DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")) });
+            if (matchCollection.Count > 0)
+            {
+                (new FileUtils()).writeAppendFile(recordPath, Regex.Split(txtResult.Text, @";"));
+            }
+        }
+
+        private void TestMustUseCode()
+        {
+            string recordPath = AppDomain.CurrentDomain.BaseDirectory + "RegTestResult.txt";
+            string input = "ABCD\n\t123efgh  321ijk";
+            string pattern = @"\w.";
+            txtInput.Text = input;
+            txtPattern.Text = pattern;
+            txtResult.Text = "";
+            MatchCollection matchCollection;
+            try
+            {
+                matchCollection = Regex.Matches(input, pattern);
+                foreach (Match match in matchCollection)
+                {
+                    txtResult.Text += string.Format("匹配到的字符串是{0};", match.Value) + "\n";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return;
+            }
+
+            //如果有记录，就将其写入文件
+            (new FileUtils()).writeAppendFile(recordPath, new string[] { string.Format("{2}\r\n对字符串：\"{0}\"\r\n使用正则表达式：\"{1}\"的结果是"
+                , input, pattern, DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")) });
+            if (matchCollection.Count > 0)
+            {
+                (new FileUtils()).writeAppendFile(recordPath, Regex.Split(txtResult.Text, @";"));
+            }
+
+
+            //string input = "Warning" + '\u0007';
+            //string input2 = "a b111c d; b2222" + "aa\b" + "\\u008";
+            //string str1 = "Warning\u98989990007";
+            //MatchCollection matchCollect = new Regex("", RegexOptions.IgnoreCase).Matches("");
+            ////new Regex.Opt
+            //string expr = @"\040b";
+            //Regex _regex = new Regex("");
+            ////MatchCollection _matchCollect = _regex.Matches("");
+            //MatchCollection _matchCollect =  Regex.Matches(input, expr);
+            //string[] strArray = Regex.Split(input, expr);
         }
     }
     public class cA_hB : cB
