@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace BaseClassUtils
 {
-    class RegUtils
+    public class RegUtils
     {
         /// <summary>
         /// 将首次出现字符串(含)前的字符串替换掉

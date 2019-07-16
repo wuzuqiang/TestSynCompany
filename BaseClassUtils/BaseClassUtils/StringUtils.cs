@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 
 namespace BaseClassUtils
 {
-    class StringUtils
+    public class StringUtils
     {
         public List<string> Get(string[] array, string strContained)
         {

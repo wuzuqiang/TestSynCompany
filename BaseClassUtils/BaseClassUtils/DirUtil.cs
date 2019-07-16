@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace BaseClassUtils
 {
-    class DirUtil
+    public class DirUtil
     {
         public void recycleChangeDir(string path, string match, string toMatch)
         {

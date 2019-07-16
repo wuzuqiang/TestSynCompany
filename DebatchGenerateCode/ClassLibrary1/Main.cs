@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using ClassLibrary1.ApplicationTemplate;
+using BaseClassUtils;
 
 namespace ClassLibrary1
 {
@@ -32,8 +33,7 @@ namespace ClassLibrary1
         {
             RegUtils.Test();
             string input = @"E:\useful\Thkj-Resource\origin\Fussion\src\Application\Fusion.Context.BasicInfo.Application\Services\Product\Brand1Service.cs;";
-            string ret = (new RegUtils()).replaceAllBeforeFirststring(input, @"\Fussion", "AA_");
-            return;
+            string ret = (new RegUtils()).replaceAllBeforeFirststring(input, @"\Fussion", AppDomain.CurrentDomain.BaseDirectory);
 
             //先这里构建原始数据，后期再动态
             string cN = txtClassName.Text;

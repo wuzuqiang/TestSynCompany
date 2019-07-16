@@ -10,3 +10,5 @@ E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.csproj.Core
 E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.csproj.CopyComplete
 E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.exe
 E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.pdb
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\BaseClassUtils.dll
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\BaseClassUtils.pdb
