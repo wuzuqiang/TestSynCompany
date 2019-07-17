@@ -41,8 +41,8 @@ namespace 循环遍历Form中的组件
             }
             else
             {
-                sb.Append(string.Format("x:{0},y:{1},控件名称:{2}，width:{3},height:{4},font-size:{5},文本内容{6}\n"
-                            , ctrl.Location.X, ctrl.Location.Y, ctrl.Name, ctrl.Width, ctrl.Height, ctrl.Font.Size, ctrl.Text));
+                sb.Append(string.Format("x:{0},y:{1},控件名称:{2}，width:{3},height:{4},font-size:{5},文本内容{6},字体颜色{7}\n"
+                            , ctrl.Location.X, ctrl.Location.Y, ctrl.Name, ctrl.Width, ctrl.Height, ctrl.Font.Size, ctrl.Text, ctrl.ForeColor.ToArgb()));
             }
         }
     }

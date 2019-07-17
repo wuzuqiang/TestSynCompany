@@ -133,10 +133,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
             this.label6.Location = new System.Drawing.Point(94, 26);
             this.label6.Margin = new System.Windows.Forms.Padding(30, 0, 30, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 15);
+            this.label6.Size = new System.Drawing.Size(205, 60);
             this.label6.TabIndex = 5;
             this.label6.Text = "label6";
             // 
