@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "..\DebatchGenerateC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseClassUtils", "..\BaseClassUtils\BaseClassUtils\BaseClassUtils.csproj", "{DEE89EA1-C066-4EF9-A94F-EB9195DBB6F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "循环遍历Form中的组件", "..\Test\循环遍历Form中的组件\循环遍历Form中的组件.csproj", "{7AA85271-E741-4601-92AF-07813A3A2A1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -587,6 +589,18 @@ Global
 		{DEE89EA1-C066-4EF9-A94F-EB9195DBB6F5}.Release|x64.Build.0 = Release|Any CPU
 		{DEE89EA1-C066-4EF9-A94F-EB9195DBB6F5}.Release|x86.ActiveCfg = Release|Any CPU
 		{DEE89EA1-C066-4EF9-A94F-EB9195DBB6F5}.Release|x86.Build.0 = Release|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Debug|x64.Build.0 = Debug|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Debug|x86.Build.0 = Debug|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x64.ActiveCfg = Release|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x64.Build.0 = Release|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x86.ActiveCfg = Release|Any CPU
+		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
