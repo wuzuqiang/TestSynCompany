@@ -32,6 +32,8 @@ namespace 循环遍历Form中的组件
         {
             if (ctrl is TableLayoutPanel || ctrl is System.Windows.Forms.Form)
             {
+                sb.Append(string.Format("XXXX====x:{0},y:{1},控件名称:{2}，width:{3},height:{4},font-size:{5},文本内容{6}\n"
+                            , ctrl.Location.X, ctrl.Location.Y, ctrl.Name, ctrl.Width, ctrl.Height, ctrl.Font.Size, ctrl.Text));
                 foreach (Control ctrlOne in ctrl.Controls)
                 {
                     getCtrlControl(ctrlOne);
@@ -39,7 +41,7 @@ namespace 循环遍历Form中的组件
             }
             else
             {
-                sb.Append(string.Format("x:{0},y:{1},控件名称:{2}，width:{3},height:{4},font-size:{5},文本内容\n"
+                sb.Append(string.Format("x:{0},y:{1},控件名称:{2}，width:{3},height:{4},font-size:{5},文本内容{6}\n"
                             , ctrl.Location.X, ctrl.Location.Y, ctrl.Name, ctrl.Width, ctrl.Height, ctrl.Font.Size, ctrl.Text));
             }
         }
