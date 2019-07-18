@@ -77,6 +77,9 @@
     <Compile Include="ListBoxControl.xaml.cs">
       <DependentUpon>ListBoxControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OperBorder.xaml.cs">
+      <DependentUpon>OperBorder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StyleTest.xaml.cs">
       <DependentUpon>StyleTest.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MyDependencyProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OperBorder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
