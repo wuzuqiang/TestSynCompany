@@ -99,6 +99,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseClassUtils", "..\BaseCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "循环遍历Form中的组件", "..\Test\循环遍历Form中的组件\循环遍历Form中的组件.csproj", "{7AA85271-E741-4601-92AF-07813A3A2A1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtjsLearning", "..\ExtjsLearning\ExtjsLearning.csproj", "{EE019012-0601-4711-9BC7-CF52E01669B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtjsLearning.Tests", "ExtjsLearning.Tests\ExtjsLearning.Tests.csproj", "{EA37B99F-3011-4528-9AFF-01F8704D1EDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -601,6 +605,30 @@ Global
 		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x64.Build.0 = Release|Any CPU
 		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x86.ActiveCfg = Release|Any CPU
 		{7AA85271-E741-4601-92AF-07813A3A2A1C}.Release|x86.Build.0 = Release|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Debug|x64.Build.0 = Debug|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Debug|x86.Build.0 = Debug|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Release|x64.ActiveCfg = Release|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Release|x64.Build.0 = Release|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{EE019012-0601-4711-9BC7-CF52E01669B3}.Release|x86.Build.0 = Release|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Debug|x64.Build.0 = Debug|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Release|x64.ActiveCfg = Release|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Release|x64.Build.0 = Release|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA37B99F-3011-4528-9AFF-01F8704D1EDB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
