@@ -4,3 +4,6 @@ E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLi
 E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.FrmOperFile.resources
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.Main.resources
+E:\repository\TestSynCompany\DebatchGenerateCode\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.GenerateResource.cache

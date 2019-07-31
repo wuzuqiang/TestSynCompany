@@ -1,0 +1,14 @@
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\Main.exe.config
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\Main.exe
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\Main.pdb
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\ClassLibrary1.dll
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\ClassLibrary1.pdb
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.Properties.Resources.resources
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.csproj.GenerateResource.cache
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.csproj.CoreCompileInputs.cache
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.csproj.CopyComplete
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.exe
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\obj\Debug\Main.pdb
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\BaseClassUtils.dll
+E:\repository\TestSynCompany\DebatchGenerateCode\Main\bin\Debug\BaseClassUtils.pdb
