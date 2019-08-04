@@ -64,5 +64,11 @@ namespace BaseClassUtils
             Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
             File.AppendAllLines(fileFullName, contents, Encoding.UTF8);
         }
+
+        public static void ExecFile(string filePath)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            System.Diagnostics.Process.Start(filePath);
+        }
     }
 }
