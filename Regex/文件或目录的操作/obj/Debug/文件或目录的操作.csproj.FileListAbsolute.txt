@@ -4,3 +4,10 @@ E:\repository\TestSynCompany\Regex\文件或目录的操作\bin\Debug\文件或�
 E:\repository\TestSynCompany\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.exe
 E:\repository\TestSynCompany\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\bin\Debug\文件或目录的操作.exe.config
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\bin\Debug\文件或目录的操作.exe
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\bin\Debug\文件或目录的操作.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.exe
+F:\wuzuqiang\TestSynCompany1\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.pdb

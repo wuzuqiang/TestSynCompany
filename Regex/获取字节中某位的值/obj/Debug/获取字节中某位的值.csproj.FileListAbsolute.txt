@@ -5,3 +5,10 @@ E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取�
 E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.exe
 E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\bin\Debug\获取字节中某位的值.exe.config
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\bin\Debug\获取字节中某位的值.exe
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\bin\Debug\获取字节中某位的值.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.exe
+F:\wuzuqiang\TestSynCompany1\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.pdb

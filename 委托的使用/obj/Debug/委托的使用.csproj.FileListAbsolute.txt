@@ -4,3 +4,9 @@ E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.csprojAss
 E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.dll
 E:\repository\TestSynCompany\委托的使用\obj\Debug\委托的使用.pdb
+F:\wuzuqiang\TestSynCompany1\委托的使用\bin\Debug\委托的使用.dll
+F:\wuzuqiang\TestSynCompany1\委托的使用\bin\Debug\委托的使用.pdb
+F:\wuzuqiang\TestSynCompany1\委托的使用\obj\Debug\委托的使用.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\委托的使用\obj\Debug\委托的使用.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\委托的使用\obj\Debug\委托的使用.dll
+F:\wuzuqiang\TestSynCompany1\委托的使用\obj\Debug\委托的使用.pdb

@@ -8,3 +8,13 @@ E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试�
 E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.exe
 E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.pdb
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\bin\Debug\面试时可能会遇到的问题.exe.config
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\bin\Debug\面试时可能会遇到的问题.exe
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\bin\Debug\面试时可能会遇到的问题.pdb
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.Form1.resources
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.Properties.Resources.resources
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.csproj.GenerateResource.cache
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.exe
+F:\wuzuqiang\TestSynCompany1\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.pdb

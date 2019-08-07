@@ -4,3 +4,9 @@ E:\repository\TestSynCompany\Test\TryCatch使用\bin\Debug\TryCatch使用.exe
 E:\repository\TestSynCompany\Test\TryCatch使用\bin\Debug\TryCatch使用.pdb
 E:\repository\TestSynCompany\Test\TryCatch使用\obj\Debug\TryCatch使用.exe
 E:\repository\TestSynCompany\Test\TryCatch使用\obj\Debug\TryCatch使用.pdb
+F:\wuzuqiang\TestSynCompany1\Test\TryCatch使用\bin\Debug\TryCatch使用.exe.config
+F:\wuzuqiang\TestSynCompany1\Test\TryCatch使用\bin\Debug\TryCatch使用.exe
+F:\wuzuqiang\TestSynCompany1\Test\TryCatch使用\bin\Debug\TryCatch使用.pdb
+F:\wuzuqiang\TestSynCompany1\Test\TryCatch使用\obj\Debug\TryCatch使用.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Test\TryCatch使用\obj\Debug\TryCatch使用.exe
+F:\wuzuqiang\TestSynCompany1\Test\TryCatch使用\obj\Debug\TryCatch使用.pdb

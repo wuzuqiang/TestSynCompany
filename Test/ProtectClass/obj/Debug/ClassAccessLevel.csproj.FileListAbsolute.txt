@@ -4,3 +4,10 @@ E:\repository\TestSynCompany\Test\ProtectClass\obj\Debug\ProtectClass.pdb
 E:\repository\TestSynCompany\Test\ProtectClass\bin\Debug\ProtectClass.exe.config
 E:\repository\TestSynCompany\Test\ProtectClass\bin\Debug\ProtectClass.exe
 E:\repository\TestSynCompany\Test\ProtectClass\bin\Debug\ProtectClass.pdb
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\bin\Debug\ProtectClass.exe.config
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\bin\Debug\ProtectClass.exe
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\bin\Debug\ProtectClass.pdb
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\obj\Debug\ClassAccessLevel.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\obj\Debug\ClassAccessLevel.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\obj\Debug\ProtectClass.exe
+F:\wuzuqiang\TestSynCompany1\Test\ProtectClass\obj\Debug\ProtectClass.pdb

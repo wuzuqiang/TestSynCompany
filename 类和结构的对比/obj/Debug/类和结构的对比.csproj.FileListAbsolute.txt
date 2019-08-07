@@ -4,3 +4,9 @@ E:\repository\TestSynCompany\类和结构的对比\bin\Debug\类和结构的对�
 E:\repository\TestSynCompany\类和结构的对比\obj\Debug\类和结构的对比.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\类和结构的对比\obj\Debug\类和结构的对比.exe
 E:\repository\TestSynCompany\类和结构的对比\obj\Debug\类和结构的对比.pdb
+F:\wuzuqiang\TestSynCompany1\类和结构的对比\bin\Debug\类和结构的对比.exe.config
+F:\wuzuqiang\TestSynCompany1\类和结构的对比\bin\Debug\类和结构的对比.exe
+F:\wuzuqiang\TestSynCompany1\类和结构的对比\bin\Debug\类和结构的对比.pdb
+F:\wuzuqiang\TestSynCompany1\类和结构的对比\obj\Debug\类和结构的对比.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\类和结构的对比\obj\Debug\类和结构的对比.exe
+F:\wuzuqiang\TestSynCompany1\类和结构的对比\obj\Debug\类和结构的对比.pdb

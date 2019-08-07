@@ -5,3 +5,10 @@ E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例�
 E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe
 E:\repository\TestSynCompany\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.pdb
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\bin\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe.config
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\bin\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\bin\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.pdb
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.exe
+F:\wuzuqiang\TestSynCompany1\Test\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗\obj\Debug\使用等号赋值实例后改变原有实例成员值会改变赋值实例吗.pdb

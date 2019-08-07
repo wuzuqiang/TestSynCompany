@@ -5,3 +5,10 @@ E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.csprojAssemblyR
 E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.exe
 E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\bin\Debug\定时器.exe.config
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\bin\Debug\定时器.exe
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\bin\Debug\定时器.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\obj\Debug\定时器.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\obj\Debug\定时器.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\obj\Debug\定时器.exe
+F:\wuzuqiang\TestSynCompany1\Regex\定时器\obj\Debug\定时器.pdb

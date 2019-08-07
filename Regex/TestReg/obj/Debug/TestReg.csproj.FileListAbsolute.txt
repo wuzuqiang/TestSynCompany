@@ -11,3 +11,16 @@ E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.pdb
 E:\repository\TestSynCompany\Regex\TestReg\bin\Debug\BaseClassUtils.dll
 E:\repository\TestSynCompany\Regex\TestReg\bin\Debug\BaseClassUtils.pdb
 E:\repository\TestSynCompany\Regex\TestReg\obj\Debug\TestReg.csproj.CopyComplete
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\bin\Debug\TestReg.exe.config
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\bin\Debug\TestReg.exe
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\bin\Debug\TestReg.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\bin\Debug\BaseClassUtils.dll
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\bin\Debug\BaseClassUtils.pdb
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.csprojAssemblyReference.cache
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.Form1.resources
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.Properties.Resources.resources
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.csproj.GenerateResource.cache
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.csproj.CoreCompileInputs.cache
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.csproj.CopyComplete
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.exe
+F:\wuzuqiang\TestSynCompany1\Regex\TestReg\obj\Debug\TestReg.pdb
