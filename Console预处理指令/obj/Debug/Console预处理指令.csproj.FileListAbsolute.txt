@@ -5,10 +5,3 @@ E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理�
 E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.exe
 E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.pdb
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\bin\Debug\Console预处理指令.exe.config
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\bin\Debug\Console预处理指令.exe
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\bin\Debug\Console预处理指令.pdb
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\obj\Debug\Console预处理指令.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\obj\Debug\Console预处理指令.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\obj\Debug\Console预处理指令.exe
-F:\wuzuqiang\TestSynCompany1\Console预处理指令\obj\Debug\Console预处理指令.pdb

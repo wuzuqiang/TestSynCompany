@@ -5,10 +5,3 @@ E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadO
 E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.exe
 E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\bin\Debug\线程ThreadOrAnother.exe.config
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\bin\Debug\线程ThreadOrAnother.exe
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\bin\Debug\线程ThreadOrAnother.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.exe
-F:\wuzuqiang\TestSynCompany1\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.pdb

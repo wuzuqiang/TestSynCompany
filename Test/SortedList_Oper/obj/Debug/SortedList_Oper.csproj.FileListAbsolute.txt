@@ -5,10 +5,3 @@ E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.cspr
 E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.exe
 E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.pdb
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\bin\Debug\SortedList_Oper.exe.config
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\bin\Debug\SortedList_Oper.exe
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\bin\Debug\SortedList_Oper.pdb
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\obj\Debug\SortedList_Oper.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\obj\Debug\SortedList_Oper.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\obj\Debug\SortedList_Oper.exe
-F:\wuzuqiang\TestSynCompany1\Test\SortedList_Oper\obj\Debug\SortedList_Oper.pdb

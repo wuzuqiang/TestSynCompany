@@ -4,10 +4,3 @@ E:\repository\TestSynCompany\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.pdb
 E:\repository\TestSynCompany\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.exe
 E:\repository\TestSynCompany\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.exe.config
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.exe
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\bin\Debug\TypeOf的用法.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.exe
-F:\wuzuqiang\TestSynCompany1\Regex\TypeOf的用法\obj\Debug\TypeOf的用法.pdb

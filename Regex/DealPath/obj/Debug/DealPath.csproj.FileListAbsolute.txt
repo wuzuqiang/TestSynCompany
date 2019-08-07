@@ -8,13 +8,3 @@ E:\repository\TestSynCompany\Regex\DealPath\obj\Debug\DealPath.csproj.GenerateRe
 E:\repository\TestSynCompany\Regex\DealPath\obj\Debug\DealPath.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\DealPath\obj\Debug\DealPath.exe
 E:\repository\TestSynCompany\Regex\DealPath\obj\Debug\DealPath.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\bin\Debug\DealPath.exe.config
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\bin\Debug\DealPath.exe
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\bin\Debug\DealPath.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.Form1.resources
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.Properties.Resources.resources
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.csproj.GenerateResource.cache
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.exe
-F:\wuzuqiang\TestSynCompany1\Regex\DealPath\obj\Debug\DealPath.pdb

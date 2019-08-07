@@ -4,10 +4,3 @@ E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\bin\D
 E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.exe
 E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\bin\Debug\遍历静态类中的所有静态成员.exe.config
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\bin\Debug\遍历静态类中的所有静态成员.exe
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\bin\Debug\遍历静态类中的所有静态成员.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.exe
-F:\wuzuqiang\TestSynCompany1\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.pdb

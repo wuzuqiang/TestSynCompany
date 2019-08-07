@@ -14,19 +14,3 @@ E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.Co
 E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.CopyComplete
 E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.dll
 E:\repository\TestSynCompany\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\bin\Debug\WPFMediaKit.dll
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\bin\Debug\WPFMediaKit.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\bin\Debug\DirectShowLib-2005.dll
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\GeneratedInternalTypeHelper.g.cs
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit_MarkupCompile.cache
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit_MarkupCompile.lref
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\Themes\Generic.baml
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\Themes\MediaDetectorGeneric.baml
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.g.resources
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.Properties.Resources.resources
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.GenerateResource.cache
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPF MediaKit.csproj.CopyComplete
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.dll
-F:\wuzuqiang\TestSynCompany1\Regex\WPF-MediaKit\obj\Debug\WPFMediaKit.pdb

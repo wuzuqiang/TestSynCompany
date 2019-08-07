@@ -8,13 +8,3 @@ E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.csproj.Generate
 E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.exe
 E:\repository\TestSynCompany\默写算法\obj\Debug\默写算法.pdb
-F:\wuzuqiang\TestSynCompany1\默写算法\bin\Debug\默写算法.exe.config
-F:\wuzuqiang\TestSynCompany1\默写算法\bin\Debug\默写算法.exe
-F:\wuzuqiang\TestSynCompany1\默写算法\bin\Debug\默写算法.pdb
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.Form1.resources
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.Properties.Resources.resources
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.csproj.GenerateResource.cache
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.exe
-F:\wuzuqiang\TestSynCompany1\默写算法\obj\Debug\默写算法.pdb

@@ -8,13 +8,3 @@ E:\repository\TestSynCompany\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.c
 E:\repository\TestSynCompany\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.exe
 E:\repository\TestSynCompany\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\bin\Debug\GetClassAddrTest.exe.config
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\bin\Debug\GetClassAddrTest.exe
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\bin\Debug\GetClassAddrTest.pdb
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.csprojAssemblyReference.cache
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.Form1.resources
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.Properties.Resources.resources
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.csproj.GenerateResource.cache
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.csproj.CoreCompileInputs.cache
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.exe
-F:\wuzuqiang\TestSynCompany1\Regex\GetClassAddrTest\obj\Debug\GetClassAddrTest.pdb
