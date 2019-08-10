@@ -11,6 +11,7 @@ E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\GameClient.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\ListBoxControl.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\MainWindow.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\MyDependencyProperty.g.cs
+E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\OperBorder.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\StyleTest.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\TestUBCStyle.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\UserControl1.g.cs
@@ -27,6 +28,7 @@ E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\GameClient.baml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\ListBoxControl.baml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\MainWindow.baml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\MyDependencyProperty.baml
+E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\OperBorder.baml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\StyleTest.baml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\TestUBCStyle.baml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\UserControl1.baml

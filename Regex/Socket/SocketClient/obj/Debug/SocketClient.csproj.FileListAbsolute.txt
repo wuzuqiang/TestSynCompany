@@ -1,6 +1,7 @@
 E:\repository\TestSynCompany\Regex\Socket\SocketClient\bin\Debug\SocketClient.exe.config
 E:\repository\TestSynCompany\Regex\Socket\SocketClient\bin\Debug\SocketClient.exe
 E:\repository\TestSynCompany\Regex\Socket\SocketClient\bin\Debug\SocketClient.pdb
+E:\repository\TestSynCompany\Regex\Socket\SocketClient\obj\Debug\SocketClient.csprojAssemblyReference.cache
 E:\repository\TestSynCompany\Regex\Socket\SocketClient\obj\Debug\SocketClient.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Regex\Socket\SocketClient\obj\Debug\SocketClient.exe
 E:\repository\TestSynCompany\Regex\Socket\SocketClient\obj\Debug\SocketClient.pdb

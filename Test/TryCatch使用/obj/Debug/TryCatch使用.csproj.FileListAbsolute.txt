@@ -1,6 +1,6 @@
-E:\repository\TestSynCompany\Test\TryCatch使用\obj\Debug\TryCatch使用.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Test\TryCatch使用\bin\Debug\TryCatch使用.exe.config
 E:\repository\TestSynCompany\Test\TryCatch使用\bin\Debug\TryCatch使用.exe
 E:\repository\TestSynCompany\Test\TryCatch使用\bin\Debug\TryCatch使用.pdb
+E:\repository\TestSynCompany\Test\TryCatch使用\obj\Debug\TryCatch使用.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Test\TryCatch使用\obj\Debug\TryCatch使用.exe
 E:\repository\TestSynCompany\Test\TryCatch使用\obj\Debug\TryCatch使用.pdb
