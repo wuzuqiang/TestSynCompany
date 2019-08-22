@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Fun1();
+        }
+
+        public void Fun1()
+        {
+            var result = GetAction(0, ActionType.Get);
+        }
+        private int GetAction(int forkExtension, ActionType actionType)
+        {
+            byte[] action = new byte[4];
+
+            switch (forkExtension)
+            {
+                case 0://单左伸
+                    action[1] = 0;
+                    action[2] = 1;
+                    break;
+                case 1://单右
+                    action[1] = 0;
+                    action[2] = 0;
+                    break;
+                case 2://双左
+                    action[1] = 1;
+                    action[2] = 1;
+                    break;
+                case 3://双右
+                    action[1] = 1;
+                    action[2] = 0;
+                    break;
+            }
+            action[3] = 0;
+            action[2] = 0;
+            action[1] = 0;
+            action[0] = 255;
+            //action[0] = (byte)actionType;
+
+            return BitConverter.ToInt32(action, 0);
+        }
+        private enum ActionType : byte
+        {
+            None = 0,
+            Get = 1,
+            Put = 2
+        }
+    }
+}

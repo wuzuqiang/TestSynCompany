@@ -115,6 +115,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExtJs", "ExtJs", "{5DDDD64B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "application", "..\ExtJsLearning\application\application.csproj", "{834054C5-90E8-43BA-81A6-28A4342067A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "..\Test\WindowsFormsApp1\WindowsFormsApp1.csproj", "{5176F9F1-64A6-488D-A179-4A51914AB079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -689,6 +691,18 @@ Global
 		{834054C5-90E8-43BA-81A6-28A4342067A7}.Release|x64.Build.0 = Release|Any CPU
 		{834054C5-90E8-43BA-81A6-28A4342067A7}.Release|x86.ActiveCfg = Release|Any CPU
 		{834054C5-90E8-43BA-81A6-28A4342067A7}.Release|x86.Build.0 = Release|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Debug|x64.Build.0 = Debug|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Debug|x86.Build.0 = Debug|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Release|x64.ActiveCfg = Release|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Release|x64.Build.0 = Release|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Release|x86.ActiveCfg = Release|Any CPU
+		{5176F9F1-64A6-488D-A179-4A51914AB079}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
