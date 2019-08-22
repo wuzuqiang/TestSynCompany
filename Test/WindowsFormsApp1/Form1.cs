@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
         public void Fun1()
         {
             var result = GetAction(0, ActionType.Get);
+            byte[] byteRet = BitConverter.GetBytes(256);
         }
         private int GetAction(int forkExtension, ActionType actionType)
         {
