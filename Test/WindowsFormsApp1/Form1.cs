@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseClassUtils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Fun1();
+            HttpHelper.Test();
+            //Fun1();
         }
 
         public void Fun1()

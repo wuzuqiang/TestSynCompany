@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BaseClassUtils\BaseClassUtils\BaseClassUtils.csproj">
+      <Project>{DEE89EA1-C066-4EF9-A94F-EB9195DBB6F5}</Project>
+      <Name>BaseClassUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
