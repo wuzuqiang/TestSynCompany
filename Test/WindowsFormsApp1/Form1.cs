@@ -20,8 +20,24 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            HttpHelper.Test();
+            HttpGet();
+            //LogHelper.WriteLog("tedsfsdfssdsf");
             //Fun1();
+        }
+
+        private void HttpGet()
+        {
+            HttpItem item = new HttpItem()
+            {
+                URL = "http://localhost",
+                Method = "Get",
+                Accept = "/",
+                Referer = "http://localhost",
+                ContentType = "application/json",
+            };
+            item.Header.Add("Origin", "*");
+            HttpResult result = new HttpHelper().GetHtml(item);
+            Console.Write(result.Html);
         }
 
         public void Fun1()
