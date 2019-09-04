@@ -20,9 +20,15 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            HttpGet();
+            //HttpGet();
             //LogHelper.WriteLog("tedsfsdfssdsf");
             //Fun1();
+            test();
+        }
+
+        private void test()
+        {
+            int a;
         }
 
         private void HttpGet()
