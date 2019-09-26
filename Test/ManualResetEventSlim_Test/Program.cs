@@ -5,20 +5,20 @@ using System.Threading.Tasks;
 class Program
 {
 
-    static void Main11()
+    static void Main()
     {
         //MRES_SetWaitReset();
         //MRES_SpinCountWaitHandle();
-
-        Class1.SimuMain();
+        //(new Class1()).TestMaualResetEventSlim();
+        Example.SimuMain();
 
         //MRES_SetWaitReset_NoEventSlim();
         //MRES_SpinCountWaitHandle_NoEventSlim();
 
 
-        Thread.Sleep(11);
-        Console.Write("Begin close this program");
-        Console.ReadLine();
+        //Thread.Sleep(11);
+        Console.WriteLine("Begin close this program");
+        //Console.ReadLine();
     }
     // Demonstrates:
     //      ManualResetEventSlim construction

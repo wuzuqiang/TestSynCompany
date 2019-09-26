@@ -9,6 +9,42 @@ namespace ManualResetEventSlim_Test
 {
     public class Class1
     {
+
+        ManualResetEventSlim mres1 = new ManualResetEventSlim(false); // initialize as unsignaled
+        public void TestMaualResetEventSlim()
+        {
+            mres1.Set();
+            bool isReadData = false;
+            //创建三个线程，并后一个线程要等前一个线程执行完才可以继续执行
+            // Start an asynchronous Task 。。。
+            var task_1 = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine($"线程1开始执行");
+                Thread.Sleep(12);
+                Console.WriteLine($"线程1结束执行");
+                mres1.Wait();
+                mres1.Reset();
+            });
+            mres1.Set();
+            var task_2 = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine($"线程2开始执行");
+                Thread.Sleep(6);
+                Console.WriteLine($"线程2结束执行");
+                mres1.Wait();
+                mres1.Reset();
+            });
+            var task_3 = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine($"线程3开始执行");
+                Thread.Sleep(7);
+                Console.WriteLine($"线程3结束执行");
+                mres1.Wait();
+                mres1.Reset();
+            });
+
+            Console.ReadLine();
+        }
         static ManualResetEventSlim manualRestEvnetSlim = new ManualResetEventSlim(false);
         static void TravelThroughGates(string threadName, int second)
         {
@@ -41,7 +77,7 @@ namespace ManualResetEventSlim_Test
             manualRestEvnetSlim.Reset();
 
         }
-        static void Main()
+        static void Main111()
         {
             var t1 = new Thread(() => TravelThroughGates("T1", 5));
             var t2 = new Thread(() => TravelThroughGates("T2", 6));
