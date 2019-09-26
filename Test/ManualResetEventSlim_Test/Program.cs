@@ -6,11 +6,11 @@ class MRESDemo
 
     static void Main()
     {
-        //MRES_SetWaitReset();
+        MRES_SetWaitReset();
         //MRES_SpinCountWaitHandle();
 
-        MRES_SetWaitReset_NoEventSlim();
-        MRES_SpinCountWaitHandle_NoEventSlim();
+        //MRES_SetWaitReset_NoEventSlim();
+        //MRES_SpinCountWaitHandle_NoEventSlim();
 
 
         Thread.Sleep(11);
@@ -38,6 +38,8 @@ class MRESDemo
             mres3.Reset(); // should switch to unsignaled
             Console.WriteLine("observer signalling mres2");
             mres2.Set();
+            Thread.Sleep(3);
+            Console.WriteLine("observer mres2.Set()");
         });
 
         Console.WriteLine("main thread: mres3.IsSet = {0} (should be true)", mres3.IsSet);
