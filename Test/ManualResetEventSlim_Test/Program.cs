@@ -9,8 +9,8 @@ class Program
     {
         //MRES_SetWaitReset();
         //MRES_SpinCountWaitHandle();
-        //(new Class1()).TestMaualResetEventSlim();
-        Example.SimuMain();
+        (new Class1()).TestMaualResetEventSlim();
+        //Example.SimuMain();
 
         //MRES_SetWaitReset_NoEventSlim();
         //MRES_SpinCountWaitHandle_NoEventSlim();
