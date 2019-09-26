@@ -18,7 +18,7 @@ namespace ManualResetEventSlim_Test
             t1.Start();
             t2.Start();
             t3.Start();
-            Thread.Sleep(TimeSpan.FromSeconds(6));
+            Thread.Sleep(TimeSpan.FromSeconds(1));
             Console.WriteLine("The gates are now open!");
             _mainEvent.Set();
             Thread.Sleep(TimeSpan.FromSeconds(2));
@@ -31,6 +31,7 @@ namespace ManualResetEventSlim_Test
             Console.WriteLine("The gates have been closed!");
             _mainEvent.Reset();
 
+            Console.Write("begin cloase program");
             Console.ReadKey();
         }
 
@@ -38,10 +39,10 @@ namespace ManualResetEventSlim_Test
 
         static void TravelThroughGates(string threadName, int seconds)
         {
-            Console.WriteLine("{0} false to sleep", threadName);
+            Console.WriteLine("{0} beigin to sleep in function TravelThroughGates", threadName);
             Thread.Sleep(TimeSpan.FromSeconds(seconds));
             Console.WriteLine("{0} waits for the gates to open!", threadName);
-            _mainEvent.Wait();
+            _mainEvent.Wait();  //等待set信息，得到了才
             Console.WriteLine("{0} enters the gates!", threadName);
         }
     }
