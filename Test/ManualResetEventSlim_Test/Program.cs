@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 class Program
 {
 
-    static void Main()
+    static void Main11()
     {
         //MRES_SetWaitReset();
         //MRES_SpinCountWaitHandle();
