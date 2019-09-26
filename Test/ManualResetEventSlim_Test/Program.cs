@@ -1,13 +1,16 @@
-﻿using System;
+﻿using ManualResetEventSlim_Test;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-class MRESDemo
+class Program
 {
 
     static void Main()
     {
-        MRES_SetWaitReset();
+        //MRES_SetWaitReset();
         //MRES_SpinCountWaitHandle();
+
+        Class1.SimuMain();
 
         //MRES_SetWaitReset_NoEventSlim();
         //MRES_SpinCountWaitHandle_NoEventSlim();
