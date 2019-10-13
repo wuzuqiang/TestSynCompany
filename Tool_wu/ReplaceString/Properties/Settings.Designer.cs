@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ManualResetEventSlim_Test.Properties
+namespace ReplaceString.Properties
 {
 
 

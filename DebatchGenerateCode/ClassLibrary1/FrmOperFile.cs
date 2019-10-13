@@ -49,5 +49,11 @@ namespace ClassLibrary1
         private void FrmOperFile_Load(object sender, EventArgs e)
         {
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //创建目录
+            (new DirUtil()).createDir(txtFolder.Text);
+        }
     }
 }

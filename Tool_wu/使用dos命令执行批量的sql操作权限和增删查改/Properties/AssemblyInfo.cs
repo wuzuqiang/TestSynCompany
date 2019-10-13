@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("ManualResetEventSlim_Test")]
+[assembly: AssemblyTitle("使用dos命令执行批量的sql操作权限和增删查改")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ManualResetEventSlim_Test")]
+[assembly: AssemblyProduct("使用dos命令执行批量的sql操作权限和增删查改")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("d4cea7c5-82bc-4e2b-85e7-7258d9213cc0")]
+[assembly: Guid("3ed42310-ea04-4d1b-9892-ee0e48a0d4bf")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

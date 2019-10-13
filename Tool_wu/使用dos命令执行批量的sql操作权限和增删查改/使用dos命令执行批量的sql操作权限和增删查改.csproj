@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D4CEA7C5-82BC-4E2B-85E7-7258D9213CC0}</ProjectGuid>
+    <ProjectGuid>{3ED42310-EA04-4D1B-9892-EE0E48A0D4BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ManualResetEventSlim_Test</RootNamespace>
-    <AssemblyName>ManualResetEventSlim_Test</AssemblyName>
+    <RootNamespace>使用dos命令执行批量的sql操作权限和增删查改</RootNamespace>
+    <AssemblyName>使用dos命令执行批量的sql操作权限和增删查改</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TestReg
+namespace 使用dos命令执行批量的sql操作权限和增删查改
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace TestReg
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegTest());
+            Application.Run(new Form1());
         }
     }
 }

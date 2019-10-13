@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FC5FDB67-E858-4E72-AEE9-5000F287307E}</ProjectGuid>
+    <ProjectGuid>{186A07C1-94D4-48F9-9B07-1296144B4B63}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TestReg</RootNamespace>
-    <AssemblyName>TestReg</AssemblyName>
+    <RootNamespace>ReplaceString</RootNamespace>
+    <AssemblyName>ReplaceString</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RegTest.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegTest.Designer.cs">
-      <DependentUpon>RegTest.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReplaceOracleSql.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReplaceOracleSql.Designer.cs">
+      <DependentUpon>FrmReplaceOracleSql.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNormalReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNormalReplace.Designer.cs">
+      <DependentUpon>FrmNormalReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegex.Designer.cs">
+      <DependentUpon>FrmRegex.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="RegTest.resx">
-      <DependentUpon>RegTest.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReplaceOracleSql.resx">
+      <DependentUpon>FrmReplaceOracleSql.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNormalReplace.resx">
+      <DependentUpon>FrmNormalReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegex.resx">
+      <DependentUpon>FrmRegex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -64,7 +92,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,12 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\BaseClassUtils\BaseClassUtils\BaseClassUtils.csproj">
-      <Project>{dee89ea1-c066-4ef9-a94f-eb9195dbb6f5}</Project>
-      <Name>BaseClassUtils</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

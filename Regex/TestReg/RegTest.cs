@@ -12,9 +12,9 @@ using BaseClassUtils;
 
 namespace TestReg
 {
-    public partial class Form1 : Form
+    public partial class RegTest : Form
     {
-        public Form1()
+        public RegTest()
         {
             InitializeComponent();
         }
