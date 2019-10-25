@@ -41,9 +41,11 @@
             // 
             // txtInput
             // 
-            this.txtInput.Location = new System.Drawing.Point(222, 38);
+            this.txtInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtInput.Location = new System.Drawing.Point(222, 12);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(709, 96);
+            this.txtInput.Size = new System.Drawing.Size(709, 122);
             this.txtInput.TabIndex = 12;
             this.txtInput.Text = "";
             // 
@@ -66,6 +68,7 @@
             this.txtPattern.Name = "txtPattern";
             this.txtPattern.Size = new System.Drawing.Size(680, 25);
             this.txtPattern.TabIndex = 10;
+            this.txtPattern.Text = "\\s";
             // 
             // label2
             // 
@@ -79,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 38);
+            this.label1.Location = new System.Drawing.Point(161, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 8;
@@ -114,6 +117,7 @@
             this.txtReplaceStr.Name = "txtReplaceStr";
             this.txtReplaceStr.Size = new System.Drawing.Size(622, 25);
             this.txtReplaceStr.TabIndex = 14;
+            this.txtReplaceStr.Text = ",";
             // 
             // btnReplace
             // 

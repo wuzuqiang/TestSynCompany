@@ -21,5 +21,11 @@ namespace ReplaceString
         {
             richInput.Text = richInput.Text.Replace(textBox1.Text, textBox2.Text);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //求文字长度
+            txtContentLength.Text = richInput.Text.Length.ToString();
+        }
     }
 }

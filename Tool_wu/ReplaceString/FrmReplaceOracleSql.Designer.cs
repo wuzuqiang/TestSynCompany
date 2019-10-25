@@ -88,9 +88,12 @@
             // 
             // richInput
             // 
-            this.richInput.Location = new System.Drawing.Point(351, 225);
+            this.richInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richInput.Location = new System.Drawing.Point(351, 179);
             this.richInput.Name = "richInput";
-            this.richInput.Size = new System.Drawing.Size(795, 424);
+            this.richInput.Size = new System.Drawing.Size(795, 470);
             this.richInput.TabIndex = 5;
             this.richInput.Text = "";
             // 

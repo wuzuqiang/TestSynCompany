@@ -85,7 +85,7 @@ namespace ReplaceString
 
         private void button3_Click(object sender, EventArgs e)
         {   //使用普通的正则表达式
-            (new FrmRegex()).ShowDialog();
+            (new FrmRegex()).Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -97,11 +97,11 @@ namespace ReplaceString
         {   //互换字母大小写
             if(cbxWordUper.Checked)
             {   //所有内容换成大写
-                richResult.Text = richResult.Text.ToUpper();
+                richResult.Text = richInput.Text.ToUpper();
             }
             else
             {
-                richResult.Text = richResult.Text.ToLower();
+                richResult.Text = richInput.Text.ToLower();
             }
         }
 
@@ -112,7 +112,19 @@ namespace ReplaceString
 
         private void button7_Click(object sender, EventArgs e)
         {
-            (new FrmReplaceOracleSql()).ShowDialog();
+            (new FrmReplaceOracleSql()).Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //编码
+            (new FrmCodeFormat()).Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //压缩
+            richResult.Text = (new Regex("\\s")).Replace(richInput.Text, "");
         }
     }
 }

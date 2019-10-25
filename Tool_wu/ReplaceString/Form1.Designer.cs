@@ -47,12 +47,14 @@
             this.txtAddedContent = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 100);
+            this.label1.Location = new System.Drawing.Point(27, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 0;
@@ -62,9 +64,9 @@
             // 
             this.richInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richInput.Location = new System.Drawing.Point(29, 122);
+            this.richInput.Location = new System.Drawing.Point(29, 218);
             this.richInput.Name = "richInput";
-            this.richInput.Size = new System.Drawing.Size(1168, 177);
+            this.richInput.Size = new System.Drawing.Size(1414, 177);
             this.richInput.TabIndex = 1;
             this.richInput.Text = "";
             // 
@@ -73,16 +75,16 @@
             this.richResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richResult.Location = new System.Drawing.Point(29, 333);
+            this.richResult.Location = new System.Drawing.Point(29, 451);
             this.richResult.Name = "richResult";
-            this.richResult.Size = new System.Drawing.Size(1168, 236);
+            this.richResult.Size = new System.Drawing.Size(1414, 257);
             this.richResult.TabIndex = 2;
             this.richResult.Text = "";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 314);
+            this.label2.Location = new System.Drawing.Point(26, 425);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 15);
             this.label2.TabIndex = 3;
@@ -221,19 +223,41 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1110, 68);
+            this.button7.Location = new System.Drawing.Point(1088, 68);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(132, 23);
             this.button7.TabIndex = 18;
-            this.button7.Text = "button7";
+            this.button7.Text = "调整oracle的Sql";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1368, 27);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(98, 23);
+            this.button8.TabIndex = 19;
+            this.button8.Text = "编码";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(29, 107);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(80, 23);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "压缩";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 601);
+            this.ClientSize = new System.Drawing.Size(1491, 740);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAddedContent);
@@ -281,6 +305,8 @@
         private System.Windows.Forms.TextBox txtAddedContent;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 
