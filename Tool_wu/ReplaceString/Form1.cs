@@ -1,8 +1,11 @@
-﻿using System;
+﻿using BaseClassUtils;
+using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -125,6 +128,21 @@ namespace ReplaceString
         {
             //压缩
             richResult.Text = (new Regex("\\s")).Replace(richInput.Text, "");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {   //获取Excel数据
+            string path = "";
+            #region choose import file
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Microsoft Excel 2013|*.xlsx";
+            if (dialog.ShowDialog() == DialogResult.Cancel)
+            {
+                path = dialog.FileName;
+            }
+            #endregion
+            DataSet ds = FileUtils.GetExcelDataSet(path);
+            return;
         }
     }
 }

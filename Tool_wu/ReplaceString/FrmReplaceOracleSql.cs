@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BaseClassUtils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -130,6 +131,22 @@ namespace ReplaceString
             strResult = strResult.ToLower();
 
             richInput.Text = strResult;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //通过excel数据生成insertSql
+            string path = "";
+            #region choose import file
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Microsoft Excel 2013|*.xlsx";
+            if (dialog.ShowDialog() == DialogResult.Cancel)
+            {
+                path = dialog.FileName;
+            }
+            #endregion
+            DataSet ds = FileUtils.GetExcelDataSet(path);
+
         }
     }
 }
