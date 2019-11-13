@@ -17,6 +17,15 @@ namespace CodeFirstAppDemo.EFDbContext
         public Context()
             :base("name=CodeFirstApp")
         {
+            this.Database.Log = (sql) =>
+            {
+                if (string.IsNullOrEmpty(sql) == false)
+                {
+                    Console.WriteLine("************sql执行*************");
+                    Console.WriteLine(sql);
+                    Console.WriteLine("************sql结束************");
+                }
+            };
         }
 
         public DbSet<Category> Categorys { get; set; }
