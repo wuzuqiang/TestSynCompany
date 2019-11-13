@@ -176,7 +176,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(339, 23);
             this.button6.TabIndex = 14;
-            this.button6.Text = "通过excel数据生成insertSql";
+            this.button6.Text = "（Undo）通过excel数据生成insertSql";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 

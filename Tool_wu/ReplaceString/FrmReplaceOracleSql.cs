@@ -146,7 +146,25 @@ namespace ReplaceString
             }
             #endregion
             DataSet ds = FileUtils.GetExcelDataSet(path);
+            string tableName= ds.Tables[0].Rows[2 - 1][1 - 1].ToString(), insertColumnList="";
+            for(int i = 0; i < ds.Tables[0].Columns.Count; i++)
+            {
+                insertColumnList += string.Format(ds.Tables[0].Rows[3-1][i].ToString() + ",");
+            }
+            insertColumnList = deleteLastDouhao(insertColumnList);  //去除最后的,号
+            //insert inot tb() values
+            StringBuilder sbSql = new StringBuilder();
+            sbSql.AppendFormat(("insert into "));
+            sbSql.AppendFormat(tableName);
+            sbSql.AppendFormat(@"(");
+            sbSql.AppendFormat(insertColumnList);
+            sbSql.AppendFormat(@") values (");
+            sbSql.AppendFormat(@");");
 
+        }
+        string deleteLastDouhao(string input)
+        {
+            return input.Substring(0, input.Length - 1);
         }
     }
 }

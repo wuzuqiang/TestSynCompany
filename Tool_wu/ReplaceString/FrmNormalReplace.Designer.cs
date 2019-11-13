@@ -36,19 +36,23 @@
             this.richInput = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtContentLength = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtFlagString = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cbxIgnoreCase = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 126);
+            this.textBox1.Location = new System.Drawing.Point(73, 194);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
+            this.textBox1.Size = new System.Drawing.Size(186, 25);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 126);
+            this.label1.Location = new System.Drawing.Point(12, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 15);
             this.label1.TabIndex = 1;
@@ -57,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 181);
+            this.label2.Location = new System.Drawing.Point(12, 249);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 3;
@@ -65,14 +69,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 181);
+            this.textBox2.Location = new System.Drawing.Point(73, 249);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
+            this.textBox2.Size = new System.Drawing.Size(186, 25);
             this.textBox2.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 271);
+            this.button1.Location = new System.Drawing.Point(154, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -85,15 +89,15 @@
             this.richInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richInput.Location = new System.Drawing.Point(325, 58);
+            this.richInput.Location = new System.Drawing.Point(325, 75);
             this.richInput.Name = "richInput";
-            this.richInput.Size = new System.Drawing.Size(430, 270);
+            this.richInput.Size = new System.Drawing.Size(951, 550);
             this.richInput.TabIndex = 5;
             this.richInput.Text = "";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1, 2);
+            this.button2.Location = new System.Drawing.Point(12, 75);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 23);
             this.button2.TabIndex = 6;
@@ -103,16 +107,57 @@
             // 
             // txtContentLength
             // 
-            this.txtContentLength.Location = new System.Drawing.Point(105, 3);
+            this.txtContentLength.Location = new System.Drawing.Point(129, 73);
             this.txtContentLength.Name = "txtContentLength";
             this.txtContentLength.Size = new System.Drawing.Size(100, 25);
             this.txtContentLength.TabIndex = 7;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(636, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(297, 26);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "将每行中这些字符前的字符都删除";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtFlagString
+            // 
+            this.txtFlagString.Location = new System.Drawing.Point(379, 13);
+            this.txtFlagString.Name = "txtFlagString";
+            this.txtFlagString.Size = new System.Drawing.Size(239, 25);
+            this.txtFlagString.TabIndex = 9;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(24, 383);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(205, 31);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "将所有内容整合成一行，中间以Tab键盘分隔";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // cbxIgnoreCase
+            // 
+            this.cbxIgnoreCase.AutoSize = true;
+            this.cbxIgnoreCase.Location = new System.Drawing.Point(35, 322);
+            this.cbxIgnoreCase.Name = "cbxIgnoreCase";
+            this.cbxIgnoreCase.Size = new System.Drawing.Size(104, 19);
+            this.cbxIgnoreCase.TabIndex = 11;
+            this.cbxIgnoreCase.Text = "忽略大小写";
+            this.cbxIgnoreCase.UseVisualStyleBackColor = true;
             // 
             // FrmNormalReplace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1308, 656);
+            this.Controls.Add(this.cbxIgnoreCase);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.txtFlagString);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.txtContentLength);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.richInput);
@@ -138,5 +183,9 @@
         private System.Windows.Forms.RichTextBox richInput;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtContentLength;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtFlagString;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox cbxIgnoreCase;
     }
 }

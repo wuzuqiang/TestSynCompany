@@ -135,14 +135,88 @@ namespace ReplaceString
             string path = "";
             #region choose import file
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Microsoft Excel 2013|*.xlsx";
-            if (dialog.ShowDialog() == DialogResult.Cancel)
+            //dialog.Filter = "Microsoft Excel 2013|*.xlsx";
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
                 path = dialog.FileName;
+            }
+            else
+            {
+                return;
             }
             #endregion
             DataSet ds = FileUtils.GetExcelDataSet(path);
             return;
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //
+            int dataN = 23; 
+            int data1 = 0;
+            int data2 = 0;
+            int num = 3;
+            int[] intArray = new int[num];
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 10; i++)
+            {
+                int iTemp = (new Random()).Next(0, 200);
+                //intArray[0] = i;
+                //...
+                //intArray[num - 2] = i;  //这种情况下结合[0]倒是达到结果
+                //intArray[num - 2] = (new Random()).Next();  //没一条满足条件
+                //intArray[num - 1] = 2 * intArray[num - 2];  //作为CheckCode
+
+                intArray[0] = (new Random()).Next(201,300);
+                intArray[num - 2] = (new Random()).Next(0, 200);  
+                intArray[num - 1] = intArray[0]+intArray[1];  //作为CheckCode
+                int[] tempArray = intArray.Take(num - 1).ToArray();
+                if (intArray[num - 1] == CalculateCheckCode(tempArray))
+                {
+                    sb.AppendLine($"结果满足的数组第{i}次：{string.Join(",",intArray)}");
+                }
+            }
+            if(!string.IsNullOrEmpty(sb.ToString()))
+                MessageBox.Show("试出满足数据如下\n"+ sb.ToString());
+        }
+        /// <summary>
+        /// 计算校验码。
+        /// </summary>
+        /// <param name="data">需要计算的int数组</param>
+        /// <returns>返回计算后的校验码</returns>
+        public static int CalculateCheckCode(int[] data)
+        {
+            int temp = 0;
+
+            foreach (var item in data)
+            {
+                temp = ((temp & 65535) + (item & 65535)) & 65535;
+            }
+
+            return temp & 65535;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            List<string> listSplit = new List<string>();
+            foreach(string str in richInput.Text.Split(','))
+            {
+                listSplit.Add(str);
+            }
+            StringBuilder sb = new StringBuilder();
+            foreach(string str in listSplit)
+            {
+                if (string.IsNullOrEmpty(str)) { continue; }
+                string tempInputText = richInput.Text.Replace(str, str.Substring(0,str.Length-1));
+                if(richInput.Text.Length - tempInputText.Length >= 2)
+                {
+                    sb.AppendLine(str + " 出现两次以上");
+                }
+            }
+            richResult.Text = sb.ToString();
+        }
+    }
+    public static class CheckCodeHelper
+    {
     }
 }

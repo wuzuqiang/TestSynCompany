@@ -7,9 +7,9 @@ using System.Text.RegularExpressions;
 
 namespace BaseClassUtils
 {
-    public class StringUtils
+    public static class StringUtils
     {
-        public List<string> Get(string[] array, string strContained)
+        public static List<string> Get(string[] array, string strContained)
         {
             List<string> listMatched = new List<string>();
             string pattern = @"(\.ext+)(.)";
@@ -22,7 +22,7 @@ namespace BaseClassUtils
             }
             return listMatched;
         }
-        public bool isMatch(string fileSuffix, string strContained)
+        public static bool isMatch(string fileSuffix, string strContained)
         {
             bool isMatch = false;
             List<string> listMatched = new List<string>();
@@ -34,6 +34,82 @@ namespace BaseClassUtils
                 }
             }
             return isMatch;
+        }
+
+        public static string ToTranslateRegexStr(this string input)
+        {
+            string strNeedTransferInReg = "*, ., [, ], {, }, ^, $";
+            string strTemp = input;
+            foreach (string strSplit in strNeedTransferInReg.Split(','))
+            {
+                if (!string.IsNullOrEmpty(strSplit))
+                {
+                    strTemp = strTemp.Replace(strSplit.Trim(), $"\\{strSplit.Trim()}");
+                }
+            }
+            return strTemp;
+        }
+
+        /// <summary>
+        /// 加密input中的特殊字符
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ToEncryInneredParticularWord(this string input)
+        {
+            StringBuilder sbTemp = new StringBuilder(input);
+            foreach (string strSplit in strNeedTransferInReg.Split(','))
+            {
+                if (!string.IsNullOrEmpty(strSplit))
+                {
+                    listNeedTransferInReg.Add(strSplit.Trim());
+                }
+            }
+            foreach (string strSplit in strCanTransferInReg.Split(','))
+            {
+                if (!string.IsNullOrEmpty(strSplit))
+                {
+                    listCanTransferInReg.Add(strSplit.Trim());
+                }
+            }
+            for(int i = 0; i < listNeedTransferInReg.Count; i++)
+            {
+                sbTemp = sbTemp.Replace(listNeedTransferInReg[i], listCanTransferInReg[i]);
+            }
+            return sbTemp.ToString();
+        }
+
+        static string strNeedTransferInReg = "*, ., [, ], {, }, ^, $";
+        static List<string> listNeedTransferInReg = new List<string>();
+        static string strCanTransferInReg = "-__0__-, __1__-, -__2__-, -__3__-, -__4__-,- __5__-, -__6__-,-__7__-";
+        static List<string> listCanTransferInReg = new List<string>();
+        /// <summary>
+        /// 解密input中的特殊字符
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ToDecodeInneredParticularWord(this string input)
+        {
+            StringBuilder sbTemp = new StringBuilder(input);
+            foreach (string strSplit in strNeedTransferInReg.Split(','))
+            {
+                if (!string.IsNullOrEmpty(strSplit))
+                {
+                    listNeedTransferInReg.Add(strSplit.Trim());
+                }
+            }
+            foreach (string strSplit in strCanTransferInReg.Split(','))
+            {
+                if (!string.IsNullOrEmpty(strSplit))
+                {
+                    listCanTransferInReg.Add(strSplit.Trim());
+                }
+            }
+            for (int i = 0; i < listNeedTransferInReg.Count; i++)
+            {
+                sbTemp = sbTemp.Replace(listCanTransferInReg[i], listNeedTransferInReg[i]);
+            }
+            return sbTemp.ToString();
         }
     }
 }
