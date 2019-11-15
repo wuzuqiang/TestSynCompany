@@ -43,6 +43,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.txtAppend = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -94,7 +100,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richInput.Location = new System.Drawing.Point(351, 179);
             this.richInput.Name = "richInput";
-            this.richInput.Size = new System.Drawing.Size(795, 470);
+            this.richInput.Size = new System.Drawing.Size(998, 512);
             this.richInput.TabIndex = 5;
             this.richInput.Text = "";
             // 
@@ -162,17 +168,17 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(351, 29);
+            this.button5.Location = new System.Drawing.Point(1059, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(339, 23);
             this.button5.TabIndex = 13;
-            this.button5.Text = "将Oracle的sql转换为Sqlserver的sql";
+            this.button5.Text = "UnComplete,将Oracle的sql转换为Sqlserver的sql";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(698, 88);
+            this.button6.Location = new System.Drawing.Point(1059, 50);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(339, 23);
             this.button6.TabIndex = 14;
@@ -180,11 +186,75 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(351, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(239, 23);
+            this.button7.TabIndex = 15;
+            this.button7.Text = "将“””号替换为空";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(351, 58);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(339, 23);
+            this.button8.TabIndex = 16;
+            this.button8.Text = "将“\'System.Byte[]\' ”替换为\"SYS_GUID()\"";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(351, 102);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(173, 23);
+            this.button9.TabIndex = 17;
+            this.button9.Text = "在每行前新增";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // txtAppend
+            // 
+            this.txtAppend.Location = new System.Drawing.Point(537, 103);
+            this.txtAppend.Name = "txtAppend";
+            this.txtAppend.Size = new System.Drawing.Size(100, 25);
+            this.txtAppend.TabIndex = 18;
+            this.txtAppend.Text = "--";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(351, 131);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(173, 23);
+            this.button10.TabIndex = 19;
+            this.button10.Text = "移除每行前";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(656, 105);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(173, 23);
+            this.button11.TabIndex = 20;
+            this.button11.Text = "新增到每行最尾端";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // FrmReplaceOracleSql
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 689);
+            this.ClientSize = new System.Drawing.Size(1410, 731);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.txtAppend);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -224,5 +294,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox txtAppend;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

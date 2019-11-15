@@ -166,5 +166,69 @@ namespace ReplaceString
         {
             return input.Substring(0, input.Length - 1);
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //将“'System.Byte[]' ”替换为"SYS_GUID()"
+            string str = richInput.Text;
+            richInput.Text = str.Replace(@"'System.Byte[]' ", "SYS_GUID()");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //将双引号替换为空
+            string str = richInput.Text;
+            richInput.Text = str.Replace("\"", "");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //在每行前新增txtAppend.Text
+            //获取每行内容组成的List
+            List<string> list = richInput.Text.Split('\n').ToList();
+            StringBuilder sb = new StringBuilder();
+            foreach (string line in list)
+            {
+                sb.Append(txtAppend.Text + line + "\n");
+            }
+            richInput.Text = sb.ToString();
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            //移除每行前txtAppend.Text
+            //获取每行内容组成的List
+            List<string> list = richInput.Text.Split('\n').ToList();
+            StringBuilder sb = new StringBuilder();
+            foreach (string line in list)
+            {   
+                if(line.Length > txtAppend.Text.Length && line.Substring(0, txtAppend.Text.Length).Contains(txtAppend.Text))
+                {
+                    sb.Append(line.Substring(txtAppend.Text.Length) + "\n");
+
+                }
+                else
+                {
+                    sb.Append(line + "\n");
+                }
+            }
+            richInput.Text = sb.ToString();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            //新增到每行最尾端
+            //获取每行内容组成的List
+            List<string> list = richInput.Text.Split('\n').ToList();
+            StringBuilder sb = new StringBuilder();
+            foreach (string line in list)
+            {
+                if (string.IsNullOrEmpty(line))
+                    continue;
+                sb.AppendLine(line + txtAppend.Text.ToString().Trim());
+            }
+            richInput.Text = sb.ToString();
+        }
     }
 }
