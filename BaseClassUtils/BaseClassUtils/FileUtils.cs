@@ -67,14 +67,18 @@ namespace BaseClassUtils
             File.AppendAllLines(fileFullName, contents, Encoding.UTF8);
         }
 
-        public static void ExecFile(string filePath)
+        public static void OpenFileIfnotthencreat(string filePath)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
             System.Diagnostics.Process.Start(filePath);
         }
 
         
-
+        /// <summary>
+        /// 获取Excel数据
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
         public static DataSet GetExcelDataSet(string filePath)
         {
             DataSet ds = new DataSet();
