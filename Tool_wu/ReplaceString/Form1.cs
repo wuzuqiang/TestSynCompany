@@ -145,7 +145,6 @@ namespace ReplaceString
                 return;
             }
             #endregion
-            DataSet ds = FileUtils.GetExcelDataSet(path);
             return;
         }
 

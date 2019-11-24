@@ -62,9 +62,9 @@
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(170, 180);
+            this.txtResult.Location = new System.Drawing.Point(160, 180);
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(535, 25);
+            this.txtResult.Size = new System.Drawing.Size(545, 25);
             this.txtResult.TabIndex = 3;
             // 
             // FrmCodeFormat

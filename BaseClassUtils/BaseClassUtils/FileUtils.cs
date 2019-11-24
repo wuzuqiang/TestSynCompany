@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using System.IO;
 using OfficeOpenXml;
 using System.Data;
+using System.Data.OleDb;
 
 namespace BaseClassUtils
 {
     public class FileUtils
     {
+        public static object ExcelEnum { get; private set; }
+
         /// <summary>
         /// 清空文件，并写入内容
         /// </summary>
@@ -74,86 +77,150 @@ namespace BaseClassUtils
         }
 
         
-        /// <summary>
-        /// 获取Excel数据
-        /// </summary>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
-        public static DataSet GetExcelDataSet(string filePath)
+        public static List<string> GetSheetnames(string filePath, out string message)
         {
-            DataSet ds = new DataSet();
-            #region check file if exists
-            FileStream stream = null;
+            message = "success";
+            List<string> listSheetname = new List<string>();
+            if (!IsExcelFile(filePath))
+            {
+                return new List<string>();
+            }
+            if (ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2003) == Path.GetExtension(filePath))
+            {
+                listSheetname = GetXlsSheetnames(filePath, out message);
+            }
+            else if(ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2007) == Path.GetExtension(filePath))
+            {
+                listSheetname = GetXlsxSheetnames(filePath,out message);
+            }
+            return listSheetname;
+        }
+
+        public static List<string> GetXlsSheetnames(string filePath, out string message)
+        {
+            message = "success";
+            List<string> listSheetname = new List<string>();
+            string fileExtension = Path.GetExtension(filePath);
+            if (".xls" == fileExtension)
+            {
+                string strConn = "Provider=Microsoft.Jet.OLEDB.4.0;" + "Data Source=" + filePath + ";" + "Extended Properties=Excel 8.0;";
+                //connectstring = "Provider=Microsoft.ACE.OLEDB.12.0; data source=" + excelPath + ";Extended Properties='Excel 12.0 Xml; HDR=" + hdr + "; IMEX=" + imex.GetHashCode() + "'";
+                OleDbConnection conn = new OleDbConnection(strConn);
+                try
+                {
+                    if (conn.State == ConnectionState.Closed)
+                    {
+                        conn.Open();
+                    }
+                    DataTable schemaTable = conn.GetOleDbSchemaTable(System.Data.OleDb.OleDbSchemaGuid.Tables, null);
+                    foreach (DataRow dr in schemaTable.Rows)
+                    {
+                        listSheetname.Add(dr[2].ToString().Trim());
+                    }
+                    //string tableName = schemaTable.Rows[0][2].ToString().Trim();
+
+                }
+                catch (Exception ex)
+                {
+                    message = ex.Message;
+                    listSheetname = new List<string>();
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            return listSheetname;
+        }
+
+        public static List<string> GetXlsxSheetnames(string filePath, out string message)
+        {
+            message = "success";
+            List<string> listSheetname = new List<string>();
+            if(ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2007) != Path.GetExtension(filePath))
+            {
+                message = "文件格式不为Excel2007";
+                return new List<string>();
+            }
+            FileStream fileStream = null;
             try
             {
-                //stream = new FileStream(dialog.FileName, FileMode.Open);
-                stream = File.OpenRead(filePath);
+                fileStream = File.OpenRead(filePath);
             }
-            catch (IOException ex)
+            catch(IOException ex)
             {
-                throw new Exception(ex.Message);
+                message = ex.Message;
+                return new List<string>();
             }
-            #endregion
-            
-            #region read excel
-            using (stream)
+            finally
             {
-                ExcelPackage package = new ExcelPackage(stream);
-
-                ExcelWorksheet sheet = package.Workbook.Worksheets[1];
-                #region check excel format
-                if (sheet == null)
-                {
-
-                    throw new Exception("sheet == null");
-                }
-                #endregion
-
-                #region get last row index
-                int lastRow = sheet.Dimension.End.Row;
-                int lastColumn = sheet.Dimension.End.Column;
-                int maxDrColumn = 0;
-                while (sheet.Cells[lastRow, 1].Value == null)
-                {
-                    lastRow--;
-                }
-                #endregion
-
-                DataTable dt = new DataTable();
-                #region read datas
-                int titleRowindex = 3;  //从第三行开始摆标题，第一行是数据检索sql，第二行隔开
-                StringBuilder sb = new StringBuilder();
-                for (int j1 = 1; j1 <= lastColumn; j1++)
-                {
-                    try
-                    {
-                        dt.Columns.Add(sheet.Cells[titleRowindex, j1].Value.ToString());
-                        maxDrColumn = j1-1;
-                    }
-                    catch
-                    {
-                        sb.AppendLine($"DataRow{j1-1}列，标题为空！");
-                    }
-                }
-                if (!string.IsNullOrEmpty(sb.ToString()))
-                {
-                    throw new Exception(sb.ToString());
-                }
-
-                for (int i = 3; i <= lastRow; i++)
-                {
-                    DataRow dr = dt.NewRow();
-                    for (int j = 0; j <= maxDrColumn; j++)
-                    {
-                        dr[j] = sheet.Cells[i, j+1].Value;
-                    }
-                    dt.Rows.Add(dr);
-                }
-                #endregion
-                ds.Tables.Add(dt);
+                int a = 2;
             }
-            #endregion
-            return ds;
+            using (fileStream)
+            {
+                ExcelPackage package = new ExcelPackage(fileStream);
+                foreach(var worksheet in package.Workbook.Worksheets)
+                {
+                    listSheetname.Add(worksheet.Name);
+                }
+            }
+            return listSheetname;
+        }
+
+        public static DataSet getXlsData(string filePath, string workbookName)
+        {
+            DataSet dsXls = new DataSet();
+            string strConn = "Provider=Microsoft.Jet.OLEDB.4.0;" + "Data Source=" + filePath + ";" + "Extended Properties=Excel 8.0;";
+            OleDbConnection conn = new OleDbConnection(strConn);
+            try
+            {
+                OleDbDataAdapter myDa = new OleDbDataAdapter($"select * from [{workbookName}]", conn);
+                myDa.Fill(dsXls);
+            }
+            finally
+            {
+            }
+            return dsXls;
+        }
+
+        public static DataSet getXlsxExcelData(string filePath, string workbookName)
+        {
+            DataSet dsExcel = new DataSet();
+            FileStream fileStream = null;
+            fileStream = File.OpenRead(filePath);
+            using (fileStream)
+            {
+                ExcelPackage package = new ExcelPackage(fileStream);
+                ExcelWorksheet worksheet = package.Workbook.Worksheets[workbookName];
+                int lastRow = worksheet.Dimension.End.Row;
+                int lastColumn = worksheet.Dimension.End.Column;
+                DataTable dtWorksheet = new DataTable("workSheet");
+                for(int i = 1; i <= lastColumn; i++)
+                {
+                    dtWorksheet.Columns.Add($"colum-{i}");
+                }
+                for(int row = 1; row <= lastRow; row++)
+                {
+                    DataRow dr = dtWorksheet.NewRow();
+                    for(int column = 1; column <= lastColumn; column++)
+                    {
+                        dr[column-1] = worksheet.GetValue(row, column);
+                    }
+                    dtWorksheet.Rows.Add(dr);
+                }
+                dsExcel.Tables.Add(dtWorksheet);
+            }
+            return dsExcel;
+        }
+
+        public static bool IsExcelFile(string filePath)
+        {
+            string fileExtension = System.IO.Path.GetExtension(filePath);
+            if(ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2003) == fileExtension || ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2007) == fileExtension)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

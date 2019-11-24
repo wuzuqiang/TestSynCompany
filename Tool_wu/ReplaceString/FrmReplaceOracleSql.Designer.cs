@@ -49,6 +49,10 @@
             this.txtAppend = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtReplaced = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -98,9 +102,9 @@
             this.richInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richInput.Location = new System.Drawing.Point(351, 179);
+            this.richInput.Location = new System.Drawing.Point(351, 190);
             this.richInput.Name = "richInput";
-            this.richInput.Size = new System.Drawing.Size(998, 512);
+            this.richInput.Size = new System.Drawing.Size(998, 501);
             this.richInput.TabIndex = 5;
             this.richInput.Text = "";
             // 
@@ -182,15 +186,15 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(339, 23);
             this.button6.TabIndex = 14;
-            this.button6.Text = "（Undo）通过excel数据生成insertSql";
+            this.button6.Text = "通过excel数据生成insertSql语句";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(351, 12);
+            this.button7.Location = new System.Drawing.Point(351, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(239, 23);
+            this.button7.Size = new System.Drawing.Size(239, 31);
             this.button7.TabIndex = 15;
             this.button7.Text = "将“””号替换为空";
             this.button7.UseVisualStyleBackColor = true;
@@ -198,9 +202,9 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(351, 58);
+            this.button8.Location = new System.Drawing.Point(351, 38);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(339, 23);
+            this.button8.Size = new System.Drawing.Size(339, 35);
             this.button8.TabIndex = 16;
             this.button8.Text = "将“\'System.Byte[]\' ”替换为\"SYS_GUID()\"";
             this.button8.UseVisualStyleBackColor = true;
@@ -208,7 +212,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(351, 102);
+            this.button9.Location = new System.Drawing.Point(351, 126);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(173, 23);
             this.button9.TabIndex = 17;
@@ -218,7 +222,7 @@
             // 
             // txtAppend
             // 
-            this.txtAppend.Location = new System.Drawing.Point(537, 103);
+            this.txtAppend.Location = new System.Drawing.Point(537, 127);
             this.txtAppend.Name = "txtAppend";
             this.txtAppend.Size = new System.Drawing.Size(100, 25);
             this.txtAppend.TabIndex = 18;
@@ -226,7 +230,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(351, 131);
+            this.button10.Location = new System.Drawing.Point(351, 155);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(173, 23);
             this.button10.TabIndex = 19;
@@ -236,7 +240,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(656, 105);
+            this.button11.Location = new System.Drawing.Point(656, 129);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(173, 23);
             this.button11.TabIndex = 20;
@@ -244,11 +248,50 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(351, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 15);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "将";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(379, 86);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(282, 25);
+            this.textBox3.TabIndex = 22;
+            this.textBox3.Text = "2019/11/18 17:17:00这样的日期类型";
+            // 
+            // txtReplaced
+            // 
+            this.txtReplaced.Location = new System.Drawing.Point(754, 86);
+            this.txtReplaced.Name = "txtReplaced";
+            this.txtReplaced.Size = new System.Drawing.Size(100, 25);
+            this.txtReplaced.TabIndex = 24;
+            this.txtReplaced.Text = "SYSDATE";
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(667, 79);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 38);
+            this.button12.TabIndex = 25;
+            this.button12.Text = "替换为";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // FrmReplaceOracleSql
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1410, 731);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.txtReplaced);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.txtAppend);
@@ -300,5 +343,9 @@
         private System.Windows.Forms.TextBox txtAppend;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtReplaced;
+        private System.Windows.Forms.Button button12;
     }
 }

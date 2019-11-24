@@ -92,6 +92,9 @@ namespace ReplaceString
 
         private void button5_Click(object sender, EventArgs e)
         {
+            FrmExcel dlg = new FrmExcel();
+            dlg.Show();
+            return;
             MessageBox.Show(string.Format("直到{0}之前都还未完成！", DateTime.Now.ToString()));
             string strResult = "";
             //将Oracle的sql转换为Sqlserver的sql
@@ -135,33 +138,44 @@ namespace ReplaceString
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //通过excel数据生成insertSql
-            string path = "";
+            //通过excel数据生成insertSql语句
+            (new FrmExcel()).ShowDialog();
+            return;
+            string filePath = "";
             #region choose import file
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "Microsoft Excel 2013|*.xlsx";
-            if (dialog.ShowDialog() == DialogResult.Cancel)
+            dialog.Filter = "(Microsoft Excel 2013;Microsoft Excel 2007)|*.xlsx;*.xls";
+            DialogResult dialogResult = dialog.ShowDialog();
+            if (DialogResult.Cancel == dialogResult)
             {
-                path = dialog.FileName;
+                return;
+            }
+            else if(DialogResult.OK == dialogResult)
+            {
+                filePath = dialog.FileName;
             }
             #endregion
-            DataSet ds = FileUtils.GetExcelDataSet(path);
-            string tableName= ds.Tables[0].Rows[2 - 1][1 - 1].ToString(), insertColumnList="";
-            for(int i = 0; i < ds.Tables[0].Columns.Count; i++)
-            {
-                insertColumnList += string.Format(ds.Tables[0].Rows[3-1][i].ToString() + ",");
-            }
-            insertColumnList = deleteLastDouhao(insertColumnList);  //去除最后的,号
-            //insert inot tb() values
-            StringBuilder sbSql = new StringBuilder();
-            sbSql.AppendFormat(("insert into "));
-            sbSql.AppendFormat(tableName);
-            sbSql.AppendFormat(@"(");
-            sbSql.AppendFormat(insertColumnList);
-            sbSql.AppendFormat(@") values (");
-            sbSql.AppendFormat(@");");
+
+            string result = "";
+            var sheetNames = FileUtils.GetXlsSheetnames(filePath, out result);
+            //DataSet ds = FileUtils.GetExcelDataSet(filePath);
+            //string tableName = ds.Tables[0].Rows[2 - 1][1 - 1].ToString(), insertColumnList = "";
+            //for (int i = 0; i < ds.Tables[0].Columns.Count; i++)
+            //{
+            //    insertColumnList += string.Format(ds.Tables[0].Rows[3 - 1][i].ToString() + ",");
+            //}
+            //insertColumnList = deleteLastDouhao(insertColumnList);  //去除最后的,号
+            ////insert inot tb() values
+            //StringBuilder sbSql = new StringBuilder();
+            //sbSql.AppendFormat(("insert into "));
+            //sbSql.AppendFormat(tableName);
+            //sbSql.AppendFormat(@"(");
+            //sbSql.AppendFormat(insertColumnList);
+            //sbSql.AppendFormat(@") values (");
+            //sbSql.AppendFormat(@");");
 
         }
+
         string deleteLastDouhao(string input)
         {
             return input.Substring(0, input.Length - 1);
@@ -229,6 +243,14 @@ namespace ReplaceString
                 sb.AppendLine(line + txtAppend.Text.ToString().Trim());
             }
             richInput.Text = sb.ToString();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            //将'2019/11/18 17:17:00'这样的日期类型 替换为 txtReplaced内容
+            string strTemp = richInput.Text;
+            strTemp = (new Regex(@"'\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2}'")).Replace(strTemp,"SYSDATE");
+            richInput.Text = strTemp;
         }
     }
 }

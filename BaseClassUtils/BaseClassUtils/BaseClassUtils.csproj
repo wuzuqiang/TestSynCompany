@@ -53,6 +53,7 @@
     <Compile Include="BitUtils.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DirUtil.cs" />
+    <Compile Include="ExcelUtils.cs" />
     <Compile Include="FileUtils.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="HttpHelper_V0.cs" />
