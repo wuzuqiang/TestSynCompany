@@ -49,5 +49,10 @@ namespace BaseFileDirOperProject
             OpenFileDialog dlg = new OpenFileDialog();
             FileUtils.OpenFileIfnotthencreat(System.IO.Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text));
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
