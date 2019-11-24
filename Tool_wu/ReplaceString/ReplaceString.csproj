@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelEnum.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +61,12 @@
     </Compile>
     <Compile Include="FrmCodeFormat.Designer.cs">
       <DependentUpon>FrmCodeFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExcel.Designer.cs">
+      <DependentUpon>FrmExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReplaceOracleSql.cs">
       <SubType>Form</SubType>
@@ -86,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCodeFormat.resx">
       <DependentUpon>FrmCodeFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExcel.resx">
+      <DependentUpon>FrmExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReplaceOracleSql.resx">
       <DependentUpon>FrmReplaceOracleSql.cs</DependentUpon>
