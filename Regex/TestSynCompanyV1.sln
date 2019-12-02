@@ -127,6 +127,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceString", "..\Tool_wu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "使用dos命令执行批量的sql操作权限和增删查改", "..\Tool_wu\使用dos命令执行批量的sql操作权限和增删查改\使用dos命令执行批量的sql操作权限和增删查改.csproj", "{3ED42310-EA04-4D1B-9892-EE0E48A0D4BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqOper", "..\Test\LinqOper\LinqOper.csproj", "{5B666727-B8E3-462F-8B66-351CA7148A46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -761,6 +763,18 @@ Global
 		{3ED42310-EA04-4D1B-9892-EE0E48A0D4BF}.Release|x64.Build.0 = Release|Any CPU
 		{3ED42310-EA04-4D1B-9892-EE0E48A0D4BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{3ED42310-EA04-4D1B-9892-EE0E48A0D4BF}.Release|x86.Build.0 = Release|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Debug|x64.Build.0 = Debug|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Release|x64.ActiveCfg = Release|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Release|x64.Build.0 = Release|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B666727-B8E3-462F-8B66-351CA7148A46}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

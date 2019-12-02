@@ -57,15 +57,15 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 190);
+            this.textBox1.Location = new System.Drawing.Point(71, 190);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
+            this.textBox1.Size = new System.Drawing.Size(252, 25);
             this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 190);
+            this.label1.Location = new System.Drawing.Point(16, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 15);
             this.label1.TabIndex = 1;
@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 245);
+            this.label2.Location = new System.Drawing.Point(16, 245);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 3;
@@ -82,14 +82,14 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 245);
+            this.textBox2.Location = new System.Drawing.Point(71, 245);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
+            this.textBox2.Size = new System.Drawing.Size(252, 25);
             this.textBox2.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(166, 305);
+            this.button1.Location = new System.Drawing.Point(181, 305);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -162,7 +162,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(39, 58);
+            this.button4.Location = new System.Drawing.Point(12, 129);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(173, 23);
             this.button4.TabIndex = 12;
@@ -172,21 +172,21 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(1059, 12);
+            this.button5.Location = new System.Drawing.Point(6, 44);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(339, 23);
             this.button5.TabIndex = 13;
-            this.button5.Text = "UnComplete,将Oracle的sql转换为Sqlserver的sql";
+            this.button5.Text = "Undo,将Oracle的sql转换为Sqlserver的sql";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(1059, 50);
+            this.button6.Location = new System.Drawing.Point(6, 12);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(339, 23);
             this.button6.TabIndex = 14;
-            this.button6.Text = "通过excel数据生成insertSql语句";
+            this.button6.Text = "Uncoplete，通过excel数据生成insertSql语句";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
