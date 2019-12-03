@@ -62,6 +62,12 @@
     <Compile Include="FrmCodeFormat.Designer.cs">
       <DependentUpon>FrmCodeFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEfficient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEfficient.Designer.cs">
+      <DependentUpon>FrmEfficient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmExcel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCodeFormat.resx">
       <DependentUpon>FrmCodeFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEfficient.resx">
+      <DependentUpon>FrmEfficient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmExcel.resx">
       <DependentUpon>FrmExcel.cs</DependentUpon>
