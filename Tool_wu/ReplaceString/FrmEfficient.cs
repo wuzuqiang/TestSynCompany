@@ -16,5 +16,10 @@ namespace ReplaceString
         {
             InitializeComponent();
         }
+
+        private void FrmEfficient_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

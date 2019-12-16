@@ -40,6 +40,8 @@
             this.txtFlagString = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.cbxIgnoreCase = new System.Windows.Forms.CheckBox();
+            this.chkContainThatWords = new System.Windows.Forms.CheckBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -124,16 +126,16 @@
             // 
             // txtFlagString
             // 
-            this.txtFlagString.Location = new System.Drawing.Point(379, 13);
+            this.txtFlagString.Location = new System.Drawing.Point(325, 29);
             this.txtFlagString.Name = "txtFlagString";
-            this.txtFlagString.Size = new System.Drawing.Size(239, 25);
+            this.txtFlagString.Size = new System.Drawing.Size(293, 25);
             this.txtFlagString.TabIndex = 9;
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(24, 383);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(205, 31);
+            this.button4.Size = new System.Drawing.Size(186, 53);
             this.button4.TabIndex = 10;
             this.button4.Text = "将所有内容整合成一行，中间以Tab键盘分隔";
             this.button4.UseVisualStyleBackColor = true;
@@ -149,11 +151,33 @@
             this.cbxIgnoreCase.Text = "忽略大小写";
             this.cbxIgnoreCase.UseVisualStyleBackColor = true;
             // 
+            // chkContainThatWords
+            // 
+            this.chkContainThatWords.AutoSize = true;
+            this.chkContainThatWords.Location = new System.Drawing.Point(968, 18);
+            this.chkContainThatWords.Name = "chkContainThatWords";
+            this.chkContainThatWords.Size = new System.Drawing.Size(149, 19);
+            this.chkContainThatWords.TabIndex = 12;
+            this.chkContainThatWords.Text = "连这些字符也删除";
+            this.chkContainThatWords.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(636, 43);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(297, 26);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "将每行中这些字符后的字符都删除";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // FrmNormalReplace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1308, 656);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.chkContainThatWords);
             this.Controls.Add(this.cbxIgnoreCase);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtFlagString);
@@ -187,5 +211,7 @@
         private System.Windows.Forms.TextBox txtFlagString;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.CheckBox cbxIgnoreCase;
+        private System.Windows.Forms.CheckBox chkContainThatWords;
+        private System.Windows.Forms.Button button5;
     }
 }

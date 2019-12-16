@@ -53,6 +53,10 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.txtReplaced = new System.Windows.Forms.TextBox();
             this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.txtReplaceStr = new System.Windows.Forms.TextBox();
+            this.txtReplacedStr02 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -174,7 +178,7 @@
             // 
             this.button5.Location = new System.Drawing.Point(6, 44);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(339, 23);
+            this.button5.Size = new System.Drawing.Size(300, 23);
             this.button5.TabIndex = 13;
             this.button5.Text = "Undo,将Oracle的sql转换为Sqlserver的sql";
             this.button5.UseVisualStyleBackColor = true;
@@ -184,7 +188,7 @@
             // 
             this.button6.Location = new System.Drawing.Point(6, 12);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(339, 23);
+            this.button6.Size = new System.Drawing.Size(300, 23);
             this.button6.TabIndex = 14;
             this.button6.Text = "Uncoplete，通过excel数据生成insertSql语句";
             this.button6.UseVisualStyleBackColor = true;
@@ -202,7 +206,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(351, 38);
+            this.button8.Location = new System.Drawing.Point(351, 94);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(339, 35);
             this.button8.TabIndex = 16;
@@ -212,7 +216,7 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(351, 126);
+            this.button9.Location = new System.Drawing.Point(907, 20);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(173, 23);
             this.button9.TabIndex = 17;
@@ -222,7 +226,7 @@
             // 
             // txtAppend
             // 
-            this.txtAppend.Location = new System.Drawing.Point(537, 127);
+            this.txtAppend.Location = new System.Drawing.Point(1093, 21);
             this.txtAppend.Name = "txtAppend";
             this.txtAppend.Size = new System.Drawing.Size(100, 25);
             this.txtAppend.TabIndex = 18;
@@ -230,7 +234,7 @@
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(351, 155);
+            this.button10.Location = new System.Drawing.Point(907, 49);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(173, 23);
             this.button10.TabIndex = 19;
@@ -240,7 +244,7 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(656, 129);
+            this.button11.Location = new System.Drawing.Point(1212, 23);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(173, 23);
             this.button11.TabIndex = 20;
@@ -251,7 +255,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(351, 89);
+            this.label5.Location = new System.Drawing.Point(351, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 15);
             this.label5.TabIndex = 21;
@@ -259,7 +263,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(379, 86);
+            this.textBox3.Location = new System.Drawing.Point(379, 142);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(282, 25);
             this.textBox3.TabIndex = 22;
@@ -267,7 +271,7 @@
             // 
             // txtReplaced
             // 
-            this.txtReplaced.Location = new System.Drawing.Point(754, 86);
+            this.txtReplaced.Location = new System.Drawing.Point(754, 142);
             this.txtReplaced.Name = "txtReplaced";
             this.txtReplaced.Size = new System.Drawing.Size(100, 25);
             this.txtReplaced.TabIndex = 24;
@@ -275,7 +279,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(667, 79);
+            this.button12.Location = new System.Drawing.Point(667, 135);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 38);
             this.button12.TabIndex = 25;
@@ -283,11 +287,49 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(667, 44);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 38);
+            this.button13.TabIndex = 29;
+            this.button13.Text = "替换为";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // txtReplaceStr
+            // 
+            this.txtReplaceStr.Location = new System.Drawing.Point(754, 51);
+            this.txtReplaceStr.Name = "txtReplaceStr";
+            this.txtReplaceStr.Size = new System.Drawing.Size(100, 25);
+            this.txtReplaceStr.TabIndex = 28;
+            // 
+            // txtReplacedStr02
+            // 
+            this.txtReplacedStr02.Location = new System.Drawing.Point(379, 51);
+            this.txtReplacedStr02.Name = "txtReplacedStr02";
+            this.txtReplacedStr02.Size = new System.Drawing.Size(282, 25);
+            this.txtReplacedStr02.TabIndex = 27;
+            this.txtReplacedStr02.Text = " and (\"ROW_VERSIONU\" =  \'System.Byte[]\' )";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(351, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(22, 15);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "将";
+            // 
             // FrmReplaceOracleSql
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1410, 731);
+            this.Controls.Add(this.button13);
+            this.Controls.Add(this.txtReplaceStr);
+            this.Controls.Add(this.txtReplacedStr02);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.txtReplaced);
             this.Controls.Add(this.textBox3);
@@ -347,5 +389,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox txtReplaced;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.TextBox txtReplaceStr;
+        private System.Windows.Forms.TextBox txtReplacedStr02;
+        private System.Windows.Forms.Label label6;
     }
 }
