@@ -43,7 +43,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.txtAppend = new System.Windows.Forms.TextBox();
@@ -194,19 +193,9 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(351, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(239, 31);
-            this.button7.TabIndex = 15;
-            this.button7.Text = "将“””号替换为空";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(351, 94);
+            this.button8.Location = new System.Drawing.Point(351, 78);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(339, 35);
             this.button8.TabIndex = 16;
@@ -255,7 +244,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(351, 145);
+            this.label5.Location = new System.Drawing.Point(351, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 15);
             this.label5.TabIndex = 21;
@@ -263,7 +252,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(379, 142);
+            this.textBox3.Location = new System.Drawing.Point(379, 126);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(282, 25);
             this.textBox3.TabIndex = 22;
@@ -271,7 +260,7 @@
             // 
             // txtReplaced
             // 
-            this.txtReplaced.Location = new System.Drawing.Point(754, 142);
+            this.txtReplaced.Location = new System.Drawing.Point(754, 126);
             this.txtReplaced.Name = "txtReplaced";
             this.txtReplaced.Size = new System.Drawing.Size(100, 25);
             this.txtReplaced.TabIndex = 24;
@@ -279,7 +268,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(667, 135);
+            this.button12.Location = new System.Drawing.Point(667, 119);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 38);
             this.button12.TabIndex = 25;
@@ -289,7 +278,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(667, 44);
+            this.button13.Location = new System.Drawing.Point(667, 28);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(75, 38);
             this.button13.TabIndex = 29;
@@ -299,14 +288,14 @@
             // 
             // txtReplaceStr
             // 
-            this.txtReplaceStr.Location = new System.Drawing.Point(754, 51);
+            this.txtReplaceStr.Location = new System.Drawing.Point(754, 35);
             this.txtReplaceStr.Name = "txtReplaceStr";
             this.txtReplaceStr.Size = new System.Drawing.Size(100, 25);
             this.txtReplaceStr.TabIndex = 28;
             // 
             // txtReplacedStr02
             // 
-            this.txtReplacedStr02.Location = new System.Drawing.Point(379, 51);
+            this.txtReplacedStr02.Location = new System.Drawing.Point(379, 35);
             this.txtReplacedStr02.Name = "txtReplacedStr02";
             this.txtReplacedStr02.Size = new System.Drawing.Size(282, 25);
             this.txtReplacedStr02.TabIndex = 27;
@@ -315,7 +304,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(351, 54);
+            this.label6.Location = new System.Drawing.Point(351, 38);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(22, 15);
             this.label6.TabIndex = 26;
@@ -339,7 +328,6 @@
             this.Controls.Add(this.txtAppend);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -379,7 +367,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox txtAppend;

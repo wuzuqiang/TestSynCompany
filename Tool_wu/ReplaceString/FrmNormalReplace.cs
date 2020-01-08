@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,7 +22,7 @@ namespace ReplaceString
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(cbxIgnoreCase.Checked)
+            if (cbxIgnoreCase.Checked)
                 richInput.Text = richInput.Text.ToLower().Replace(textBox1.Text.ToLower(), textBox2.Text.ToLower());
             else
                 richInput.Text = richInput.Text.Replace(textBox1.Text, textBox2.Text);
@@ -38,14 +39,14 @@ namespace ReplaceString
             //将每行中某字符前的字符都删除
             string input = richInput.Text;
             StringBuilder sbOutput = new StringBuilder();
-            foreach(string str in input.Split('\n'))
+            foreach (string str in input.Split('\n'))
             {
                 //sbOutput.AppendLine((new Regex(@".+"+txtFlagString.Text+"").Replace(str, "")));
                 //如果内容中包含*号等转义字符，上面就会出错了。
                 string strTemp = txtFlagString.Text;
                 foreach (string strSplit in strNeedTransferInReg.Split(','))
                 {
-                    if(!string.IsNullOrEmpty(strSplit))
+                    if (!string.IsNullOrEmpty(strSplit))
                     {
                         strTemp = strTemp.Replace(strSplit.Trim(), $"\\{strSplit.Trim()}");
                     }
@@ -117,6 +118,53 @@ namespace ReplaceString
             }
             richInput.Text = sbOutput.ToString();
             //MessageBox.Show("吴祖强正在开发，敬请期待！");
+        }
+        
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //raw转guid
+            //new guid(byte[] id);
+            var guid_Val = new Guid(HexStringToBytes(richInput.Text, Encoding.Unicode));
+            richInput.Text = guid_Val.ToString();
+
+            //MessageBox.Show("吴祖强在加油中！！");
+            return;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var temp2 = byte.Parse("1b", NumberStyles.HexNumber); 
+            //guid转raw
+            var temp = (new Guid(richInput.Text)).ToByteArray();
+            richInput.Text = BitConverter.ToString(temp).Replace("-","");
+        }
+
+        //3、将16进制字符串转为字符串
+        private byte[] HexStringToBytes(string hs, Encoding encode)
+        {
+            string strTemp = "";
+            byte[] b = new byte[hs.Length / 2];
+            for (int i = 0; i < hs.Length / 2; i++)
+            {
+                strTemp = hs.Substring(i * 2, 2);
+                b[i] = Convert.ToByte(strTemp, 16);
+            }
+            //按照指定编码将字节数组变为字符串
+            return b;
+        }
+
+        //4、将byte[]转为16进制字符串
+        public static string byteToHexStr(byte[] bytes)
+        {
+            string returnStr = "";
+            if (bytes != null)
+            {
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    returnStr += bytes[i].ToString("X2");
+                }
+            }
+            return returnStr;
         }
     }
 }

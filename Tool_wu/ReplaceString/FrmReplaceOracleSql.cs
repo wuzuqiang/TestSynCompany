@@ -249,7 +249,7 @@ namespace ReplaceString
         {
             //将'2019/11/18 17:17:00'这样的日期类型 替换为 txtReplaced内容
             string strTemp = richInput.Text;
-            strTemp = (new Regex(@"'\d{4}/\d{2}/\d{1,2} \d{2}:\d{2}:\d{2}'")).Replace(strTemp,"SYSDATE");
+            strTemp = (new Regex(@"'\d{4}/\d{1,2}/\d{1,2} \d{1,2}:\d{2}:\d{2}'")).Replace(strTemp,"SYSDATE");
             richInput.Text = strTemp;
         }
 
