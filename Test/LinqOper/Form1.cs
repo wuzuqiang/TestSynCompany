@@ -32,6 +32,8 @@ namespace LinqOper
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            var b00 = TypeConverterUtil.GetParameterValueBy<Boolean>("true", false);
             Student student = new Student("zhangsan");
             Student student1 = new Student("lisi");
             Student student2 = new Student("lisi001");
