@@ -62,6 +62,7 @@
     <Compile Include="RegUtils.cs" />
     <Compile Include="StringUtils.cs" />
     <Compile Include="TestMultiLayerClass.cs" />
+    <Compile Include="TypeConverterUtil.cs" />
     <Compile Include="XMLHelper.cs" />
   </ItemGroup>
   <ItemGroup>
