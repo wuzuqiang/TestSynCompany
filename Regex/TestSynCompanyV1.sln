@@ -133,6 +133,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealImage", "..\Tool_wu\Dea
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tool_wu", "Tool_wu", "{4DCA7E4A-A2B3-4C46-B12F-D16042527006}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LEDProject", "..\LEDProject\LEDProject.csproj", "{8822FAF1-7B6E-4258-B671-65C686DED406}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -791,6 +793,18 @@ Global
 		{D3CBF3E1-117D-43CC-99C8-7002F8414B15}.Release|x64.Build.0 = Release|Any CPU
 		{D3CBF3E1-117D-43CC-99C8-7002F8414B15}.Release|x86.ActiveCfg = Release|Any CPU
 		{D3CBF3E1-117D-43CC-99C8-7002F8414B15}.Release|x86.Build.0 = Release|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Debug|x64.Build.0 = Debug|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Debug|x86.Build.0 = Debug|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Release|x64.ActiveCfg = Release|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Release|x64.Build.0 = Release|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Release|x86.ActiveCfg = Release|Any CPU
+		{8822FAF1-7B6E-4258-B671-65C686DED406}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
