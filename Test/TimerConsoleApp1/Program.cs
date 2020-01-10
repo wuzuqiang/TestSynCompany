@@ -10,8 +10,8 @@ namespace TimerConsoleApp1
     {
         static void Main(string[] args)
         {
-            var a = (new Class1());
-            a.Init();
+            var a = (new SimuActivityInThok());
+            a.Init(1000);
             a.print(DateTime.Now);
             Console.ReadLine();
         }

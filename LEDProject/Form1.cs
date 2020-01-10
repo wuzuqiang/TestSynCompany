@@ -17,15 +17,15 @@ namespace LEDProject
         {
             InitializeComponent();
         }
-        public virtual LedCardType LedCardType { get { return LedCardType.EQ2013; } }
-        public LEDUtil LEDUtil = new LEDUtil();
 
         private void Form1_Load(object sender, EventArgs e)
         {
         }
 
+        public virtual LedCardType LedCardType { get { return LedCardType.EQ2013; } }
+        public LEDUtil LEDUtil = new LEDUtil();
         private void Set_LED()
-        {
+        { 
             IList<LEDData> ledDataList = new List<LEDData>();
             for (int i = 0; i < 1; i++)
             {
@@ -53,8 +53,7 @@ namespace LEDProject
             if (ledDataList.Count() > 0)
             {
                 LEDUtil.Sending(ledDataList.ToArray());
-            }
-        }
+            }}
 
         private void button1_Click(object sender, EventArgs e)
         {

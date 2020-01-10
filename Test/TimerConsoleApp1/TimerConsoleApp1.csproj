@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +44,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LED\Class1.cs" />
+    <Compile Include="LED\EQ2008\DataStruct.cs" />
+    <Compile Include="LED\EQ2008\EQ2008.cs" />
+    <Compile Include="LED\EQ2008\EQ2008Collection.cs" />
+    <Compile Include="LED\EQ2013\LedDll.cs" />
+    <Compile Include="LED\LEDData.cs" />
+    <Compile Include="LED\LedHelper.cs" />
+    <Compile Include="LED\LEDHelper2.cs" />
+    <Compile Include="LED\LEDStyle.cs" />
+    <Compile Include="LED\LEDUtil.cs" />
+    <Compile Include="LED\MethodType.cs" />
+    <Compile Include="SimuActivityInThok.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="LED\EQ2008\Dll\EQ2008_Dll_Set.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LED\EQ2008\Dll\EQ2008_Dll.dll" />
+    <Content Include="LED\EQ2008\Dll\Readme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
