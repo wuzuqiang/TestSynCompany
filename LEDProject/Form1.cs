@@ -20,6 +20,34 @@ namespace LEDProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Init(1000);
+        }
+        private static readonly System.Timers.Timer Timer = new System.Timers.Timer(); //初始化。
+        private static DateTime dt = new DateTime(); //固定时间。
+        private static int num = 1;
+        public virtual double MaxInterval { get; protected set; }
+        public virtual double MinInterval { get; protected set; }
+        public virtual double Interval { get; protected set; }
+        public void Init(int iInterval)
+        {
+            dt = DateTime.Now;
+            Excute();
+            SetInterval(iInterval);
+            Timer.Elapsed += new System.Timers.ElapsedEventHandler((s, e) => Excute()); //达到间隔时间发生
+        }
+        public void Excute()
+        {
+            Set_LED();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="iMilSecond"></param>
+        public void SetInterval(int iMilliSecond)
+        {
+            Timer.Stop();
+            Timer.Interval = iMilliSecond;
+            Timer.Start();
         }
 
         public virtual LedCardType LedCardType { get { return LedCardType.EQ2013; } }
@@ -32,7 +60,7 @@ namespace LEDProject
                 LEDData ledData = new LEDData();
                 ledData.CardNum = 1;
                 ledData.ColorFont = false ? EQ2008.EQ2008.GREEN : EQ2008.EQ2008.RED;
-                ledData.Content = "test" + textBox1.Text.ToString();
+                ledData.Content = "test" + num++.ToString().PadLeft(6, '0');
                 ledData.FontName = "@宋体";
                 ledData.SingleText.FontInfo.iFontSize = 9;
                 //if (LedCardType == LedCardType.EQ2013)
