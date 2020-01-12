@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EQ2008_DataStruct.cs" />
     <Compile Include="LED\Class1.cs" />
     <Compile Include="LED\EQ2008\DataStruct.cs" />
     <Compile Include="LED\EQ2008\EQ2008.cs" />

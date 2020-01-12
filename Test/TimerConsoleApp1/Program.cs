@@ -8,6 +8,7 @@ namespace TimerConsoleApp1
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
             var a = (new SimuActivityInThok());
