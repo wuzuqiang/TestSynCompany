@@ -24,10 +24,11 @@ namespace Client_ConsoleApp1
         /// <returns>返回值</returns>
         public string callWebService(string methodName, Dictionary<string, string> param)
         {
-
             ///获取请求数据
-            byte[] data = getRequestData(methodName, param);
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(mUrl);
+            byte[] data = getRequestData(methodName, param);  //System.Net.WebException:“远程服务器返回错误: (500) 内部服务器错误。”
+            //byte[] data = getRequestDataALL(methodName, param); //调用服务端的服务名称
+            //byte[] data = getBaseRequestData(methodName, param); //ERROR：System.Net.WebException:“远程服务器返回错误: (400) 错误的请求。”
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(mUrl);
             request.Method = "POST";
             request.ContentType = "text/xml; charset=utf-8";
             string mSoapAction = "http://tempuri.org/" + methodName;
@@ -56,6 +57,7 @@ namespace Client_ConsoleApp1
         /// <returns></returns>
         public byte[] getRequestData(string methodName, Dictionary<string, string> param)
         {
+            //http://localhost:9090/WebService1.asmx?op=
             #region 以下是 SOAP 1.2 请求和响应示例。所显示的占位符需替换为实际值。HelloWorld()
             /*
 
@@ -88,7 +90,7 @@ Content-Length: length
 </soap:Envelope>
              */
             #endregion
-            #region http://localhost:9090/WebService1.asmx?op=SayHello(string name)
+            #region 以下是 SOAP 1.2 请求和响应示例。所显示的占位符需替换为实际值。SayHello(string name)
             /*
 SOAP 1.1
 以下是 SOAP 1.2 请求和响应示例。所显示的占位符需替换为实际值。
@@ -121,6 +123,24 @@ Content-Length: length
 </soap:Envelope>
              */
             #endregion
+            #region 以下是 HTTP POST 请求和响应示例。所显示的占位符需替换为实际值。
+            /*
+             以下是 HTTP POST 请求和响应示例。所显示的占位符需替换为实际值。
+
+POST /WebService1.asmx/SayHello HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: length
+
+name=string
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length: length
+
+<?xml version="1.0" encoding="utf-8"?>
+<string xmlns="http://tempuri.org/">string</string>
+             */
+            #endregion
             StringBuilder requestData = new StringBuilder("<?xml version=\"1.0\" encoding=\"utf-8\"?>")
               .Append("<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">")
               .Append("  <soap:Body>")
@@ -140,13 +160,27 @@ Content-Length: length
             return data;
         }
 
-        /// <summary>
-        /// 获取数据(方法2) 兼容所有的(java soap 服务端和.net  soap 服务端)
-        /// </summary>
-        /// <param name="methodName">方法名称</param>
-        /// <param name="param">参数</param>
-        /// <returns></returns>
-        public byte[] getRequestDataALL(string methodName, Dictionary<string, string> param)
+
+        public byte[] getBaseRequestData(string methodName, Dictionary<string, string> param)
+        {
+            StringBuilder requestBuider = new StringBuilder();
+            string val = requestBuider.ToString();
+            byte[] data = Encoding.UTF8.GetBytes(val);
+            foreach (KeyValuePair<string, string> item in param)
+            {
+                requestBuider.Append(item.Key);
+                requestBuider.Append(item.Value);
+            }
+            return data;
+        }
+
+        /// <summary>
+        /// 获取数据(方法2) 兼容所有的(java soap 服务端和.net  soap 服务端)
+        /// </summary>
+        /// <param name="methodName">方法名称</param>
+        /// <param name="param">参数</param>
+        /// <returns></returns>
+        public byte[] getRequestDataALL(string methodName, Dictionary<string, string> param)
         {
             StringBuilder requestBuider = new StringBuilder();
             requestBuider.Append("<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:icc=\"http://pub.ccgb.so.itf.nc/ICCGBHAService\">");
