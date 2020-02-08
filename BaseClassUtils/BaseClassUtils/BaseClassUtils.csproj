@@ -64,10 +64,33 @@
     <Compile Include="TestMultiLayerClass.cs" />
     <Compile Include="TypeConverterUtil.cs" />
     <Compile Include="XMLHelper.cs" />
+    <Compile Include="xml_HNLY\MessagePackage.cs" />
+    <Compile Include="xml_HNLY\MessageSerialXml.cs" />
+    <Compile Include="xml_HNLY\XMLBody.cs" />
+    <Compile Include="xml_HNLY\XMLHead.cs" />
+    <Compile Include="xml_HNLY\XMLHelper.cs" />
+    <Compile Include="xml_HNLY\XMLPackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="xml_HNLY\卷包工单实际辅料消耗归集.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xml_HNLY\工单下达.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xml_HNLY\工单取消.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xml_HNLY\工单开始.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xml_HNLY\工单结束.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Msg>
+  <Head>
+    <InterfaceCode>HNZY_ESB_AYMES_JBSC_SJFLXHGJ</InterfaceCode>
+    <InterfaceDescription>卷包工单实际辅料消耗归集</InterfaceDescription>
+    <MsgID></MsgID>
+    <Source>AYJBSC</Source>
+    <MsgMark>HNZY_ESB_AYMES_JBSC</MsgMark>
+    <WsMethod>JBSC_SJFLXHGJ</WsMethod>
+    <Date>2018-07-12 10:10:00</Date>
+    <Cryp></Cryp>
+    <User></User>
+    <StateCode>600</StateCode>
+    <StateDesription>正常发送</StateDesription>
+    <DataDefine>
+      <Table TableName="T_JBSC_SJFLXHGJ_M">
+        <FieldItem FieldName="WO_NO" Caption="工单号" FieldType="CHAR" FieldLength="30" Remark="必传" isPrimaryKey="True" />
+		<FieldItem FieldName="PRODUCTION_DATE" Caption="生产日期" FieldType="DATE" FieldLength="25" Remark="必传(格式:yyyy-MM-dd)" isPrimaryKey="False" />
+		<FieldItem FieldName="SHIFT_CD" Caption="班次" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+		<FieldItem FieldName="TEAM_CD" Caption="班组" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="MACHINE_CD" Caption="机台" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="CG_MAT_CD" Caption="卷烟牌号" FieldType="CHAR" FieldLength="20" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="MAT_CD" Caption="物料编码" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="True" />
+        <FieldItem FieldName="MAT_NAME" Caption="物料名称" FieldType="CHAR" FieldLength="60" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="SUPPLIER_CD" Caption="供应商" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="True" />
+        <FieldItem FieldName="STATISTICS_AMOUNT" Caption="统计数量" FieldType="NUMBER" FieldLength="10.4" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="STD_STATISTICS_AMOUNT" Caption="标准统计数量" FieldType="NUMBER" FieldLength="10.4" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="STATISTICS_UNIT" Caption="统计单位CD" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+		<FieldItem FieldName="LOGISTICS_AMOUNT" Caption="物流数量" FieldType="NUMBER" FieldLength="10.4" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="LOGISTICS_UNIT" Caption="物流单位CD" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+      </Table>
+    </DataDefine>
+  </Head>
+  <Data>
+    <DataTable TableName="T_JBSC_SJFLXHGJ_M">
+      <Row Index="0">
+        <Header Action="Unchange">
+          <DataItem FieldName="WO_NO" FieldValue="GB150106HJYYDH06_6YJC1" />
+          <DataItem FieldName="PRODUCTION_DATE" FieldValue="2018-07-12" />
+          <DataItem FieldName="SHIFT_CD" FieldValue="69010281692190001" />
+          <DataItem FieldName="TEAM_CD" FieldValue="1" />
+          <DataItem FieldName="MACHINE_CD" FieldValue="6" />
+          <DataItem FieldName="CG_MAT_CD" FieldValue="1" />
+          <DataItem FieldName="MAT_CD" FieldValue="1" />
+          <DataItem FieldName="MAT_NAME" FieldValue="YJC1" />
+          <DataItem FieldName="SUPPLIER_CD" FieldValue="0" />
+		  <DataItem FieldName="STATISTICS_AMOUNT" FieldValue="6" />
+          <DataItem FieldName="STD_STATISTICS_AMOUNT" FieldValue="1" />
+          <DataItem FieldName="STATISTICS_UNIT" FieldValue="1" />
+          <DataItem FieldName="LOGISTICS_AMOUNT" FieldValue="125" />
+          <DataItem FieldName="LOGISTICS_UNIT" FieldValue="0" />
+        </Header>
+      </Row>
+    </DataTable>
+  </Data>
+</Msg>

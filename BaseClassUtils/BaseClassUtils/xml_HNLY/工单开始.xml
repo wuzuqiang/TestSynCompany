@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Msg>
+  <Head>
+    <InterfaceCode>HNZY_ESB_AYMES_JBSC_SCGL_GDKS</InterfaceCode>
+    <InterfaceDescription>工单开始</InterfaceDescription>
+    <MsgID>63B3651E-3872-42A1-ADB4-42588B52F5B5</MsgID>
+    <Source>AYJBSC</Source>
+    <MsgMark>HNZY_ESB_AYMES_JBSC</MsgMark>
+    <WsMethod>JBSC_SCGL_GDKS</WsMethod>
+    <Date>2019-12-27 08:31:00.67</Date>
+    <Cryp>
+    </Cryp>
+    <User>MES</User>
+    <StateCode>600</StateCode>
+    <StateDesription>正常发送</StateDesription>
+    <DataDefine>
+      <!-- 描述表结构：字段名、字段描述、字段类型、字段长度、备注、是否主键 -->
+      <Table TableName="T_JBSC_SCGL_GDKS_M">
+        <FieldItem FieldName="WO_NO" Caption="工单号" FieldType="CHAR" FieldLength="30" Remark="必传(外键，复合主键)" isPrimaryKey="True" />
+        <FieldItem FieldName="PRODUCTION_DATE" Caption="生产日期" FieldType="DATE" FieldLength="19" Remark="必传(格式:yyyy-MM-dd)" isPrimaryKey="False" />
+        <FieldItem FieldName="SHIFT_CD" Caption="班次" FieldType="CHAR" FieldLength="25" Remark="必传(1:夜,2:白,3:中)" isPrimaryKey="False" />
+        <FieldItem FieldName="TEAM_CD" Caption="班组" FieldType="CHAR" FieldLength="25" Remark="必传(1:甲,2:乙,3:丙,4:丁)" isPrimaryKey="False" />
+        <FieldItem FieldName="MACHINE_CD" Caption="机台" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="MAT_CD" Caption="牌号" FieldType="CHAR" FieldLength="25" Remark="必传" isPrimaryKey="False" />
+        <FieldItem FieldName="WO_START_DATETIME" Caption="工单开始时间" FieldType="DATE" FieldLength="19" Remark="必传(格式:yyyy-MM-dd hh24:mi:ss)" isPrimaryKey="False" />
+      </Table>
+    </DataDefine>
+  </Head>
+  <Data>
+    <DataTable TableName="T_JBSC_SCGL_GDKS_M">
+      <Row Index="0">
+        <Header Action="Unchange">
+          <DataItem FieldName="MACHINE_CD" FieldValue="200200014828" />
+          <DataItem FieldName="MAT_CD" FieldValue="69010281617180001" />
+          <DataItem FieldName="PRODUCTION_DATE" FieldValue="2019-12-27" />
+          <DataItem FieldName="WO_NO" FieldValue="LY20191227HQQMG###01BZ#011" />
+          <DataItem FieldName="TEAM_CD" FieldValue="2" />
+          <DataItem FieldName="SHIFT_CD" FieldValue="1" />
+          <DataItem FieldName="WO_START_DATETIME" FieldValue="2019-12-27 08:30:59" />
+        </Header>
+      </Row>
+    </DataTable>
+  </Data>
+</Msg>
