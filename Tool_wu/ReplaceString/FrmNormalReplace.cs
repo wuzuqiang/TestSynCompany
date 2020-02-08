@@ -166,5 +166,12 @@ namespace ReplaceString
             }
             return returnStr;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //反转义双引号、右下划线
+            richInput.Text = (new Regex("\"")).Replace(richInput.Text, "\\\"");
+            richInput.Text = (new Regex("\\\\")).Replace(richInput.Text, "\\\\");
+        }
     }
 }

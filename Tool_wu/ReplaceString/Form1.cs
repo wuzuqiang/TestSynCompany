@@ -214,6 +214,23 @@ namespace ReplaceString
             }
             richResult.Text = sb.ToString();
         }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            //只压缩行
+            richResult.Text = (new Regex("\\n")).Replace(richInput.Text, "");
+        }
+
+        int clickNum = 1;
+        private void richInput_Click(object sender, EventArgs e)
+        {
+            int index = richInput.GetFirstCharIndexOfCurrentLine();//得到当前行第一个字符的索引
+            int line = richInput.GetLineFromCharIndex(index) + 1;//得到当前行的行号,从0开始，习惯是从1开始，所以+1.
+            int col = richInput.SelectionStart - index + 1;//.SelectionStart得到光标所在位置的索引 减去 当前行第一个字符的索引 = 光标所在的列数（从0开始)
+            txtCurrentIndex.Text = line + "," + col;
+            return;
+            //txtCurrentIndex.Text = (1 + Convert.ToInt32(txtCurrentIndex.Text)).ToString();
+        }
     }
     public static class CheckCodeHelper
     {

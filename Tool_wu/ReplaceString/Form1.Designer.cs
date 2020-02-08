@@ -51,6 +51,9 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCurrentIndex = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -71,6 +74,7 @@
             this.richInput.Size = new System.Drawing.Size(1414, 177);
             this.richInput.TabIndex = 1;
             this.richInput.Text = "";
+            this.richInput.Click += new System.EventHandler(this.richInput_Click);
             // 
             // richResult
             // 
@@ -79,7 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richResult.Location = new System.Drawing.Point(29, 451);
             this.richResult.Name = "richResult";
-            this.richResult.Size = new System.Drawing.Size(1414, 257);
+            this.richResult.Size = new System.Drawing.Size(1414, 242);
             this.richResult.TabIndex = 2;
             this.richResult.Text = "";
             // 
@@ -273,11 +277,41 @@
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(156, 107);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(93, 23);
+            this.button10.TabIndex = 24;
+            this.button10.Text = "只压缩行";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click_1);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1058, 713);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 15);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "当前行列：";
+            // 
+            // txtCurrentIndex
+            // 
+            this.txtCurrentIndex.Location = new System.Drawing.Point(1146, 710);
+            this.txtCurrentIndex.Name = "txtCurrentIndex";
+            this.txtCurrentIndex.Size = new System.Drawing.Size(100, 25);
+            this.txtCurrentIndex.TabIndex = 26;
+            this.txtCurrentIndex.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1491, 740);
+            this.Controls.Add(this.txtCurrentIndex);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button9);
@@ -333,6 +367,9 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCurrentIndex;
     }
 }
 
