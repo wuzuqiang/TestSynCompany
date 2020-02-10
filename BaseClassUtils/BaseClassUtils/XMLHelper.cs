@@ -16,6 +16,8 @@ namespace BaseClassUtils
     {
         public bool isUseConsoleProject = true;
         public static string filePath = "";
+
+        #region 使用linq操作xml数据
         public string GetElementValue(string eleKey)
         {
             string eleValue = "";
@@ -27,7 +29,6 @@ namespace BaseClassUtils
             }
             return eleValue;
         }
-
         //直接找到元素为eleKey的这个结点,然后遍历读取所有的结果.
         public void readAll(string eleKey)
         {
@@ -53,6 +54,7 @@ namespace BaseClassUtils
                 showAllData<BookModel>(model);
             }
         }
+        #endregion
 
         public void showAllData<T>(T model)
         {
@@ -95,7 +97,7 @@ namespace BaseClassUtils
                                       //获得属性的类型,进行判断然后进行以后的操作,例如判断获得的属性是整数
                 if (!(value1.GetType() == typeof(int) || value1.GetType() == typeof(string)))
                 {
-                    //如果得到value1的T类型呢。
+                    //如何得到value1的T类型呢？
                     //showData(value1.GetType().Assembly.CreateInstance(value1.GetType().ToString()));
                 }
                 Console.Write(name + ":" + value1 + "\t");
