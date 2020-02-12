@@ -15,13 +15,14 @@ namespace HNLY
     {
         static void Main(string[] args)
         {
-            Func0();
+            //Func0();
 
-            //serialXml();
+            serialXml();
             //deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
             //deSerialXmlByXmlString();
 
-            testHNLY_mess();
+            //testHNLY_mess();
+            //testBaseOperXml();
             Console.ReadLine();
         }
         public static void Func0()
@@ -34,8 +35,9 @@ namespace HNLY
         public static void serialXml()
         {
             XMLUtils.filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Test1.xml");
-            Person p1 = new Person("张三", "男", 20);
-            (new XMLUtils()).serialXml<Person>(p1);
+            Person p1 = new Person();
+            p1.Name = "test";
+            Console.WriteLine("最终序列化为：" + (new XMLUtils()).serialXml<Person>(p1));
         }
 
         public static void deSerialXmlByXmlFile()
@@ -70,6 +72,12 @@ namespace HNLY
         {
             XMLUtils.filePath = "E:\\THOK\\MESS对接\\卷包工单及消耗归集xml\\工单下达.xml";
             (new XMLUtils()).deSerialXmlByXmlFile<MessageSerialXml>();
+        }
+
+        static void testBaseOperXml()
+        {
+            XMLUtils.filePath = "E:\\THOK\\MESS对接\\卷包工单及消耗归集xml\\testBaseOperXml.xml";
+            XMLUtils.Main();
         }
     }
 }

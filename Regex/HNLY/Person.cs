@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace Serializable
 {
     [Serializable] //不可少！ 
-    [XmlRoot("Test")]
+    [XmlRoot("Person")]
     public class Person
     {
         private String name;
@@ -24,8 +24,8 @@ namespace Serializable
             sex = s;
             age = a;
         }
-
-        [XmlElement("Ele01")]
+        
+        [XmlElement("Name_test")]
         public String Name
         {
             get
