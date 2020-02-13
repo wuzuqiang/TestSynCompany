@@ -173,5 +173,12 @@ namespace ReplaceString
             richInput.Text = (new Regex("\"")).Replace(richInput.Text, "\\\"");
             richInput.Text = (new Regex("\\\\")).Replace(richInput.Text, "\\\\");
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //将六个空格替换为换行
+            //中文全角空格为\u3000，英文半角空格为\u0020，
+            richInput.Text = (new Regex("[\u0020\u3000]{6}")).Replace(richInput.Text, "\n");
+        }
     }
 }

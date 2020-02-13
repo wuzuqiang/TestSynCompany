@@ -45,7 +45,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.txtAppend = new System.Windows.Forms.TextBox();
+            this.txtAppendToBefore = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.txtReplaceStr = new System.Windows.Forms.TextBox();
             this.txtReplacedStr02 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtAppendToEnd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -213,13 +214,13 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // txtAppend
+            // txtAppendToBefore
             // 
-            this.txtAppend.Location = new System.Drawing.Point(1093, 21);
-            this.txtAppend.Name = "txtAppend";
-            this.txtAppend.Size = new System.Drawing.Size(100, 25);
-            this.txtAppend.TabIndex = 18;
-            this.txtAppend.Text = "--";
+            this.txtAppendToBefore.Location = new System.Drawing.Point(1093, 28);
+            this.txtAppendToBefore.Name = "txtAppendToBefore";
+            this.txtAppendToBefore.Size = new System.Drawing.Size(100, 25);
+            this.txtAppendToBefore.TabIndex = 18;
+            this.txtAppendToBefore.Text = "--";
             // 
             // button10
             // 
@@ -233,9 +234,9 @@
             // 
             // button11
             // 
-            this.button11.Location = new System.Drawing.Point(1212, 23);
+            this.button11.Location = new System.Drawing.Point(907, 81);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(173, 23);
+            this.button11.Size = new System.Drawing.Size(173, 35);
             this.button11.TabIndex = 20;
             this.button11.Text = "新增到每行最尾端";
             this.button11.UseVisualStyleBackColor = true;
@@ -310,11 +311,20 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "将";
             // 
+            // txtAppendToEnd
+            // 
+            this.txtAppendToEnd.Location = new System.Drawing.Point(1093, 88);
+            this.txtAppendToEnd.Name = "txtAppendToEnd";
+            this.txtAppendToEnd.Size = new System.Drawing.Size(100, 25);
+            this.txtAppendToEnd.TabIndex = 30;
+            this.txtAppendToEnd.Text = "--";
+            // 
             // FrmReplaceOracleSql
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1410, 731);
+            this.Controls.Add(this.txtAppendToEnd);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.txtReplaceStr);
             this.Controls.Add(this.txtReplacedStr02);
@@ -325,7 +335,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.txtAppend);
+            this.Controls.Add(this.txtAppendToBefore);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
@@ -369,7 +379,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.TextBox txtAppend;
+        private System.Windows.Forms.TextBox txtAppendToBefore;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label5;
@@ -380,5 +390,6 @@
         private System.Windows.Forms.TextBox txtReplaceStr;
         private System.Windows.Forms.TextBox txtReplacedStr02;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtAppendToEnd;
     }
 }

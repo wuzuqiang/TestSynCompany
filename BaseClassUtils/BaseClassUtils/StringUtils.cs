@@ -9,6 +9,16 @@ namespace BaseClassUtils
 {
     public static class StringUtils
     {
+        public static List<string> GetSplitLineWithoutEmpty(string input)
+        {
+            List<string> list = new List<string>();
+            foreach(string str in input.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                list.Add(str);
+            }
+            return list;
+        }
+
         public static List<string> Get(string[] array, string strContained)
         {
             List<string> listMatched = new List<string>();

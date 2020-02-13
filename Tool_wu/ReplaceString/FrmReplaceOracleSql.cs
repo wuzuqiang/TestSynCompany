@@ -205,7 +205,7 @@ namespace ReplaceString
             StringBuilder sb = new StringBuilder();
             foreach (string line in list)
             {
-                sb.Append(txtAppend.Text + line + "\n");
+                sb.Append(txtAppendToBefore.Text + line + "\n");
             }
             richInput.Text = sb.ToString();
 
@@ -219,9 +219,9 @@ namespace ReplaceString
             StringBuilder sb = new StringBuilder();
             foreach (string line in list)
             {   
-                if(line.Length > txtAppend.Text.Length && line.Substring(0, txtAppend.Text.Length).Contains(txtAppend.Text))
+                if(line.Length > txtAppendToBefore.Text.Length && line.Substring(0, txtAppendToBefore.Text.Length).Contains(txtAppendToBefore.Text))
                 {
-                    sb.Append(line.Substring(txtAppend.Text.Length) + "\n");
+                    sb.Append(line.Substring(txtAppendToBefore.Text.Length) + "\n");
 
                 }
                 else
@@ -236,13 +236,11 @@ namespace ReplaceString
         {
             //新增到每行最尾端
             //获取每行内容组成的List
-            List<string> list = richInput.Text.Split('\n').ToList();
+            List<string> list = StringUtils.GetSplitLineWithoutEmpty(richInput.Text);
             StringBuilder sb = new StringBuilder();
             foreach (string line in list)
             {
-                if (string.IsNullOrEmpty(line))
-                    continue;
-                sb.AppendLine(line + txtAppend.Text.ToString().Trim());
+                sb.AppendLine(line + txtAppendToEnd.Text.ToString().Trim());
             }
             richInput.Text = sb.ToString();
         }
