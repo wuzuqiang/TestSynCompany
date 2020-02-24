@@ -32,7 +32,7 @@ namespace ClassLibrary1
             //}
             foreach (FileInfo info in (new DirUtil()).getAllFile(txtFolder.Text, txtFileNameNeedContain.Text))
             {
-                if((new StringUtils()).isMatch(Path.GetExtension(info.FullName), ".cs|.js"))
+                if(StringUtils.isMatch(Path.GetExtension(info.FullName), ".cs|.js"))
                     txtFiles.Text += info.FullName + ";\n";
             }
             //foreach(DirectoryInfo info in (new DirUtil()).getAllDir(txtFolder.Text))

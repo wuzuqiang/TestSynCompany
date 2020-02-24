@@ -42,3 +42,5 @@ E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileI
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.exe
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.pdb
+E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\System.Windows.Interactivity.xml
