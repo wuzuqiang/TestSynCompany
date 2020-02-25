@@ -60,9 +60,9 @@
             // 
             this.btnOpenFile.Location = new System.Drawing.Point(651, 68);
             this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(137, 23);
+            this.btnOpenFile.Size = new System.Drawing.Size(351, 23);
             this.btnOpenFile.TabIndex = 2;
-            this.btnOpenFile.Text = "打开文件或目录";
+            this.btnOpenFile.Text = "打开文件(不存在则创建)或打开目录";
             this.btnOpenFile.UseVisualStyleBackColor = true;
             this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
