@@ -9,6 +9,13 @@ namespace BaseClassUtils
 {
     public static class StringUtils
     {
+        #region String.ToXXX()转换成某类数据
+        public static Int32 ToInt32(this string input)
+        {
+            return Convert.ToInt32(input);
+        }
+        #endregion
+
         public static List<string> GetSplitLineWithoutEmpty(string input)
         {
             List<string> list = new List<string>();
@@ -89,9 +96,9 @@ namespace BaseClassUtils
             return sbTemp.ToString();
         }
 
-        static string strNeedTransferInReg = "*, ., [, ], {, }, ^, $";
+        static string strNeedTransferInReg = "*, ., [, ], {, }, ^, $                                              ,<   ,>    ,?";
         static List<string> listNeedTransferInReg = new List<string>();
-        static string strCanTransferInReg = "-__0__-, __1__-, -__2__-, -__3__-, -__4__-,- __5__-, -__6__-,-__7__-";
+        static string strCanTransferInReg = "-__0__-, __1__-, -__2__-, -__3__-, -__4__-,- __5__-, -__6__-,-__7__-,-_8_-,-_9_-,-_10_-,";
         static List<string> listCanTransferInReg = new List<string>();
         /// <summary>
         /// 解密input中的特殊字符

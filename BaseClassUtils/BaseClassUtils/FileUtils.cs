@@ -12,19 +12,8 @@ namespace BaseClassUtils
 {
     public class FileUtils
     {
-        public static object ExcelEnum { get; private set; }
-
-        /// <summary>
-        /// 清空文件，并写入内容
-        /// </summary>
-        /// <param name="fileFullName"></param>
-        /// <param name="content"></param>
-        public void writeToFile(string fileFullName, string content)
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
-            File.WriteAllBytes(fileFullName, Encoding.UTF8.GetBytes(content));
-        }
-
+        
+        #region 文件的新建、打开、复制、移动
         public void copyAllFile(string[] fileFullNames)
         {
             foreach (string fileFullName in fileFullNames)
@@ -58,6 +47,85 @@ namespace BaseClassUtils
             System.Diagnostics.Process.Start(fileCopyDestPath);
         }
 
+        public static void OpenFileIfnotthencreat(string filePath)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            System.Diagnostics.Process.Start(filePath);
+        }
+        #endregion
+
+        public static Encoding GetFileEncoding(string filePath)
+        {
+            Encoding Result = null;
+            FileInfo info = new FileInfo(filePath);
+            FileStream fs = default(FileStream);
+            try
+            {
+                fs = info.OpenRead();
+                Encoding[] unicodeEncodings =
+                {
+                    Encoding.BigEndianUnicode,
+                    Encoding.Unicode,
+                    Encoding.UTF8,
+                    Encoding.UTF32,
+                    Encoding.UTF7,
+                    new UTF32Encoding(true,true)
+                };
+                for (int i = 0; Result == null && i < unicodeEncodings.Length; i++)
+                {
+                    fs.Position = 0;
+                    byte[] preamble = unicodeEncodings[i].GetPreamble();
+                    bool isEqual = true;
+                    for (int j = 0; isEqual && j < preamble.Length; j++)
+                    {
+                        isEqual = preamble[j] == fs.ReadByte();
+                    }
+                    if (isEqual)
+                        Result = unicodeEncodings[i];
+
+                }
+            }
+            catch (IOException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (fs != null)
+                {
+                    fs.Close();//包括了Dispose,并通过GC强行释放资源
+                }
+            }
+            if (object.ReferenceEquals(null, Result))
+            {
+                Result = Encoding.Default;
+            }
+            return Result;
+        }
+
+        #region 文件的读、写
+        public string ReadFile(string filePath)
+        {
+            string strContent = "";
+            using (FileStream fsRead = new FileStream(filePath, FileMode.OpenOrCreate))
+            {
+                int iFileLength = fsRead.Length.ToString().ToInt32();
+                byte[] byteFile = new byte[iFileLength];
+                fsRead.Read(byteFile, 0, iFileLength);
+                strContent = Encoding.UTF8.GetString(byteFile);
+            }
+            return strContent;
+        }
+        /// <summary>
+        /// 清空文件，并写入内容
+        /// </summary>
+        /// <param name="fileFullName"></param>
+        /// <param name="content"></param>
+        public void writeToFile(string fileFullName, string content)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
+            File.WriteAllBytes(fileFullName, Encoding.UTF8.GetBytes(content));
+        }
 
         /// <summary>
         /// 向文件中写入内容
@@ -69,12 +137,7 @@ namespace BaseClassUtils
             Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
             File.AppendAllLines(fileFullName, contents, Encoding.UTF8);
         }
+        #endregion
 
-        public static void OpenFileIfnotthencreat(string filePath)
-        {
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-            System.Diagnostics.Process.Start(filePath);
-        }
-        
     }
 }
