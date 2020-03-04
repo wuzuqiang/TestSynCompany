@@ -159,7 +159,7 @@ namespace ReplaceString
             #endregion
 
             string result = "";
-            var sheetNames = FileUtils.GetXlsSheetnames(filePath, out result);
+            var sheetNames = ExcelUtils.GetXlsSheetnames(filePath, out result);
             //DataSet ds = FileUtils.GetExcelDataSet(filePath);
             //string tableName = ds.Tables[0].Rows[2 - 1][1 - 1].ToString(), insertColumnList = "";
             //for (int i = 0; i < ds.Tables[0].Columns.Count; i++)

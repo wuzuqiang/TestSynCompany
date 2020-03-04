@@ -36,11 +36,11 @@ namespace ReplaceString
             DataSet ds = new DataSet();
             if(ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2003) == Path.GetExtension(txtFilePath.Text))
             {
-                ds = FileUtils.getXlsData(txtFilePath.Text, txtSheetnames.Text);
+                ds = ExcelUtils.getXlsData(txtFilePath.Text, txtSheetnames.Text);
             }
             else
             {
-                ds = FileUtils.getXlsxExcelData(txtFilePath.Text, txtSheetnames.Text);
+                ds = ExcelUtils.getXlsxExcelData(txtFilePath.Text, txtSheetnames.Text);
             }
 
             #region 将DataSet中内容转换为insert sql
@@ -92,12 +92,12 @@ namespace ReplaceString
             }
             //将Excel的表名称绑定上以供选择
             string result = "";
-            List<string> vs = FileUtils.GetSheetnames(filePath, out result);
+            List<string> vs = ExcelUtils.GetSheetnames(filePath, out result);
             foreach (var sheetname in vs)
             {
 
             }
-            txtSheetnames.Items.AddRange(FileUtils.GetSheetnames(filePath, out result).ToArray());
+            txtSheetnames.Items.AddRange(ExcelUtils.GetSheetnames(filePath, out result).ToArray());
         }
 
         private void txtSheetnames_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,8 +110,8 @@ namespace ReplaceString
             string result = "";
             //List<string> vs = FileUtils.GetSheetnames(txtFilePath.Text, out result);
             txtSheetnames.Items.Clear();
-            txtSheetnames.Items.AddRange(FileUtils.GetSheetnames(txtFilePath.Text, out result).ToArray());
-            //DataSet ds = FileUtils.getXlsxExcelData(txtFilePath.Text, txtSheetnames.SelectedText);
+            txtSheetnames.Items.AddRange(ExcelUtils.GetSheetnames(txtFilePath.Text, out result).ToArray());
+            //DataSet ds = ExcelUtils.getXlsxExcelData(txtFilePath.Text, txtSheetnames.SelectedText);
         }
     }
 }
