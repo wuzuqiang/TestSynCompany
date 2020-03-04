@@ -75,67 +75,6 @@ namespace BaseClassUtils
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
             System.Diagnostics.Process.Start(filePath);
         }
-
         
-        public static List<string> GetSheetnames(string filePath, out string message)
-        {
-            message = "success";
-            List<string> listSheetname = new List<string>();
-            if (!IsExcelFile(filePath))
-            {
-                return new List<string>();
-            }
-            if (ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2003) == Path.GetExtension(filePath))
-            {
-                listSheetname = GetXlsSheetnames(filePath, out message);
-            }
-            else if(ExcelUtils.getExcelExtesion(ExcelUtils.ExceType.Excel2007) == Path.GetExtension(filePath))
-            {
-                listSheetname = GetXlsxSheetnames(filePath,out message);
-            }
-            return listSheetname;
-        }
-
-        public static List<string> GetXlsSheetnames(string filePath, out string message)
-        {
-            message = "success";
-            List<string> listSheetname = new List<string>();
-            string fileExtension = Path.GetExtension(filePath);
-            if (".xls" == fileExtension)
-            {
-                string strConn = "Provider=Microsoft.Jet.OLEDB.4.0;" + "Data Source=" + filePath + ";" + "Extended Properties=Excel 8.0;";
-                //connectstring = "Provider=Microsoft.ACE.OLEDB.12.0; data source=" + excelPath + ";Extended Properties='Excel 12.0 Xml; HDR=" + hdr + "; IMEX=" + imex.GetHashCode() + "'";
-                OleDbConnection conn = new OleDbConnection(strConn);
-                try
-                {
-                    if (conn.State == ConnectionState.Closed)
-                    {
-                        conn.Open();
-                    }
-                    DataTable schemaTable = conn.GetOleDbSchemaTable(System.Data.OleDb.OleDbSchemaGuid.Tables, null);
-                    foreach (DataRow dr in schemaTable.Rows)
-                    {
-                        listSheetname.Add(dr[2].ToString().Trim());
-                    }
-                    //string tableName = schemaTable.Rows[0][2].ToString().Trim();
-
-                }
-                catch (Exception ex)
-                {
-                    message = ex.Message;
-                    listSheetname = new List<string>();
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
-            return listSheetname;
-        }
-
-
-
-
-
     }
 }
