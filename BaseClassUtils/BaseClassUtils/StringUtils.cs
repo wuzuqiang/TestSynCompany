@@ -96,7 +96,10 @@ namespace BaseClassUtils
             return sbTemp.ToString();
         }
 
-        static string strNeedTransferInReg = "*, ., [, ], {, }, ^, $                                              ,<   ,>    ,?";
+        /// <summary>
+        /// 通配符，不仅仅限制于Reg表达式
+        /// </summary>
+        static string strNeedTransferInReg = "*     , .     , [      , ]      , {      , }     , ^       , $     ,<    ,>    ,?";
         static List<string> listNeedTransferInReg = new List<string>();
         static string strCanTransferInReg = "-__0__-, __1__-, -__2__-, -__3__-, -__4__-,- __5__-, -__6__-,-__7__-,-_8_-,-_9_-,-_10_-,";
         static List<string> listCanTransferInReg = new List<string>();
