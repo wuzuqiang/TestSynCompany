@@ -122,11 +122,13 @@ namespace BaseClassUtils
                 MemoryStream memStream = new MemoryStream();
                 XmlWriter writer = XmlWriter.Create(memStream);
                 Regex.Replace(xmlStr, @"<!-- *.* -->", "", RegexOptions.IgnoreCase);
+                xmlStr = xmlStr.Replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
                 xmlStr = xmlStr.Replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
                 xmlStr = xmlStr.Replace("<?xml version=\"1.0\" encoding=\"GBK\"?>", "");
                 xmlStr = xmlStr.Replace("<?xml version=\"1.0\"", "");
-                //xmlStr = xmlStr.Replace(" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"", "");
-                //xmlStr = xmlStr.Replace(" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", ""); //不替换这些也行
+                //xmlStr = xmlStr.Replace(" xmlns=\"http://tempuri.org/\"", "");
+                //xmlStr = xmlStr.Replace(" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "");
+                //xmlStr = xmlStr.Replace(" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"", ""); //不替换这些也行
                 //string xmlStr = "<Person><Name>张三</Name><Sex>男</Sex><Age>20</Age></Person>"; //XmlWriter要写入这类数据xmlReader才能正确读取出来
                 writer.WriteRaw(xmlStr);
                 writer.Flush();
