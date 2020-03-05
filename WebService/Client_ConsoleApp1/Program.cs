@@ -51,8 +51,13 @@ namespace Client_ConsoleApp1
         {
             WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx");
             var ret = webServiceCall.callWebServiceByHTTP("localhost", "JBSC_SCGL_JBGD", "reqXmlTest", "test");
-            Console.WriteLine(ret);
-        }
+            XMLUtils xMLUtils = new XMLUtils();
+            //xMLUtils.deSerialXmlByXmlString<LYYCRetVal>(ret.Replace("&gt;", ">").Replace("&lt;", "<"));
+            string strTest = "<string xmlns=\"http://tempuri.org/\"><Msg xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"> <Head> <InterfaceCode>HNZY_ESB_AYMES_JBSC_SCGL_JBGD</InterfaceCode> <InterfaceDescription>卷包工单；错误：XML 文档(1,39)中有错误。</InterfaceDescription> <MsgID>2bdf8746812c46479d46e23520ed33fa</MsgID> <Source>AYJBSC</Source> <MsgMark>HNZY_ESB_AYMES_JBSC</MsgMark> <WsMethod>JBSC_SCGL_JBGD</WsMethod> <Date>2020-03-05 10:25:03</Date> <StateCode>000</StateCode> <StateDesription>正常调用</StateDesription> </Head></Msg></string>";
+            strTest = "<string><Msg> <Head> <InterfaceCode>HNZY_ESB_AYMES_JBSC_SCGL_JBGD</InterfaceCode> <InterfaceDescription>卷包工单；错误：XML 文档(1,39)中有错误。</InterfaceDescription> <MsgID>2bdf8746812c46479d46e23520ed33fa</MsgID> <Source>AYJBSC</Source> <MsgMark>HNZY_ESB_AYMES_JBSC</MsgMark> <WsMethod>JBSC_SCGL_JBGD</WsMethod> <Date>2020-03-05 10:25:03</Date> <StateCode>000</StateCode> <StateDesription>正常调用</StateDesription> </Head></Msg></string>";
+            xMLUtils.deSerialXmlByXmlString<LYYCRetVal>(strTest);
+            //Console.WriteLine(ret);
+    }
 
 
         public static void Test00()
