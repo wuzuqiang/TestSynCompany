@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitUtils.cs" />
+    <Compile Include="CallWebServiceHelper.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DirUtil.cs" />
     <Compile Include="ExcelUtils.cs" />
