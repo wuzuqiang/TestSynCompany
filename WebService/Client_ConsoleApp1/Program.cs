@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BaseClassUtils;
 
 namespace Client_ConsoleApp1
 {
@@ -12,9 +13,11 @@ namespace Client_ConsoleApp1
         {
             try
             {
-                TestWebserviceBySoap11();
-                Console.WriteLine("----------------------------------------");
-                TestWebserviceBySoap12();
+                //TestWebserviceBySoap11();
+                //Console.WriteLine("----------------------------------------");
+                //TestWebserviceBySoap12();
+                //Console.WriteLine("----------------------------------------");
+                TestWebserviceByHTTP();
             }
             catch(Exception ex)
             {
@@ -29,19 +32,25 @@ namespace Client_ConsoleApp1
         public static void TestWebserviceBySoap11()
         {
             //直接通过Http访问WebService服务
-            WebServiceCall webServiceCall = new WebServiceCall("http://localhost:8085/MesToFLKService.asmx");
-            //WebServiceCall webServiceCall = new WebServiceCall("localhost:8085"); //ERROR:无法识别该 URI 前缀。
-            //WebServiceCall webServiceCall = new WebServiceCall("http://localhost:8085"); //ERROR:好像得到一个完整的HTML，但是看着数据很不对，具体还待分析
-            //WebServiceCall webServiceCall = new WebServiceCall("http://localhost:8085/MesToFLKService.asmx?op=JBSC_SCGL_GDQX");
-            var ret = webServiceCall.callWebServiceBySOAP11("localhost", "transManufacturingFormula", "test");
+            WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx");
+            //WebServiceCallHelper webServiceCall = new WebServiceCallHelper("localhost:8085"); //ERROR:无法识别该 URI 前缀。
+            //WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085"); //ERROR:好像得到一个完整的HTML，但是看着数据很不对，具体还待分析
+            //WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx?op=JBSC_SCGL_GDQX");
+            var ret = webServiceCall.callWebServiceBySOAP11("localhost", "transManufacturingFormula", "JBSC_SCGL_JBGD", "reqXmlTest", "test");
             Console.WriteLine(ret);
         }
 
         public static void TestWebserviceBySoap12()
         {
-            //WebServiceCall webServiceCall = new WebServiceCall("http://localhost:8085/MesToFLKService.asmx?op=JBSC_SCGL_GDQX");
-            WebServiceCall webServiceCall = new WebServiceCall("http://localhost:8085/MesToFLKService.asmx");
-            var ret = webServiceCall.callWebServiceBySOAP12("localhost", "transManufacturingFormula", "test");
+            WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx");
+            var ret = webServiceCall.callWebServiceBySOAP12("localhost", "transManufacturingFormula", "JBSC_SCGL_JBGD", "reqXmlTest", "test");
+            Console.WriteLine(ret);
+        }
+
+        public static void TestWebserviceByHTTP()
+        {
+            WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx");
+            var ret = webServiceCall.callWebServiceByHTTP("localhost", "JBSC_SCGL_JBGD", "reqXmlTest", "test");
             Console.WriteLine(ret);
         }
 
