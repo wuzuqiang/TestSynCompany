@@ -7,11 +7,11 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExportAttribute
+namespace TestExportAttribute
 {
     class Program
     {
-        [Import("MusicBook")]
+        [Import]
         public IBookService Service { get; set; }
         static void Main(string[] args)
         {
