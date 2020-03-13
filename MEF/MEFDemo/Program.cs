@@ -11,7 +11,7 @@ namespace MEFDemo
 {
     class Program
     {
-        //[Import]
+        [Import]
         public IBookService Service { get; set; }
         static void Main(string[] args)
         {
@@ -29,7 +29,14 @@ namespace MEFDemo
         {
             var catalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
             CompositionContainer container = new CompositionContainer(catalog);
-            container.ComposeParts(this);
+            try
+            {
+                container.ComposeParts(this);
+            }
+            catch(CompositionException compoEx)
+            {
+                throw new Exception(compoEx.Message);
+            }
         }
     }
 }

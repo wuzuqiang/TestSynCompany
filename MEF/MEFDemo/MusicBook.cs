@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MEFDemo
 {
-    //[Export(typeof(IBookService))]
-    public class MusicBook
+    [Export(typeof(IBookService))]
+    public class MusicBook : IBookService
     {
         public string BookName { get; set; }
         public string GetBookName()
