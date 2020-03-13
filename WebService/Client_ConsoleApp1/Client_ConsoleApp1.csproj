@@ -51,8 +51,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="LYYCRetVal.cs" />
+    <Compile Include="MessagePackage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XMLBody.cs" />
+    <Compile Include="XMLHead.cs" />
+    <Compile Include="XMLPackage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

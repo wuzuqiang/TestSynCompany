@@ -4,13 +4,89 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace HN.Integration.Helper
 {
     public class XmlHelper
     {
+        /// <summary>
+        /// 返回结果
+        /// </summary>
+        /// <param name="ret"></param>
+        /// <returns></returns>
+        public static string ReturnResult(XMLFeedBackResult ret)
+        {
+            return SerialXml<XMLFeedBackResult>(ret);
+        }
+
+        /// <summary>
+        /// 序列化
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public static string SerialXml<T>(T model)
+        {
+            //序列化
+            XmlSerializer xmlser = new XmlSerializer(typeof(XMLFeedBackResult));
+            StringWriter writer = new StringWriter();
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                StreamWriter textWriter = new StreamWriter(ms, Encoding.UTF8);
+                XmlSerializer serializer = new XmlSerializer(typeof(T));
+                serializer.Serialize(textWriter, model);
+                string xmlMessage = Encoding.UTF8.GetString(ms.GetBuffer());
+                ms.Close();
+                textWriter.Close();
+                return xmlMessage;
+            }
+            catch (Exception ex)
+            {
+                writer.Close();
+                throw ex;
+            }
+        }
+
+        public static T DeSerialXmlByXmlString<T>(string xmlStr)
+        {
+            XmlReader xmlReader = null;
+            try
+            {
+                MemoryStream memStream = new MemoryStream();
+                XmlWriter writer = XmlWriter.Create(memStream);
+                Regex.Replace(xmlStr, @"<!-- *.* -->", "", RegexOptions.IgnoreCase);
+                xmlStr = xmlStr.Replace("<?xml version=\"1.0\" encoding=\"utf-8\"?>", "");
+                xmlStr = xmlStr.Replace("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", "");
+                xmlStr = xmlStr.Replace("<?xml version=\"1.0\" encoding=\"GBK\"?>", "");
+                xmlStr = xmlStr.Replace("<?xml version=\"1.0\"", "");
+                //xmlStr = xmlStr.Replace(" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"", "");
+                //xmlStr = xmlStr.Replace(" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", ""); //不替换这些也行
+                writer.WriteRaw(xmlStr);
+                writer.Flush();
+                writer.Close();
+                memStream.Position = 0;
+                xmlReader = XmlReader.Create(memStream);
+                XmlSerializer xs = new XmlSerializer(typeof(T));
+                T model = (T)xs.Deserialize(xmlReader);
+                return model;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (xmlReader != null)
+                {
+                    xmlReader.Close();
+                }
+            }
+        }
         /// <summary>
         /// 返回结果成功
         /// </summary>

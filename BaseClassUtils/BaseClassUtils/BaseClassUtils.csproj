@@ -65,6 +65,7 @@
     <Compile Include="TestMultiLayerClass.cs" />
     <Compile Include="TypeConverterUtil.cs" />
     <Compile Include="XMLHelper.cs" />
+    <Compile Include="xml_HNLY\FeedBackResult.cs" />
     <Compile Include="xml_HNLY\MessagePackage.cs" />
     <Compile Include="xml_HNLY\MessageSerialXml.cs" />
     <Compile Include="xml_HNLY\XMLBody.cs" />

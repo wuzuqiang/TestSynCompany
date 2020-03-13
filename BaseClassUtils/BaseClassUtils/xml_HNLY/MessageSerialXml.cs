@@ -17,6 +17,12 @@ namespace HN.Integration.Helper
     [XmlRoot("Msg", Namespace = "", DataType = "string", IsNullable = false)]
     public class MessageSerialXml
     {
+        public MessageSerialXml()
+        {
+            this.Head = new _Head();
+            this.Data = new _Data();
+        }
+
         #region //序列化和反序列化实例
         public static void SerialClass(MessageSerialXml SourceObj, string FileName)
         {
