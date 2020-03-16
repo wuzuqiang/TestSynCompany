@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using BaseClassUtils;
 using HN.Integration.Helper;
 
@@ -14,10 +16,11 @@ namespace Client_ConsoleApp1
         {
             try
             {
-                TestHNLYFLKToMes();
+                //TestWebSvcCaller();
+                //TestHNLYFLKToMes();
                 //TestWebserviceBySoap11();
                 //Console.WriteLine("----------------------------------------");
-                //TestWebserviceBySoap12();
+                TestWebserviceBySoap12();
                 //Console.WriteLine("----------------------------------------");
                 //TestWebserviceByHTTP();
             }
@@ -28,6 +31,16 @@ namespace Client_ConsoleApp1
 
             Console.Write("按回车键退出！");
             Console.ReadLine();
+        }
+
+        public static void TestWebSvcCaller()
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("theEmail", "test@qq.com");
+            //XmlDocument xdoc = WebSvcCaller.QuerySoapWebService("http://www.webxml.com.cn/WebServices/ValidateEmailWebService.asmx?wsdl", "ValidateEmailAddress", ht);
+            XmlDocument xdoc = WebSvcCaller.QuerySoapWebService("http://www.webxml.com.cn/WebServices/ValidateEmailWebService.asmx?wsdl", "ValidateEmailAddress", ht);
+
+            Console.WriteLine(xdoc.InnerText);
         }
 
         public static void TestHNLYFLKToMes()
@@ -142,7 +155,8 @@ namespace Client_ConsoleApp1
 
         public static void TestWebserviceBySoap12()
         {
-            WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx");
+            //WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx");
+            WebServiceCallHelper webServiceCall = new WebServiceCallHelper("http://localhost:8085/MesToFLKService.asmx?wsdl");
             var ret = webServiceCall.callWebServiceBySOAP12("localhost", "transManufacturingFormula", "JBSC_SCGL_JBGD", "reqXmlTest", "test");
             Console.WriteLine(ret);
         }
