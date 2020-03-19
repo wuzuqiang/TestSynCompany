@@ -138,7 +138,7 @@ namespace Client_ConsoleApp1
             obj.Data.DataTableSet[0].RowSet[0].Header.DataItemSet = dataFieldItems;
 
 
-            var reqXml = XmlHelper.SerialXml<MessageSerialXml>(obj);
+            var reqXml = (new XMLUtils()).serialXml<MessageSerialXml>(obj);
         }
 
 

@@ -72,7 +72,6 @@
     <Compile Include="xml_HNLY\MessageSerialXml.cs" />
     <Compile Include="xml_HNLY\XMLBody.cs" />
     <Compile Include="xml_HNLY\XMLHead.cs" />
-    <Compile Include="xml_HNLY\XMLHelper.cs" />
     <Compile Include="xml_HNLY\XMLPackage.cs" />
   </ItemGroup>
   <ItemGroup>
