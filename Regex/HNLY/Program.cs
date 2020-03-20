@@ -17,6 +17,7 @@ namespace HNLY
         {
             //Func0();
 
+            //test2deSerialXmlByXmlString();
             serialXml();
             //deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
             //deSerialXmlByXmlString();
@@ -66,6 +67,12 @@ namespace HNLY
             //Name中就算有好几个Item，反解析得到的只能是第一个<>中的内容，即test张三
             string xmlStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Test xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><Ele01><Item>test张三</Item><Item2>01张三</Item2></Ele01><Sex>男</Sex><Age>20</Age></Test>";
             (new XMLUtils()).deSerialXmlByXmlString<Person>(xmlStr);
+        }
+        static void test2deSerialXmlByXmlString()
+        {
+            //Name中就算有好几个Item，反解析得到的只能是第一个<>中的内容，即test张三
+            string xmlStr = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Msg><Head><InterfaceCode>HNZY_ESB_AYMES_JBSC_SCGL_JBGD</InterfaceCode><InterfaceDescription>卷包工单</InterfaceDescription><MsgID>0f12d34d71b640b1a8441a088255bc87+RET</MsgID><Source>MES</Source><MsgMark>HNZY_ESB_AYMES_JBSC</MsgMark><WsMethod>JBSC_SCGL_JBGD</WsMethod><Date>2020-02-27 07:47:41.44</Date><Cryp></Cryp><User>AYJBSC</User><StateCode>000</StateCode><StateDesription>调用成功</StateDesription></Head></Msg>";
+            (new XMLUtils()).deSerialXmlByXmlString<RetNodeHead>(xmlStr);
         }
 
         static void testHNLY_mess()

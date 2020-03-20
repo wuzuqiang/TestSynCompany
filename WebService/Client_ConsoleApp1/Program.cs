@@ -17,10 +17,10 @@ namespace Client_ConsoleApp1
             try
             {
                 //TestWebSvcCaller();
-                //TestHNLYFLKToMes();
+                TestHNLYFLKToMes();
                 //TestWebserviceBySoap11();
                 //Console.WriteLine("----------------------------------------");
-                TestWebserviceBySoap12();
+                //TestWebserviceBySoap12();
                 //Console.WriteLine("----------------------------------------");
                 //TestWebserviceByHTTP();
             }
@@ -102,6 +102,7 @@ namespace Client_ConsoleApp1
             headFieldItems[6].Caption = "工单开始时间";
             headFieldItems[6].FieldName = "WO_START_DATETIME";
             #endregion
+            obj.Head = new _Head();
             obj.Head.DataDefine = new _DataDefine();
             obj.Head.DataDefine.TableSet = new _Table[1];
             obj.Head.DataDefine.TableSet[0] = new _Table();
@@ -130,6 +131,7 @@ namespace Client_ConsoleApp1
             dataFieldItems[6].FieldName = "WO_START_DATETIME";
             dataFieldItems[6].FieldValue = "";
             #endregion
+            obj.Data = new _Data();
             obj.Data.DataTableSet = new _DataTable[1];
             obj.Data.DataTableSet[0] = new _DataTable();
             obj.Data.DataTableSet[0].RowSet = new _Row[1];
@@ -137,8 +139,21 @@ namespace Client_ConsoleApp1
             obj.Data.DataTableSet[0].RowSet[0].Header = new _Header();
             obj.Data.DataTableSet[0].RowSet[0].Header.DataItemSet = dataFieldItems;
 
+            obj.Head.InterfaceCode = "HNZY_ESB_AYMES_JBSC_SCGL_GDKS";
+            obj.Head.InterfaceDescription = "工单开始";
+            obj.Head.MsgID = "CC14702D-B610-470D-B267-4474A5D8D7DD";
+            obj.Head.Source = "AYJBSC";
+            obj.Head.MsgMark = "HNZY_ESB_AYMES_JBSC";
+            obj.Head.WsMethod = "JBSC_SCGL_GDKS";
+            obj.Head.Date = DateTime.Now.ToString();
+            obj.Head.User = "MES";
+            obj.Head.StateCode = "600";
+            obj.Head.StateDesription = "正常发送";
+
 
             var reqXml = (new XMLUtils()).serialXml<MessageSerialXml>(obj);
+            Console.WriteLine("<Result：");
+            Console.WriteLine(reqXml);
         }
 
 
