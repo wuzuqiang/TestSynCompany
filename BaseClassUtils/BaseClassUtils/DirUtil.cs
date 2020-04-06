@@ -30,7 +30,7 @@ namespace BaseClassUtils
             }
         }
 
-        public FileInfo[] getAllFile(string path)
+        public static FileInfo[] getAllFile(string path)
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(path);
             return directoryInfo.GetFiles("*", SearchOption.AllDirectories);
@@ -73,22 +73,24 @@ namespace BaseClassUtils
             return listFile;
         }
 
-        public void get(string path)
+        static List<FileSystemInfo> fileSystemInfos = new List<FileSystemInfo>();
+        public static List<FileSystemInfo> GetAllFileSystemInfo(string path)
         {
-            List<string> listFile = new List<string>();
             FileSystemInfo[] fileSysArray = (new DirectoryInfo(path)).GetFileSystemInfos();
             foreach (FileSystemInfo info in fileSysArray)
             {
                 if (info is DirectoryInfo)
                 {
-                    getAllFile(info.FullName);
+                    GetAllFileSystemInfo(info.FullName);
                 }
                 else
                 {
-                    listFile.Add(info.FullName);
+                    fileSystemInfos.Add(info);
                 }
             }
+            return fileSystemInfos;
         }
+        
 
     }
 }
