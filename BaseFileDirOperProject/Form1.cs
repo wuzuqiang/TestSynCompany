@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace BaseFileDirOperProject
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
             //打开文件(不存在则创建)或打开目录
-            FileUtils.OpenFileIfnotthencreat(txtFilePath.Text);
+            FileUtils.OpenFileIfnotthencreat(txtFilePath01.Text);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,6 +53,54 @@ namespace BaseFileDirOperProject
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string path = txtFilePath01.Text;
+            path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
+            //获取目录2下所有文件内容 //排列文件名称
+            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo) a).DirectoryName).ThenBy(a => a.FullName);
+
+            if (checkBox1.Checked)
+            { //记录所有文件信息到当前路径默认日志
+                StringBuilder sb = new StringBuilder();
+                List<string> contents = new List<string>();
+                int iIndex = 1;
+                sb.AppendLine($"iIndex++，Name，FullName，根目录为{txtCombineDir.Text}");
+                foreach (var fileInfo in fileSystemInfos)
+                {
+                    string temp = $"{fileInfo.Name.PadRight(70)},{fileInfo.FullName.Replace(txtCombineDir.Text, "")}";
+                    if(cbxAppendRowIndex.Checked)
+                    {
+                        contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
+                    }
+                    else
+                    {
+                        contents.Add(temp);
+                    }
+                }
+                if(cbxClearOrigin.Checked)
+                { //覆盖原有内容
+                    FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt"), contents);
+                }
+                else
+                FileUtils.AppendAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt"),contents);
+            }
+
+            MessageBox.Show("恭喜！操作成功！");
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //打开本程序根目录
+            System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
 
         }
