@@ -20,7 +20,7 @@ namespace BaseClassUtils
         }
         #endregion
 
-        public static List<string> GetSplitLineWithoutEmpty(string input)
+        public static List<string> GetSplitLineWithoutEmpty(this string input)
         {
             List<string> list = new List<string>();
             foreach(string str in input.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries))
@@ -40,19 +40,35 @@ namespace BaseClassUtils
             return list;
         }
 
-        public static List<string> Get(string[] array, string strContained)
+        public static string GetSameBaseDirString(this string input, string input02)
         {
-            List<string> listMatched = new List<string>();
-            string pattern = @"(\.ext+)(.)";
-            foreach(string str in array)
+            StringBuilder sbSame = new StringBuilder();
+            int iMaxSame = 0;
+            for(int i= 0; i < 1; i++)
             {
-                if((new Regex(pattern).Matches(str).Count > 0))
+                for(int j=1; (i+j) < input.Count(); j++)
                 {
-                    listMatched.Add(str);
+                    string matchedString = input.Substring(i, j);
+                    if (input02.Contains(matchedString))
+                    {
+                        sbSame = new StringBuilder(matchedString);
+                        iMaxSame = matchedString.Count();
+                        break;
+                    }
+                }
+                if(iMaxSame > 0)
+                {
+                    break;
                 }
             }
-            return listMatched;
+            return sbSame.ToString();
         }
+
+        public static string GetStringAfterDeleteDriveString(this string input)
+        {
+            return input.Replace("C:\\", " ").Replace("D:\\", " ").Replace("E:\\", " ");
+        }
+
         public static bool isMatch(string fileSuffix, string strContained)
         {
             bool isMatch = false;
