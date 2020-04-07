@@ -121,21 +121,46 @@ namespace BaseClassUtils
         /// </summary>
         /// <param name="fileFullName"></param>
         /// <param name="content"></param>
-        public void writeToFile(string fileFullName, string content)
+        public static void WriteToFile(string fileFullName, string content, string encoding="UTF-8")
         {
             Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
-            File.WriteAllBytes(fileFullName, Encoding.UTF8.GetBytes(content));
+            File.WriteAllBytes(fileFullName, Encoding.GetEncoding(encoding).GetBytes(content));
         }
 
         /// <summary>
-        /// 向文件中写入内容
+        /// 清空文件，并写入内容
+        /// </summary>
+        /// <param name="fileFullName"></param>
+        /// <param name="contents"></param>
+        /// <param name="encoding"></param>
+        public static void WriteAllLines(string fileFullName, List<string> contents, string encoding = "UTF-8")
+        {
+            if(Directory.Exists(fileFullName))
+            {
+                Directory.Delete(fileFullName);
+            }
+            File.WriteAllLines(fileFullName, contents, Encoding.GetEncoding(encoding));
+        }
+
+        /// <summary>
+        /// 不清空文件，并写入内容
         /// </summary>
         /// <param name="fileFullName"></param>
         /// <param name="content"></param>
-        public void writeAppendFile(string fileFullName, string[] contents)
+        public static void AppendAllText(string fileFullName, string content, string encoding = "UTF-8")
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(fileFullName));
-            File.AppendAllLines(fileFullName, contents, Encoding.UTF8);
+            File.AppendAllText(fileFullName, content, Encoding.GetEncoding(encoding));
+        }
+
+        /// <summary>
+        /// 不清空文件，并写入内容
+        /// </summary>
+        /// <param name="fileFullName"></param>
+        /// <param name="contents"></param>
+        /// <param name="encoding"></param>
+        public static void AppendAllText(string fileFullName, List<string> contents, string encoding = "UTF-8")
+        {
+            File.AppendAllLines(fileFullName, contents, Encoding.GetEncoding(encoding));
         }
         #endregion
 

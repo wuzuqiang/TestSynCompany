@@ -29,15 +29,20 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFilePath = new System.Windows.Forms.TextBox();
+            this.txtFilePath01 = new System.Windows.Forms.TextBox();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtCombineDir = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtCombineRelaPath = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.cbxAppendRowIndex = new System.Windows.Forms.CheckBox();
+            this.cbxClearOrigin = new System.Windows.Forms.CheckBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,16 +50,17 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(34, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "目录：";
+            this.label1.Text = "目录1：";
             // 
-            // txtFilePath
+            // txtFilePath01
             // 
-            this.txtFilePath.Location = new System.Drawing.Point(93, 67);
-            this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(538, 25);
-            this.txtFilePath.TabIndex = 1;
+            this.txtFilePath01.Location = new System.Drawing.Point(93, 67);
+            this.txtFilePath01.Name = "txtFilePath01";
+            this.txtFilePath01.Size = new System.Drawing.Size(538, 25);
+            this.txtFilePath01.TabIndex = 1;
+            this.txtFilePath01.Text = "E:\\repository\\Fusion\\src\\User Interface\\Fusion\\bin";
             // 
             // btnOpenFile
             // 
@@ -82,25 +88,16 @@
             this.txtCombineDir.Name = "txtCombineDir";
             this.txtCombineDir.Size = new System.Drawing.Size(538, 25);
             this.txtCombineDir.TabIndex = 4;
-            this.txtCombineDir.Text = "G:\\wuzuqiang\\Fussion\\";
+            this.txtCombineDir.Text = "D:\\workspace\\";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(34, 224);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 3;
-            this.label2.Text = "目录：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(90, 247);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "\\";
+            this.label2.Text = "目录2：";
             // 
             // txtCombineRelaPath
             // 
@@ -108,6 +105,7 @@
             this.txtCombineRelaPath.Name = "txtCombineRelaPath";
             this.txtCombineRelaPath.Size = new System.Drawing.Size(538, 25);
             this.txtCombineRelaPath.TabIndex = 7;
+            this.txtCombineRelaPath.Text = "repository\\Fusion\\src\\User Interface\\Fusion\\bin";
             // 
             // button2
             // 
@@ -129,20 +127,84 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(37, 418);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(211, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "获取目录2下所有文件内容";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(275, 418);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(284, 19);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "记录所有文件信息到当前路径默认日志";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(37, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(137, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "打开本程序根目录";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // cbxAppendRowIndex
+            // 
+            this.cbxAppendRowIndex.AutoSize = true;
+            this.cbxAppendRowIndex.Location = new System.Drawing.Point(565, 418);
+            this.cbxAppendRowIndex.Name = "cbxAppendRowIndex";
+            this.cbxAppendRowIndex.Size = new System.Drawing.Size(89, 19);
+            this.cbxAppendRowIndex.TabIndex = 13;
+            this.cbxAppendRowIndex.Text = "添加行号";
+            this.cbxAppendRowIndex.UseVisualStyleBackColor = true;
+            // 
+            // cbxClearOrigin
+            // 
+            this.cbxClearOrigin.AutoSize = true;
+            this.cbxClearOrigin.Location = new System.Drawing.Point(660, 418);
+            this.cbxClearOrigin.Name = "cbxClearOrigin";
+            this.cbxClearOrigin.Size = new System.Drawing.Size(119, 19);
+            this.cbxClearOrigin.TabIndex = 14;
+            this.cbxClearOrigin.Text = "覆盖原有内容";
+            this.cbxClearOrigin.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(37, 480);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(137, 23);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "复制文件";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 630);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.cbxClearOrigin);
+            this.Controls.Add(this.cbxAppendRowIndex);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtCombineRelaPath);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCombineDir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnOpenFile);
-            this.Controls.Add(this.txtFilePath);
+            this.Controls.Add(this.txtFilePath01);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -155,15 +217,20 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtFilePath;
+        private System.Windows.Forms.TextBox txtFilePath01;
         private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtCombineDir;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCombineRelaPath;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.CheckBox cbxAppendRowIndex;
+        private System.Windows.Forms.CheckBox cbxClearOrigin;
+        private System.Windows.Forms.Button button7;
     }
 }
 
