@@ -66,23 +66,8 @@ namespace BaseFileDirOperProject
 
             if (checkBox1.Checked)
             { //记录所有文件信息到当前路径默认日志
-                StringBuilder sb = new StringBuilder();
-                List<string> contents = new List<string>();
-                int iIndex = 1;
-                sb.AppendLine($"iIndex++，Name，FullName，根目录为{txtCombineDir.Text}");
-                foreach (var fileInfo in fileSystemInfos)
-                {
-                    string temp = $"{fileInfo.Name.PadRight(70)},{fileInfo.FullName.Replace(txtCombineDir.Text, "")}";
-                    if(cbxAppendRowIndex.Checked)
-                    {
-                        contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
-                    }
-                    else
-                    {
-                        contents.Add(temp);
-                    }
-                }
-                if(cbxClearOrigin.Checked)
+                List<string> contents = getAllFileNameAndFilePath(fileSystemInfos.ToList());
+                if (cbxClearOrigin.Checked)
                 { //覆盖原有内容
                     FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt"), contents);
                 }
@@ -94,6 +79,69 @@ namespace BaseFileDirOperProject
             
         }
 
+        private List<string> getAllFileNameAndFilePath(List<FileSystemInfo> fileSystemInfos)
+        {
+            StringBuilder sb = new StringBuilder();
+            List<string> contents = new List<string>();
+            int iIndex = 1;
+            sb.AppendLine($"iIndex++，Name，FullName，根目录为{txtCombineDir.Text}");
+            foreach (var fileInfo in fileSystemInfos)
+            {
+                string temp = $"{fileInfo.Name.PadRight(70)},{fileInfo.FullName.Replace(txtCombineDir.Text, "")}";
+                if (cbxAppendRowIndex.Checked)
+                {
+                    contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
+                }
+                else
+                {
+                    contents.Add(temp);
+                }
+            }
+            return contents;
+        }
+
+        private List<string> getAllFileName(List<FileSystemInfo> fileSystemInfos)
+        {
+            StringBuilder sb = new StringBuilder();
+            List<string> contents = new List<string>();
+            int iIndex = 1;
+            sb.AppendLine($"iIndex++，Name，目录为{txtCombineDir.Text}");
+            foreach (var fileInfo in fileSystemInfos)
+            {
+                string temp = $"{fileInfo.Name.PadRight(70)}";
+                if (cbxAppendRowIndex.Checked)
+                {
+                    contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
+                }
+                else
+                {
+                    contents.Add(temp);
+                }
+            }
+            return contents;
+        }
+
+        private List<string> getAllFilePath(List<FileSystemInfo> fileSystemInfos)
+        {
+            StringBuilder sb = new StringBuilder();
+            List<string> contents = new List<string>();
+            int iIndex = 1;
+            sb.AppendLine($"iIndex++，Name，目录为{txtCombineDir.Text}");
+            foreach (var fileInfo in fileSystemInfos)
+            {
+                string temp = $"{fileInfo.FullName.PadRight(70)}";
+                if (cbxAppendRowIndex.Checked)
+                {
+                    contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
+                }
+                else
+                {
+                    contents.Add(temp);
+                }
+            }
+            return contents;
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             //打开本程序根目录
@@ -103,6 +151,54 @@ namespace BaseFileDirOperProject
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            FrmCopyFile dlg = new FrmCopyFile();
+            dlg.Show();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            //获取目录2下所有文件名称列表
+            string path = txtFilePath01.Text;
+            path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
+            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
+
+            if (checkBox1.Checked)
+            { //记录所有文件信息到当前路径默认日志
+                List<string> contents = getAllFileName(fileSystemInfos.ToList());
+                if (cbxClearOrigin.Checked)
+                { //覆盖原有内容
+                    FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件名称).txt"), contents);
+                }
+                else
+                    FileUtils.AppendAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件名称).txt"), contents);
+            }
+
+            MessageBox.Show("恭喜！操作成功！");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //获取目录2下所有文件路径列表
+            string path = txtFilePath01.Text;
+            path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
+            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
+
+            if (checkBox1.Checked)
+            { //记录所有文件信息到当前路径默认日志
+                List<string> contents = getAllFilePath(fileSystemInfos.ToList());
+                if (cbxClearOrigin.Checked)
+                { //覆盖原有内容
+                    FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件路径).txt"), contents);
+                }
+                else
+                    FileUtils.AppendAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件路径).txt"), contents);
+            }
+
+            MessageBox.Show("恭喜！操作成功！");
         }
     }
 }
