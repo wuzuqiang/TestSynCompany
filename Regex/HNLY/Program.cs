@@ -16,15 +16,23 @@ namespace HNLY
         static void Main(string[] args)
         {
             //Func0();
-
+            TestTranslatorHelper();
             //test2deSerialXmlByXmlString();
-            serialXml();
+            //serialXml();
             //deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
             //deSerialXmlByXmlString();
 
             //testHNLY_mess();
             //testBaseOperXml();
             Console.ReadLine();
+        }
+
+        public static void TestTranslatorHelper()
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Test.xml");
+            FileUtils fileUtils = new FileUtils();
+            string reqXml = fileUtils.ReadFile(filePath);
+            var a = TranslatorHelper.AnalysicInputData<Person>(reqXml., "/bookstore/book/title");
         }
         public static void Func0()
         {
