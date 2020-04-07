@@ -32,7 +32,7 @@ namespace HNLY
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Test.xml");
             FileUtils fileUtils = new FileUtils();
             string reqXml = fileUtils.ReadFile(filePath);
-            var a = TranslatorHelper.AnalysicInputData<Person>(reqXml., "/bookstore/book/title");
+            var a = TranslatorHelper.AnalysicInputData<Person>(reqXml, "/bookstore/book/title");
         }
         public static void Func0()
         {
