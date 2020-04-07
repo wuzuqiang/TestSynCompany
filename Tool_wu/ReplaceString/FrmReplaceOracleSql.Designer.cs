@@ -208,17 +208,17 @@
             // 
             this.button9.Location = new System.Drawing.Point(907, 20);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(173, 23);
+            this.button9.Size = new System.Drawing.Size(200, 23);
             this.button9.TabIndex = 17;
-            this.button9.Text = "在每行前新增";
+            this.button9.Text = "在每行前新增(空行除外)";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // txtAppendToBefore
             // 
-            this.txtAppendToBefore.Location = new System.Drawing.Point(1093, 28);
+            this.txtAppendToBefore.Location = new System.Drawing.Point(1128, 28);
             this.txtAppendToBefore.Name = "txtAppendToBefore";
-            this.txtAppendToBefore.Size = new System.Drawing.Size(100, 25);
+            this.txtAppendToBefore.Size = new System.Drawing.Size(148, 25);
             this.txtAppendToBefore.TabIndex = 18;
             this.txtAppendToBefore.Text = "--";
             // 
@@ -226,9 +226,9 @@
             // 
             this.button10.Location = new System.Drawing.Point(907, 49);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(173, 23);
+            this.button10.Size = new System.Drawing.Size(200, 23);
             this.button10.TabIndex = 19;
-            this.button10.Text = "移除每行前";
+            this.button10.Text = "移除每行前(空行除外)";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -236,9 +236,9 @@
             // 
             this.button11.Location = new System.Drawing.Point(907, 81);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(173, 35);
+            this.button11.Size = new System.Drawing.Size(200, 35);
             this.button11.TabIndex = 20;
-            this.button11.Text = "新增到每行最尾端";
+            this.button11.Text = "新增到每行最尾端(空行除外)";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -313,9 +313,9 @@
             // 
             // txtAppendToEnd
             // 
-            this.txtAppendToEnd.Location = new System.Drawing.Point(1093, 88);
+            this.txtAppendToEnd.Location = new System.Drawing.Point(1128, 88);
             this.txtAppendToEnd.Name = "txtAppendToEnd";
-            this.txtAppendToEnd.Size = new System.Drawing.Size(100, 25);
+            this.txtAppendToEnd.Size = new System.Drawing.Size(148, 25);
             this.txtAppendToEnd.TabIndex = 30;
             this.txtAppendToEnd.Text = "--";
             // 

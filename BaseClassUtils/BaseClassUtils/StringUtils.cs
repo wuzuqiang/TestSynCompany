@@ -9,6 +9,10 @@ namespace BaseClassUtils
 {
     public static class StringUtils
     {
+        public static string DeleteNewLineCharater(this string input)
+        {
+            return input.Replace("\r", "").Replace("\n", "");
+        }
         #region String.ToXXX()转换成某类数据
         public static Int32 ToInt32(this string input)
         {
@@ -20,6 +24,16 @@ namespace BaseClassUtils
         {
             List<string> list = new List<string>();
             foreach(string str in input.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                list.Add(str);
+            }
+            return list;
+        }
+
+        public static List<string> GetSplitLine(string input)
+        {
+            List<string> list = new List<string>();
+            foreach (string str in input.Split(new char[] { '\n' }))
             {
                 list.Add(str);
             }
