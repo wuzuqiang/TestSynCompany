@@ -54,6 +54,7 @@
     <Compile Include="BitUtils.cs" />
     <Compile Include="CallWebServiceHelper.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="TranslatorHelper.cs" />
     <Compile Include="WebSvcCaller.cs" />
     <Compile Include="DirUtil.cs" />
     <Compile Include="ExcelUtils.cs" />
