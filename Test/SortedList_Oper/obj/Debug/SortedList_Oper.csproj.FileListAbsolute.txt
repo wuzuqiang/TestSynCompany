@@ -1,6 +1,7 @@
 E:\repository\TestSynCompany\Test\SortedList_Oper\bin\Debug\SortedList_Oper.exe.config
 E:\repository\TestSynCompany\Test\SortedList_Oper\bin\Debug\SortedList_Oper.exe
 E:\repository\TestSynCompany\Test\SortedList_Oper\bin\Debug\SortedList_Oper.pdb
+E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.csprojAssemblyReference.cache
 E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.exe
 E:\repository\TestSynCompany\Test\SortedList_Oper\obj\Debug\SortedList_Oper.pdb

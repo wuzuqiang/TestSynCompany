@@ -1,7 +1,6 @@
 E:\repository\TestSynCompany\Regex\Ch14Ex01\bin\Debug\Ch14Ex01.exe.config
 E:\repository\TestSynCompany\Regex\Ch14Ex01\bin\Debug\Ch14Ex01.exe
 E:\repository\TestSynCompany\Regex\Ch14Ex01\bin\Debug\Ch14Ex01.pdb
-E:\repository\TestSynCompany\Regex\Ch14Ex01\obj\Debug\Ch14Ex01.csprojAssemblyReference.cache
 E:\repository\TestSynCompany\Regex\Ch14Ex01\obj\Debug\Grid.g.cs
 E:\repository\TestSynCompany\Regex\Ch14Ex01\obj\Debug\ImageButton.g.cs
 E:\repository\TestSynCompany\Regex\Ch14Ex01\obj\Debug\MainWindow.g.cs

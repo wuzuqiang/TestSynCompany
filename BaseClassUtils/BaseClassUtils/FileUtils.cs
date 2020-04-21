@@ -10,7 +10,7 @@ using System.Data.OleDb;
 
 namespace BaseClassUtils
 {
-    public class FileUtils
+    public class FileUtils 
     {
         
         #region 文件的新建、打开、复制、移动

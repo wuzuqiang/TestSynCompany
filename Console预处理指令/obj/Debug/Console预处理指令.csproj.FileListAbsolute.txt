@@ -1,6 +1,7 @@
 E:\repository\TestSynCompany\Console预处理指令\bin\Debug\Console预处理指令.exe.config
 E:\repository\TestSynCompany\Console预处理指令\bin\Debug\Console预处理指令.exe
 E:\repository\TestSynCompany\Console预处理指令\bin\Debug\Console预处理指令.pdb
+E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.csprojAssemblyReference.cache
 E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.csproj.CoreCompileInputs.cache
 E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.exe
 E:\repository\TestSynCompany\Console预处理指令\obj\Debug\Console预处理指令.pdb

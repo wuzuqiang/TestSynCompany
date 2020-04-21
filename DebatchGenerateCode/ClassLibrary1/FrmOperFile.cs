@@ -53,7 +53,7 @@ namespace ClassLibrary1
         private void button2_Click(object sender, EventArgs e)
         {
             //创建目录
-            (new DirUtil()).createDir(txtFolder.Text);
+            DirUtil.CreateDir(txtFolder.Text);
         }
     }
 }

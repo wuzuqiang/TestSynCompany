@@ -1,7 +1,6 @@
 E:\repository\TestSynCompany\面试时可能会遇到的问题\bin\Debug\面试时可能会遇到的问题.exe.config
 E:\repository\TestSynCompany\面试时可能会遇到的问题\bin\Debug\面试时可能会遇到的问题.exe
 E:\repository\TestSynCompany\面试时可能会遇到的问题\bin\Debug\面试时可能会遇到的问题.pdb
-E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.csprojAssemblyReference.cache
 E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.Form1.resources
 E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.Properties.Resources.resources
 E:\repository\TestSynCompany\面试时可能会遇到的问题\obj\Debug\面试时可能会遇到的问题.csproj.GenerateResource.cache

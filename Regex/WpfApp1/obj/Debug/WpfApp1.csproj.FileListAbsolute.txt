@@ -5,7 +5,8 @@ E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\Framework.OEM.dll
 E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\Framework.UI.dll
 E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\Software.OEM.dll
 E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\Software.UI.dll
-E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
+E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\System.Windows.Interactivity.xml
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\BorderControl.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\GameClient.g.cs
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\ListBoxControl.g.cs
@@ -42,5 +43,3 @@ E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileI
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.exe
 E:\repository\TestSynCompany\Regex\WpfApp1\obj\Debug\WpfApp1.pdb
-E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\System.Windows.Interactivity.dll
-E:\repository\TestSynCompany\Regex\WpfApp1\bin\Debug\System.Windows.Interactivity.xml

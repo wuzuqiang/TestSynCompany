@@ -48,11 +48,11 @@ namespace TestReg
             }
 
             //如果有记录，就将其写入文件
-            (new FileUtils()).writeAppendFile(recordPath, new string[] { string.Format("{2}\r\n对字符串：\"{0}\"\r\n使用正则表达式：\"{1}\"的结果是"
-                , input, pattern, DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")) });
+            FileUtils.AppendAllText(recordPath, string.Format("{2}\r\n对字符串：\"{0}\"\r\n使用正则表达式：\"{1}\"的结果是"
+                , input, pattern, DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")));
             if (matchCollection.Count > 0)
             {
-                (new FileUtils()).writeAppendFile(recordPath, Regex.Split(txtResult.Text, @";"));
+                FileUtils.AppendAllText(recordPath, Regex.Split(txtResult.Text, @";").ToList());
             }
         }
 
@@ -80,11 +80,11 @@ namespace TestReg
             }
 
             //如果有记录，就将其写入文件
-            (new FileUtils()).writeAppendFile(recordPath, new string[] { string.Format("{2}\r\n对字符串：\"{0}\"\r\n使用正则表达式：\"{1}\"的结果是"
-                , input, pattern, DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")) });
+            FileUtils.AppendAllText(recordPath,  string.Format("{2}\r\n对字符串：\"{0}\"\r\n使用正则表达式：\"{1}\"的结果是"
+                , input, pattern, DateTime.Now.ToString("yyyy-mm-dd hh:mm:ss")));
             if (matchCollection.Count > 0)
             {
-                (new FileUtils()).writeAppendFile(recordPath, Regex.Split(txtResult.Text, @";"));
+                FileUtils.AppendAllText(recordPath, Regex.Split(txtResult.Text, @";").ToList()); 
             }
 
 
