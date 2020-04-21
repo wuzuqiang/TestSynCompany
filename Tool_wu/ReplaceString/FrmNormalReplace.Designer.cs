@@ -46,6 +46,9 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.cbxOrderType = new System.Windows.Forms.CheckBox();
+            this.richOriginContent = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -97,7 +100,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richInput.Location = new System.Drawing.Point(325, 75);
             this.richInput.Name = "richInput";
-            this.richInput.Size = new System.Drawing.Size(951, 550);
+            this.richInput.Size = new System.Drawing.Size(953, 577);
             this.richInput.TabIndex = 5;
             this.richInput.Text = "";
             // 
@@ -197,7 +200,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(24, 570);
+            this.button8.Location = new System.Drawing.Point(24, 560);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(176, 40);
             this.button8.TabIndex = 16;
@@ -215,11 +218,42 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(147, 612);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(112, 40);
+            this.button10.TabIndex = 18;
+            this.button10.Text = "排序每行";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // cbxOrderType
+            // 
+            this.cbxOrderType.AutoSize = true;
+            this.cbxOrderType.Location = new System.Drawing.Point(15, 624);
+            this.cbxOrderType.Name = "cbxOrderType";
+            this.cbxOrderType.Size = new System.Drawing.Size(119, 19);
+            this.cbxOrderType.TabIndex = 19;
+            this.cbxOrderType.Text = "按首字母拼音";
+            this.cbxOrderType.UseVisualStyleBackColor = true;
+            // 
+            // richOriginContent
+            // 
+            this.richOriginContent.Location = new System.Drawing.Point(1178, 7);
+            this.richOriginContent.Name = "richOriginContent";
+            this.richOriginContent.Size = new System.Drawing.Size(100, 62);
+            this.richOriginContent.TabIndex = 20;
+            this.richOriginContent.Text = "";
+            // 
             // FrmNormalReplace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 656);
+            this.ClientSize = new System.Drawing.Size(1310, 683);
+            this.Controls.Add(this.richOriginContent);
+            this.Controls.Add(this.cbxOrderType);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -265,5 +299,8 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.CheckBox cbxOrderType;
+        private System.Windows.Forms.RichTextBox richOriginContent;
     }
 }

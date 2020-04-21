@@ -19,9 +19,14 @@ namespace ReplaceString
         {
             InitializeComponent();
         }
+        private void saveBeforeContent()
+        {
+            richOriginContent.Text = richInput.Text;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             if (cbxIgnoreCase.Checked)
                 richInput.Text = richInput.Text.ToLower().Replace(textBox1.Text.ToLower(), textBox2.Text.ToLower());
             else
@@ -29,6 +34,7 @@ namespace ReplaceString
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //求文字长度
             txtContentLength.Text = richInput.Text.Length.ToString();
         }
@@ -36,6 +42,7 @@ namespace ReplaceString
         string strNeedTransferInReg = "*, ., [, ], {, }, ^, $, (, )";
         private void button3_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //将每行中某字符前的字符都删除
             string input = richInput.Text;
             StringBuilder sbOutput = new StringBuilder();
@@ -66,6 +73,7 @@ namespace ReplaceString
 
         private void button4_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //将所有内容整合成一行，中间以Tab键盘分隔
             string input = richInput.Text.ToEncryInneredParticularWord();
             StringBuilder sbOutput = new StringBuilder();
@@ -78,6 +86,7 @@ namespace ReplaceString
 
         private void button5_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //将每行中这些字符替换为空
             string input = richInput.Text;
             StringBuilder sbOutput = new StringBuilder();
@@ -90,6 +99,7 @@ namespace ReplaceString
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //将每行中这些字符后的字符都删除
             string input = richInput.Text;
             StringBuilder sbOutput = new StringBuilder();
@@ -122,6 +132,7 @@ namespace ReplaceString
         
         private void button6_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //raw转guid
             //new guid(byte[] id);
             var guid_Val = new Guid(HexStringToBytes(richInput.Text, Encoding.Unicode));
@@ -133,6 +144,7 @@ namespace ReplaceString
 
         private void button7_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             var temp2 = byte.Parse("1b", NumberStyles.HexNumber); 
             //guid转raw
             var temp = (new Guid(richInput.Text)).ToByteArray();
@@ -169,6 +181,7 @@ namespace ReplaceString
 
         private void button8_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //反转义双引号、右下划线
             richInput.Text = (new Regex("\"")).Replace(richInput.Text, "\\\"");
             richInput.Text = (new Regex("\\\\")).Replace(richInput.Text, "\\\\");
@@ -176,9 +189,19 @@ namespace ReplaceString
 
         private void button9_Click(object sender, EventArgs e)
         {
+            saveBeforeContent();
             //将六个空格替换为换行
             //中文全角空格为\u3000，英文半角空格为\u0020，
             richInput.Text = (new Regex("[\u0020\u3000]{6}")).Replace(richInput.Text, "\n");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {   //按首字母拼音或者笔画(反)排序每行
+            saveBeforeContent();
+            if (cbxOrderType.Checked)
+            { //按首字母拼音
+                richInput.Text = richInput.Text.GetSplitLineWithoutEmpty().SortList().Aggregate((n, j) => n + "\n" + j);
+            }
         }
     }
 }
