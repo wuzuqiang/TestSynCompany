@@ -30,6 +30,28 @@ namespace BaseClassUtils
             }
         }
 
+        /// <summary>
+        /// 是否是文件目录，不包含\字符也不算
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static bool IsFileDirectory( string path)
+        {
+            if(!path.Contains("\\"))
+            {
+                return false;
+            }
+            try
+            {
+                Path.GetDirectoryName(path);
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
+
         public static FileInfo[] getAllFile(string path)
         {
             DirectoryInfo directoryInfo = new DirectoryInfo(path);
@@ -47,9 +69,14 @@ namespace BaseClassUtils
             return (new DirectoryInfo(path)).GetDirectories("*", SearchOption.AllDirectories);
         }
 
-        public void createDir(string path)
+        public static void CreateDir(string path)
         {
-            Directory.CreateDirectory(path);
+            Directory.CreateDirectory(Path.GetDirectoryName(path));
+        }
+
+        public static void DeleteDirRecursive(string path)
+        {
+            Directory.Delete(Path.GetDirectoryName(path), true);
         }
 
         public List<string> get第二级别下各自的一行目录或者文件(string path)

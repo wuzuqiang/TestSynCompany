@@ -9,17 +9,7 @@ namespace HN.Integration.Helper
 {
     [Serializable]
     [XmlType(Namespace = "", IncludeInSchema = false)]
-    [XmlRoot("string", Namespace = "", DataType = "string", IsNullable = false)]
-    public class XMLFeedBackResult
-    {
-        public XMLFeedBackResult()
-        {
-            retNodeHead = new RetNodeHead();
-        }
-        /// <remarks/>
-        [XmlElement("Msg")]
-        public RetNodeHead retNodeHead { get; set; }
-    }
+    [XmlRoot("Msg", Namespace = "", DataType = "string", IsNullable = false)]
     public class RetNodeHead
     {
         public RetNodeHead()

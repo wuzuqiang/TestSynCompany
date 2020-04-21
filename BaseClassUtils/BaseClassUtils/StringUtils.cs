@@ -11,6 +11,7 @@ namespace BaseClassUtils
 {
     public static class StringUtils
     {
+<<<<<<< HEAD
         #region 按首字母的拼音或笔画排序字符串
         /// <summary>
         /// 排序
@@ -60,6 +61,10 @@ namespace BaseClassUtils
             return arr;
         }
         #endregion
+        public static string DeleteNewLineCharater(this string input)
+        {
+            return input.Replace("\r", "").Replace("\n", "");
+        }
         #region String.ToXXX()转换成某类数据
         public static Int32 ToInt32(this string input)
         {
@@ -77,19 +82,45 @@ namespace BaseClassUtils
             return list;
         }
 
-        public static List<string> Get(string[] array, string strContained)
+        public static List<string> GetSplitLine(string input)
         {
-            List<string> listMatched = new List<string>();
-            string pattern = @"(\.ext+)(.)";
-            foreach(string str in array)
+            List<string> list = new List<string>();
+            foreach (string str in input.Split(new char[] { '\n' }))
             {
-                if((new Regex(pattern).Matches(str).Count > 0))
+                list.Add(str);
+            }
+            return list;
+        }
+
+        public static string GetSameBaseDirString(this string input, string input02)
+        {
+            StringBuilder sbSame = new StringBuilder();
+            int iMaxSame = 0;
+            for(int i= 0; i < 1; i++)
+            {
+                for(int j=1; (i+j) < input.Count(); j++)
                 {
-                    listMatched.Add(str);
+                    string matchedString = input.Substring(i, j);
+                    if (input02.Contains(matchedString))
+                    {
+                        sbSame = new StringBuilder(matchedString);
+                        iMaxSame = matchedString.Count();
+                        break;
+                    }
+                }
+                if(iMaxSame > 0)
+                {
+                    break;
                 }
             }
-            return listMatched;
+            return sbSame.ToString();
         }
+
+        public static string GetStringAfterDeleteDriveString(this string input)
+        {
+            return input.Replace("C:\\", " ").Replace("D:\\", " ").Replace("E:\\", " ");
+        }
+
         public static bool isMatch(string fileSuffix, string strContained)
         {
             bool isMatch = false;

@@ -201,10 +201,15 @@ namespace ReplaceString
         {
             //在每行前新增txtAppend.Text
             //获取每行内容组成的List
-            List<string> list = richInput.Text.Split('\n').ToList();
+            List<string> list = StringUtils.GetSplitLine(richInput.Text);
             StringBuilder sb = new StringBuilder();
             foreach (string line in list)
             {
+                if(string.IsNullOrEmpty(line.Trim()))
+                {
+                    sb.Append(line + "\n");
+                    continue;
+                }
                 sb.Append(txtAppendToBefore.Text + line + "\n");
             }
             richInput.Text = sb.ToString();
@@ -236,10 +241,15 @@ namespace ReplaceString
         {
             //新增到每行最尾端
             //获取每行内容组成的List
-            List<string> list = StringUtils.GetSplitLineWithoutEmpty(richInput.Text);
+            List<string> list = StringUtils.GetSplitLine(richInput.Text);
             StringBuilder sb = new StringBuilder();
             foreach (string line in list)
             {
+                if (string.IsNullOrEmpty(line.Trim()))
+                {
+                    sb.Append(line + "\n");
+                    continue;
+                }
                 sb.AppendLine(line + txtAppendToEnd.Text.ToString().Trim());
             }
             richInput.Text = sb.ToString();

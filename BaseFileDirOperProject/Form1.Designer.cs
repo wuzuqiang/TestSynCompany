@@ -43,6 +43,8 @@
             this.cbxAppendRowIndex = new System.Windows.Forms.CheckBox();
             this.cbxClearOrigin = new System.Windows.Forms.CheckBox();
             this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -129,18 +131,18 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 418);
+            this.button4.Location = new System.Drawing.Point(37, 398);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(211, 23);
+            this.button4.Size = new System.Drawing.Size(291, 23);
             this.button4.TabIndex = 10;
-            this.button4.Text = "获取目录2下所有文件内容";
+            this.button4.Text = "获取目录2下所有文件名称和所在路径";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(275, 418);
+            this.checkBox1.Location = new System.Drawing.Point(389, 418);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(284, 19);
             this.checkBox1.TabIndex = 11;
@@ -160,7 +162,7 @@
             // cbxAppendRowIndex
             // 
             this.cbxAppendRowIndex.AutoSize = true;
-            this.cbxAppendRowIndex.Location = new System.Drawing.Point(565, 418);
+            this.cbxAppendRowIndex.Location = new System.Drawing.Point(679, 418);
             this.cbxAppendRowIndex.Name = "cbxAppendRowIndex";
             this.cbxAppendRowIndex.Size = new System.Drawing.Size(89, 19);
             this.cbxAppendRowIndex.TabIndex = 13;
@@ -170,7 +172,7 @@
             // cbxClearOrigin
             // 
             this.cbxClearOrigin.AutoSize = true;
-            this.cbxClearOrigin.Location = new System.Drawing.Point(660, 418);
+            this.cbxClearOrigin.Location = new System.Drawing.Point(774, 418);
             this.cbxClearOrigin.Name = "cbxClearOrigin";
             this.cbxClearOrigin.Size = new System.Drawing.Size(119, 19);
             this.cbxClearOrigin.TabIndex = 14;
@@ -179,18 +181,41 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(37, 480);
+            this.button7.Location = new System.Drawing.Point(37, 573);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(137, 23);
             this.button7.TabIndex = 16;
             this.button7.Text = "复制文件";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(37, 444);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(238, 23);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "获取目录2下所有文件名称列表";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(37, 483);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(291, 23);
+            this.button8.TabIndex = 18;
+            this.button8.Text = "获取目录2下所有文件路径列表";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 630);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.cbxClearOrigin);
             this.Controls.Add(this.cbxAppendRowIndex);
@@ -231,6 +256,8 @@
         private System.Windows.Forms.CheckBox cbxAppendRowIndex;
         private System.Windows.Forms.CheckBox cbxClearOrigin;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button8;
     }
 }
 

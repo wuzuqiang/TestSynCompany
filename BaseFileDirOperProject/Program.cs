@@ -17,6 +17,12 @@ namespace BaseFileDirOperProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            Application.ThreadException += Application_ThreadException;
+        }
+
+        private static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
+        {
+            MessageBox.Show(e.ToString());
         }
     }
 }

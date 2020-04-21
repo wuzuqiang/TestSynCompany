@@ -101,13 +101,13 @@ namespace HN.Integration.Helper
         /// 消息ID
         /// </summary>
         [XmlElement("MsgID")]
-        public string MsgID { get; set; }
+        public string MsgID;
 
         /// <summary>
         /// 接口标识
         /// </summary>
         [XmlElement("InterfaceCode")]
-        public string InterfaceCode { get; set; }
+        public string InterfaceCode;
 
         /// <summary>
         /// 接口描述
