@@ -11,7 +11,6 @@ namespace BaseClassUtils
 {
     public static class StringUtils
     {
-<<<<<<< HEAD
         #region 按首字母的拼音或笔画排序字符串
         /// <summary>
         /// 排序
