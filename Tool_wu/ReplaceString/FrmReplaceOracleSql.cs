@@ -267,5 +267,11 @@ namespace ReplaceString
         {
             richInput.Text = richInput.Text.Replace(txtReplacedStr02.Text, txtReplaceStr.Text);
         }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            //where ((("IDU" =  SYS_GUID()) and   替换为 where ((
+            richInput.Text = richInput.Text.Replace(txtBeReplaceStr04.Text, txtReplaceStr04.Text);
+        }
     }
 }
