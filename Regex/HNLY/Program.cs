@@ -6,6 +6,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using BaseClassUtils;
+using Fusion.Context.Warehouse.Domain.Models.Bill.OutBills;
+using Fusion.Context.Warehouse.Domain.Models.Warehouse.Locations;
+using Fusion.Infrastructure.Interface.Chinasoft.MES.V2.Services.YSK;
 using HN.Integration.Helper;
 using Serializable;
 
@@ -15,16 +18,29 @@ namespace HNLY
     {
         static void Main(string[] args)
         {
-            //Func0();
-            TestTranslatorHelper();
-            //test2deSerialXmlByXmlString();
-            //serialXml();
-            //deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
-            //deSerialXmlByXmlString();
+            Func1();
+            ////Func0();
+            //TestTranslatorHelper();
+            ////test2deSerialXmlByXmlString();
+            ////serialXml();
+            ////deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
+            ////deSerialXmlByXmlString();
 
-            //testHNLY_mess();
-            //testBaseOperXml();
+            ////testHNLY_mess();
+            ////testBaseOperXml();
             Console.ReadLine();
+        }
+
+        public static void Func1()
+        {
+            var temp = new OutBill("OutBillNo", "BillTypeCode", "WarehouseCode", "Maker", DateTime.Now);
+            var temp2 = new Storage(Guid.NewGuid(),"locationCode", Guid.NewGuid(), "productCode", "productName", DateTime.Now,"inBillNo");
+            var temp3 = new Storage(Guid.NewGuid(), "locationCode02", Guid.NewGuid(), "productCode02", "productName02", DateTime.Now, "inBillNo");
+            List<Storage> storages = new List<Storage>();
+            storages.Add(temp2);
+            storages.Add(temp3);
+            var main01 = new YSKToMesAdapter();
+            main01.AdapterTransOutBillState(temp, storages);
         }
 
         public static void TestTranslatorHelper()
