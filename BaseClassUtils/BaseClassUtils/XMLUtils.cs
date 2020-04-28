@@ -166,34 +166,61 @@ namespace BaseClassUtils
             //return "";
             #endregion
 
-            #region 方法2
-            //准备序化列对象
+            #region 方法2，过滤主节点的无用属性
+            //#region
+            ////准备序化列对象
+            //XmlSerializer xs = new XmlSerializer(typeof(T));
+            //MemoryStream ms = new MemoryStream();
+            ////设置序序化XML格式
+            //XmlWriterSettings xws = new XmlWriterSettings();
+            //xws.Indent = true;
+            //xws.OmitXmlDeclaration = true;
+            //xws.Encoding = Encoding.UTF8;
+            //XmlWriter xtw = XmlTextWriter.Create(ms, xws);W
+            ////去掉要结点的 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 属性
+            //XmlSerializerNamespaces _namespaces = new XmlSerializerNamespaces(
+            //    new XmlQualifiedName[] {
+            //            new XmlQualifiedName(string.Empty, "aa")
+            // });
+            //xs.Serialize(xtw, obj, _namespaces);
+            //ms.Position = 0;
+            //XmlDocument xmlDoc = new XmlDocument();
+            //xmlDoc.Load(ms);
+            ////给文档添加<?xml version="1.0" encoding="utf-8"?>
+            //XmlDeclaration xmlDecl = xmlDoc.CreateXmlDeclaration("1.0", "utf-8", null);
+            //xmlDoc.InsertBefore(xmlDecl, xmlDoc.DocumentElement);
+
+            //string xmlMessage = xmlDoc.InnerXml;
+
+            //ms.Close();
+
+            //return xmlMessage;
+            //#endregion
+            #endregion
+
+            #region 方法3，看着最简便的方法//
+            //#region //
+            //MemoryStream ms = new MemoryStream();
+            //// XmlTextWriter textWriter = new XmlTextWriter(ms, Encoding.GetEncoding(encoding));
+            //StreamWriter textWriter = new StreamWriter(ms, Encoding.GetEncoding(encoding));
+            //XmlSerializer serializer = new XmlSerializer(typeof(T));
+            //serializer.Serialize(textWriter, obj);
+            //string xmlMessage = Encoding.GetEncoding(encoding).GetString(ms.GetBuffer());
+            //ms.Close();
+            //textWriter.Close();
+            //return xmlMessage;
+            //#endregion
+            #endregion
+
+            #region
+            #endregion
+            #region 
             XmlSerializer xs = new XmlSerializer(typeof(T));
-            MemoryStream ms = new MemoryStream();
-            //设置序序化XML格式
-            XmlWriterSettings xws = new XmlWriterSettings();
-            xws.Indent = true;
-            xws.OmitXmlDeclaration = true;
-            xws.Encoding = Encoding.UTF8;
-            XmlWriter xtw = XmlTextWriter.Create(ms, xws);
-            //去掉要结点的 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 属性
-            XmlSerializerNamespaces _namespaces = new XmlSerializerNamespaces(
-                new XmlQualifiedName[] {
-                        new XmlQualifiedName(string.Empty, "aa")
-             });
-            xs.Serialize(xtw, obj, _namespaces);
-            ms.Position = 0;
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(ms);
-            //给文档添加<?xml version="1.0" encoding="utf-8"?>
-            XmlDeclaration xmlDecl = xmlDoc.CreateXmlDeclaration("1.0", "utf-8", null);
-            xmlDoc.InsertBefore(xmlDecl, xmlDoc.DocumentElement);
-
-            string xmlMessage = xmlDoc.InnerXml;
-            
-            ms.Close();
-
-            return xmlMessage;
+            StringWriter xout = new StringWriter();
+            xs.Serialize(xout, obj);
+            XmlDocument x = new XmlDocument();
+            x.LoadXml(xout.ToString()); //请确保xou是从“<?xml”开始的，即是完整的xml数据
+            return x.InnerXml;
             #endregion
         }
 

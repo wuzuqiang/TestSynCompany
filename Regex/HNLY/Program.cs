@@ -18,11 +18,11 @@ namespace HNLY
     {
         static void Main(string[] args)
         {
-            Func1();
+            //Func1();
             ////Func0();
             //TestTranslatorHelper();
             ////test2deSerialXmlByXmlString();
-            ////serialXml();
+            serialXml();
             ////deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
             ////deSerialXmlByXmlString();
 
@@ -62,7 +62,9 @@ namespace HNLY
             XMLUtils.filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Test1.xml");
             Person p1 = new Person();
             p1.Name = "test";
-            Console.WriteLine("最终序列化为：" + (new XMLUtils()).serialXml<Person>(p1));
+            Console.WriteLine("最终序列化为：\n" + (new XMLUtils()).serialXml<Person>(p1)
+                .Replace(" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"", "")
+                .Replace(" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"", ""));
         }
 
         public static void deSerialXmlByXmlFile()
