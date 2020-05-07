@@ -91,6 +91,17 @@ namespace BaseClassUtils
             return list;
         }
 
+        public static Dictionary<int, string> GetSplitLine(this string input, char splitChar)
+        {
+            Dictionary<int, string> dicSplit = new Dictionary<int, string>();
+            int rowSerial = 1;
+            foreach (string str in input.Split(new char[] { splitChar }))
+            {
+                dicSplit.Add(rowSerial++, str);
+            }
+            return dicSplit;
+        }
+
         public static string GetSameBaseDirString(this string input, string input02)
         {
             StringBuilder sbSame = new StringBuilder();
