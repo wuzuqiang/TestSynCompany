@@ -60,10 +60,28 @@ namespace BaseClassUtils
             return arr;
         }
         #endregion
+
+        /// <summary>
+        /// 移除换行符
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static string DeleteNewLineCharater(this string input)
         {
             return input.Replace("\r", "").Replace("\n", "");
         }
+
+        /// <summary>
+        /// 移除字符串的最后lastNum行
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="lastNum">要移除最后的几行？</param>
+        /// <returns></returns>
+        public static string RemoveLastChar(this string input, int lastNum = 1)
+        {
+            return input.Remove(input.Length - lastNum, lastNum);
+        }
+
         #region String.ToXXX()转换成某类数据
         public static Int32 ToInt32(this string input)
         {
