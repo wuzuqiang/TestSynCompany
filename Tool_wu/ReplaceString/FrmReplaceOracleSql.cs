@@ -60,18 +60,24 @@ namespace ReplaceString
         private void button3_Click(object sender, EventArgs e)
         {
             //获取每行内容组成的List
-            List<string> list = richInput.Text.Split('\n').ToList();
+            List<string> list = richInput.Text.Split('\n').ToList();list.RemoveAt();
+            int iInsertRow = 0;
             List<string> listNeedExistedString = txtOperNotContained.Text.Split('|').ToList();
             richInput.Text = "";
+            List<string> listTempSave = new List<string>();
+            Dictionary<int, string> dicTempSave = new Dictionary<int, string>();
             StringBuilder sb = new StringBuilder();
+            int remainNeedRemoveRowNum = txtConcludeAfterRowNum.Text.ToInt32();
+            bool existMatchStr = false;
             foreach (string line in list)
             {
                 bool isExisted = false;
                 foreach (string str in listNeedExistedString)
                 {
-                    if (line.ToLower().Contains(str.ToLower()))
+                    if (line.ToEncryInneredParticularWord().Contains(str.ToEncryInneredParticularWord()))
                     {
                         isExisted = true;
+                        existMatchStr = true;
                         break;
                     }
                 }
@@ -79,8 +85,33 @@ namespace ReplaceString
                 {   //如果line中包含左括号{，会造成错误
                     //要注意的特殊字符分类，1、string.Format双引号中左括号、右括号、英文双引号、右下划线；2、正则表达式替换
                     //想法，碰到要替换字符串、被替换字符串中包含这些特殊字符，都先转换为唯一的字符串，最后，如果还存在这些特殊字符串就转换回来。
-                    sb.AppendFormat(line + "\n");
+                    dicTempSave.Add(iInsertRow++, $"{line.ToEncryInneredParticularWord()}");
                 }
+                if (isExisted)
+                {
+                    int temp = txtConcludeBeforeRowNum.Text.ToInt32();
+                    if (temp > 0)
+                    {
+                        for (int i = 1; i <= temp && i <= dicTempSave.Keys.Count; i++)
+                        {
+                            dicTempSave.Remove(dicTempSave.Keys.Count - i);
+                            iInsertRow--;
+                        }
+                    }
+                }
+                //不论这行是否包含特定字符，
+                if(existMatchStr && remainNeedRemoveRowNum-- > 0 && dicTempSave.Keys.Count > (remainNeedRemoveRowNum + 1))
+                {
+
+                }
+            }
+            foreach(var saveRow in dicTempSave)
+            {
+                sb.Append($"{saveRow.Value.ToDecodeInneredParticularWord()}\n");
+            }
+            if (sb.Length > 1)
+            {
+                sb.Remove(sb.Length - 1, 1);
             }
             richInput.Text = sb.ToString();
         }
