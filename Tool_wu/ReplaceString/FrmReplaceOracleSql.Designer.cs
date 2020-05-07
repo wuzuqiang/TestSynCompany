@@ -161,6 +161,7 @@
             this.txtOperNotContained.Name = "txtOperNotContained";
             this.txtOperNotContained.Size = new System.Drawing.Size(252, 25);
             this.txtOperNotContained.TabIndex = 11;
+            this.txtOperNotContained.Text = "1|2|4";
             // 
             // button3
             // 
@@ -406,7 +407,7 @@
             this.txtConcludeBeforeRowNum.Name = "txtConcludeBeforeRowNum";
             this.txtConcludeBeforeRowNum.Size = new System.Drawing.Size(53, 25);
             this.txtConcludeBeforeRowNum.TabIndex = 36;
-            this.txtConcludeBeforeRowNum.Text = "0";
+            this.txtConcludeBeforeRowNum.Text = "2";
             // 
             // label9
             // 
@@ -424,7 +425,7 @@
             this.txtConcludeAfterRowNum.Name = "txtConcludeAfterRowNum";
             this.txtConcludeAfterRowNum.Size = new System.Drawing.Size(53, 25);
             this.txtConcludeAfterRowNum.TabIndex = 38;
-            this.txtConcludeAfterRowNum.Text = "0";
+            this.txtConcludeAfterRowNum.Text = "2";
             // 
             // label10
             // 
