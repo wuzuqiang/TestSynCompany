@@ -235,7 +235,7 @@ namespace ReplaceString
         private void button13_Click(object sender, EventArgs e)
         {
             //生成GUID
-            richInput.Text = System.Guid.NewGuid().ToString();
+            richInput.Text = System.Guid.NewGuid().ToString().ToUpper();
         }
     }
     public static class CheckCodeHelper
