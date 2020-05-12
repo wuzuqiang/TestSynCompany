@@ -231,6 +231,12 @@ namespace ReplaceString
             return;
             //txtCurrentIndex.Text = (1 + Convert.ToInt32(txtCurrentIndex.Text)).ToString();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //生成GUID
+            richInput.Text = System.Guid.NewGuid().ToString();
+        }
     }
     public static class CheckCodeHelper
     {
