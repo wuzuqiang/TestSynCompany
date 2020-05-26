@@ -75,6 +75,10 @@ namespace BaseFileDirOperProject
         }
         private void CopyFile(string src, string des)
         {
+            if(File.Exists(src))
+            {
+                throw new Exception($"抱歉，文件：{src}不存在！请检查！");
+            }
             File.Copy(src, des);
         }
 
