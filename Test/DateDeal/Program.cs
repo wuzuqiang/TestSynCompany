@@ -9,9 +9,10 @@ namespace DateDeal
     class Program
     {
         static void Main(string[] args)
-        {
+        {   //时间处理DateTime
+            Console.WriteLine("(new DateTime()).ToString(\"yyyy - MM - dd HH: mm:ss\")：" + (new DateTime()).ToString("yyyy-MM-dd HH:mm:ss"));
             Console.WriteLine("DateTime.Now.ToString()：" + DateTime.Now.ToString());
-            Console.WriteLine("DateTime.Now.ToString()：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+            Console.WriteLine("DateTime.Now.ToString(\"yyyy-MM-dd HH: mm:ss\")：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
 
             Console.WriteLine("DateTime.Now.ToLongDateString()：" + DateTime.Now.ToLongDateString());
             Console.WriteLine("DateTime.Now.ToShortTimeString()：" + DateTime.Now.ToShortTimeString());
