@@ -133,6 +133,8 @@ namespace BaseFileDirOperProject
             //打开文本框中的所有文件
             foreach(string str in richCopyFiles.Text.GetSplitLineWithoutEmpty())
             {
+                if (Path.GetExtension(str) == ".resx")
+                    continue;
                 System.Diagnostics.Process.Start(str);
             }
         }
