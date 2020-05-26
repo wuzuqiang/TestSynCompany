@@ -14,6 +14,16 @@ namespace BaseClassUtils
     {
         
         #region 文件的新建、打开、复制、移动
+
+        public static void CopyFile(string srcFileFullName, string destFileFullName)
+        {
+            if (File.Exists(srcFileFullName))
+            {
+                throw new Exception($"抱歉，文件：{srcFileFullName}不存在！请检查！");
+            }
+            File.Copy(srcFileFullName, destFileFullName);
+        }
+
         public void copyAllFile(string[] fileFullNames)
         {
             foreach (string fileFullName in fileFullNames)
@@ -51,6 +61,14 @@ namespace BaseClassUtils
         {
             Directory.CreateDirectory(Path.GetDirectoryName(filePath));
             System.Diagnostics.Process.Start(filePath);
+        }
+
+        public static void ChangeFileName(string srcFileLocationDir, string srcFileName, string destFileName)
+        {
+            string srcFilePath = Path.Combine(srcFileLocationDir, srcFileName);
+            string destFilePath = Path.Combine(srcFileLocationDir, destFileName);
+            File.Copy(srcFilePath, destFilePath);
+            File.Delete(srcFilePath);
         }
         #endregion
 
