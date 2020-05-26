@@ -12,15 +12,22 @@ namespace BaseClassUtils
 {
     public class FileUtils 
     {
-        
+        #region string字符串的文件校验
+        public static void CheckedFile(string srcFileFullName)
+        {
+            string dirName = Path.GetDirectoryName(srcFileFullName + "a.txt");
+            if (Directory.Exists(srcFileFullName) || srcFileFullName == dirName)
+            {
+                throw new Exception($"抱歉，文件：{srcFileFullName}非文件类型(明显是目录)！请检查！");
+            }
+        }
+        #endregion
+
         #region 文件的新建、打开、复制、移动
 
         public static void CopyFile(string srcFileFullName, string destFileFullName)
         {
-            if (File.Exists(srcFileFullName))
-            {
-                throw new Exception($"抱歉，文件：{srcFileFullName}不存在！请检查！");
-            }
+            CheckedFile(srcFileFullName);
             File.Copy(srcFileFullName, destFileFullName);
         }
 
