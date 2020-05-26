@@ -40,6 +40,9 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\..\Regex\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\Regex\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
@@ -54,6 +57,7 @@
     <Compile Include="BitUtils.cs" />
     <Compile Include="CallWebServiceHelper.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="JsonHelper.cs" />
     <Compile Include="ListUtil.cs" />
     <Compile Include="TranslatorHelper.cs" />
     <Compile Include="WebSvcCaller.cs" />
@@ -96,6 +100,9 @@
     <Content Include="xml_HNLY\工单结束.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
