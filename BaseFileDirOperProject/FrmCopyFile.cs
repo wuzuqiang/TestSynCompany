@@ -24,21 +24,21 @@ namespace BaseFileDirOperProject
             bool isNeedAddBaseDir = cbxIsNeedAddBaseDir.Checked;
             string needCopyFiles = richCopyFiles.Text;
             string msg = "";
-            CopyFile(needCopyFiles, isNeedAddBaseDir,ref msg);
+
+            CopyFile(needCopyFiles, isNeedAddBaseDir, txtDestBaseDir.Text, ref msg);
             string extraTips = string.IsNullOrEmpty(msg) ? " " : $"但出现异常：{msg}";
             MessageBox.Show("恭喜！操作成功！" + extraTips);
         }
 
-        private void CopyFile(string needCopyFiles, bool isNeedAddBaseDir, ref string msg)
+        private void CopyFile(string needCopyFiles, bool isNeedAddBaseDir, string strDestBaseDir, ref string msg)
         {//将这些路径下的文件都复制到目录
-            if(Directory.Exists(txtDestBaseDir.Text))
+            if (Directory.Exists(strDestBaseDir))
             {
-                if(DialogResult.OK == MessageBox.Show("已存在目录" + "是否先连子目录也删除？\n" + txtDestBaseDir.Text, "目录已存在！是否先连子目录也删除？", MessageBoxButtons.OKCancel))
+                if (DialogResult.OK == MessageBox.Show("已存在目录" + "是否先连子目录也删除？\n" + strDestBaseDir, "目录已存在！是否先连子目录也删除？", MessageBoxButtons.OKCancel))
                 {
-                    DirUtil.DeleteDirRecursive(txtDestBaseDir.Text);
-                }                
+                    DirUtil.DeleteDirRecursive(strDestBaseDir);
+                }
             }
-
             List<string> listSrcPath = new List<string>();
             foreach (string str in needCopyFiles.GetSplitLineWithoutEmpty())
             {
@@ -63,7 +63,7 @@ namespace BaseFileDirOperProject
                 if (DirUtil.IsFileDirectory(srcPath))
                 {
                     //listPath.Add(srcPath);
-                    string desPath = $"{ txtDestBaseDir.Text.Trim()}\\{str.Trim().Replace(":\\", "")}";
+                    string desPath = $"{ strDestBaseDir.Trim()}\\{str.Trim().Replace(":\\", "")}";
                     DirUtil.CreateDir(desPath);
                     FileUtils.CopyFile(srcPath, desPath);
                 }
@@ -80,7 +80,7 @@ namespace BaseFileDirOperProject
 
         private void FrmCopyFile_Load(object sender, EventArgs e)
         {
-            txtDestBaseDir.Text = AppDomain.CurrentDomain.BaseDirectory + $"{DateTime.Now.ToString("yyyy-MM-dd")}";
+            strDestBaseDir = AppDomain.CurrentDomain.BaseDirectory + $"{DateTime.Now.ToString("yyyy-MM-dd")}";
         }
 
         private void button1_Click(object sender, EventArgs e)
