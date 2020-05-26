@@ -20,7 +20,7 @@ namespace BaseFileDirOperProject
         }
 
         private void button6_Click(object sender, EventArgs e)
-        {
+        {   //将文本框中的所有文件都复制到目录(每行一个)
             bool isNeedAddBaseDir = cbxIsNeedAddBaseDir.Checked;
             string needCopyFiles = richCopyFiles.Text;
             string msg = "";

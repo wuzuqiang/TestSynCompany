@@ -41,7 +41,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(385, 23);
             this.button6.TabIndex = 16;
-            this.button6.Text = "将这些路径下的文件都复制到目录";
+            this.button6.Text = "将文本框中的所有文件都复制到目录(每行一个)";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -69,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richCopyFiles.Location = new System.Drawing.Point(55, 141);
             this.richCopyFiles.Name = "richCopyFiles";
-            this.richCopyFiles.Size = new System.Drawing.Size(779, 420);
+            this.richCopyFiles.Size = new System.Drawing.Size(789, 519);
             this.richCopyFiles.TabIndex = 19;
             this.richCopyFiles.Text = "需要复制文件的目录列表";
             // 
@@ -79,14 +79,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDestBaseDir.Location = new System.Drawing.Point(455, 47);
             this.txtDestBaseDir.Name = "txtDestBaseDir";
-            this.txtDestBaseDir.Size = new System.Drawing.Size(379, 25);
+            this.txtDestBaseDir.Size = new System.Drawing.Size(389, 25);
             this.txtDestBaseDir.TabIndex = 20;
             // 
             // FrmCopyFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 585);
+            this.ClientSize = new System.Drawing.Size(880, 729);
             this.Controls.Add(this.txtDestBaseDir);
             this.Controls.Add(this.richCopyFiles);
             this.Controls.Add(this.txtBaseDir);
