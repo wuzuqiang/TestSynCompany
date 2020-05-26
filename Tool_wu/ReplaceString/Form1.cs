@@ -237,6 +237,20 @@ namespace ReplaceString
             //生成GUID
             richInput.Text = System.Guid.NewGuid().ToString().ToUpper();
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            //首字母大小写
+            var temp = richInput.Text;
+            if(cbkToUper.Checked)
+            {
+                richInput.Text = temp.Substring(0, 1).ToUpper() + temp.Substring(1);
+            }
+            else
+            {
+                richInput.Text = temp.Substring(0, 1).ToLower() + temp.Substring(1);
+            }
+        }
     }
     public static class CheckCodeHelper
     {

@@ -55,6 +55,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCurrentIndex = new System.Windows.Forms.TextBox();
             this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.cbkToUper = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -166,7 +168,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(356, 67);
+            this.button5.Location = new System.Drawing.Point(984, 107);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 11;
@@ -177,7 +179,7 @@
             // cbxWordUper
             // 
             this.cbxWordUper.AutoSize = true;
-            this.cbxWordUper.Location = new System.Drawing.Point(438, 71);
+            this.cbxWordUper.Location = new System.Drawing.Point(1066, 111);
             this.cbxWordUper.Name = "cbxWordUper";
             this.cbxWordUper.Size = new System.Drawing.Size(74, 19);
             this.cbxWordUper.TabIndex = 12;
@@ -230,7 +232,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(1088, 68);
+            this.button7.Location = new System.Drawing.Point(353, 72);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(132, 23);
             this.button7.TabIndex = 18;
@@ -315,11 +317,33 @@
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(984, 148);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(111, 23);
+            this.button14.TabIndex = 28;
+            this.button14.Text = "首字母";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // cbkToUper
+            // 
+            this.cbkToUper.AutoSize = true;
+            this.cbkToUper.Location = new System.Drawing.Point(1102, 148);
+            this.cbkToUper.Name = "cbkToUper";
+            this.cbkToUper.Size = new System.Drawing.Size(59, 19);
+            this.cbkToUper.TabIndex = 29;
+            this.cbkToUper.Text = "大写";
+            this.cbkToUper.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1491, 740);
+            this.Controls.Add(this.cbkToUper);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.txtCurrentIndex);
             this.Controls.Add(this.label6);
@@ -383,6 +407,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCurrentIndex;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.CheckBox cbkToUper;
     }
 }
 
