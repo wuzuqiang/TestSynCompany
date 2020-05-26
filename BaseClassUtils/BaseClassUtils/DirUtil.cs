@@ -74,9 +74,9 @@ namespace BaseClassUtils
             Directory.CreateDirectory(Path.GetDirectoryName(path));
         }
 
-        public static void DeleteDirRecursive(string path)
+        public static void DeleteDirRecursive(string dirPath)
         {
-            Directory.Delete(Path.GetDirectoryName(path), true);
+            Directory.Delete(dirPath, true);
         }
 
         public List<string> get第二级别下各自的一行目录或者文件(string path)
