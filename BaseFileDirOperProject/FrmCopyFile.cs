@@ -82,5 +82,24 @@ namespace BaseFileDirOperProject
         {
             txtDestBaseDir.Text = AppDomain.CurrentDomain.BaseDirectory + $"{DateTime.Now.ToString("yyyy-MM-dd")}";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //假如输入的是目录列表，那么先转换为文件列表，然后如上复制文件即可实现复制目录以及子目录
+            List<string> listSrcPath = new List<string>();
+            foreach (string str in richCopyFiles.Text.GetSplitLineWithoutEmpty())
+            {
+                foreach(FileInfo fileInfo in DirUtil.getAllFile(str))
+                {
+                    listSrcPath.Add(fileInfo.FullName);
+                }
+            }
+
+            richCopyFiles.Text = "";
+            foreach(string str in listSrcPath)
+            {
+                richCopyFiles.Text += $"{str}\n";
+            }
+        }
     }
 }
