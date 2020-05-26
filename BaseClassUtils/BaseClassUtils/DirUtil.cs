@@ -69,9 +69,13 @@ namespace BaseClassUtils
             return (new DirectoryInfo(path)).GetDirectories("*", SearchOption.AllDirectories);
         }
 
-        public static void CreateDir(string path)
+        /// <summary>
+        /// 依据文件名称，创建文件所需目录
+        /// </summary>
+        /// <param name="filePath"></param>
+        public static void CreateDir(string filePath)
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(path));
+            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
         }
 
         public static void DeleteDirRecursive(string dirPath)
