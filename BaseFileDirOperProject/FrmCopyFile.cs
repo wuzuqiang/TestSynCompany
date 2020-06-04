@@ -105,6 +105,7 @@ namespace BaseFileDirOperProject
             //包含原有功能外，附加功能，修改文件名和带这些内容的目录由
             List<string> listSrcPath = new List<string>();
             listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked, txtDestBaseDir.Text);
+            List<string> listDestPath = new List<string>();
 
             //将这些路径下的文件都复制到目录strDestBaseDir下
             foreach (string srcPath in listSrcPath)
@@ -116,9 +117,10 @@ namespace BaseFileDirOperProject
                     string destDir = $"{ txtDestBaseDir.Text.Trim()}\\{Path.GetDirectoryName(srcPath)}".Replace(strReplaced, strReplace);
                     string destFileName = $"{Path.GetFileName(srcPath).Replace(strReplaced, strReplace)}";
 
-                    string desPath = $"{destDir}\\{destFileName}".Replace("\\E:\\", "\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
-                    DirUtil.CreateDir(desPath);
-                    FileUtils.CopyFile(srcPath, desPath);   //有时会出现错误：指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符
+                    string destPath = $"{destDir}\\{destFileName}".Replace("\\E:\\", "\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
+                    listDestPath.Add(destPath);
+                    DirUtil.CreateDir(destPath);
+                    FileUtils.CopyFile(srcPath, destPath);   //有时会出现错误：指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符
                 }
                 else
                 {
@@ -126,6 +128,14 @@ namespace BaseFileDirOperProject
                     MessageBox.Show(msg);
                 }
             }
+
+            richCopyFiles.Text = "";
+            foreach(string path in listDestPath)
+            {
+                richCopyFiles.Text += $"{path}\n";
+            }
+
+            MessageBox.Show("恭喜！操作成功！");
         }
 
         private void button3_Click(object sender, EventArgs e)

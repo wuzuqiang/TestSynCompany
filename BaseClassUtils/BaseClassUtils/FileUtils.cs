@@ -64,9 +64,12 @@ namespace BaseClassUtils
             System.Diagnostics.Process.Start(fileCopyDestPath);
         }
 
-        public static void OpenFileIfnotthencreat(string filePath)
+        public static void OpenFileIfnotthencreat(string filePath, bool isCreateIfNotExist = true)
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            if(isCreateIfNotExist)
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+            }
             System.Diagnostics.Process.Start(filePath);
         }
 

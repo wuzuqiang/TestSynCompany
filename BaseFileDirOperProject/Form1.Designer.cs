@@ -45,6 +45,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.cbxIsCreateIfNotExist = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,11 +67,11 @@
             // 
             // btnOpenFile
             // 
-            this.btnOpenFile.Location = new System.Drawing.Point(651, 68);
+            this.btnOpenFile.Location = new System.Drawing.Point(651, 59);
             this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(351, 23);
+            this.btnOpenFile.Size = new System.Drawing.Size(272, 37);
             this.btnOpenFile.TabIndex = 2;
-            this.btnOpenFile.Text = "打开文件(不存在则创建)或打开目录";
+            this.btnOpenFile.Text = "打开文件或打开目录";
             this.btnOpenFile.UseVisualStyleBackColor = true;
             this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
@@ -209,11 +210,22 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // cbxIsCreateIfNotExist
+            // 
+            this.cbxIsCreateIfNotExist.AutoSize = true;
+            this.cbxIsCreateIfNotExist.Location = new System.Drawing.Point(953, 69);
+            this.cbxIsCreateIfNotExist.Name = "cbxIsCreateIfNotExist";
+            this.cbxIsCreateIfNotExist.Size = new System.Drawing.Size(119, 19);
+            this.cbxIsCreateIfNotExist.TabIndex = 19;
+            this.cbxIsCreateIfNotExist.Text = "不存在则创建";
+            this.cbxIsCreateIfNotExist.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 630);
+            this.Controls.Add(this.cbxIsCreateIfNotExist);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
@@ -258,6 +270,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.CheckBox cbxIsCreateIfNotExist;
     }
 }
 

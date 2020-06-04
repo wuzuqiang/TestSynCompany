@@ -22,7 +22,7 @@ namespace BaseFileDirOperProject
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
             //打开文件(不存在则创建)或打开目录
-            FileUtils.OpenFileIfnotthencreat(txtFilePath01.Text);
+            FileUtils.OpenFileIfnotthencreat(txtFilePath01.Text, cbxIsCreateIfNotExist.Checked);
         }
 
         private void button2_Click(object sender, EventArgs e)
