@@ -46,6 +46,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,7 @@
     <Compile Include="StringUtils.cs" />
     <Compile Include="TestMultiLayerClass.cs" />
     <Compile Include="TypeConverterUtil.cs" />
+    <Compile Include="WinFormUtil.cs" />
     <Compile Include="XMLUtils.cs" />
     <Compile Include="xml_HNLY\FeedBackResult.cs" />
     <Compile Include="xml_HNLY\MessagePackage.cs" />
