@@ -12,7 +12,7 @@ namespace BaseClassUtils
 {
     public class FileUtils 
     {
-        #region string字符串的文件校验
+        #region string字符串的文件类型校验
         public static void CheckedFile(string srcFileFullName)
         {
             string dirName = Path.GetDirectoryName(srcFileFullName + "a.txt");
