@@ -27,34 +27,25 @@ namespace BaseFileDirOperProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //打开目录
-            FolderBrowserDialog dlg = new FolderBrowserDialog();
-            if(DialogResult.OK == dlg.ShowDialog())
-            {
-
-            }
+            //打开目录2的基目录
+            txtCombineDir.Text = WinFormUtil.ShowFolderBrowserDialog() ?? txtCombineDir.Text;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //打开文件或目录
-            FolderBrowserDialog dlg = new FolderBrowserDialog();
-            if (DialogResult.OK == dlg.ShowDialog())
-            {
-
-            }
+            //选择目录2
+            txtCombineRelaPath.Text = WinFormUtil.ShowFolderBrowserDialog() ?? txtCombineRelaPath.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //打开上述合并的文件或目录
-            OpenFileDialog dlg = new OpenFileDialog();
             FileUtils.OpenFileIfnotthencreat(System.IO.Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text));
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
+        {   //反正自己用的，替换掉就是
+            txtFilePathThatContainAllSoftwarePackage.Text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "当前某服务器某目录所有的软件安装包.txt").Replace(@"\bin\Debug\", @"\");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -125,19 +116,10 @@ namespace BaseFileDirOperProject
         {
             StringBuilder sb = new StringBuilder();
             List<string> contents = new List<string>();
-            int iIndex = 1;
-            sb.AppendLine($"iIndex++，Name，目录为{txtCombineDir.Text}");
             foreach (var fileInfo in fileSystemInfos)
             {
-                string temp = $"{fileInfo.FullName.PadRight(70)}";
-                if (cbxAppendRowIndex.Checked)
-                {
-                    contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
-                }
-                else
-                {
-                    contents.Add(temp);
-                }
+                string temp = $"{fileInfo.FullName}";
+                contents.Add(temp);
             }
             return contents;
         }
@@ -182,23 +164,25 @@ namespace BaseFileDirOperProject
 
         private void button8_Click(object sender, EventArgs e)
         {
-            //获取目录2下所有文件路径列表
+            //获取目录2下所有软件安装包文件名
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
-            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
+            var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
 
-            if (checkBox1.Checked)
-            { //记录所有文件信息到当前路径默认日志
-                List<string> contents = getAllFilePath(fileSystemInfos.ToList());
-                if (cbxClearOrigin.Checked)
-                { //覆盖原有内容
-                    FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件路径).txt"), contents);
-                }
-                else
-                    FileUtils.AppendAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件路径).txt"), contents);
-            }
+            List<string> matchFileExtension = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
+                , ".bat", ".ppt", ".doc", ".txt" };
+            var fileSystemInfos = fileSystemInfos00.Where(w => matchFileExtension.Contains(Path.GetExtension(w.FullName)));
+
+            //记录所有文件信息到当前路径默认日志
+            List<string> contents = getAllFilePath(fileSystemInfos.ToList());
+            FileUtils.WriteAllLines(txtFilePathThatContainAllSoftwarePackage.Text, contents);
 
             MessageBox.Show("恭喜！操作成功！");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            txtFilePathThatContainAllSoftwarePackage.Text = WinFormUtil.ShowOpenFileDialog() ?? txtFilePathThatContainAllSoftwarePackage.Text;
         }
     }
 }

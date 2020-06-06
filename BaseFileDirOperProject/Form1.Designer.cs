@@ -46,6 +46,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.cbxIsCreateIfNotExist = new System.Windows.Forms.CheckBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.txtFilePathThatContainAllSoftwarePackage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -77,17 +79,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(37, 306);
+            this.button1.Location = new System.Drawing.Point(37, 239);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(211, 23);
+            this.button1.Size = new System.Drawing.Size(331, 31);
             this.button1.TabIndex = 5;
-            this.button1.Text = "打开上述合并的文件或目录";
+            this.button1.Text = "打开上述合并的文件或目录(即目录2)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtCombineDir
             // 
-            this.txtCombineDir.Location = new System.Drawing.Point(93, 213);
+            this.txtCombineDir.Location = new System.Drawing.Point(93, 146);
             this.txtCombineDir.Name = "txtCombineDir";
             this.txtCombineDir.Size = new System.Drawing.Size(538, 25);
             this.txtCombineDir.TabIndex = 4;
@@ -96,7 +98,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 224);
+            this.label2.Location = new System.Drawing.Point(34, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 3;
@@ -104,7 +106,7 @@
             // 
             // txtCombineRelaPath
             // 
-            this.txtCombineRelaPath.Location = new System.Drawing.Point(93, 265);
+            this.txtCombineRelaPath.Location = new System.Drawing.Point(93, 198);
             this.txtCombineRelaPath.Name = "txtCombineRelaPath";
             this.txtCombineRelaPath.Size = new System.Drawing.Size(538, 25);
             this.txtCombineRelaPath.TabIndex = 7;
@@ -112,29 +114,29 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(637, 212);
+            this.button2.Location = new System.Drawing.Point(637, 145);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 23);
+            this.button2.Size = new System.Drawing.Size(137, 26);
             this.button2.TabIndex = 8;
-            this.button2.Text = "打开目录";
+            this.button2.Text = "选择基目录";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(637, 264);
+            this.button3.Location = new System.Drawing.Point(637, 197);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 23);
+            this.button3.Size = new System.Drawing.Size(137, 26);
             this.button3.TabIndex = 9;
-            this.button3.Text = "打开文件或目录";
+            this.button3.Text = "选择目录";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(37, 398);
+            this.button4.Location = new System.Drawing.Point(37, 351);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(291, 23);
+            this.button4.Size = new System.Drawing.Size(291, 30);
             this.button4.TabIndex = 10;
             this.button4.Text = "获取目录2下所有文件名称和所在路径";
             this.button4.UseVisualStyleBackColor = true;
@@ -143,7 +145,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(389, 418);
+            this.checkBox1.Location = new System.Drawing.Point(345, 371);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(284, 19);
             this.checkBox1.TabIndex = 11;
@@ -163,7 +165,7 @@
             // cbxAppendRowIndex
             // 
             this.cbxAppendRowIndex.AutoSize = true;
-            this.cbxAppendRowIndex.Location = new System.Drawing.Point(679, 418);
+            this.cbxAppendRowIndex.Location = new System.Drawing.Point(635, 371);
             this.cbxAppendRowIndex.Name = "cbxAppendRowIndex";
             this.cbxAppendRowIndex.Size = new System.Drawing.Size(89, 19);
             this.cbxAppendRowIndex.TabIndex = 13;
@@ -173,7 +175,7 @@
             // cbxClearOrigin
             // 
             this.cbxClearOrigin.AutoSize = true;
-            this.cbxClearOrigin.Location = new System.Drawing.Point(774, 418);
+            this.cbxClearOrigin.Location = new System.Drawing.Point(730, 371);
             this.cbxClearOrigin.Name = "cbxClearOrigin";
             this.cbxClearOrigin.Size = new System.Drawing.Size(119, 19);
             this.cbxClearOrigin.TabIndex = 14;
@@ -192,9 +194,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(37, 444);
+            this.button6.Location = new System.Drawing.Point(37, 388);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(238, 23);
+            this.button6.Size = new System.Drawing.Size(266, 29);
             this.button6.TabIndex = 17;
             this.button6.Text = "获取目录2下所有文件名称列表";
             this.button6.UseVisualStyleBackColor = true;
@@ -202,11 +204,11 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(37, 483);
+            this.button8.Location = new System.Drawing.Point(37, 452);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(291, 23);
+            this.button8.Size = new System.Drawing.Size(502, 28);
             this.button8.TabIndex = 18;
-            this.button8.Text = "获取目录2下所有文件路径列表";
+            this.button8.Text = "获取目录2下所有软件安装包文件名(去除基目录)，并保存在文件：";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -220,11 +222,31 @@
             this.cbxIsCreateIfNotExist.Text = "不存在则创建";
             this.cbxIsCreateIfNotExist.UseVisualStyleBackColor = true;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(951, 482);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(137, 28);
+            this.button9.TabIndex = 21;
+            this.button9.Text = "选择文件";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // txtFilePathThatContainAllSoftwarePackage
+            // 
+            this.txtFilePathThatContainAllSoftwarePackage.Location = new System.Drawing.Point(37, 486);
+            this.txtFilePathThatContainAllSoftwarePackage.Name = "txtFilePathThatContainAllSoftwarePackage";
+            this.txtFilePathThatContainAllSoftwarePackage.Size = new System.Drawing.Size(886, 25);
+            this.txtFilePathThatContainAllSoftwarePackage.TabIndex = 20;
+            this.txtFilePathThatContainAllSoftwarePackage.Text = "E:\\repository\\TestSynCompany\\Regex\\文件是否上传到服务器\\当前某服务器某目录所有的软件安装包.txt";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 630);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.txtFilePathThatContainAllSoftwarePackage);
             this.Controls.Add(this.cbxIsCreateIfNotExist);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button6);
@@ -271,6 +293,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.CheckBox cbxIsCreateIfNotExist;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox txtFilePathThatContainAllSoftwarePackage;
     }
 }
 
