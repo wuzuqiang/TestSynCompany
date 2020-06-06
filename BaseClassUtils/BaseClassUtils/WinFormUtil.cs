@@ -17,6 +17,10 @@ namespace BaseClassUtils
             {
                 result = dlg.FileName;
             }
+            else
+            {
+                result = null;
+            }
             return result;
         }
 
@@ -27,6 +31,10 @@ namespace BaseClassUtils
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 result = dlg.SelectedPath;
+            }
+            else
+            {
+                result = null;
             }
             return result;
         }
