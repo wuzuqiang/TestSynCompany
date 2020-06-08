@@ -89,10 +89,10 @@ namespace BaseClassUtils
         }
         #endregion
 
-        public static List<string> GetSplitLineWithoutEmpty(this string input)
+        public static List<string> GetSplitLineWithoutEmpty(this string input, char splitArray= '\n')
         {
             List<string> list = new List<string>();
-            foreach(string str in input.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries))
+            foreach(string str in input.Split(new char[] { splitArray }, StringSplitOptions.RemoveEmptyEntries))
             {
                 list.Add(str);
             }
