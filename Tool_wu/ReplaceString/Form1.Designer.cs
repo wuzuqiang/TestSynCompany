@@ -57,6 +57,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.cbkToUper = new System.Windows.Forms.CheckBox();
+            this.button15 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -337,11 +338,22 @@
             this.cbkToUper.Text = "大写";
             this.cbkToUper.UseVisualStyleBackColor = true;
             // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(1330, 65);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(136, 23);
+            this.button15.TabIndex = 30;
+            this.button15.Text = "THOK计算校验码";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1491, 740);
+            this.Controls.Add(this.button15);
             this.Controls.Add(this.cbkToUper);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button13);
@@ -409,6 +421,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.CheckBox cbkToUper;
+        private System.Windows.Forms.Button button15;
     }
 }
 

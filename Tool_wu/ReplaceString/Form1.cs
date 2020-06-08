@@ -251,8 +251,11 @@ namespace ReplaceString
                 richInput.Text = temp.Substring(0, 1).ToLower() + temp.Substring(1);
             }
         }
-    }
-    public static class CheckCodeHelper
-    {
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            //THOK计算校验码
+            (new FrmCalculateCheckCode()).Show();
+        }
     }
 }

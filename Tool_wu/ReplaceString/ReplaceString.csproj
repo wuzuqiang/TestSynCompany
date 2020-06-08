@@ -56,6 +56,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCalculateCheckCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalculateCheckCode.Designer.cs">
+      <DependentUpon>FrmCalculateCheckCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCodeFormat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalculateCheckCode.resx">
+      <DependentUpon>FrmCalculateCheckCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCodeFormat.resx">
       <DependentUpon>FrmCodeFormat.cs</DependentUpon>
