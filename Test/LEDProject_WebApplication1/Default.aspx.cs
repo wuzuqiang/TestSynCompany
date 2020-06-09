@@ -47,7 +47,7 @@ namespace LEDProject_WebApplication1
         public static extern int User_AddTemperature(int CardNum, ref User_Temperature pTemperature, int iProgramIndex);
 
         //发送数据
-        [DllImport("EQ2008_Dll.dll", CharSet = CharSet.Ansi)]
+        [DllImport("EQ2008_Dll.dll", SetLastError = true, CharSet = CharSet.Ansi)]
         public static extern Boolean User_SendToScreen(int CardNum);
         //====================================================================//       
 
