@@ -102,7 +102,10 @@ namespace LEDProject_WebApplication1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.comboBox1.SelectedIndex = 0;
+            if(!IsPostBack)
+            {
+                this.comboBox1.SelectedIndex = 0;
+            }
             //string str = $"当前g_iCardNum：{g_iCardNum}\t";
             //this.label1.Text = str;
 
@@ -110,7 +113,6 @@ namespace LEDProject_WebApplication1
 
         protected void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.comboBox1.SelectedIndex = 0;
             g_iCardNum = comboBox1.SelectedIndex + 1;
         }
 

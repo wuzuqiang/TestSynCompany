@@ -11,9 +11,8 @@
     <form id="form1" runat="server">
         <div>
             选择控制卡地址:&nbsp;
-            <asp:DropDownList ID="comboBox1" runat="server" Height="31px" OnSelectedIndexChanged="comboBox1_SelectedIndexChanged" Width="188px">
-                <asp:ListItem Value="0"></asp:ListItem>
-                <asp:ListItem>1</asp:ListItem>
+            <asp:DropDownList ID="comboBox1" runat="server" Height="31px" OnSelectedIndexChanged="comboBox1_SelectedIndexChanged" Width="188px" AutoPostBack="True">
+                <asp:ListItem Value="1"></asp:ListItem>
                 <asp:ListItem Value="2"></asp:ListItem>
                 <asp:ListItem Value="3"></asp:ListItem>
                 <asp:ListItem Value="4"></asp:ListItem>
