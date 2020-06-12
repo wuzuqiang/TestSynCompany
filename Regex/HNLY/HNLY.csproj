@@ -46,9 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HeadFieldItemModel.cs" />
+    <Compile Include="MessageSerialXml.cs" />
+    <Compile Include="MesToFLKTranslate.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransFLKStoreHouseResourcesModel.cs" />
     <Compile Include="useComp\Models\Utils\HeadFieldItemModel.cs" />
     <Compile Include="useComp\Models\XmlBase.cs" />
     <Compile Include="useComp\Models\XmlInput.cs" />

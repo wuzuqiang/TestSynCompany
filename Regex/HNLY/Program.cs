@@ -22,13 +22,22 @@ namespace HNLY
             ////Func0();
             //TestTranslatorHelper();
             ////test2deSerialXmlByXmlString();
-            serialXml();
+            //serialXml();
             ////deSerialXmlByXmlFile();   //一切可正常序列化xml和反解析
             ////deSerialXmlByXmlString();
 
             ////testHNLY_mess();
             ////testBaseOperXml();
+            SerialMessageSerialXmlV1Xml();
             Console.ReadLine();
+        }
+
+        public static void SerialMessageSerialXmlV1Xml()
+        {
+            MessageSerialXmlV1 messageSerialXmlV1 = new MessageSerialXmlV1();
+            messageSerialXmlV1.Data = "testDataInMessageSerialXmlV1";
+            var ret = (new XMLUtils()).serialXml<MessageSerialXmlV1>(messageSerialXmlV1);
+            Console.WriteLine(ret);
         }
 
         public static void Func1()
