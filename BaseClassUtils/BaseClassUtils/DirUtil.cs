@@ -104,24 +104,34 @@ namespace BaseClassUtils
             return listFile;
         }
 
-        static List<FileSystemInfo> fileSystemInfos = new List<FileSystemInfo>();
-        public static List<FileSystemInfo> GetAllFileSystemInfo(string path)
+        static List<FileSystemInfo> FileSystemInfos = new List<FileSystemInfo>();
+        public static List<FileSystemInfo> ReCursiveGetAllFileSystemInfo(string path)
         {
             FileSystemInfo[] fileSysArray = (new DirectoryInfo(path)).GetFileSystemInfos();
             foreach (FileSystemInfo info in fileSysArray)
             {
                 if (info is DirectoryInfo)
                 {
-                    GetAllFileSystemInfo(info.FullName);
+                    ReCursiveGetAllFileSystemInfo(info.FullName);
                 }
                 else
                 {
-                    fileSystemInfos.Add(info);
+                    FileSystemInfos.Add(info);
                 }
+            }
+            return FileSystemInfos;
+        }
+        public static IEnumerable<FileSystemInfo> GetAllFileSystemInfo(string path, bool isSort = true)
+        {
+            IEnumerable<FileSystemInfo> fileSystemInfos = new List<FileSystemInfo>();
+            fileSystemInfos = ReCursiveGetAllFileSystemInfo(path);
+            if(isSort)
+            {
+                fileSystemInfos = fileSystemInfos.OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
             }
             return fileSystemInfos;
         }
-        
+
 
     }
 }

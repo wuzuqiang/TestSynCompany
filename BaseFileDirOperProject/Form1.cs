@@ -167,7 +167,7 @@ namespace BaseFileDirOperProject
             //获取目录2下所有软件安装包文件名
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
-            var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
+            var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path);
 
             List<string> matchFileExtension = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
                 , ".bat", ".ppt", ".doc", ".txt" };

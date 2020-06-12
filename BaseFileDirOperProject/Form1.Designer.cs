@@ -206,9 +206,9 @@
             // 
             this.button8.Location = new System.Drawing.Point(37, 452);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(502, 28);
+            this.button8.Size = new System.Drawing.Size(620, 28);
             this.button8.TabIndex = 18;
-            this.button8.Text = "获取目录2下所有软件安装包文件名(去除基目录)，并保存在文件：";
+            this.button8.Text = "获取目录2下所有软件安装包文件名(去除基目录)，并保存在文件(清空原有内容)：";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
