@@ -38,7 +38,7 @@ namespace BaseFileDirOperProject
                 if (DirUtil.IsFileDirectory(srcPath))
                 {
                     //listPath.Add(srcPath);
-                    string desPath = $"{ strDestBaseDir.Trim()}\\{srcPath.Trim().Replace(":\\", "")}";
+                    string desPath = $"{ strDestBaseDir.Trim()}\\{srcPath.Trim().Replace(":\\", "__\\")}";
                     DirUtil.CreateDir(desPath);
                     FileUtils.CopyFile(srcPath, desPath);
                 }
@@ -64,7 +64,14 @@ namespace BaseFileDirOperProject
                 string srcPath = "";
                 if (isNeedAddBaseDir)
                 {
-                    srcPath = Path.Combine(txtBaseDir.Text, str.Trim());
+                    if(str.Length > 2)
+                    {
+                        srcPath = Path.Combine(txtBaseDir.Text, (str.Substring(0, 2).Replace("\\", "") + str.Substring(2)).Trim());
+                    }
+                    else
+                    {
+                        srcPath = Path.Combine(txtBaseDir.Text, str.Trim());
+                    }
                 }
                 else
                 {

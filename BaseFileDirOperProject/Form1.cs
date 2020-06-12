@@ -112,13 +112,17 @@ namespace BaseFileDirOperProject
             return contents;
         }
 
-        private List<string> getAllFilePath(List<FileSystemInfo> fileSystemInfos)
+        private List<string> getAllFilePath(List<FileSystemInfo> fileSystemInfos, bool isNotContainedBaseDir = true, string baseDir = " ")
         {
             StringBuilder sb = new StringBuilder();
             List<string> contents = new List<string>();
             foreach (var fileInfo in fileSystemInfos)
             {
-                string temp = $"{fileInfo.FullName}";
+                string temp = "";
+                if(isNotContainedBaseDir)
+                {
+                    temp = $"{fileInfo.FullName}".Replace(baseDir, " ");
+                }
                 contents.Add(temp);
             }
             return contents;
@@ -174,7 +178,7 @@ namespace BaseFileDirOperProject
             var fileSystemInfos = fileSystemInfos00.Where(w => matchFileExtension.Contains(Path.GetExtension(w.FullName)));
 
             //记录所有文件信息到当前路径默认日志
-            List<string> contents = getAllFilePath(fileSystemInfos.ToList());
+            List<string> contents = getAllFilePath(fileSystemInfos.ToList(), true, txtCombineDir.Text);
             FileUtils.WriteAllLines(txtFilePathThatContainAllSoftwarePackage.Text, contents);
 
             MessageBox.Show("恭喜！操作成功！");
