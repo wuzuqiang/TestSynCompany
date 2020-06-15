@@ -79,6 +79,8 @@ namespace BaseClassUtils
         /// <returns></returns>
         public static string RemoveLastChar(this string input, int lastNum = 1)
         {
+            if (string.IsNullOrEmpty(input))
+                return "";
             return input.Remove(input.Length - lastNum, lastNum);
         }
 
