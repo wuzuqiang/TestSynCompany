@@ -174,7 +174,7 @@ namespace BaseFileDirOperProject
             var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path);
 
             List<string> matchFileExtension = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
-                , ".bat", ".ppt", ".doc", ".txt" };
+                , ".bat", ".ppt", ".doc", ".docx", ".txt", ".pdf", ".xls", ".xlsx", ".chm", ".xmind", ".sql" };
             var fileSystemInfos = fileSystemInfos00.Where(w => matchFileExtension.Contains(Path.GetExtension(w.FullName)));
 
             //记录所有文件信息到当前路径默认日志

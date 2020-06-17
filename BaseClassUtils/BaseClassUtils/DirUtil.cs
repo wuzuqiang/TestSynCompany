@@ -104,7 +104,7 @@ namespace BaseClassUtils
             return listFile;
         }
 
-        static List<FileSystemInfo> FileSystemInfos = new List<FileSystemInfo>();
+        static List<FileSystemInfo> ExistedFileSystemInfos = new List<FileSystemInfo>();
         public static List<FileSystemInfo> ReCursiveGetAllFileSystemInfo(string path)
         {
             FileSystemInfo[] fileSysArray = (new DirectoryInfo(path)).GetFileSystemInfos();
@@ -116,13 +116,14 @@ namespace BaseClassUtils
                 }
                 else
                 {
-                    FileSystemInfos.Add(info);
+                    ExistedFileSystemInfos.Add(info);
                 }
             }
-            return FileSystemInfos;
+            return ExistedFileSystemInfos;
         }
         public static IEnumerable<FileSystemInfo> GetAllFileSystemInfo(string path, bool isSort = true)
         {
+            ExistedFileSystemInfos = new List<FileSystemInfo>();
             IEnumerable<FileSystemInfo> fileSystemInfos = new List<FileSystemInfo>();
             fileSystemInfos = ReCursiveGetAllFileSystemInfo(path);
             if(isSort)
