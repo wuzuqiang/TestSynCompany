@@ -45,7 +45,7 @@ namespace BaseFileDirOperProject
 
         private void Form1_Load(object sender, EventArgs e)
         {   //反正自己用的，替换掉就是
-            txtFilePathThatContainAllSoftwarePackage.Text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "当前某服务器某目录所有的软件安装包.txt").Replace(@"\bin\Debug\", @"\");
+            txtFilePathThatContainAllSoftwarePackage.Text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "当前某服务器某目录所有的软件安装包.txt");//.Replace(@"\bin\Debug\", @"\");
         }
 
         private void button4_Click(object sender, EventArgs e)
