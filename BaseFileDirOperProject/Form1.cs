@@ -147,28 +147,36 @@ namespace BaseFileDirOperProject
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            //获取目录2下所有文件名称列表
+            //获取目录2下所有文件信息
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
-            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
-
-            if (checkBox1.Checked)
-            { //记录所有文件信息到当前路径默认日志
-                List<string> contents = getAllFileName(fileSystemInfos.ToList());
-                if (cbxClearOrigin.Checked)
-                { //覆盖原有内容
-                    FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件名称).txt"), contents);
-                }
-                else
-                    FileUtils.AppendAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + "(只含文件名称).txt"), contents);
-            }
 
             MessageBox.Show("恭喜！操作成功！");
         }
 
+        private string getSaveFilePath()
+        {
+            string saveFilePath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
+            if (!checkBox1.Checked)
+            {   //记录所有文件信息到当前路径默认日志
+                saveFilePath = txtFilePathThatContainAllSoftwarePackage.Text;
+            }
+            return saveFilePath;
+        }
+
+        private IEnumerable<FileSystemInfo> getFileSysteInfo(string path)
+        {
+            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path, false);
+            if(cbxOrderFileName.Checked)
+            {
+                fileSystemInfos = fileSystemInfos.OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
+            }
+            return fileSystemInfos;
+        }
+
         private void button8_Click(object sender, EventArgs e)
         {
-            //获取目录2下所有软件安装包文件名
+            //获取目录2下所有软件安装包文件信息
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
             var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path);
