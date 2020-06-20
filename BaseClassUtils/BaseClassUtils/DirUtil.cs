@@ -105,7 +105,7 @@ namespace BaseClassUtils
         }
 
         static List<FileSystemInfo> ExistedFileSystemInfos = new List<FileSystemInfo>();
-        public static List<FileSystemInfo> ReCursiveGetAllFileSystemInfo(string path)
+        private static List<FileSystemInfo> ReCursiveGetAllFileSystemInfo(string path)
         {
             FileSystemInfo[] fileSysArray = (new DirectoryInfo(path)).GetFileSystemInfos();
             foreach (FileSystemInfo info in fileSysArray)
