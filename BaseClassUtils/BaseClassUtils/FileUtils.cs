@@ -192,5 +192,54 @@ namespace BaseClassUtils
         }
         #endregion
 
+
+        /// <summary>
+        /// 获取整理后的文件信息
+        /// </summary>
+        /// <param name="fileSystemInfos"></param>
+        /// <param name="isContainBaseDir"></param>
+        /// <param name="baseDir"></param>
+        /// <param name="isContainSerialNumber"></param>
+        /// <param name="isContainFileName"></param>
+        /// <param name="isContainFilePath"></param>
+        /// <param name="isContainCreateTime"></param>
+        /// <returns></returns>
+        public static List<string> GetCollateFileSystemInfo(List<FileSystemInfo> fileSystemInfos, bool isContainBaseDir = true, string baseDir = " ", bool isContainSerialNumber = false
+            , bool isContainFileName = true, bool isContainFilePath = true, bool isContainCreateTime = false,bool isContainLastTime = false)
+        {
+            List<string> contents = new List<string>();
+            int iIndex = 1;
+            foreach (var fileInfo in fileSystemInfos)
+            {
+                StringBuilder rowContent = new StringBuilder();
+                if (isContainFilePath)
+                {
+                    rowContent.Append($"{fileInfo.FullName}，");
+                }
+                if (isContainFilePath && !isContainBaseDir)
+                {   //都不包含文件全路径，何谈是否包含根目录
+                    rowContent = rowContent.Replace(baseDir, " ");
+                }
+                if (isContainCreateTime)
+                {
+                    rowContent.Append($"{fileInfo.CreationTime.ToString("yyyy--MM--dd")}，");
+                }
+                if (isContainLastTime)
+                {
+                    rowContent.Append($"{fileInfo.LastWriteTime.ToString("yyyy--MM--dd")}，");
+                }
+                if (isContainFileName)
+                {
+                    rowContent.Insert(0, $"{fileInfo.Name}, ");
+                }
+                if (isContainSerialNumber)
+                {
+                    rowContent.Insert(0, $"{(iIndex++).ToString().PadLeft(4)}, ");
+                }
+                contents.Add(rowContent.ToString());
+            }
+            return contents;
+        }
+
     }
 }
