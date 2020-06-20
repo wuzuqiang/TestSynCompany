@@ -46,97 +46,14 @@ namespace BaseFileDirOperProject
         private void Form1_Load(object sender, EventArgs e)
         {   //反正自己用的，替换掉就是
             txtFilePathThatContainAllSoftwarePackage.Text = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "当前某服务器某目录所有的软件安装包.txt");//.Replace(@"\bin\Debug\", @"\");
+            lbDefaultFileSavePath.Text = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string path = txtFilePath01.Text;
-            path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
-            //获取目录2下所有文件内容 //排列文件名称
-            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path).OrderBy(a => ((FileInfo) a).DirectoryName).ThenBy(a => a.FullName);
-
-            if (checkBox1.Checked)
-            { //记录所有文件信息到当前路径默认日志
-                List<string> contents = getAllFileNameAndFilePath(fileSystemInfos.ToList());
-                if (cbxClearOrigin.Checked)
-                { //覆盖原有内容
-                    FileUtils.WriteAllLines(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt"), contents);
-                }
-                else
-                FileUtils.AppendAllText(Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt"),contents);
-            }
-
-            MessageBox.Show("恭喜！操作成功！");
-            
-        }
-
-        private List<string> getAllFileNameAndFilePath(List<FileSystemInfo> fileSystemInfos)
-        {
-            StringBuilder sb = new StringBuilder();
-            List<string> contents = new List<string>();
-            int iIndex = 1;
-            sb.AppendLine($"iIndex++，Name，FullName，根目录为{txtCombineDir.Text}");
-            foreach (var fileInfo in fileSystemInfos)
-            {
-                string temp = $"{fileInfo.Name.PadRight(70)},{fileInfo.FullName.Replace(txtCombineDir.Text, "")}";
-                if (cbxAppendRowIndex.Checked)
-                {
-                    contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
-                }
-                else
-                {
-                    contents.Add(temp);
-                }
-            }
-            return contents;
-        }
-
-        private List<string> getAllFileName(List<FileSystemInfo> fileSystemInfos)
-        {
-            StringBuilder sb = new StringBuilder();
-            List<string> contents = new List<string>();
-            int iIndex = 1;
-            sb.AppendLine($"iIndex++，Name，目录为{txtCombineDir.Text}");
-            foreach (var fileInfo in fileSystemInfos)
-            {
-                string temp = $"{fileInfo.Name.PadRight(70)}";
-                if (cbxAppendRowIndex.Checked)
-                {
-                    contents.Add($"{(iIndex++).ToString().PadLeft(4)}, " + temp);
-                }
-                else
-                {
-                    contents.Add(temp);
-                }
-            }
-            return contents;
-        }
-
-        private List<string> getAllFilePath(List<FileSystemInfo> fileSystemInfos, bool isNotContainedBaseDir = true, string baseDir = " ")
-        {
-            StringBuilder sb = new StringBuilder();
-            List<string> contents = new List<string>();
-            foreach (var fileInfo in fileSystemInfos)
-            {
-                string temp = "";
-                if(isNotContainedBaseDir)
-                {
-                    temp = $"{fileInfo.FullName}".Replace(baseDir, " ");
-                }
-                contents.Add(temp);
-            }
-            return contents;
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
             //打开本程序根目录
             System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -148,30 +65,47 @@ namespace BaseFileDirOperProject
         private void button6_Click_1(object sender, EventArgs e)
         {
             //获取目录2下所有文件信息
-            string path = txtFilePath01.Text;
-            path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
+            var fileInfos = DirUtil.GetAllFileSystemInfo(Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text), cbxOrderFileName.Checked);
+
+            //获取要写入的文件信息
+            var listContent = FileUtils.GetCollateFileSystemInfo(fileInfos.ToList(), cbxAddBaseDir.Checked, txtCombineDir.Text, cbxOrderFileName.Checked, cbxAddFileName.Checked
+                , cbxAddFilePath.Checked, cbxAddCreateTime.Checked, cbxAddLastWriteTime.Checked);
+
+            //获取数据保存在哪个文件
+            string saveFilePath = getSaveFilePath();
+
+            //将数据写入文件
+            writeToFile(saveFilePath, listContent);
 
             MessageBox.Show("恭喜！操作成功！");
         }
 
+        private List<string> getContents(IEnumerable<FileSystemInfo> fileSystemInfos)
+        {
+            return FileUtils.GetCollateFileSystemInfo(fileSystemInfos.ToList(), cbxAddBaseDir.Checked, txtCombineDir.Text, cbxOrderFileName.Checked, cbxAddFileName.Checked
+                , cbxAddFilePath.Checked, cbxAddCreateTime.Checked);
+        }
+
+        private void writeToFile(string saveFilePath, List<string> listContent)
+        {
+            if (cbxCoverageOrigin.Checked)
+            {
+                FileUtils.WriteAllLines(saveFilePath, listContent);
+            }
+            else
+            {
+                FileUtils.AppendAllText(saveFilePath, listContent);
+            }
+        }
+
         private string getSaveFilePath()
         {
-            string saveFilePath = Path.Combine(System.AppDomain.CurrentDomain.BaseDirectory, DateTime.Now.ToString("yyyy-MM-dd") + ".txt");
-            if (!checkBox1.Checked)
-            {   //记录所有文件信息到当前路径默认日志
+            string saveFilePath = lbDefaultFileSavePath.Text;
+            if (!cbxSaveToDefaultPath.Checked)
+            {   //记录所有文件信息到自己选择的目录文件
                 saveFilePath = txtFilePathThatContainAllSoftwarePackage.Text;
             }
             return saveFilePath;
-        }
-
-        private IEnumerable<FileSystemInfo> getFileSysteInfo(string path)
-        {
-            var fileSystemInfos = DirUtil.GetAllFileSystemInfo(path, false);
-            if(cbxOrderFileName.Checked)
-            {
-                fileSystemInfos = fileSystemInfos.OrderBy(a => ((FileInfo)a).DirectoryName).ThenBy(a => a.FullName);
-            }
-            return fileSystemInfos;
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -179,15 +113,21 @@ namespace BaseFileDirOperProject
             //获取目录2下所有软件安装包文件信息
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
-            var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path);
+            var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path, cbxSaveToDefaultPath.Checked);
 
             List<string> matchFileExtension = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
                 , ".bat", ".ppt", ".doc", ".docx", ".txt", ".pdf", ".xls", ".xlsx", ".chm", ".xmind", ".sql" };
-            var fileSystemInfos = fileSystemInfos00.Where(w => matchFileExtension.Contains(Path.GetExtension(w.FullName)));
+            var fileInfos = fileSystemInfos00.Where(w => matchFileExtension.Contains(Path.GetExtension(w.FullName)));
 
-            //记录所有文件信息到当前路径默认日志
-            List<string> contents = getAllFilePath(fileSystemInfos.ToList(), true, txtCombineDir.Text);
-            FileUtils.WriteAllLines(txtFilePathThatContainAllSoftwarePackage.Text, contents);
+
+            //获取要写入的文件信息
+            var listContent = getContents(fileInfos);
+
+            //获取数据保存在哪个文件
+            string saveFilePath = getSaveFilePath();
+
+            //将数据写入文件
+            writeToFile(saveFilePath, listContent);
 
             MessageBox.Show("恭喜！操作成功！");
         }
