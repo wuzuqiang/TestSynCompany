@@ -65,7 +65,7 @@ namespace BaseFileDirOperProject
         private void button6_Click_1(object sender, EventArgs e)
         {
             //获取目录2下所有文件信息
-            var fileInfos = DirUtil.GetAllFileSystemInfo(Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text), cbxOrderFileName.Checked);
+            var fileInfos = getAllFileConsideSerialNum();
 
             //获取要写入的文件信息
             var listContent = FileUtils.GetCollateFileSystemInfo(fileInfos.ToList(), cbxAddBaseDir.Checked, txtCombineDir.Text, cbxOrderFileName.Checked, cbxAddFileName.Checked
@@ -78,6 +78,11 @@ namespace BaseFileDirOperProject
             writeToFile(saveFilePath, listContent);
 
             MessageBox.Show("恭喜！操作成功！");
+        }
+
+        private IEnumerable<FileSystemInfo> getAllFileConsideSerialNum()
+        {
+            return DirUtil.GetAllFileSystemInfo(Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text), cbxOrderFileName.Checked);
         }
 
         private List<string> getContents(IEnumerable<FileSystemInfo> fileSystemInfos)
@@ -113,12 +118,12 @@ namespace BaseFileDirOperProject
             //获取目录2下所有软件安装包文件信息
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
-            var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path, cbxSaveToDefaultPath.Checked);
+            var fileSystemInfos00= getAllFileConsideSerialNum();
             
             List<string> matchFileExtensionV0 = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
                 , ".bat", ".ppt", ".doc", ".docx", ".txt", ".pdf", ".xls", ".xlsx", ".chm", ".xmind", ".sql" };
             List<string> matchFileExtensionV1 = new List<string>();
-            matchFileExtensionV1.AddRange(matchFileExtensionV1.Select(s => s.ToLower()));
+            matchFileExtensionV1.AddRange(matchFileExtensionV0.Select(s => s.ToLower()));
             var fileInfos = fileSystemInfos00.Where(w => matchFileExtensionV1.Contains(Path.GetExtension(w.FullName.ToLower())));
             
             //获取要写入的文件信息
