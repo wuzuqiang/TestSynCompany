@@ -91,6 +91,11 @@ namespace BaseFileDirOperProject
         private void FrmCopyFile_Load(object sender, EventArgs e)
         {
             txtDestDir.Text = AppDomain.CurrentDomain.BaseDirectory + $"{DateTime.Now.ToString("yyyy-MM-dd")}";
+
+            dptMinTime.Format = DateTimePickerFormat.Custom;
+            dptMinTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            dptMaxTime.Format = DateTimePickerFormat.Custom;
+            dptMaxTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -169,8 +174,49 @@ namespace BaseFileDirOperProject
 
         private void FilterFile()
         {
-            CheckDestDir();
             List<string> listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked);
+            List<FileInfo> listFileInfo = filePathToFileInfo(listSrcPath);
+            var filterFileInfo = GetFilterFileInfos(listFileInfo);
+            if (filterFileInfo.Count() >= 2)
+                richCopyFiles.Text = GetFilterFileInfos(listFileInfo).Select(s => s.FullName).Aggregate((a1, a2) => $"{a1}\n{a2}");
+            else
+            {
+                richCopyFiles.Text = "";
+                foreach (var info in filterFileInfo)
+                {
+                    richCopyFiles.Text += $"{info.FullName}\n";
+                }
+            }
+        }
+
+        private IEnumerable<FileInfo> GetFilterFileInfos(List<FileInfo> listFileInfo)
+        {
+            IEnumerable<FileInfo> fileInfos = listFileInfo.Where(w => true);
+            if(cbxTimeGreaterThan.Checked)
+            {
+                fileInfos = fileInfos.Where(w => w.LastWriteTime >= dptMinTime.Text.ToDateTime());
+            }
+            if (cbxTimeLessThan.Checked)
+            {
+                fileInfos = fileInfos.Where(w => w.LastWriteTime <= dptMaxTime.Text.ToDateTime());
+            }
+            if(cbxFileNameContain.Checked)
+            {
+                fileInfos = fileInfos.Where(w => w.Name.Contains(txtContainStr.Text));
+            }
+            
+            return fileInfos;
+        }
+
+        private List<FileInfo> filePathToFileInfo(List<string> listPath)
+        {
+            List<FileInfo> listFileInfo = new List<FileInfo>();
+            foreach (string path in listPath)
+            {
+                FileInfo fileInfo = new FileInfo(path);
+                listFileInfo.Add(fileInfo);
+            }
+            return listFileInfo;
         }
     }
 }

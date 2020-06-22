@@ -40,18 +40,20 @@
             this.txtSrc01 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dptMinTime = new System.Windows.Forms.DateTimePicker();
             this.cbxTimeGreaterThan = new System.Windows.Forms.CheckBox();
             this.cbxFileNameContain = new System.Windows.Forms.CheckBox();
             this.txtContainStr = new System.Windows.Forms.TextBox();
+            this.cbxTimeLessThan = new System.Windows.Forms.CheckBox();
+            this.dptMaxTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(41, 19);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Location = new System.Drawing.Point(55, 24);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(289, 18);
+            this.button6.Size = new System.Drawing.Size(385, 22);
             this.button6.TabIndex = 16;
             this.button6.Text = "将文本框中的所有文件都复制到目录(每行一个)";
             this.button6.UseVisualStyleBackColor = true;
@@ -60,20 +62,20 @@
             // cbxIsNeedAddBaseDir
             // 
             this.cbxIsNeedAddBaseDir.AutoSize = true;
-            this.cbxIsNeedAddBaseDir.Location = new System.Drawing.Point(41, 150);
-            this.cbxIsNeedAddBaseDir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxIsNeedAddBaseDir.Location = new System.Drawing.Point(55, 188);
+            this.cbxIsNeedAddBaseDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxIsNeedAddBaseDir.Name = "cbxIsNeedAddBaseDir";
-            this.cbxIsNeedAddBaseDir.Size = new System.Drawing.Size(168, 16);
+            this.cbxIsNeedAddBaseDir.Size = new System.Drawing.Size(209, 19);
             this.cbxIsNeedAddBaseDir.TabIndex = 17;
             this.cbxIsNeedAddBaseDir.Text = "原目录是否需要带根目录？";
             this.cbxIsNeedAddBaseDir.UseVisualStyleBackColor = true;
             // 
             // txtBaseDir
             // 
-            this.txtBaseDir.Location = new System.Drawing.Point(200, 148);
-            this.txtBaseDir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBaseDir.Location = new System.Drawing.Point(267, 185);
+            this.txtBaseDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBaseDir.Name = "txtBaseDir";
-            this.txtBaseDir.Size = new System.Drawing.Size(257, 21);
+            this.txtBaseDir.Size = new System.Drawing.Size(341, 25);
             this.txtBaseDir.TabIndex = 18;
             // 
             // richCopyFiles
@@ -81,10 +83,10 @@
             this.richCopyFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richCopyFiles.Location = new System.Drawing.Point(41, 173);
-            this.richCopyFiles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richCopyFiles.Location = new System.Drawing.Point(55, 216);
+            this.richCopyFiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richCopyFiles.Name = "richCopyFiles";
-            this.richCopyFiles.Size = new System.Drawing.Size(1252, 506);
+            this.richCopyFiles.Size = new System.Drawing.Size(1668, 632);
             this.richCopyFiles.TabIndex = 19;
             this.richCopyFiles.Text = "需要复制文件列表";
             // 
@@ -92,19 +94,19 @@
             // 
             this.txtDestDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDestDir.Location = new System.Drawing.Point(341, 18);
-            this.txtDestDir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDestDir.Location = new System.Drawing.Point(455, 22);
+            this.txtDestDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDestDir.Name = "txtDestDir";
-            this.txtDestDir.Size = new System.Drawing.Size(952, 21);
+            this.txtDestDir.Size = new System.Drawing.Size(1268, 25);
             this.txtDestDir.TabIndex = 20;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(705, 147);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(940, 184);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(572, 21);
+            this.button1.Size = new System.Drawing.Size(763, 26);
             this.button1.TabIndex = 21;
             this.button1.Text = "假如输入的是目录列表，那么先转换为文件列表，然后如上复制文件即可实现复制目录以及子目录";
             this.button1.UseVisualStyleBackColor = true;
@@ -112,10 +114,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 45);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(57, 56);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(253, 26);
+            this.button2.Size = new System.Drawing.Size(337, 32);
             this.button2.TabIndex = 22;
             this.button2.Text = "附加功能，修改文件名和带这些内容的目录由";
             this.button2.UseVisualStyleBackColor = true;
@@ -124,36 +126,35 @@
             // 修改为
             // 
             this.修改为.AutoSize = true;
-            this.修改为.Location = new System.Drawing.Point(496, 53);
-            this.修改为.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.修改为.Location = new System.Drawing.Point(661, 66);
             this.修改为.Name = "修改为";
-            this.修改为.Size = new System.Drawing.Size(41, 12);
+            this.修改为.Size = new System.Drawing.Size(52, 15);
             this.修改为.TabIndex = 27;
             this.修改为.Text = "修改为";
             // 
             // txtDest01
             // 
-            this.txtDest01.Location = new System.Drawing.Point(550, 47);
-            this.txtDest01.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDest01.Location = new System.Drawing.Point(733, 59);
+            this.txtDest01.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDest01.Name = "txtDest01";
-            this.txtDest01.Size = new System.Drawing.Size(210, 21);
+            this.txtDest01.Size = new System.Drawing.Size(279, 25);
             this.txtDest01.TabIndex = 26;
             // 
             // txtSrc01
             // 
-            this.txtSrc01.Location = new System.Drawing.Point(311, 47);
-            this.txtSrc01.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSrc01.Location = new System.Drawing.Point(415, 59);
+            this.txtSrc01.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSrc01.Name = "txtSrc01";
-            this.txtSrc01.Size = new System.Drawing.Size(181, 21);
+            this.txtSrc01.Size = new System.Drawing.Size(240, 25);
             this.txtSrc01.TabIndex = 25;
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(1132, 692);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(1509, 865);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 30);
+            this.button3.Size = new System.Drawing.Size(215, 38);
             this.button3.TabIndex = 28;
             this.button3.Text = "打开文本框中的所有文件";
             this.button3.UseVisualStyleBackColor = true;
@@ -162,28 +163,30 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.Location = new System.Drawing.Point(41, 90);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(55, 112);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 30);
+            this.button4.Size = new System.Drawing.Size(136, 38);
             this.button4.TabIndex = 29;
             this.button4.Text = "过滤文件";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dateTimePicker1
+            // dptMinTime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(241, 93);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(206, 21);
-            this.dateTimePicker1.TabIndex = 31;
+            this.dptMinTime.Location = new System.Drawing.Point(321, 116);
+            this.dptMinTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dptMinTime.Name = "dptMinTime";
+            this.dptMinTime.Size = new System.Drawing.Size(273, 25);
+            this.dptMinTime.TabIndex = 31;
             // 
             // cbxTimeGreaterThan
             // 
             this.cbxTimeGreaterThan.AutoSize = true;
-            this.cbxTimeGreaterThan.Location = new System.Drawing.Point(157, 98);
+            this.cbxTimeGreaterThan.Location = new System.Drawing.Point(209, 122);
+            this.cbxTimeGreaterThan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxTimeGreaterThan.Name = "cbxTimeGreaterThan";
-            this.cbxTimeGreaterThan.Size = new System.Drawing.Size(78, 16);
+            this.cbxTimeGreaterThan.Size = new System.Drawing.Size(97, 19);
             this.cbxTimeGreaterThan.TabIndex = 32;
             this.cbxTimeGreaterThan.Text = "修改时间>";
             this.cbxTimeGreaterThan.UseVisualStyleBackColor = true;
@@ -191,30 +194,52 @@
             // cbxFileNameContain
             // 
             this.cbxFileNameContain.AutoSize = true;
-            this.cbxFileNameContain.Location = new System.Drawing.Point(498, 98);
+            this.cbxFileNameContain.Location = new System.Drawing.Point(1057, 122);
+            this.cbxFileNameContain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxFileNameContain.Name = "cbxFileNameContain";
-            this.cbxFileNameContain.Size = new System.Drawing.Size(84, 16);
+            this.cbxFileNameContain.Size = new System.Drawing.Size(104, 19);
             this.cbxFileNameContain.TabIndex = 33;
             this.cbxFileNameContain.Text = "文件名包含";
             this.cbxFileNameContain.UseVisualStyleBackColor = true;
             // 
             // txtContainStr
             // 
-            this.txtContainStr.Location = new System.Drawing.Point(587, 93);
-            this.txtContainStr.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContainStr.Location = new System.Drawing.Point(1183, 116);
+            this.txtContainStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContainStr.Name = "txtContainStr";
-            this.txtContainStr.Size = new System.Drawing.Size(257, 21);
+            this.txtContainStr.Size = new System.Drawing.Size(341, 25);
             this.txtContainStr.TabIndex = 34;
+            // 
+            // cbxTimeLessThan
+            // 
+            this.cbxTimeLessThan.AutoSize = true;
+            this.cbxTimeLessThan.Location = new System.Drawing.Point(616, 123);
+            this.cbxTimeLessThan.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxTimeLessThan.Name = "cbxTimeLessThan";
+            this.cbxTimeLessThan.Size = new System.Drawing.Size(97, 19);
+            this.cbxTimeLessThan.TabIndex = 36;
+            this.cbxTimeLessThan.Text = "修改时间<";
+            this.cbxTimeLessThan.UseVisualStyleBackColor = true;
+            // 
+            // dptMaxTime
+            // 
+            this.dptMaxTime.Location = new System.Drawing.Point(728, 117);
+            this.dptMaxTime.Margin = new System.Windows.Forms.Padding(4);
+            this.dptMaxTime.Name = "dptMaxTime";
+            this.dptMaxTime.Size = new System.Drawing.Size(273, 25);
+            this.dptMaxTime.TabIndex = 35;
             // 
             // FrmCopyFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 733);
+            this.ClientSize = new System.Drawing.Size(1759, 916);
+            this.Controls.Add(this.cbxTimeLessThan);
+            this.Controls.Add(this.dptMaxTime);
             this.Controls.Add(this.txtContainStr);
             this.Controls.Add(this.cbxFileNameContain);
             this.Controls.Add(this.cbxTimeGreaterThan);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dptMinTime);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.修改为);
@@ -227,7 +252,7 @@
             this.Controls.Add(this.txtBaseDir);
             this.Controls.Add(this.cbxIsNeedAddBaseDir);
             this.Controls.Add(this.button6);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCopyFile";
             this.Text = "FrmCopyFile";
             this.Load += new System.EventHandler(this.FrmCopyFile_Load);
@@ -250,9 +275,11 @@
         private System.Windows.Forms.TextBox txtSrc01;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dptMinTime;
         private System.Windows.Forms.CheckBox cbxTimeGreaterThan;
         private System.Windows.Forms.CheckBox cbxFileNameContain;
         private System.Windows.Forms.TextBox txtContainStr;
+        private System.Windows.Forms.CheckBox cbxTimeLessThan;
+        private System.Windows.Forms.DateTimePicker dptMaxTime;
     }
 }
