@@ -21,14 +21,26 @@ namespace BaseFileDirOperProject
 
         private void button6_Click(object sender, EventArgs e)
         {   //将文本框中的所有文件都复制到目录(每行一个)
-
+            CheckDestDir();
             List<string> listSrcPath = new List<string>();
-            listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked, txtDestBaseDir.Text);
+            listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked);
 
             string msg = "";
-            CopyFile(listSrcPath, txtDestBaseDir.Text, ref msg);
+            CopyFile(listSrcPath, txtDestDir.Text, ref msg);
             string extraTips = string.IsNullOrEmpty(msg) ? " " : $"但出现异常：{msg}";
             MessageBox.Show("恭喜！操作成功！" + extraTips);
+        }
+
+        private void CheckDestDir()
+        {
+            string strDestBaseDir = txtBaseDir.Text;
+            if (Directory.Exists(strDestBaseDir))
+            {
+                if (DialogResult.OK == MessageBox.Show("已存在目录" + "是否先连子目录也删除？\n" + strDestBaseDir, "目录已存在！是否先连子目录也删除？", MessageBoxButtons.OKCancel))
+                {
+                    DirUtil.DeleteDirRecursive(strDestBaseDir);
+                }
+            }
         }
 
         private void CopyFile(List<string> listSrcPath, string strDestBaseDir, ref string msg)
@@ -49,15 +61,8 @@ namespace BaseFileDirOperProject
             }
         }
 
-        public List<string> GetListSrcCopyFile(string needCopyFiles, bool isNeedAddBaseDir, string strDestBaseDir)
+        public List<string> GetListSrcCopyFile(string needCopyFiles, bool isNeedAddBaseDir)
         {
-            if (Directory.Exists(strDestBaseDir))
-            {
-                if (DialogResult.OK == MessageBox.Show("已存在目录" + "是否先连子目录也删除？\n" + strDestBaseDir, "目录已存在！是否先连子目录也删除？", MessageBoxButtons.OKCancel))
-                {
-                    DirUtil.DeleteDirRecursive(strDestBaseDir);
-                }
-            }
             List<string> listSrcPath = new List<string>();
             foreach (string str in needCopyFiles.GetSplitLineWithoutEmpty())
             {
@@ -85,7 +90,7 @@ namespace BaseFileDirOperProject
 
         private void FrmCopyFile_Load(object sender, EventArgs e)
         {
-            txtDestBaseDir.Text = AppDomain.CurrentDomain.BaseDirectory + $"{DateTime.Now.ToString("yyyy-MM-dd")}";
+            txtDestDir.Text = AppDomain.CurrentDomain.BaseDirectory + $"{DateTime.Now.ToString("yyyy-MM-dd")}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -110,8 +115,9 @@ namespace BaseFileDirOperProject
         private void button2_Click(object sender, EventArgs e)
         {
             //包含原有功能外，附加功能，修改文件名和带这些内容的目录由
+            CheckDestDir();
             List<string> listSrcPath = new List<string>();
-            listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked, txtDestBaseDir.Text);
+            listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked);
             List<string> listDestPath = new List<string>();
 
             //将这些路径下的文件都复制到目录strDestBaseDir下
@@ -121,7 +127,7 @@ namespace BaseFileDirOperProject
                 {
                     string strReplaced = string.IsNullOrEmpty(txtSrc01.Text) ? " " : txtSrc01.Text.Trim();
                     string strReplace = string.IsNullOrEmpty(txtDest01.Text) ? " " : txtDest01.Text.Trim();
-                    string destDir = $"{ txtDestBaseDir.Text.Trim()}\\{Path.GetDirectoryName(srcPath)}".Replace(strReplaced, strReplace);
+                    string destDir = $"{ txtDestDir.Text.Trim()}\\{Path.GetDirectoryName(srcPath)}".Replace(strReplaced, strReplace);
                     string destFileName = $"{Path.GetFileName(srcPath).Replace(strReplaced, strReplace)}";
 
                     string destPath = $"{destDir}\\{destFileName}".Replace("\\E:\\", "\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
@@ -154,6 +160,17 @@ namespace BaseFileDirOperProject
                     continue;
                 System.Diagnostics.Process.Start(str);
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FilterFile();
+        }
+
+        private void FilterFile()
+        {
+            CheckDestDir();
+            List<string> listSrcPath = GetListSrcCopyFile(richCopyFiles.Text, cbxIsNeedAddBaseDir.Checked);
         }
     }
 }
