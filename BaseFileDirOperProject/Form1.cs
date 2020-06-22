@@ -114,12 +114,13 @@ namespace BaseFileDirOperProject
             string path = txtFilePath01.Text;
             path = Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text);
             var fileSystemInfos00= DirUtil.GetAllFileSystemInfo(path, cbxSaveToDefaultPath.Checked);
-
-            List<string> matchFileExtension = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
+            
+            List<string> matchFileExtensionV0 = new List<string>() { ".exe", ".zip", ".rar", ".apk", ".EXE", ".cab", ".msi", ".jar", ".iso", ".vsix"
                 , ".bat", ".ppt", ".doc", ".docx", ".txt", ".pdf", ".xls", ".xlsx", ".chm", ".xmind", ".sql" };
-            var fileInfos = fileSystemInfos00.Where(w => matchFileExtension.Contains(Path.GetExtension(w.FullName)));
-
-
+            List<string> matchFileExtensionV1 = new List<string>();
+            matchFileExtensionV1.AddRange(matchFileExtensionV1.Select(s => s.ToLower()));
+            var fileInfos = fileSystemInfos00.Where(w => matchFileExtensionV1.Contains(Path.GetExtension(w.FullName.ToLower())));
+            
             //获取要写入的文件信息
             var listContent = getContents(fileInfos);
 
