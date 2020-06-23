@@ -46,6 +46,8 @@
             this.txtContainStr = new System.Windows.Forms.TextBox();
             this.cbxTimeLessThan = new System.Windows.Forms.CheckBox();
             this.dptMaxTime = new System.Windows.Forms.DateTimePicker();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button6
@@ -175,7 +177,7 @@
             // dptMinTime
             // 
             this.dptMinTime.Location = new System.Drawing.Point(321, 116);
-            this.dptMinTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dptMinTime.Margin = new System.Windows.Forms.Padding(4);
             this.dptMinTime.Name = "dptMinTime";
             this.dptMinTime.Size = new System.Drawing.Size(273, 25);
             this.dptMinTime.TabIndex = 31;
@@ -184,7 +186,7 @@
             // 
             this.cbxTimeGreaterThan.AutoSize = true;
             this.cbxTimeGreaterThan.Location = new System.Drawing.Point(209, 122);
-            this.cbxTimeGreaterThan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxTimeGreaterThan.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTimeGreaterThan.Name = "cbxTimeGreaterThan";
             this.cbxTimeGreaterThan.Size = new System.Drawing.Size(97, 19);
             this.cbxTimeGreaterThan.TabIndex = 32;
@@ -195,7 +197,7 @@
             // 
             this.cbxFileNameContain.AutoSize = true;
             this.cbxFileNameContain.Location = new System.Drawing.Point(1057, 122);
-            this.cbxFileNameContain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxFileNameContain.Margin = new System.Windows.Forms.Padding(4);
             this.cbxFileNameContain.Name = "cbxFileNameContain";
             this.cbxFileNameContain.Size = new System.Drawing.Size(104, 19);
             this.cbxFileNameContain.TabIndex = 33;
@@ -204,7 +206,7 @@
             // 
             // txtContainStr
             // 
-            this.txtContainStr.Location = new System.Drawing.Point(1183, 116);
+            this.txtContainStr.Location = new System.Drawing.Point(1168, 120);
             this.txtContainStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContainStr.Name = "txtContainStr";
             this.txtContainStr.Size = new System.Drawing.Size(341, 25);
@@ -229,11 +231,32 @@
             this.dptMaxTime.Size = new System.Drawing.Size(273, 25);
             this.dptMaxTime.TabIndex = 35;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(209, 149);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 19);
+            this.checkBox1.TabIndex = 37;
+            this.checkBox1.Text = "文件名包含";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(314, 147);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(341, 25);
+            this.textBox1.TabIndex = 38;
+            // 
             // FrmCopyFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1759, 916);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cbxTimeLessThan);
             this.Controls.Add(this.dptMaxTime);
             this.Controls.Add(this.txtContainStr);
@@ -281,5 +304,7 @@
         private System.Windows.Forms.TextBox txtContainStr;
         private System.Windows.Forms.CheckBox cbxTimeLessThan;
         private System.Windows.Forms.DateTimePicker dptMaxTime;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
