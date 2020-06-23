@@ -38,5 +38,14 @@ namespace BaseClassUtils
             }
             return result;
         }
+        
+        private void CopyToClipboard(string sSource)
+        {
+            Clipboard.Clear();
+            if (!string.IsNullOrEmpty(sSource))
+            {
+                Clipboard.SetText(sSource);
+            }
+        }
     }
 }
