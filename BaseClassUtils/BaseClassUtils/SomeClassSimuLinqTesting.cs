@@ -11,11 +11,11 @@ using System.Core;
 #endif //SILVERLIGHT
 
 
-namespace System.SimuLinq
+namespace BaseClassUtils.SimuLinq
 {
-    public static class Enumerable
+    public static class MyEnumerable
     {
-        public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
+        public static IEnumerable<TSource> MyWhere<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate)
         {
             if (source == null) throw Error.ArgumentNull("source");
             if (predicate == null) throw Error.ArgumentNull("predicate");
