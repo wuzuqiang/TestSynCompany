@@ -194,10 +194,12 @@ namespace BaseFileDirOperProject
             IEnumerable<FileInfo> fileInfos = listFileInfo.Where(w => true);
             if(cbxTimeGreaterThan.Checked)
             {
-                fileInfos = fileInfos.Where(w => w.LastWriteTime >= dptMinTime.Text.ToDateTime());
+                string minTime = string.IsNullOrEmpty(txtMinTime.Text) ? dptMinTime.Text : txtMinTime.Text;
+                fileInfos = fileInfos.Where(w => w.LastWriteTime >= minTime.ToDateTime());
             }
             if (cbxTimeLessThan.Checked)
             {
+                string maxTime = string.IsNullOrEmpty(txtMaxTime.Text) ? dptMaxTime.Text : txtMaxTime.Text;
                 fileInfos = fileInfos.Where(w => w.LastWriteTime <= dptMaxTime.Text.ToDateTime());
             }
             if(cbxFileNameContain.Checked)

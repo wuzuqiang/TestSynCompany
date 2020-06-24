@@ -48,6 +48,8 @@
             this.dptMaxTime = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMinTime = new System.Windows.Forms.TextBox();
+            this.txtMaxTime = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button6
@@ -196,7 +198,7 @@
             // cbxFileNameContain
             // 
             this.cbxFileNameContain.AutoSize = true;
-            this.cbxFileNameContain.Location = new System.Drawing.Point(1057, 122);
+            this.cbxFileNameContain.Location = new System.Drawing.Point(1256, 122);
             this.cbxFileNameContain.Margin = new System.Windows.Forms.Padding(4);
             this.cbxFileNameContain.Name = "cbxFileNameContain";
             this.cbxFileNameContain.Size = new System.Drawing.Size(104, 19);
@@ -206,7 +208,7 @@
             // 
             // txtContainStr
             // 
-            this.txtContainStr.Location = new System.Drawing.Point(1168, 120);
+            this.txtContainStr.Location = new System.Drawing.Point(1367, 120);
             this.txtContainStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtContainStr.Name = "txtContainStr";
             this.txtContainStr.Size = new System.Drawing.Size(341, 25);
@@ -215,7 +217,7 @@
             // cbxTimeLessThan
             // 
             this.cbxTimeLessThan.AutoSize = true;
-            this.cbxTimeLessThan.Location = new System.Drawing.Point(616, 123);
+            this.cbxTimeLessThan.Location = new System.Drawing.Point(729, 123);
             this.cbxTimeLessThan.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTimeLessThan.Name = "cbxTimeLessThan";
             this.cbxTimeLessThan.Size = new System.Drawing.Size(97, 19);
@@ -225,7 +227,7 @@
             // 
             // dptMaxTime
             // 
-            this.dptMaxTime.Location = new System.Drawing.Point(728, 117);
+            this.dptMaxTime.Location = new System.Drawing.Point(841, 117);
             this.dptMaxTime.Margin = new System.Windows.Forms.Padding(4);
             this.dptMaxTime.Name = "dptMaxTime";
             this.dptMaxTime.Size = new System.Drawing.Size(273, 25);
@@ -250,11 +252,29 @@
             this.textBox1.Size = new System.Drawing.Size(341, 25);
             this.textBox1.TabIndex = 38;
             // 
+            // txtMinTime
+            // 
+            this.txtMinTime.Location = new System.Drawing.Point(601, 116);
+            this.txtMinTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMinTime.Name = "txtMinTime";
+            this.txtMinTime.Size = new System.Drawing.Size(93, 25);
+            this.txtMinTime.TabIndex = 39;
+            // 
+            // txtMaxTime
+            // 
+            this.txtMaxTime.Location = new System.Drawing.Point(1121, 117);
+            this.txtMaxTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaxTime.Name = "txtMaxTime";
+            this.txtMaxTime.Size = new System.Drawing.Size(93, 25);
+            this.txtMaxTime.TabIndex = 40;
+            // 
             // FrmCopyFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1759, 916);
+            this.Controls.Add(this.txtMaxTime);
+            this.Controls.Add(this.txtMinTime);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cbxTimeLessThan);
@@ -306,5 +326,7 @@
         private System.Windows.Forms.DateTimePicker dptMaxTime;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMinTime;
+        private System.Windows.Forms.TextBox txtMaxTime;
     }
 }
