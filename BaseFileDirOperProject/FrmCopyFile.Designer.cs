@@ -39,19 +39,21 @@
             this.txtDest01 = new System.Windows.Forms.TextBox();
             this.txtSrc01 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dptMinTime = new System.Windows.Forms.DateTimePicker();
-            this.cbxTimeGreaterThan = new System.Windows.Forms.CheckBox();
-            this.cbxFileNameContain = new System.Windows.Forms.CheckBox();
-            this.txtContainStr = new System.Windows.Forms.TextBox();
+            this.panelFileFilterCondition = new System.Windows.Forms.Panel();
+            this.btnRestoreFilterCondition = new System.Windows.Forms.Button();
+            this.btnSaveFilterCondition = new System.Windows.Forms.Button();
+            this.txtMaxTime = new System.Windows.Forms.TextBox();
+            this.txtMinTime = new System.Windows.Forms.TextBox();
+            this.txtContainContent = new System.Windows.Forms.TextBox();
+            this.cbxContainContent = new System.Windows.Forms.CheckBox();
             this.cbxTimeLessThan = new System.Windows.Forms.CheckBox();
             this.dptMaxTime = new System.Windows.Forms.DateTimePicker();
-            this.cbxContainContent = new System.Windows.Forms.CheckBox();
-            this.txtContainContent = new System.Windows.Forms.TextBox();
-            this.txtMinTime = new System.Windows.Forms.TextBox();
-            this.txtMaxTime = new System.Windows.Forms.TextBox();
-            this.btnSaveFilterCondition = new System.Windows.Forms.Button();
-            this.btnRestoreFilterCondition = new System.Windows.Forms.Button();
+            this.txtContainFileName = new System.Windows.Forms.TextBox();
+            this.cbxFileNameContain = new System.Windows.Forms.CheckBox();
+            this.cbxTimeGreaterThan = new System.Windows.Forms.CheckBox();
+            this.dptMinTime = new System.Windows.Forms.DateTimePicker();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panelFileFilterCondition.SuspendLayout();
             this.SuspendLayout();
             // 
             // button6
@@ -89,10 +91,10 @@
             this.richCopyFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richCopyFiles.Location = new System.Drawing.Point(55, 216);
+            this.richCopyFiles.Location = new System.Drawing.Point(55, 528);
             this.richCopyFiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richCopyFiles.Name = "richCopyFiles";
-            this.richCopyFiles.Size = new System.Drawing.Size(1668, 632);
+            this.richCopyFiles.Size = new System.Drawing.Size(1668, 320);
             this.richCopyFiles.TabIndex = 19;
             this.richCopyFiles.Text = "需要复制文件列表";
             // 
@@ -165,130 +167,147 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // panelFileFilterCondition
             // 
-            this.button4.Location = new System.Drawing.Point(55, 112);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 38);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "过滤文件";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.panelFileFilterCondition.Controls.Add(this.txtMaxTime);
+            this.panelFileFilterCondition.Controls.Add(this.txtMinTime);
+            this.panelFileFilterCondition.Controls.Add(this.txtContainContent);
+            this.panelFileFilterCondition.Controls.Add(this.cbxContainContent);
+            this.panelFileFilterCondition.Controls.Add(this.cbxTimeLessThan);
+            this.panelFileFilterCondition.Controls.Add(this.dptMaxTime);
+            this.panelFileFilterCondition.Controls.Add(this.txtContainFileName);
+            this.panelFileFilterCondition.Controls.Add(this.cbxFileNameContain);
+            this.panelFileFilterCondition.Controls.Add(this.cbxTimeGreaterThan);
+            this.panelFileFilterCondition.Controls.Add(this.dptMinTime);
+            this.panelFileFilterCondition.Location = new System.Drawing.Point(55, 231);
+            this.panelFileFilterCondition.Name = "panelFileFilterCondition";
+            this.panelFileFilterCondition.Size = new System.Drawing.Size(1653, 100);
+            this.panelFileFilterCondition.TabIndex = 43;
             // 
-            // dptMinTime
+            // btnRestoreFilterCondition
             // 
-            this.dptMinTime.Location = new System.Drawing.Point(321, 116);
-            this.dptMinTime.Margin = new System.Windows.Forms.Padding(4);
-            this.dptMinTime.Name = "dptMinTime";
-            this.dptMinTime.Size = new System.Drawing.Size(273, 25);
-            this.dptMinTime.TabIndex = 31;
-            this.dptMinTime.ValueChanged += new System.EventHandler(this.dptMinTime_ValueChanged);
+            this.btnRestoreFilterCondition.Location = new System.Drawing.Point(492, 113);
+            this.btnRestoreFilterCondition.Name = "btnRestoreFilterCondition";
+            this.btnRestoreFilterCondition.Size = new System.Drawing.Size(175, 28);
+            this.btnRestoreFilterCondition.TabIndex = 55;
+            this.btnRestoreFilterCondition.Text = "还原过滤条件";
+            this.btnRestoreFilterCondition.UseVisualStyleBackColor = true;
+            this.btnRestoreFilterCondition.Click += new System.EventHandler(this.btnRestoreFilterCondition_Click);
             // 
-            // cbxTimeGreaterThan
+            // btnSaveFilterCondition
             // 
-            this.cbxTimeGreaterThan.AutoSize = true;
-            this.cbxTimeGreaterThan.Location = new System.Drawing.Point(209, 122);
-            this.cbxTimeGreaterThan.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxTimeGreaterThan.Name = "cbxTimeGreaterThan";
-            this.cbxTimeGreaterThan.Size = new System.Drawing.Size(97, 19);
-            this.cbxTimeGreaterThan.TabIndex = 32;
-            this.cbxTimeGreaterThan.Tag = "filterCondition";
-            this.cbxTimeGreaterThan.Text = "修改时间>";
-            this.cbxTimeGreaterThan.UseVisualStyleBackColor = true;
+            this.btnSaveFilterCondition.Location = new System.Drawing.Point(265, 113);
+            this.btnSaveFilterCondition.Name = "btnSaveFilterCondition";
+            this.btnSaveFilterCondition.Size = new System.Drawing.Size(175, 28);
+            this.btnSaveFilterCondition.TabIndex = 54;
+            this.btnSaveFilterCondition.Text = "保存过滤条件";
+            this.btnSaveFilterCondition.UseVisualStyleBackColor = true;
+            this.btnSaveFilterCondition.Click += new System.EventHandler(this.btnSaveFilterCondition_Click);
             // 
-            // cbxFileNameContain
+            // txtMaxTime
             // 
-            this.cbxFileNameContain.AutoSize = true;
-            this.cbxFileNameContain.Location = new System.Drawing.Point(1256, 122);
-            this.cbxFileNameContain.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxFileNameContain.Name = "cbxFileNameContain";
-            this.cbxFileNameContain.Size = new System.Drawing.Size(104, 19);
-            this.cbxFileNameContain.TabIndex = 33;
-            this.cbxFileNameContain.Text = "文件名包含";
-            this.cbxFileNameContain.UseVisualStyleBackColor = true;
+            this.txtMaxTime.Location = new System.Drawing.Point(808, 23);
+            this.txtMaxTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaxTime.Name = "txtMaxTime";
+            this.txtMaxTime.Size = new System.Drawing.Size(198, 25);
+            this.txtMaxTime.TabIndex = 53;
             // 
-            // txtContainStr
+            // txtMinTime
             // 
-            this.txtContainStr.Location = new System.Drawing.Point(1367, 120);
-            this.txtContainStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContainStr.Name = "txtContainStr";
-            this.txtContainStr.Size = new System.Drawing.Size(341, 25);
-            this.txtContainStr.TabIndex = 34;
+            this.txtMinTime.Location = new System.Drawing.Point(283, 22);
+            this.txtMinTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMinTime.Name = "txtMinTime";
+            this.txtMinTime.Size = new System.Drawing.Size(210, 25);
+            this.txtMinTime.TabIndex = 52;
+            // 
+            // txtContainContent
+            // 
+            this.txtContainContent.Location = new System.Drawing.Point(152, 53);
+            this.txtContainContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContainContent.Name = "txtContainContent";
+            this.txtContainContent.Size = new System.Drawing.Size(341, 25);
+            this.txtContainContent.TabIndex = 51;
+            // 
+            // cbxContainContent
+            // 
+            this.cbxContainContent.AutoSize = true;
+            this.cbxContainContent.Location = new System.Drawing.Point(22, 55);
+            this.cbxContainContent.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxContainContent.Name = "cbxContainContent";
+            this.cbxContainContent.Size = new System.Drawing.Size(119, 19);
+            this.cbxContainContent.TabIndex = 50;
+            this.cbxContainContent.Text = "文件内容包含";
+            this.cbxContainContent.UseVisualStyleBackColor = true;
             // 
             // cbxTimeLessThan
             // 
             this.cbxTimeLessThan.AutoSize = true;
-            this.cbxTimeLessThan.Location = new System.Drawing.Point(729, 123);
+            this.cbxTimeLessThan.Location = new System.Drawing.Point(556, 29);
             this.cbxTimeLessThan.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTimeLessThan.Name = "cbxTimeLessThan";
             this.cbxTimeLessThan.Size = new System.Drawing.Size(97, 19);
-            this.cbxTimeLessThan.TabIndex = 36;
+            this.cbxTimeLessThan.TabIndex = 49;
             this.cbxTimeLessThan.Text = "修改时间<";
             this.cbxTimeLessThan.UseVisualStyleBackColor = true;
             // 
             // dptMaxTime
             // 
-            this.dptMaxTime.Location = new System.Drawing.Point(841, 117);
+            this.dptMaxTime.Location = new System.Drawing.Point(668, 23);
             this.dptMaxTime.Margin = new System.Windows.Forms.Padding(4);
             this.dptMaxTime.Name = "dptMaxTime";
-            this.dptMaxTime.Size = new System.Drawing.Size(273, 25);
-            this.dptMaxTime.TabIndex = 35;
+            this.dptMaxTime.Size = new System.Drawing.Size(133, 25);
+            this.dptMaxTime.TabIndex = 48;
             this.dptMaxTime.ValueChanged += new System.EventHandler(this.dptMaxTime_ValueChanged);
             // 
-            // cbxContainContent
+            // txtContainFileName
             // 
-            this.cbxContainContent.AutoSize = true;
-            this.cbxContainContent.Location = new System.Drawing.Point(209, 149);
-            this.cbxContainContent.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxContainContent.Name = "cbxContainContent";
-            this.cbxContainContent.Size = new System.Drawing.Size(104, 19);
-            this.cbxContainContent.TabIndex = 37;
-            this.cbxContainContent.Text = "文件名包含";
-            this.cbxContainContent.UseVisualStyleBackColor = true;
+            this.txtContainFileName.Location = new System.Drawing.Point(1180, 26);
+            this.txtContainFileName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtContainFileName.Name = "txtContainFileName";
+            this.txtContainFileName.Size = new System.Drawing.Size(341, 25);
+            this.txtContainFileName.TabIndex = 47;
             // 
-            // txtContainContent
+            // cbxFileNameContain
             // 
-            this.txtContainContent.Location = new System.Drawing.Point(314, 147);
-            this.txtContainContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtContainContent.Name = "txtContainContent";
-            this.txtContainContent.Size = new System.Drawing.Size(341, 25);
-            this.txtContainContent.TabIndex = 38;
+            this.cbxFileNameContain.AutoSize = true;
+            this.cbxFileNameContain.Location = new System.Drawing.Point(1069, 28);
+            this.cbxFileNameContain.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxFileNameContain.Name = "cbxFileNameContain";
+            this.cbxFileNameContain.Size = new System.Drawing.Size(104, 19);
+            this.cbxFileNameContain.TabIndex = 46;
+            this.cbxFileNameContain.Text = "文件名包含";
+            this.cbxFileNameContain.UseVisualStyleBackColor = true;
             // 
-            // txtMinTime
+            // cbxTimeGreaterThan
             // 
-            this.txtMinTime.Location = new System.Drawing.Point(601, 116);
-            this.txtMinTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMinTime.Name = "txtMinTime";
-            this.txtMinTime.Size = new System.Drawing.Size(93, 25);
-            this.txtMinTime.TabIndex = 39;
+            this.cbxTimeGreaterThan.AutoSize = true;
+            this.cbxTimeGreaterThan.Location = new System.Drawing.Point(22, 28);
+            this.cbxTimeGreaterThan.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxTimeGreaterThan.Name = "cbxTimeGreaterThan";
+            this.cbxTimeGreaterThan.Size = new System.Drawing.Size(97, 19);
+            this.cbxTimeGreaterThan.TabIndex = 45;
+            this.cbxTimeGreaterThan.Tag = "filterCondition";
+            this.cbxTimeGreaterThan.Text = "修改时间>";
+            this.cbxTimeGreaterThan.UseVisualStyleBackColor = true;
             // 
-            // txtMaxTime
+            // dptMinTime
             // 
-            this.txtMaxTime.Location = new System.Drawing.Point(1121, 117);
-            this.txtMaxTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaxTime.Name = "txtMaxTime";
-            this.txtMaxTime.Size = new System.Drawing.Size(93, 25);
-            this.txtMaxTime.TabIndex = 40;
+            this.dptMinTime.Location = new System.Drawing.Point(134, 22);
+            this.dptMinTime.Margin = new System.Windows.Forms.Padding(4);
+            this.dptMinTime.Name = "dptMinTime";
+            this.dptMinTime.Size = new System.Drawing.Size(142, 25);
+            this.dptMinTime.TabIndex = 44;
+            this.dptMinTime.ValueChanged += new System.EventHandler(this.dptMinTime_ValueChanged);
             // 
-            // btnSaveFilterCondition
+            // button4
             // 
-            this.btnSaveFilterCondition.Location = new System.Drawing.Point(1059, 82);
-            this.btnSaveFilterCondition.Name = "btnSaveFilterCondition";
-            this.btnSaveFilterCondition.Size = new System.Drawing.Size(175, 28);
-            this.btnSaveFilterCondition.TabIndex = 41;
-            this.btnSaveFilterCondition.Text = "保存过滤条件";
-            this.btnSaveFilterCondition.UseVisualStyleBackColor = true;
-            this.btnSaveFilterCondition.Click += new System.EventHandler(this.btnSaveFilterCondition_Click);
-            // 
-            // btnRestoreFilterCondition
-            // 
-            this.btnRestoreFilterCondition.Location = new System.Drawing.Point(1317, 82);
-            this.btnRestoreFilterCondition.Name = "btnRestoreFilterCondition";
-            this.btnRestoreFilterCondition.Size = new System.Drawing.Size(175, 28);
-            this.btnRestoreFilterCondition.TabIndex = 42;
-            this.btnRestoreFilterCondition.Text = "还原过滤条件";
-            this.btnRestoreFilterCondition.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(55, 108);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(136, 38);
+            this.button4.TabIndex = 43;
+            this.button4.Text = "过滤文件";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // FrmCopyFile
             // 
@@ -296,18 +315,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1759, 916);
             this.Controls.Add(this.btnRestoreFilterCondition);
+            this.Controls.Add(this.panelFileFilterCondition);
             this.Controls.Add(this.btnSaveFilterCondition);
-            this.Controls.Add(this.txtMaxTime);
-            this.Controls.Add(this.txtMinTime);
-            this.Controls.Add(this.txtContainContent);
-            this.Controls.Add(this.cbxContainContent);
-            this.Controls.Add(this.cbxTimeLessThan);
-            this.Controls.Add(this.dptMaxTime);
-            this.Controls.Add(this.txtContainStr);
-            this.Controls.Add(this.cbxFileNameContain);
-            this.Controls.Add(this.cbxTimeGreaterThan);
-            this.Controls.Add(this.dptMinTime);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.修改为);
             this.Controls.Add(this.txtDest01);
@@ -319,10 +328,13 @@
             this.Controls.Add(this.txtBaseDir);
             this.Controls.Add(this.cbxIsNeedAddBaseDir);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.button4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCopyFile";
             this.Text = "FrmCopyFile";
             this.Load += new System.EventHandler(this.FrmCopyFile_Load);
+            this.panelFileFilterCondition.ResumeLayout(false);
+            this.panelFileFilterCondition.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,18 +353,19 @@
         private System.Windows.Forms.TextBox txtDest01;
         private System.Windows.Forms.TextBox txtSrc01;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DateTimePicker dptMinTime;
-        private System.Windows.Forms.CheckBox cbxTimeGreaterThan;
-        private System.Windows.Forms.CheckBox cbxFileNameContain;
-        private System.Windows.Forms.TextBox txtContainStr;
+        private System.Windows.Forms.Panel panelFileFilterCondition;
+        private System.Windows.Forms.TextBox txtMaxTime;
+        private System.Windows.Forms.TextBox txtMinTime;
+        private System.Windows.Forms.TextBox txtContainContent;
+        private System.Windows.Forms.CheckBox cbxContainContent;
         private System.Windows.Forms.CheckBox cbxTimeLessThan;
         private System.Windows.Forms.DateTimePicker dptMaxTime;
-        private System.Windows.Forms.CheckBox cbxContainContent;
-        private System.Windows.Forms.TextBox txtContainContent;
-        private System.Windows.Forms.TextBox txtMinTime;
-        private System.Windows.Forms.TextBox txtMaxTime;
-        private System.Windows.Forms.Button btnSaveFilterCondition;
+        private System.Windows.Forms.TextBox txtContainFileName;
+        private System.Windows.Forms.CheckBox cbxFileNameContain;
+        private System.Windows.Forms.CheckBox cbxTimeGreaterThan;
+        private System.Windows.Forms.DateTimePicker dptMinTime;
         private System.Windows.Forms.Button btnRestoreFilterCondition;
+        private System.Windows.Forms.Button btnSaveFilterCondition;
+        private System.Windows.Forms.Button button4;
     }
 }

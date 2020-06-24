@@ -202,7 +202,7 @@ namespace BaseFileDirOperProject
             }
             if(cbxFileNameContain.Checked)
             {
-                fileInfos = fileInfos.Where(w => w.Name.Contains(txtContainStr.Text));
+                fileInfos = fileInfos.Where(w => w.Name.Contains(txtContainFileName.Text));
             }
             if(cbxContainContent.Checked)
             {
@@ -229,7 +229,27 @@ namespace BaseFileDirOperProject
         private void btnSaveFilterCondition_Click(object sender, EventArgs e)
         {
             Dictionary<string, string> dicFilterCondition = new Dictionary<string, string>();
-            dicFilterCondition.Add(cbxContainContent.Name, txtContainContent.Text);
+            dicFilterCondition.Add(txtContainContent.Name, txtContainContent.Text);
+            dicFilterCondition.Add(txtContainFileName.Name, txtContainFileName.Text);
+            dicFilterCondition.Add(txtMinTime.Name, txtMinTime.Text);
+            dicFilterCondition.Add(txtMaxTime.Name, txtMaxTime.Text);
+            string content = JsonHelper.SerializeObject<Dictionary<string, string>>(dicFilterCondition);
+
+            var savePath = WinFormUtil.ShowOpenFileDialog(AppDomain.CurrentDomain.BaseDirectory, $"initCofig.wuconfig", "搜索配置文件|*.wuconfig") ?? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"initCofig.wuconfig");
+            FileUtils.WriteToFile(savePath, content);
+
+            MessageBox.Show("恭喜！保存成功！");
+        }
+
+        private void btnRestoreFilterCondition_Click(object sender, EventArgs e)
+        {
+            var savePath = WinFormUtil.ShowOpenFileDialog(AppDomain.CurrentDomain.BaseDirectory, $"initCofig.wuconfig", "搜索配置文件|*.wuconfig") ?? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $"initCofig.wuconfig");
+            var fileContent = FileUtils.ReadFileByStreamReader(savePath);
+            var dicConfigCondition = JsonHelper.DeserializeObject<Dictionary<string, string>>(fileContent);
+            txtMaxTime.Text = dicConfigCondition[txtMaxTime.Name];
+            txtMinTime.Text = dicConfigCondition[txtMinTime.Name];
+            txtContainFileName.Text = dicConfigCondition[txtContainFileName.Name];
+            txtContainContent.Text = dicConfigCondition[txtContainFileName.Name];
         }
 
         private void dptMinTime_ValueChanged(object sender, EventArgs e)
