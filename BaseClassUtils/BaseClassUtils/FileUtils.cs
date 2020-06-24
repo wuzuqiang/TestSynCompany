@@ -212,6 +212,45 @@ namespace BaseClassUtils
             }
             return strContent;
         }
+        
+        public static IEnumerable<string> ReadMultiLines(string filePath,int skipRowIndex = 0, int takeRowNum = 100, string encode="UTF-8")
+        {
+            var lines = File.ReadLines(filePath, Encoding.GetEncoding(encode)).Skip(skipRowIndex).Take(takeRowNum);
+            return lines;
+        }
+
+        /// <summary>
+        /// 读取文件所有内容，大文件也没问题
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="rowNumEveryTime">每次读取行数</param>
+        /// <param name="encode"></param>
+        /// <returns></returns>
+        public static List<string> ReadAllText(string filePath, int rowNumEveryTime = 100, string encode = "UTF-8")
+        {
+            try
+            {
+                List<string> listFileContent = new List<string>();
+                int totalRows = File.ReadLines(filePath).Count();
+                int _currentLine = 0;
+                //string headerLine = File.ReadLines(filePath).FirstOrDefault(); // Read the first row for headings
+                int readTime = totalRows / rowNumEveryTime + 1;
+                for(int i = 0; i <= readTime; i++)
+                {
+                    if(totalRows < (_currentLine+1)*rowNumEveryTime)    //将要读取的行数大于总数，则缩小每次读取次数
+                    {
+                        rowNumEveryTime = totalRows % rowNumEveryTime;
+                    }
+                    listFileContent.AddRange(ReadMultiLines(filePath, _currentLine, rowNumEveryTime, encode));
+                    _currentLine += rowNumEveryTime;
+                }
+                return listFileContent;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         /// <summary>
         /// 清空文件，并写入内容
         /// </summary>
