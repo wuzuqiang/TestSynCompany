@@ -50,6 +50,8 @@
             this.txtContainContent = new System.Windows.Forms.TextBox();
             this.txtMinTime = new System.Windows.Forms.TextBox();
             this.txtMaxTime = new System.Windows.Forms.TextBox();
+            this.btnSaveFilterCondition = new System.Windows.Forms.Button();
+            this.btnRestoreFilterCondition = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button6
@@ -181,6 +183,7 @@
             this.dptMinTime.Name = "dptMinTime";
             this.dptMinTime.Size = new System.Drawing.Size(273, 25);
             this.dptMinTime.TabIndex = 31;
+            this.dptMinTime.ValueChanged += new System.EventHandler(this.dptMinTime_ValueChanged);
             // 
             // cbxTimeGreaterThan
             // 
@@ -190,6 +193,7 @@
             this.cbxTimeGreaterThan.Name = "cbxTimeGreaterThan";
             this.cbxTimeGreaterThan.Size = new System.Drawing.Size(97, 19);
             this.cbxTimeGreaterThan.TabIndex = 32;
+            this.cbxTimeGreaterThan.Tag = "filterCondition";
             this.cbxTimeGreaterThan.Text = "修改时间>";
             this.cbxTimeGreaterThan.UseVisualStyleBackColor = true;
             // 
@@ -230,6 +234,7 @@
             this.dptMaxTime.Name = "dptMaxTime";
             this.dptMaxTime.Size = new System.Drawing.Size(273, 25);
             this.dptMaxTime.TabIndex = 35;
+            this.dptMaxTime.ValueChanged += new System.EventHandler(this.dptMaxTime_ValueChanged);
             // 
             // cbxContainContent
             // 
@@ -266,11 +271,32 @@
             this.txtMaxTime.Size = new System.Drawing.Size(93, 25);
             this.txtMaxTime.TabIndex = 40;
             // 
+            // btnSaveFilterCondition
+            // 
+            this.btnSaveFilterCondition.Location = new System.Drawing.Point(1059, 82);
+            this.btnSaveFilterCondition.Name = "btnSaveFilterCondition";
+            this.btnSaveFilterCondition.Size = new System.Drawing.Size(175, 28);
+            this.btnSaveFilterCondition.TabIndex = 41;
+            this.btnSaveFilterCondition.Text = "保存过滤条件";
+            this.btnSaveFilterCondition.UseVisualStyleBackColor = true;
+            this.btnSaveFilterCondition.Click += new System.EventHandler(this.btnSaveFilterCondition_Click);
+            // 
+            // btnRestoreFilterCondition
+            // 
+            this.btnRestoreFilterCondition.Location = new System.Drawing.Point(1317, 82);
+            this.btnRestoreFilterCondition.Name = "btnRestoreFilterCondition";
+            this.btnRestoreFilterCondition.Size = new System.Drawing.Size(175, 28);
+            this.btnRestoreFilterCondition.TabIndex = 42;
+            this.btnRestoreFilterCondition.Text = "还原过滤条件";
+            this.btnRestoreFilterCondition.UseVisualStyleBackColor = true;
+            // 
             // FrmCopyFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1759, 916);
+            this.Controls.Add(this.btnRestoreFilterCondition);
+            this.Controls.Add(this.btnSaveFilterCondition);
             this.Controls.Add(this.txtMaxTime);
             this.Controls.Add(this.txtMinTime);
             this.Controls.Add(this.txtContainContent);
@@ -326,5 +352,7 @@
         private System.Windows.Forms.TextBox txtContainContent;
         private System.Windows.Forms.TextBox txtMinTime;
         private System.Windows.Forms.TextBox txtMaxTime;
+        private System.Windows.Forms.Button btnSaveFilterCondition;
+        private System.Windows.Forms.Button btnRestoreFilterCondition;
     }
 }

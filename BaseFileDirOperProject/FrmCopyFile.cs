@@ -194,13 +194,11 @@ namespace BaseFileDirOperProject
             IEnumerable<FileInfo> fileInfos = listFileInfo.Where(w => true);
             if(cbxTimeGreaterThan.Checked)
             {
-                string minTime = string.IsNullOrEmpty(txtMinTime.Text) ? dptMinTime.Text : txtMinTime.Text;
-                fileInfos = fileInfos.Where(w => w.LastWriteTime >= minTime.ToDateTime());
+                fileInfos = fileInfos.Where(w => w.LastWriteTime >= txtMinTime.Text.ToDateTime());
             }
             if (cbxTimeLessThan.Checked)
             {
-                string maxTime = string.IsNullOrEmpty(txtMaxTime.Text) ? dptMaxTime.Text : txtMaxTime.Text;
-                fileInfos = fileInfos.Where(w => w.LastWriteTime <= dptMaxTime.Text.ToDateTime());
+                fileInfos = fileInfos.Where(w => w.LastWriteTime <= txtMaxTime.Text.ToDateTime());
             }
             if(cbxFileNameContain.Checked)
             {
@@ -226,6 +224,22 @@ namespace BaseFileDirOperProject
                 listFileInfo.Add(fileInfo);
             }
             return listFileInfo;
+        }
+
+        private void btnSaveFilterCondition_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, string> dicFilterCondition = new Dictionary<string, string>();
+            dicFilterCondition.Add(cbxContainContent.Name, txtContainContent.Text);
+        }
+
+        private void dptMinTime_ValueChanged(object sender, EventArgs e)
+        {
+            txtMinTime.Text = dptMinTime.Text;
+        }
+
+        private void dptMaxTime_ValueChanged(object sender, EventArgs e)
+        {
+            txtMaxTime.Text = dptMaxTime.Text;
         }
     }
 }
