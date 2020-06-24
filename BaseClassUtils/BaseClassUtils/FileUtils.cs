@@ -133,63 +133,13 @@ namespace BaseClassUtils
 
         #region 文件的读、写
         #region 读取文件
-        private bool ReadBigFile(string sourcePath, ref string message, int readRowCount = 10)
-        {
-            string sTmpFile = @"c:\tmpTest.txt";
-            if (File.Exists(sTmpFile))
-            {
-                File.Delete(sTmpFile);
-            }
 
-            if (!System.IO.File.Exists(sTmpFile))
-            {
-                FileStream fs;
-                fs = File.Create(sTmpFile);
-                fs.Close();
-            }
-
-            if (!File.Exists(sourcePath.Trim()))
-            {
-                message += "File not exist!";
-                return false;
-            }
-
-            FileStream streamInput = System.IO.File.OpenRead(@sourcePath.Trim());
-            FileStream streamOutput = System.IO.File.OpenWrite(sTmpFile);
-
-            try
-            {
-                for (int i = 1; i <= readRowCount;)
-                {
-                    int result = streamInput.ReadByte();
-                    if (result == 13)
-                    {
-                        i++;
-                    }
-                    if (result == -1)
-                    {
-                        break;
-                    }
-                    streamOutput.WriteByte((byte)result);
-                }
-            }
-            finally
-            {
-                streamInput.Dispose();
-                streamOutput.Dispose();
-            }
-
-            string sContent = ReaderFile(sTmpFile);
-
-            return true;
-        }
-
-        public static string ReaderFile(string path)
+        public static string ReadFileByStreamReader(string path, string encoding = "UTF-8")
         {
             string fileData = string.Empty;
             try
             {   ///读取文件的内容    
-                StreamReader reader = new StreamReader(path, Encoding.UTF8);
+                StreamReader reader = new StreamReader(path, Encoding.GetEncoding(encoding));
                 fileData = reader.ReadToEnd();
                 reader.Close();
             }
@@ -200,7 +150,7 @@ namespace BaseClassUtils
             return fileData;
         }
         #endregion
-        public string ReadFile(string filePath)
+        public string ReadFileByFileStream(string filePath, string encoding = "UTF-8")
         {
             string strContent = "";
             using (FileStream fsRead = new FileStream(filePath, FileMode.OpenOrCreate))
@@ -208,11 +158,19 @@ namespace BaseClassUtils
                 int iFileLength = fsRead.Length.ToString().ToInt32();
                 byte[] byteFile = new byte[iFileLength];
                 fsRead.Read(byteFile, 0, iFileLength);
-                strContent = Encoding.UTF8.GetString(byteFile);
+                strContent = Encoding.GetEncoding(encoding).GetString(byteFile);
             }
             return strContent;
         }
-        
+
+        /// <summary>
+        /// 读取文件，跳过skipRowIndex行，读取takeRowNum行文件内容
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="skipRowIndex"></param>
+        /// <param name="takeRowNum"></param>
+        /// <param name="encode"></param>
+        /// <returns></returns>
         public static IEnumerable<string> ReadMultiLines(string filePath,int skipRowIndex = 0, int takeRowNum = 100, string encode="UTF-8")
         {
             var lines = File.ReadLines(filePath, Encoding.GetEncoding(encode)).Skip(skipRowIndex).Take(takeRowNum);
