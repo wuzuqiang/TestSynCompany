@@ -206,6 +206,13 @@ namespace BaseFileDirOperProject
             {
                 fileInfos = fileInfos.Where(w => w.Name.Contains(txtContainStr.Text));
             }
+            if(cbxContainContent.Checked)
+            {
+                fileInfos = fileInfos.Where(w => {
+                    List<string> fileContents = FileUtils.ReadAllText(w.FullName);
+                    return fileContents.Contains(txtContainContent.Text);
+                });
+            }
             
             return fileInfos;
         }
