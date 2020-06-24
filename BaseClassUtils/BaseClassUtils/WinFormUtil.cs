@@ -9,10 +9,22 @@ namespace BaseClassUtils
 {
     public class WinFormUtil
     {
-        public static string ShowOpenFileDialog()
+        public static string ShowOpenFileDialog(string initialDirectory = "", string fileName = "", string filter = "")
         {
             string result = "";
             OpenFileDialog dlg = new OpenFileDialog();
+            if(!string.IsNullOrEmpty(initialDirectory))
+            {
+                dlg.InitialDirectory = initialDirectory;
+            }
+            if (!string.IsNullOrEmpty(fileName))
+            {
+                dlg.FileName = fileName;
+            }
+            if (!string.IsNullOrEmpty(filter))
+            {
+                dlg.Filter = filter;
+            }
             if(dlg.ShowDialog() == DialogResult.OK)
             {
                 result = dlg.FileName;
