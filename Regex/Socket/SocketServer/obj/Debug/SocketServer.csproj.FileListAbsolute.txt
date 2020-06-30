@@ -1,6 +1,0 @@
-E:\repository\TestSynCompany\Regex\Socket\SocketServer\bin\Debug\SocketServer.exe.config
-E:\repository\TestSynCompany\Regex\Socket\SocketServer\bin\Debug\SocketServer.exe
-E:\repository\TestSynCompany\Regex\Socket\SocketServer\bin\Debug\SocketServer.pdb
-E:\repository\TestSynCompany\Regex\Socket\SocketServer\obj\Debug\SocketServer.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Regex\Socket\SocketServer\obj\Debug\SocketServer.exe
-E:\repository\TestSynCompany\Regex\Socket\SocketServer\obj\Debug\SocketServer.pdb

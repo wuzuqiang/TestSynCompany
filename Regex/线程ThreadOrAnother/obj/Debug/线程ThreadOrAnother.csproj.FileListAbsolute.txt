@@ -1,6 +1,0 @@
-E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\bin\Debug\线程ThreadOrAnother.exe.config
-E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\bin\Debug\线程ThreadOrAnother.exe
-E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\bin\Debug\线程ThreadOrAnother.pdb
-E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.exe
-E:\repository\TestSynCompany\Regex\线程ThreadOrAnother\obj\Debug\线程ThreadOrAnother.pdb

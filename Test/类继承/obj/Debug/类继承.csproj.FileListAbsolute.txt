@@ -1,6 +1,0 @@
-E:\repository\TestSynCompany\Test\类继承\bin\Debug\类继承.exe.config
-E:\repository\TestSynCompany\Test\类继承\bin\Debug\类继承.exe
-E:\repository\TestSynCompany\Test\类继承\bin\Debug\类继承.pdb
-E:\repository\TestSynCompany\Test\类继承\obj\Debug\类继承.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Test\类继承\obj\Debug\类继承.exe
-E:\repository\TestSynCompany\Test\类继承\obj\Debug\类继承.pdb

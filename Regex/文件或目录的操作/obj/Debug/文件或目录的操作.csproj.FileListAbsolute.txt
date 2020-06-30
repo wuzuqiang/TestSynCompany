@@ -1,6 +1,0 @@
-E:\repository\TestSynCompany\Regex\文件或目录的操作\bin\Debug\文件或目录的操作.exe.config
-E:\repository\TestSynCompany\Regex\文件或目录的操作\bin\Debug\文件或目录的操作.exe
-E:\repository\TestSynCompany\Regex\文件或目录的操作\bin\Debug\文件或目录的操作.pdb
-E:\repository\TestSynCompany\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.exe
-E:\repository\TestSynCompany\Regex\文件或目录的操作\obj\Debug\文件或目录的操作.pdb

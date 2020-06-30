@@ -1,6 +1,0 @@
-E:\repository\TestSynCompany\Regex\定时器\bin\Debug\定时器.exe.config
-E:\repository\TestSynCompany\Regex\定时器\bin\Debug\定时器.exe
-E:\repository\TestSynCompany\Regex\定时器\bin\Debug\定时器.pdb
-E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.exe
-E:\repository\TestSynCompany\Regex\定时器\obj\Debug\定时器.pdb

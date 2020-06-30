@@ -1,7 +1,0 @@
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\bin\Debug\获取字节中某位的值.exe.config
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\bin\Debug\获取字节中某位的值.exe
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\bin\Debug\获取字节中某位的值.pdb
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.csprojAssemblyReference.cache
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.exe
-E:\repository\TestSynCompany\Regex\获取字节中某位的值\obj\Debug\获取字节中某位的值.pdb

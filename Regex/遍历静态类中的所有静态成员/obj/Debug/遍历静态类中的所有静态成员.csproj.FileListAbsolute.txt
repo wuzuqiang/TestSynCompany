@@ -1,6 +1,0 @@
-E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\bin\Debug\遍历静态类中的所有静态成员.exe.config
-E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\bin\Debug\遍历静态类中的所有静态成员.exe
-E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\bin\Debug\遍历静态类中的所有静态成员.pdb
-E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.csproj.CoreCompileInputs.cache
-E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.exe
-E:\repository\TestSynCompany\Regex\遍历静态类中的所有静态成员\obj\Debug\遍历静态类中的所有静态成员.pdb
