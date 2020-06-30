@@ -40,8 +40,6 @@
             this.txtSrc01 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panelFileFilterCondition = new System.Windows.Forms.Panel();
-            this.btnRestoreFilterCondition = new System.Windows.Forms.Button();
-            this.btnSaveFilterCondition = new System.Windows.Forms.Button();
             this.txtMaxTime = new System.Windows.Forms.TextBox();
             this.txtMinTime = new System.Windows.Forms.TextBox();
             this.txtContainContent = new System.Windows.Forms.TextBox();
@@ -52,6 +50,8 @@
             this.cbxFileNameContain = new System.Windows.Forms.CheckBox();
             this.cbxTimeGreaterThan = new System.Windows.Forms.CheckBox();
             this.dptMinTime = new System.Windows.Forms.DateTimePicker();
+            this.btnRestoreFilterCondition = new System.Windows.Forms.Button();
+            this.btnSaveFilterCondition = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panelFileFilterCondition.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +70,7 @@
             // cbxIsNeedAddBaseDir
             // 
             this.cbxIsNeedAddBaseDir.AutoSize = true;
-            this.cbxIsNeedAddBaseDir.Location = new System.Drawing.Point(55, 188);
+            this.cbxIsNeedAddBaseDir.Location = new System.Drawing.Point(58, 295);
             this.cbxIsNeedAddBaseDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxIsNeedAddBaseDir.Name = "cbxIsNeedAddBaseDir";
             this.cbxIsNeedAddBaseDir.Size = new System.Drawing.Size(209, 19);
@@ -80,7 +80,7 @@
             // 
             // txtBaseDir
             // 
-            this.txtBaseDir.Location = new System.Drawing.Point(267, 185);
+            this.txtBaseDir.Location = new System.Drawing.Point(270, 292);
             this.txtBaseDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBaseDir.Name = "txtBaseDir";
             this.txtBaseDir.Size = new System.Drawing.Size(341, 25);
@@ -91,10 +91,10 @@
             this.richCopyFiles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richCopyFiles.Location = new System.Drawing.Point(55, 528);
+            this.richCopyFiles.Location = new System.Drawing.Point(56, 335);
             this.richCopyFiles.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.richCopyFiles.Name = "richCopyFiles";
-            this.richCopyFiles.Size = new System.Drawing.Size(1668, 320);
+            this.richCopyFiles.Size = new System.Drawing.Size(1578, 267);
             this.richCopyFiles.TabIndex = 19;
             this.richCopyFiles.Text = "需要复制文件列表";
             // 
@@ -105,15 +105,15 @@
             this.txtDestDir.Location = new System.Drawing.Point(455, 22);
             this.txtDestDir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDestDir.Name = "txtDestDir";
-            this.txtDestDir.Size = new System.Drawing.Size(1268, 25);
+            this.txtDestDir.Size = new System.Drawing.Size(1124, 25);
             this.txtDestDir.TabIndex = 20;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(940, 184);
+            this.button1.Location = new System.Drawing.Point(871, 286);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(763, 26);
+            this.button1.Size = new System.Drawing.Size(763, 31);
             this.button1.TabIndex = 21;
             this.button1.Text = "假如输入的是目录列表，那么先转换为文件列表，然后如上复制文件即可实现复制目录以及子目录";
             this.button1.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(1509, 865);
+            this.button3.Location = new System.Drawing.Point(1419, 630);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(215, 38);
@@ -179,30 +179,10 @@
             this.panelFileFilterCondition.Controls.Add(this.cbxFileNameContain);
             this.panelFileFilterCondition.Controls.Add(this.cbxTimeGreaterThan);
             this.panelFileFilterCondition.Controls.Add(this.dptMinTime);
-            this.panelFileFilterCondition.Location = new System.Drawing.Point(55, 231);
+            this.panelFileFilterCondition.Location = new System.Drawing.Point(53, 151);
             this.panelFileFilterCondition.Name = "panelFileFilterCondition";
-            this.panelFileFilterCondition.Size = new System.Drawing.Size(1653, 100);
+            this.panelFileFilterCondition.Size = new System.Drawing.Size(1581, 100);
             this.panelFileFilterCondition.TabIndex = 43;
-            // 
-            // btnRestoreFilterCondition
-            // 
-            this.btnRestoreFilterCondition.Location = new System.Drawing.Point(492, 113);
-            this.btnRestoreFilterCondition.Name = "btnRestoreFilterCondition";
-            this.btnRestoreFilterCondition.Size = new System.Drawing.Size(175, 28);
-            this.btnRestoreFilterCondition.TabIndex = 55;
-            this.btnRestoreFilterCondition.Text = "还原过滤条件";
-            this.btnRestoreFilterCondition.UseVisualStyleBackColor = true;
-            this.btnRestoreFilterCondition.Click += new System.EventHandler(this.btnRestoreFilterCondition_Click);
-            // 
-            // btnSaveFilterCondition
-            // 
-            this.btnSaveFilterCondition.Location = new System.Drawing.Point(265, 113);
-            this.btnSaveFilterCondition.Name = "btnSaveFilterCondition";
-            this.btnSaveFilterCondition.Size = new System.Drawing.Size(175, 28);
-            this.btnSaveFilterCondition.TabIndex = 54;
-            this.btnSaveFilterCondition.Text = "保存过滤条件";
-            this.btnSaveFilterCondition.UseVisualStyleBackColor = true;
-            this.btnSaveFilterCondition.Click += new System.EventHandler(this.btnSaveFilterCondition_Click);
             // 
             // txtMaxTime
             // 
@@ -299,6 +279,26 @@
             this.dptMinTime.TabIndex = 44;
             this.dptMinTime.ValueChanged += new System.EventHandler(this.dptMinTime_ValueChanged);
             // 
+            // btnRestoreFilterCondition
+            // 
+            this.btnRestoreFilterCondition.Location = new System.Drawing.Point(492, 113);
+            this.btnRestoreFilterCondition.Name = "btnRestoreFilterCondition";
+            this.btnRestoreFilterCondition.Size = new System.Drawing.Size(175, 28);
+            this.btnRestoreFilterCondition.TabIndex = 55;
+            this.btnRestoreFilterCondition.Text = "还原过滤条件";
+            this.btnRestoreFilterCondition.UseVisualStyleBackColor = true;
+            this.btnRestoreFilterCondition.Click += new System.EventHandler(this.btnRestoreFilterCondition_Click);
+            // 
+            // btnSaveFilterCondition
+            // 
+            this.btnSaveFilterCondition.Location = new System.Drawing.Point(265, 113);
+            this.btnSaveFilterCondition.Name = "btnSaveFilterCondition";
+            this.btnSaveFilterCondition.Size = new System.Drawing.Size(175, 28);
+            this.btnSaveFilterCondition.TabIndex = 54;
+            this.btnSaveFilterCondition.Text = "保存过滤条件";
+            this.btnSaveFilterCondition.UseVisualStyleBackColor = true;
+            this.btnSaveFilterCondition.Click += new System.EventHandler(this.btnSaveFilterCondition_Click);
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(55, 108);
@@ -313,7 +313,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1759, 916);
+            this.ClientSize = new System.Drawing.Size(1681, 679);
             this.Controls.Add(this.btnRestoreFilterCondition);
             this.Controls.Add(this.panelFileFilterCondition);
             this.Controls.Add(this.btnSaveFilterCondition);
