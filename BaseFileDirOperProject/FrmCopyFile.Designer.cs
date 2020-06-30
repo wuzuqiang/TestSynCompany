@@ -188,7 +188,7 @@
             // 
             // txtMaxTime
             // 
-            this.txtMaxTime.Location = new System.Drawing.Point(606, 18);
+            this.txtMaxTime.Location = new System.Drawing.Point(613, 18);
             this.txtMaxTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMaxTime.Name = "txtMaxTime";
             this.txtMaxTime.Size = new System.Drawing.Size(150, 21);
@@ -234,13 +234,13 @@
             // 
             this.dptMaxTime.Location = new System.Drawing.Point(501, 18);
             this.dptMaxTime.Name = "dptMaxTime";
-            this.dptMaxTime.Size = new System.Drawing.Size(101, 21);
+            this.dptMaxTime.Size = new System.Drawing.Size(107, 21);
             this.dptMaxTime.TabIndex = 48;
             this.dptMaxTime.ValueChanged += new System.EventHandler(this.dptMaxTime_ValueChanged);
             // 
             // txtContainFileName
             // 
-            this.txtContainFileName.Location = new System.Drawing.Point(885, 21);
+            this.txtContainFileName.Location = new System.Drawing.Point(889, 21);
             this.txtContainFileName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContainFileName.Name = "txtContainFileName";
             this.txtContainFileName.Size = new System.Drawing.Size(257, 21);
@@ -249,7 +249,7 @@
             // cbxFileNameContain
             // 
             this.cbxFileNameContain.AutoSize = true;
-            this.cbxFileNameContain.Location = new System.Drawing.Point(802, 22);
+            this.cbxFileNameContain.Location = new System.Drawing.Point(806, 22);
             this.cbxFileNameContain.Name = "cbxFileNameContain";
             this.cbxFileNameContain.Size = new System.Drawing.Size(84, 16);
             this.cbxFileNameContain.TabIndex = 46;
