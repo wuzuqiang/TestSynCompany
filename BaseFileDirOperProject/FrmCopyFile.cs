@@ -27,13 +27,13 @@ namespace BaseFileDirOperProject
 
             string msg = "";
             CopyFile(listSrcPath, txtDestDir.Text, ref msg);
-            string extraTips = string.IsNullOrEmpty(msg) ? " " : $"但出现异常：{msg}";
+            string extraTips = string.IsNullOrEmpty(msg) ? " " : $"但出现异常：\n{msg}";
             MessageBox.Show("恭喜！操作成功！" + extraTips);
         }
 
         private void CheckDestDir()
         {
-            string strDestBaseDir = txtBaseDir.Text;
+            string strDestBaseDir = txtDestDir.Text;
             if (Directory.Exists(strDestBaseDir))
             {
                 if (DialogResult.OK == MessageBox.Show("已存在目录" + "是否先连子目录也删除？\n" + strDestBaseDir, "目录已存在！是否先连子目录也删除？", MessageBoxButtons.OKCancel))
@@ -56,7 +56,7 @@ namespace BaseFileDirOperProject
                 }
                 else
                 {
-                    msg += $"整合目录{srcPath}不存在！\n";
+                    msg += $"源文件路径：{srcPath}不存在！\n";
                 }
             }
         }
