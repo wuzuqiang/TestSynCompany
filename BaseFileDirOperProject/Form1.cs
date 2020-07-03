@@ -40,7 +40,7 @@ namespace BaseFileDirOperProject
         private void button1_Click(object sender, EventArgs e)
         {
             //打开上述合并的文件或目录
-            FileUtils.OpenFileIfnotthencreat(System.IO.Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text));
+            FileUtils.OpenFileIfnotthencreat(System.IO.Path.Combine(txtCombineDir.Text, txtCombineRelaPath.Text), false);
         }
 
         private void Form1_Load(object sender, EventArgs e)
