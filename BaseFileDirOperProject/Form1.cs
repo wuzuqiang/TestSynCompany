@@ -87,7 +87,7 @@ namespace BaseFileDirOperProject
 
         private List<string> getContents(IEnumerable<FileSystemInfo> fileSystemInfos)
         {
-            return FileUtils.GetCollateFileSystemInfo(fileSystemInfos.ToList(), cbxAddBaseDir.Checked, txtCombineDir.Text, cbxOrderFileName.Checked, cbxAddFileName.Checked
+            return FileUtils.GetCollateFileSystemInfo(fileSystemInfos.ToList(), cbxAddBaseDir.Checked, txtCombineDir.Text, cbxAppendRowIndex.Checked, cbxAddFileName.Checked
                 , cbxAddFilePath.Checked, cbxAddCreateTime.Checked, cbxAddLastWriteTime.Checked);
         }
 

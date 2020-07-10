@@ -311,7 +311,7 @@
             this.cbxOrderFileName.AutoSize = true;
             this.cbxOrderFileName.Checked = true;
             this.cbxOrderFileName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxOrderFileName.Location = new System.Drawing.Point(36, 446);
+            this.cbxOrderFileName.Location = new System.Drawing.Point(36, 475);
             this.cbxOrderFileName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxOrderFileName.Name = "cbxOrderFileName";
             this.cbxOrderFileName.Size = new System.Drawing.Size(119, 19);
