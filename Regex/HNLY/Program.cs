@@ -28,8 +28,15 @@ namespace HNLY
 
             ////testHNLY_mess();
             ////testBaseOperXml();
-            SerialMessageSerialXmlV1Xml();
+            //SerialMessageSerialXmlV1Xml();
+            Func2();
             Console.ReadLine();
+        }
+
+        public static void Func2()
+        {
+            string strTest = "  <LY>    <ID>1</ID>    <LO>      <ID>0000</ID>    </LO>    <NA>      <ID>0002</ID>    </NA>    <SS>      <ID>0000</ID>    </SS>    <EB>      <ID>0000</ID>    </EB>    <BL>      <ID>0000</ID>    </BL>    <LB>      <ID>0000</ID>    </LB>    <SR>      <ID>0000</ID>    </SR>    <SSF>      <ID>0000</ID>    </SSF>    <SRS>      <ID>0009</ID>    </SRS>    <FE>      <ID>0000</ID>    </FE>  </LY>";
+            AGVStatus agvStatus = XMLUtils.XmlDeSerializer<AGVStatus>(strTest.Replace("LY>", "AGVStatus>"));
         }
 
         public static void SerialMessageSerialXmlV1Xml()
@@ -56,7 +63,7 @@ namespace HNLY
         {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Test.xml");
             FileUtils fileUtils = new FileUtils();
-            string reqXml = fileUtils.ReadFile(filePath);
+            string reqXml = fileUtils.ReadFileByFileStream(filePath);
             var a = TranslatorHelper.AnalysicInputData<Person>(reqXml, "/bookstore/book/title");
         }
         public static void Func0()
@@ -121,5 +128,55 @@ namespace HNLY
             XMLUtils.filePath = "E:\\THOK\\MESS对接\\卷包工单及消耗归集xml\\testBaseOperXml.xml";
             XMLUtils.Main();
         }
+    }
+
+
+
+    public class AGVStatus
+    {
+        /// <summary>
+        /// 车号
+        /// </summary>
+        public string ID = "ID";
+        /// <summary>
+        /// 有货--[loaded]
+        /// </summary>
+        public string LO = "LO";
+        /// <summary>
+        /// 手动--[noAuto]
+        /// </summary>
+        public string NA = "NA";
+        /// <summary>
+        /// 软停--[stopSoft]
+        /// </summary>
+        public string SS = "SS";
+        /// <summary>
+        /// 急停--[stopEstopButton]
+        /// </summary>
+        public string EB = "EB";
+        /// <summary>
+        /// 排队--[blocked]
+        /// </summary>
+        public string BL = "BL";
+        /// <summary>
+        /// 电量低--[lowBattery]
+        /// </summary>
+        public string LB = "LB";
+        /// <summary>
+        /// 后方障碍--[stopRear]
+        /// </summary>
+        public string SR = "SR";
+        /// <summary>
+        /// 前方SICK障碍--[stopSafety]
+        /// </summary>
+        public string SSF = "SSF";
+        /// <summary>
+        /// AGV需要复位--[stopReset]
+        /// </summary>
+        public string SRS = "SRS";
+        /// <summary>
+        /// 举升编码器错误 --[stopForkEncoder]
+        /// </summary>
+        public string FE = "FE";
     }
 }

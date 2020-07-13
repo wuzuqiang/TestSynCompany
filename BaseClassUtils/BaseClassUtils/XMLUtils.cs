@@ -424,6 +424,22 @@ namespace BaseClassUtils
 
         #endregion
 
+
+        /// <summary>
+        /// xml转实体对象
+        /// </summary>
+        /// <typeparam name="T">实体类型</typeparam>
+        /// <param name="strXML">xml字符串</param>
+        /// <returns>实体对象</returns>
+        public static T XmlDeSerializer<T>(string strXML) where T : class
+        {
+            using (StringReader sr = new StringReader(strXML))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(T));
+                return serializer.Deserialize(sr) as T;
+            }
+        }
+
     }
     public class BookModel
     {
