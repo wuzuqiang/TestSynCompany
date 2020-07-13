@@ -9,6 +9,7 @@ using BaseClassUtils;
 using Fusion.Context.Warehouse.Domain.Models.Bill.OutBills;
 using Fusion.Context.Warehouse.Domain.Models.Warehouse.Locations;
 using Fusion.Infrastructure.Interface.Chinasoft.MES.V2.Services.YSK;
+using Fusion.Project.HN.LY.FLK.Activities.AGV.Models;
 using HN.Integration.Helper;
 using Serializable;
 
@@ -29,13 +30,23 @@ namespace HNLY
             ////testHNLY_mess();
             ////testBaseOperXml();
             //SerialMessageSerialXmlV1Xml();
-            Func2();
+            Func3();
             Console.ReadLine();
+        }
+
+        public static void Func3()
+        {
+            string strTest = "<HM>  <ID>30</ID>  <TC>MS</TC>  <LY>    <ID>1</ID>    <LO>      <ID>0000</ID>    </LO>    <NA>      <ID>0002</ID>    </NA>    <SS>      <ID>0000</ID>    </SS>    <EB>      <ID>0000</ID>    </EB>    <BL>      <ID>0000</ID>    </BL>    <LB>      <ID>0000</ID>    </LB>    <SR>      <ID>0000</ID>    </SR>    <SSF>      <ID>0000</ID>    </SSF>    <SRS>      <ID>0009</ID>    </SRS>    <FE>      <ID>0000</ID>    </FE>  </LY></HM>";
+
+            string strMiddle = "^_^";
+            strTest = new Regex("<HM>|</HM>|<ID>30</ID>|<TC>MS</TC>|<ID>|</ID>").Replace(strTest.Replace("<ID>1</ID>", strMiddle), "");
+            AGVStatus agvStatus = XMLUtils.XmlDeSerializer<AGVStatus>(strTest.Replace("<ID>1</ID>", strMiddle).Replace("LY>", "AGVStatus>").Replace(strMiddle, "<ID>1</ID>"));
         }
 
         public static void Func2()
         {
             string strTest = "  <LY>    <ID>1</ID>    <LO>      <ID>0000</ID>    </LO>    <NA>      <ID>0002</ID>    </NA>    <SS>      <ID>0000</ID>    </SS>    <EB>      <ID>0000</ID>    </EB>    <BL>      <ID>0000</ID>    </BL>    <LB>      <ID>0000</ID>    </LB>    <SR>      <ID>0000</ID>    </SR>    <SSF>      <ID>0000</ID>    </SSF>    <SRS>      <ID>0009</ID>    </SRS>    <FE>      <ID>0000</ID>    </FE>  </LY>";
+
             AGVStatus agvStatus = XMLUtils.XmlDeSerializer<AGVStatus>(strTest.Replace("LY>", "AGVStatus>"));
         }
 
@@ -179,4 +190,5 @@ namespace HNLY
         /// </summary>
         public string FE = "FE";
     }
+
 }
