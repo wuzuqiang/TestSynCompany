@@ -47,10 +47,13 @@ namespace BaseFileDirOperProject
         {
             string destPath = $"{ strDestBaseDir.Trim()}\\";
             if (cbxIsNeedAddBaseDir.Checked)
-            {
+            {   //通用目录不考虑
                 var tempPath = $"{srcPath.Trim()}";
-                //通用目录不考虑
                 destPath += tempPath.Replace(txtBaseDir.Text + "\\", "").Replace(":\\", "__\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
+                if (cbxExtraCopyFunc01.Checked)
+                {
+                    destPath = destPath.Replace(txtSrc01.Text.Trim(), txtDest01.Text.Trim());
+                }
             }
             if (!cbxIsNeedAddBaseDir.Checked)
             {
@@ -164,6 +167,7 @@ namespace BaseFileDirOperProject
             {
                 richCopyFiles.Text += $"{path}\n";
             }
+            cbxIsNeedAddBaseDir.Checked = false;
 
             MessageBox.Show("恭喜！操作成功！");
         }
