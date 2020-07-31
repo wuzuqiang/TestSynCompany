@@ -49,16 +49,17 @@ namespace BaseFileDirOperProject
             if (cbxIsNeedAddBaseDir.Checked)
             {   //通用目录不考虑
                 var tempPath = $"{srcPath.Trim()}";
-                destPath += tempPath.Replace(txtBaseDir.Text + "\\", "").Replace(":\\", "__\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
-                if (cbxExtraCopyFunc01.Checked)
-                {
-                    destPath = destPath.Replace(txtSrc01.Text.Trim(), txtDest01.Text.Trim());
-                }
+                destPath += tempPath.Replace(txtBaseDir.Text + "\\", "").Replace(":\\", "__\\"); 
+                //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼，也只能在后面添加的路径中替换掉，不然会把最终的正常路径E:\\替换成\\就成错误路径了
             }
             if (!cbxIsNeedAddBaseDir.Checked)
             {
                 var tempPath = $"{srcPath.Trim()}";
                 destPath += tempPath.Replace(":\\", "__\\");
+            }
+            if (cbxExtraCopyFunc01.Checked)
+            {
+                destPath = destPath.Replace(txtSrc01.Text.Trim(), txtDest01.Text.Trim());
             }
             return destPath;
         }
