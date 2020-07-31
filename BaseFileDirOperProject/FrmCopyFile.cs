@@ -43,22 +43,40 @@ namespace BaseFileDirOperProject
             }
         }
 
+        private string getDestPath(string strDestBaseDir, string srcPath)
+        {
+            string destPath = $"{ strDestBaseDir.Trim()}\\";
+            if (cbxIsNeedAddBaseDir.Checked)
+            {
+                var tempPath = $"{srcPath.Trim()}";
+                //通用目录不考虑
+                destPath += tempPath.Replace(txtBaseDir.Text + "\\", "").Replace(":\\", "__\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
+            }
+            if (!cbxIsNeedAddBaseDir.Checked)
+            {
+                var tempPath = $"{srcPath.Trim()}";
+                destPath += tempPath.Replace(":\\", "__\\");
+            }
+            return destPath;
+        }
+
         private void CopyFile(List<string> listSrcPath, string strDestBaseDir, ref string msg)
         {//将这些路径下的文件都复制到目录strDestBaseDir下
+            List<string> listDestPath = new List<string>();
             foreach (string srcPath in listSrcPath)
             {
                 if (DirUtil.IsFileDirectory(srcPath))
                 {
                     //listPath.Add(srcPath);
-                    string desPath = $"{ strDestBaseDir.Trim()}\\{srcPath.Trim().Replace(":\\", "__\\")}";
-                    DirUtil.CreateDir(desPath);
-                    FileUtils.CopyFile(srcPath, desPath);
+                    listDestPath.Add(getDestPath(strDestBaseDir, srcPath));
                 }
                 else
                 {
                     msg += $"源文件路径：{srcPath}不存在！\n";
                 }
             }
+
+            CopyFile(listSrcPath, listDestPath);
         }
 
         public List<string> GetListSrcCopyFile(string needCopyFiles, bool isNeedAddBaseDir)
@@ -130,15 +148,7 @@ namespace BaseFileDirOperProject
             {
                 if (DirUtil.IsFileDirectory(srcPath))
                 {
-                    string strReplaced = string.IsNullOrEmpty(txtSrc01.Text) ? " " : txtSrc01.Text.Trim();
-                    string strReplace = string.IsNullOrEmpty(txtDest01.Text) ? " " : txtDest01.Text.Trim();
-                    string destDir = $"{ txtDestDir.Text.Trim()}\\{Path.GetDirectoryName(srcPath)}".Replace(strReplaced, strReplace);
-                    string destFileName = $"{Path.GetFileName(srcPath).Replace(strReplaced, strReplace)}";
-
-                    string destPath = $"{destDir}\\{destFileName}".Replace("\\E:\\", "\\"); //将中间的E:\去掉，不然是非法路径，异常提示也很让人懵逼
-                    listDestPath.Add(destPath);
-                    DirUtil.CreateDir(destPath);
-                    FileUtils.CopyFile(srcPath, destPath);   //有时会出现错误：指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符
+                    listDestPath.Add(getDestPath(txtDestDir.Text, srcPath));
                 }
                 else
                 {
@@ -147,6 +157,8 @@ namespace BaseFileDirOperProject
                 }
             }
 
+            CopyFile(listSrcPath, listDestPath);
+
             richCopyFiles.Text = "";
             foreach(string path in listDestPath)
             {
@@ -154,6 +166,17 @@ namespace BaseFileDirOperProject
             }
 
             MessageBox.Show("恭喜！操作成功！");
+        }
+
+        private void CopyFile(List<string> listSrcPath, List<string> listDestPath)
+        {
+            if (listSrcPath.Count() != listDestPath.Count())
+                throw new Exception("抱歉！源路径和目标路径数不相等！无法一一复制！");
+            for (int i = 0; i < listSrcPath.Count(); i++)
+            {   //请保证来源路径和目标路径是一一对应的
+                DirUtil.CreateDir(listDestPath[i]);
+                FileUtils.CopyFile(listSrcPath[i], listDestPath[i]);   //有时会出现错误：指定的路径或文件名太长，或者两者都太长。完全限定文件名必须少于 260 个字符，并且目录名必须少于 248 个字符
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
