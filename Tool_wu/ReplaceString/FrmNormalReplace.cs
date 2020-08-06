@@ -218,5 +218,40 @@ namespace ReplaceString
             Regex regex = new Regex(regexPattern);
             richInput.Text = regex.Replace(richInput.Text, "");
         }
+
+        private void richInput_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+        public void TestKeyDown()
+        {
+
+            // Ctrl + H 
+            if ((Control.ModifierKeys & Keys.Control) != 0 && e.KeyCode == Keys.H)
+            {
+                MessageBox.Show("Ctrl + H");
+            }
+
+            // Alt + H 
+            if ((Control.ModifierKeys & Keys.Alt) != 0 && e.KeyCode == Keys.H)
+            {
+                MessageBox.Show("Alt + H");
+            }
+
+            // Shift + H 
+            if ((Control.ModifierKeys & Keys.Shift) != 0 && e.KeyCode == Keys.H)
+            {
+                MessageBox.Show("Shift + H");
+            }
+
+            // Ctrl + Alt + Shift + H 
+            if ((Control.ModifierKeys & Keys.Control) != 0 &&
+                 (Control.ModifierKeys & Keys.Alt) != 0 &&
+                 (Control.ModifierKeys & Keys.Shift) != 0 &&
+                 e.KeyCode == Keys.H)
+            {
+                MessageBox.Show("Ctrl + Alt + Shift + H");
+            }
+        }
     }
 }
