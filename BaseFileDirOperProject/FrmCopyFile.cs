@@ -191,7 +191,12 @@ namespace BaseFileDirOperProject
             {
                 if (Path.GetExtension(str) == ".resx")
                     continue;
-                System.Diagnostics.Process.Start(str);
+                string filePath = str;
+                if(cbxIsNeedAddBaseDir.Checked)
+                {
+                    filePath = Path.Combine(txtBaseDir.Text, str);
+                }
+                System.Diagnostics.Process.Start(filePath);
             }
         }
 
