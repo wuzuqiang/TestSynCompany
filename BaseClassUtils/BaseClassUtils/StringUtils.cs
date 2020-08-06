@@ -84,6 +84,19 @@ namespace BaseClassUtils
             return input.Remove(input.Length - lastNum, lastNum);
         }
 
+        /// <summary>
+        /// 移除字符串的前面beforeNum行，直到字符串为空
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="lastNum">要移除最后的几行？</param>
+        /// <returns></returns>
+        public static string RemovFrontChar(this string input, int beforeNum = 1)
+        {
+            if (string.IsNullOrEmpty(input))
+                return "";
+            return input.Remove(0, beforeNum < input.Length ? beforeNum : input.Length);
+        }
+
         #region String.ToXXX()转换成某类数据
         public static Int32 ToInt32(this string input)
         {
