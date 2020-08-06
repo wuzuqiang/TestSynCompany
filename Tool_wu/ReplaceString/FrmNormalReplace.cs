@@ -203,5 +203,20 @@ namespace ReplaceString
                 richInput.Text = richInput.Text.GetSplitLineWithoutEmpty().SortList().Aggregate((n, j) => n + "\n" + j);
             }
         }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            //将如下这些C#变量类型和其后的空格替换为空
+            saveBeforeContent();
+            List<string> listCodeTypeName = txtCodeTypeNames.Text.GetSplitLineWithoutEmpty(',');
+            string regexPattern = "";
+            foreach(string codeTypeName in listCodeTypeName)
+            {
+                regexPattern += $"|{codeTypeName} ?(?=\\S)"; //前面?号表示0个或N个，后面(?=\\s)表示正则表达式查找或替换时不会包含\\S
+            }
+            regexPattern = regexPattern.RemovFrontChar();
+            Regex regex = new Regex(regexPattern);
+            richInput.Text = regex.Replace(richInput.Text, "");
+        }
     }
 }
