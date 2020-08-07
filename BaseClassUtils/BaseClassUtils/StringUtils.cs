@@ -157,9 +157,19 @@ namespace BaseClassUtils
                 list.Add(str);
             }
             return list;
-        }
+		}
 
-        public static List<string> GetSplitLine(string input)
+		public static List<string> GetSplitLineKeepEmptyRow(this string input, char splitArray = '\n')
+		{
+			List<string> list = new List<string>();
+			foreach (string str in input.Split(new char[] { splitArray }))
+			{
+				list.Add(str);
+			}
+			return list;
+		}
+
+		public static List<string> GetSplitLine(string input)
         {
             List<string> list = new List<string>();
             foreach (string str in input.Split(new char[] { '\n' }))
