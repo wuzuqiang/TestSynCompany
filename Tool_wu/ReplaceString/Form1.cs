@@ -241,15 +241,20 @@ namespace ReplaceString
         private void button14_Click(object sender, EventArgs e)
         {
             //首字母大小写
-            var temp = richInput.Text;
-            if(cbkToUper.Checked)
-            {
-                richInput.Text = temp.Substring(0, 1).ToUpper() + temp.Substring(1);
-            }
-            else
-            {
-                richInput.Text = temp.Substring(0, 1).ToLower() + temp.Substring(1);
-            }
+			List<string> listInput = richInput.Text.GetSplitLineWithoutEmpty();
+			string input = "";
+			foreach(string temp in listInput)
+			{
+				if (cbkToUper.Checked)
+				{
+					input += temp.Substring(0, 1).ToUpper() + temp.Substring(1) + "\n";
+				}
+				else
+				{
+					input += temp.Substring(0, 1).ToLower() + temp.Substring(1) + "\n";
+				}
+			}
+			richResult.Text = input.RemoveLastChar();
         }
 
         private void button15_Click(object sender, EventArgs e)
