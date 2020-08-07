@@ -108,9 +108,48 @@ namespace BaseClassUtils
             DateTime dt = DateTime.ParseExact(input, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
             return dt;
         }
-        #endregion
+		#endregion
 
-        public static List<string> GetSplitLineWithoutEmpty(this string input, char splitArray= '\n')
+		#region GUID和RAW字符类互转
+		public static string RawToGuid(this string input)
+		{
+			string output = "";
+			//raw转guid
+			//new guid(byte[] id);
+			var guid_Val = new Guid(HexStringToBytes(input, Encoding.Unicode));
+			output = guid_Val.ToString();
+
+			return output;
+		}
+
+		//3、将16进制字符串转为字符串
+		public static byte[] HexStringToBytes(string hex, Encoding encode)
+		{
+			string strTemp = "";
+			byte[] b = new byte[hex.Length / 2];
+			for (int i = 0; i < hex.Length / 2; i++)
+			{
+				strTemp = hex.Substring(i * 2, 2);
+				b[i] = Convert.ToByte(strTemp, 16);
+			}
+			//按照指定编码将字节数组变为字符串
+			return b;
+		}
+
+		public static string GuidToRaw(this string input)
+		{
+			string output = "";
+
+			//var temp2 = byte.Parse("1b", NumberStyles.HexNumber);
+			//guid转raw
+			var temp = (new Guid(input)).ToByteArray();
+			output = BitConverter.ToString(temp).Replace("-", "");
+
+			return output;
+		}
+		#endregion
+
+		public static List<string> GetSplitLineWithoutEmpty(this string input, char splitArray= '\n')
         {
             List<string> list = new List<string>();
             foreach(string str in input.Split(new char[] { splitArray }, StringSplitOptions.RemoveEmptyEntries))
