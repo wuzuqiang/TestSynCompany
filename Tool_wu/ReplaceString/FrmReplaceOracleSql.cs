@@ -19,125 +19,15 @@ namespace ReplaceString
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //需要排除select from 
-            richInput.Text = richInput.Text.Replace(textBox1.Text, textBox2.Text);
+		private void saveBeforeContent()
+		{
+			richOriginContent.Text = richInput.Text;
+		}
+		private void button1_Click(object sender, EventArgs e)
+        {	
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //某行带这些内容则保留，以 | 符号组合
-            //获取每行内容组成的List
-            List<string> list = richInput.Text.Split('\n').ToList();
-            List<string> listNeedExistedString = txtOperContent.Text.Split('|').ToList();
-            richInput.Text = "";
-            StringBuilder sb = new StringBuilder();
-            foreach(string line in list)
-            {
-                bool isExisted = false;
-                foreach(string str in listNeedExistedString)
-                {
-                    if (line.ToLower().Contains(str.ToLower()))
-                    {
-                        isExisted = true;
-                        break;
-                    }
-                }
-                if(isExisted)
-                {
-                    sb.AppendFormat(line + "\n");
-                }
-            }
-            richInput.Text = sb.ToString();
-        }
-
-        /// <summary>
-        /// 某行不带这些内容则保留，以|符号组合
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //获取每行内容组成的List
-            List<string> list = richInput.Text.Split('\n').ToList();
-            List<string> listNeedExistedString = txtOperNotContained.Text.Split('|').ToList();
-
-            int lineIndex = 0;
-            List<int> listNeedRemoveIndexS1 = new List<int>(); //带有这些内容，则这行不保留，需要从list中移除
-            StringBuilder sb = new StringBuilder();
-            foreach (string line in list)
-            {
-                bool isExisted = false;
-                foreach (string str in listNeedExistedString)
-                {
-                    if (line.ToEncryInneredParticularWord().Contains(str.ToEncryInneredParticularWord()))
-                    {
-                        isExisted = true;
-                        break;
-                    }
-                }
-                if (isExisted)
-                {   //如果带了这些内容，就不存这行了
-                    listNeedRemoveIndexS1.Add(lineIndex);
-                }
-                lineIndex++;
-            }
-
-            //使用对比插入
-            List<int> listNeedRemoveIndexS2 = new List<int>(); //带有这些内容，则这行不保留，需要从list中移除
-            int s1TotalCount = listNeedRemoveIndexS1.Count();
-            for (int i = 0; i < s1TotalCount; i++)
-            {
-                int operIndex = listNeedRemoveIndexS1[i];
-                listNeedRemoveIndexS2.Add(operIndex);
-
-                int beforeRowNum = txtConcludeBeforeRowNum.Text.ToInt32();
-                if (beforeRowNum > 0)
-                {
-                    int temp = 1;
-                    while (operIndex >= temp && temp <= beforeRowNum)
-                    {
-                        listNeedRemoveIndexS2.Add(operIndex - temp);
-                        temp++;
-                    }
-                }
-
-                int afterRowNum = txtConcludeAfterRowNum.Text.ToInt32();
-                if (afterRowNum > 0)
-                {
-                    int temp = 1;
-                    while (operIndex + temp < list.Count && temp <= beforeRowNum)
-                    {
-                        listNeedRemoveIndexS2.Add(operIndex + temp);
-                        temp++;
-                    }
-                }
-            }
-
-            listNeedRemoveIndexS2 = listNeedRemoveIndexS2.Distinct().ToList();
-            listNeedRemoveIndexS2.SortByDesc<int>();
-
-            foreach (int removeIndex in listNeedRemoveIndexS2)
-            {
-                list.RemoveAt(removeIndex);
-            }
-
-            foreach (var saveRow in list)
-            {
-                sb.Append($"{saveRow}\n");
-            }
-            richInput.Text = sb.ToString().RemoveLastChar();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //将每行以|组合起来
-            string str = richInput.Text.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries).Aggregate((e1, e2) => string.Format("{0}|{1}", e1, e2));
-            richInput.Text = str;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+		
+		private void button5_Click(object sender, EventArgs e)
         {
             FrmExcel dlg = new FrmExcel();
             dlg.Show();
@@ -147,7 +37,7 @@ namespace ReplaceString
             //将Oracle的sql转换为Sqlserver的sql
             //将某行中带有字符串“REM INSERTING”或“SET DEFINE OFF”的删除掉
             txtOperNotContained.Text = "REM INSERTING|SET DEFINE OFF";
-            button3_Click(null, null);
+            btnSaveByNotContainAnyStr_Click(null, null);
             strResult = richInput.Text;
             //将字符串“C##FUSION.”转换为空字符
             strResult = strResult.Replace("C##FUSION.", "");
@@ -242,62 +132,12 @@ namespace ReplaceString
             richInput.Text = str.Replace("\"", "");
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            //在每行前新增txtAppend.Text
-            //获取每行内容组成的List
-            List<string> list = StringUtils.GetSplitLine(richInput.Text);
-            StringBuilder sb = new StringBuilder();
-            foreach (string line in list)
-            {
-                if(string.IsNullOrEmpty(line.Trim()))
-                {
-                    sb.Append(line + "\n");
-                    continue;
-                }
-                sb.Append(txtAppendToBefore.Text + line + "\n");
-            }
-            richInput.Text = sb.ToString();
-
-        }
-
         private void button10_Click(object sender, EventArgs e)
         {
-            //移除每行前txtAppend.Text
-            //获取每行内容组成的List
-            List<string> list = richInput.Text.Split('\n').ToList();
-            StringBuilder sb = new StringBuilder();
-            foreach (string line in list)
-            {   
-                if(line.Length > txtAppendToBefore.Text.Length && line.Substring(0, txtAppendToBefore.Text.Length).Contains(txtAppendToBefore.Text))
-                {
-                    sb.Append(line.Substring(txtAppendToBefore.Text.Length) + "\n");
-
-                }
-                else
-                {
-                    sb.Append(line + "\n");
-                }
-            }
-            richInput.Text = sb.ToString();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            //新增到每行最尾端
-            //获取每行内容组成的List
-            List<string> list = StringUtils.GetSplitLine(richInput.Text);
-            StringBuilder sb = new StringBuilder();
-            foreach (string line in list)
-            {
-                if (string.IsNullOrEmpty(line.Trim()))
-                {
-                    sb.Append(line + "\n");
-                    continue;
-                }
-                sb.AppendLine(line + txtAppendToEnd.Text.ToString().Trim());
-            }
-            richInput.Text = sb.ToString();
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -318,5 +158,332 @@ namespace ReplaceString
             //where ((("IDU" =  SYS_GUID()) and   替换为 where ((
             richInput.Text = richInput.Text.Replace(txtBeReplaceStr04.Text, txtReplaceStr04.Text);
         }
-    }
+
+		private void button15_Click(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+			richInput.Text = richInput.Text.RawToGuid();
+		}
+
+		private void button14_Click(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+			richInput.Text = richInput.Text.GuidToRaw();
+		}
+
+
+		#region 
+
+		#region 主要功能是替换功能的tabControl中所有click事件
+		#endregion
+		#region 主要功能是替换功能的tabControl中所有click事件
+		private void btnReplace_Click(object sender, EventArgs e)
+		{
+			//替换字符串
+			saveBeforeContent();
+			StringBuilder sbOutput = new StringBuilder();
+
+			//将需要的改动的内容转义成strTemp ，防止出错       //如果内容中包含*号等转义字符，替换就会出错了。
+			string strTempOriginEncry = "";
+			string strTempFinalEncry = "";
+			if (chkIgnoreCase.Checked)
+			{
+				strTempOriginEncry = txtOriginStr.Text.ToLower();
+				strTempFinalEncry = txtFinalStr.Text.ToLower();
+			}
+			strTempOriginEncry = strTempOriginEncry.ToEncryInneredParticularWord();
+			strTempFinalEncry = strTempFinalEncry.ToEncryInneredParticularWord();
+
+			foreach (string str in richInput.Text.ToEncryInneredParticularWord().GetSplitLineKeepEmptyRow())
+			{
+				sbOutput.AppendLine(str.Replace(strTempFinalEncry, strTempFinalEncry));
+			}
+			string strChangeTextThatTransfer = txtAppendToBefore.Text.ToEncryInneredParticularWord();
+
+			richInput.Text = sbOutput.ToString().RemoveLastChar().ToDecodeInneredParticularWord();
+		}
+
+		private void btnCombineAllLineToOneLine_Click(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+			richInput.Text = ManyRowToOneRowByLinkMiddleStr(richInput.Text, txtLinkStr.Text);
+		}
+
+		public string ManyRowToOneRowByLinkMiddleStr(string input, string linkMiddle)
+		{
+			string output = "";
+			//将所有内容整合成一行，中间以某字符连接形成一行
+			string temp = input.ToEncryInneredParticularWord();
+			StringBuilder sbOutput = new StringBuilder();
+			foreach (string str in temp.Split('\n'))
+			{
+				sbOutput.AppendFormat(str + linkMiddle);
+			}
+			output = sbOutput.ToString().ToDecodeInneredParticularWord();
+
+			return output;
+		}
+
+		private void btnSixSpaceToBreakLine_Click(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+			//将六个空格替换为换行
+			//中文全角空格为\u3000，英文半角空格为\u0020，
+			richInput.Text = (new Regex("[\u0020\u3000]{6}")).Replace(richInput.Text, "\n");
+		}
+
+		private void btnSortAll_Click(object sender, EventArgs e)
+		{
+			//按首字母拼音或者笔画(反)排序每行
+			saveBeforeContent();
+			if (cbxOrderType.Checked)
+			{ //按首字母拼音
+				richInput.Text = richInput.Text.GetSplitLineWithoutEmpty().SortList().Aggregate((n, j) => n + "\n" + j);
+			}
+		}
+
+		private void btnGetAllTextLength_Click(object sender, EventArgs e)
+		{
+			//获取输入框文字总长度
+			txtContentLength.Text = richInput.Text.Length.ToString();
+		}
+		#endregion
+		#region 常用转换特定转换
+		private void btnTransferParticularChar_Click(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+			//反转义双引号、右下划线
+			richInput.Text = (new Regex("\"")).Replace(richInput.Text, "\\\"");
+			richInput.Text = (new Regex("\\\\")).Replace(richInput.Text, "\\\\");
+		}
+		private void btnReplaceCodeType_Click(object sender, EventArgs e)
+		{
+			//将如下这些C#变量类型和其后的空格替换为空
+			saveBeforeContent();
+			List<string> listCodeTypeName = txtCodeTypeNames.Text.GetSplitLineWithoutEmpty(',');
+			string regexPattern = "";
+			foreach (string codeTypeName in listCodeTypeName)
+			{
+				regexPattern += $"|{codeTypeName} ?(?=\\S)"; //前面?号表示0个或N个，后面(?=\\s)表示正则表达式查找或替换时不会包含\\S
+			}
+			regexPattern = regexPattern.RemovFrontChar();
+			Regex regex = new Regex(regexPattern);
+			richInput.Text = regex.Replace(richInput.Text, "");
+		}
+		#endregion
+		#region 主要功能是前后增、删、查功能的tabControl中所有click事件
+		#region 增加或者删除 每行前或后的某些字符串
+		private void btnAddBeforeExceptEmptyR_Click(object sender, EventArgs e)
+		{
+			//在每行前新增txtAppend.Text
+
+			//txtAppendToBefore.Text = txtAppendToBefore.Text.Trim();
+			//获取每行内容组成的List
+			StringBuilder sbOutput = new StringBuilder();
+			foreach (string str in richInput.Text.GetSplitLineKeepEmptyRow())
+			{
+				if (string.IsNullOrEmpty(str))
+				{
+					sbOutput.AppendLine();
+					continue;
+				}
+				sbOutput.AppendLine(txtAppendToBefore.Text + str);
+			}
+			richInput.Text = sbOutput.ToString().RemoveLastChar();
+
+		}
+
+		private void btnRemoveEveryRowPreviousStrExeceptEmptyRow_Click(object sender, EventArgs e)
+		{
+			//移除每行某某内容前的所有内容
+
+			//txtAppendToBefore.Text = txtAppendToBefore.Text.Trim();
+
+			StringBuilder sb = new StringBuilder();
+			foreach (string line in richInput.Text.GetSplitLineKeepEmptyRow())
+			{
+				int index = line.IndexOf(txtAppendToBefore.Text);
+
+				if (index >= 0)
+				{
+					if (chkContainThatPreviousWords.Checked)
+					{
+						sb.Append(line.Substring(index + txtAppendToBefore.Text.Length) + "\n");
+					}
+					if (!chkContainThatPreviousWords.Checked)
+					{
+						sb.Append(line.Substring(index) + "\n");
+					}
+				}
+				else
+				{
+					sb.Append(line + "\n");
+				}
+			}
+			richInput.Text = sb.ToString().RemoveLastChar();
+		}
+
+		private void btnAddEverRowSuffixStrExceptEmptyRow_Click(object sender, EventArgs e)
+		{
+			//新增到每行最尾端
+
+			//txtAppendToEnd.Text = txtAppendToEnd.Text.Trim();
+			//获取每行内容组成的List
+			List<string> list = StringUtils.GetSplitLine(richInput.Text);
+			StringBuilder sb = new StringBuilder();
+			foreach (string line in list)
+			{
+				if (string.IsNullOrEmpty(line.Trim()))
+				{
+					sb.Append(line + "\n");
+					continue;
+				}
+				sb.AppendLine(line + txtAppendToEnd.Text.ToString().Trim());
+			}
+			richInput.Text = sb.ToString().RemoveLastChar();
+		}
+
+		private void btnRemoveEveryRowSuffixStrExeceptEmptyRow_Click(object sender, EventArgs e)
+		{
+			//移除每行后 字符串
+
+			//txtAppendToEnd.Text = txtAppendToEnd.Text.Trim();
+
+			StringBuilder sb = new StringBuilder();
+			foreach (string line in richInput.Text.GetSplitLineKeepEmptyRow())
+			{
+				int index = line.LastIndexOf(txtAppendToEnd.Text);
+
+				if (index >= 0)
+				{
+					if (chkContainThatSuffixStr.Checked)
+					{
+						sb.Append(line.Substring(0, index) + "\n");
+					}
+					if (!chkContainThatSuffixStr.Checked)
+					{
+						sb.Append(line.Substring(0, index + txtAppendToEnd.Text.Length) + "\n");
+					}
+				}
+				else
+				{
+					sb.Append(line + "\n");
+				}
+			}
+			richInput.Text = sb.ToString().RemoveLastChar();
+		}
+		#endregion
+
+
+		#region 保留或者不保留哪些行
+		/// <summary>
+		/// 某行不带这些内容则保留，以|符号组合
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void btnSaveByNotContainAnyStr_Click(object sender, EventArgs e)
+		{
+			//获取每行内容组成的List
+			List<string> list = richInput.Text.Split('\n').ToList();
+			List<string> listNeedExistedString = txtOperNotContained.Text.Split('|').ToList();
+
+			int lineIndex = 0;
+			List<int> listNeedRemoveIndexS1 = new List<int>(); //带有这些内容，则这行不保留，需要从list中移除
+			StringBuilder sb = new StringBuilder();
+			foreach (string line in list)
+			{
+				bool isExisted = false;
+				foreach (string str in listNeedExistedString)
+				{
+					if (line.ToEncryInneredParticularWord().Contains(str.ToEncryInneredParticularWord()))
+					{
+						isExisted = true;
+						break;
+					}
+				}
+				if (isExisted)
+				{   //如果带了这些内容，就不存这行了
+					listNeedRemoveIndexS1.Add(lineIndex);
+				}
+				lineIndex++;
+			}
+
+			//使用对比插入
+			List<int> listNeedRemoveIndexS2 = new List<int>(); //带有这些内容，则这行不保留，需要从list中移除
+			int s1TotalCount = listNeedRemoveIndexS1.Count();
+			for (int i = 0; i < s1TotalCount; i++)
+			{
+				int operIndex = listNeedRemoveIndexS1[i];
+				listNeedRemoveIndexS2.Add(operIndex);
+
+				int beforeRowNum = txtConcludeBeforeRowNum.Text.ToInt32();
+				if (beforeRowNum > 0)
+				{
+					int temp = 1;
+					while (operIndex >= temp && temp <= beforeRowNum)
+					{
+						listNeedRemoveIndexS2.Add(operIndex - temp);
+						temp++;
+					}
+				}
+
+				int afterRowNum = txtConcludeAfterRowNum.Text.ToInt32();
+				if (afterRowNum > 0)
+				{
+					int temp = 1;
+					while (operIndex + temp < list.Count && temp <= beforeRowNum)
+					{
+						listNeedRemoveIndexS2.Add(operIndex + temp);
+						temp++;
+					}
+				}
+			}
+
+			listNeedRemoveIndexS2 = listNeedRemoveIndexS2.Distinct().ToList();
+			listNeedRemoveIndexS2.SortByDesc<int>();
+
+			foreach (int removeIndex in listNeedRemoveIndexS2)
+			{
+				list.RemoveAt(removeIndex);
+			}
+
+			foreach (var saveRow in list)
+			{
+				sb.Append($"{saveRow}\n");
+			}
+			richInput.Text = sb.ToString().RemoveLastChar();
+		}
+
+		private void btnSaveByContainAnyStr_Click(object sender, EventArgs e)
+		{
+			//某行带这些内容则保留，以 | 符号组合
+			//获取每行内容组成的List
+			List<string> list = richInput.Text.Split('\n').ToList();
+			List<string> listNeedExistedString = txtOperContent.Text.Split('|').ToList();
+			richInput.Text = "";
+			StringBuilder sb = new StringBuilder();
+			foreach (string line in list)
+			{
+				bool isExisted = false;
+				foreach (string str in listNeedExistedString)
+				{
+					if (line.ToLower().Contains(str.ToLower()))
+					{
+						isExisted = true;
+						break;
+					}
+				}
+				if (isExisted)
+				{
+					sb.AppendFormat(line + "\n");
+				}
+			}
+			richInput.Text = sb.ToString();
+		}
+		#endregion
+
+		#endregion
+
+		#endregion
+	}
 }

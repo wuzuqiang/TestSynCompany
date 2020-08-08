@@ -161,7 +161,7 @@
 			// 
 			this.button4.Location = new System.Drawing.Point(207, 68);
 			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(107, 23);
+			this.button4.Size = new System.Drawing.Size(106, 37);
 			this.button4.TabIndex = 10;
 			this.button4.Text = "普通替换";
 			this.button4.UseVisualStyleBackColor = true;
