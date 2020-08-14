@@ -62,7 +62,7 @@
 			this.button4 = new System.Windows.Forms.Button();
 			this.button9 = new System.Windows.Forms.Button();
 			this.button10 = new System.Windows.Forms.Button();
-			this.tabControl3 = new System.Windows.Forms.TabControl();
+			this.tabCtrl_01 = new System.Windows.Forms.TabControl();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
 			this.btnSortAll = new System.Windows.Forms.Button();
 			this.txtContentLength = new System.Windows.Forms.TextBox();
@@ -72,25 +72,17 @@
 			this.btnSixSpaceToBreakLine = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
 			this.txtLinkStr = new System.Windows.Forms.TextBox();
-			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.checkBox1 = new System.Windows.Forms.CheckBox();
-			this.textBox9 = new System.Windows.Forms.TextBox();
 			this.label15 = new System.Windows.Forms.Label();
 			this.label16 = new System.Windows.Forms.Label();
 			this.btnReplace = new System.Windows.Forms.Button();
+			this.txtOriginStr = new System.Windows.Forms.TextBox();
+			this.txtFinalStr = new System.Windows.Forms.TextBox();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
 			this.btnTransferParticularChar = new System.Windows.Forms.Button();
 			this.txtCodeTypeNames = new System.Windows.Forms.RichTextBox();
 			this.btnReplaceCodeType = new System.Windows.Forms.Button();
-			this.tabControl2 = new System.Windows.Forms.TabControl();
-			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.txtFinalStr = new System.Windows.Forms.TextBox();
 			this.chkIgnoreCase = new System.Windows.Forms.CheckBox();
-			this.txtOriginStr = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
-			this.tabPage4 = new System.Windows.Forms.TabPage();
-			this.tabControl1 = new System.Windows.Forms.TabControl();
+			this.tabCtrl_02 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.chkContainThatSuffixStr = new System.Windows.Forms.CheckBox();
 			this.btnRemoveEveryRowSuffixStrExeceptEmptyRow = new System.Windows.Forms.Button();
@@ -113,12 +105,10 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.txtConcludeBeforeRowNum = new System.Windows.Forms.TextBox();
-			this.tabControl3.SuspendLayout();
+			this.tabCtrl_01.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
-			this.tabControl2.SuspendLayout();
-			this.tabPage3.SuspendLayout();
-			this.tabControl1.SuspendLayout();
+			this.tabCtrl_02.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.SuspendLayout();
@@ -457,18 +447,19 @@
 			this.button10.UseVisualStyleBackColor = true;
 			this.button10.Click += new System.EventHandler(this.button14_Click);
 			// 
-			// tabControl3
+			// tabCtrl_01
 			// 
-			this.tabControl3.Controls.Add(this.tabPage5);
-			this.tabControl3.Controls.Add(this.tabPage6);
-			this.tabControl3.Location = new System.Drawing.Point(12, 106);
-			this.tabControl3.Name = "tabControl3";
-			this.tabControl3.SelectedIndex = 0;
-			this.tabControl3.Size = new System.Drawing.Size(333, 371);
-			this.tabControl3.TabIndex = 54;
+			this.tabCtrl_01.Controls.Add(this.tabPage5);
+			this.tabCtrl_01.Controls.Add(this.tabPage6);
+			this.tabCtrl_01.Location = new System.Drawing.Point(12, 106);
+			this.tabCtrl_01.Name = "tabCtrl_01";
+			this.tabCtrl_01.SelectedIndex = 0;
+			this.tabCtrl_01.Size = new System.Drawing.Size(333, 371);
+			this.tabCtrl_01.TabIndex = 54;
 			// 
 			// tabPage5
 			// 
+			this.tabPage5.Controls.Add(this.chkIgnoreCase);
 			this.tabPage5.Controls.Add(this.btnSortAll);
 			this.tabPage5.Controls.Add(this.txtContentLength);
 			this.tabPage5.Controls.Add(this.cbxOrderType);
@@ -477,12 +468,11 @@
 			this.tabPage5.Controls.Add(this.btnSixSpaceToBreakLine);
 			this.tabPage5.Controls.Add(this.label3);
 			this.tabPage5.Controls.Add(this.txtLinkStr);
-			this.tabPage5.Controls.Add(this.textBox8);
-			this.tabPage5.Controls.Add(this.checkBox1);
-			this.tabPage5.Controls.Add(this.textBox9);
 			this.tabPage5.Controls.Add(this.label15);
 			this.tabPage5.Controls.Add(this.label16);
 			this.tabPage5.Controls.Add(this.btnReplace);
+			this.tabPage5.Controls.Add(this.txtOriginStr);
+			this.tabPage5.Controls.Add(this.txtFinalStr);
 			this.tabPage5.Location = new System.Drawing.Point(4, 25);
 			this.tabPage5.Name = "tabPage5";
 			this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -572,33 +562,6 @@
 			this.txtLinkStr.TabIndex = 50;
 			this.txtLinkStr.Text = "|";
 			// 
-			// textBox8
-			// 
-			this.textBox8.Location = new System.Drawing.Point(57, 60);
-			this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(252, 25);
-			this.textBox8.TabIndex = 2;
-			// 
-			// checkBox1
-			// 
-			this.checkBox1.AutoSize = true;
-			this.checkBox1.Location = new System.Drawing.Point(8, 123);
-			this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.checkBox1.Name = "checkBox1";
-			this.checkBox1.Size = new System.Drawing.Size(104, 19);
-			this.checkBox1.TabIndex = 47;
-			this.checkBox1.Text = "忽略大小写";
-			this.checkBox1.UseVisualStyleBackColor = true;
-			// 
-			// textBox9
-			// 
-			this.textBox9.Location = new System.Drawing.Point(57, 5);
-			this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.Size = new System.Drawing.Size(252, 25);
-			this.textBox9.TabIndex = 0;
-			// 
 			// label15
 			// 
 			this.label15.AutoSize = true;
@@ -627,6 +590,22 @@
 			this.btnReplace.Text = "开始替换";
 			this.btnReplace.UseVisualStyleBackColor = true;
 			this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
+			// 
+			// txtOriginStr
+			// 
+			this.txtOriginStr.Location = new System.Drawing.Point(57, 5);
+			this.txtOriginStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtOriginStr.Name = "txtOriginStr";
+			this.txtOriginStr.Size = new System.Drawing.Size(252, 25);
+			this.txtOriginStr.TabIndex = 0;
+			// 
+			// txtFinalStr
+			// 
+			this.txtFinalStr.Location = new System.Drawing.Point(57, 57);
+			this.txtFinalStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.txtFinalStr.Name = "txtFinalStr";
+			this.txtFinalStr.Size = new System.Drawing.Size(252, 25);
+			this.txtFinalStr.TabIndex = 2;
 			// 
 			// tabPage6
 			// 
@@ -673,43 +652,10 @@
 			this.btnReplaceCodeType.UseVisualStyleBackColor = true;
 			this.btnReplaceCodeType.Click += new System.EventHandler(this.btnReplaceCodeType_Click);
 			// 
-			// tabControl2
-			// 
-			this.tabControl2.Controls.Add(this.tabPage3);
-			this.tabControl2.Controls.Add(this.tabPage4);
-			this.tabControl2.Location = new System.Drawing.Point(12, 248);
-			this.tabControl2.Name = "tabControl2";
-			this.tabControl2.SelectedIndex = 0;
-			this.tabControl2.Size = new System.Drawing.Size(333, 229);
-			this.tabControl2.TabIndex = 53;
-			// 
-			// tabPage3
-			// 
-			this.tabPage3.Controls.Add(this.txtFinalStr);
-			this.tabPage3.Controls.Add(this.chkIgnoreCase);
-			this.tabPage3.Controls.Add(this.txtOriginStr);
-			this.tabPage3.Controls.Add(this.label1);
-			this.tabPage3.Controls.Add(this.label2);
-			this.tabPage3.Location = new System.Drawing.Point(4, 25);
-			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(325, 200);
-			this.tabPage3.TabIndex = 0;
-			this.tabPage3.Text = "替换";
-			this.tabPage3.UseVisualStyleBackColor = true;
-			// 
-			// txtFinalStr
-			// 
-			this.txtFinalStr.Location = new System.Drawing.Point(57, 60);
-			this.txtFinalStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtFinalStr.Name = "txtFinalStr";
-			this.txtFinalStr.Size = new System.Drawing.Size(252, 25);
-			this.txtFinalStr.TabIndex = 2;
-			// 
 			// chkIgnoreCase
 			// 
 			this.chkIgnoreCase.AutoSize = true;
-			this.chkIgnoreCase.Location = new System.Drawing.Point(8, 123);
+			this.chkIgnoreCase.Location = new System.Drawing.Point(10, 120);
 			this.chkIgnoreCase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.chkIgnoreCase.Name = "chkIgnoreCase";
 			this.chkIgnoreCase.Size = new System.Drawing.Size(104, 19);
@@ -717,50 +663,15 @@
 			this.chkIgnoreCase.Text = "忽略大小写";
 			this.chkIgnoreCase.UseVisualStyleBackColor = true;
 			// 
-			// txtOriginStr
+			// tabCtrl_02
 			// 
-			this.txtOriginStr.Location = new System.Drawing.Point(57, 5);
-			this.txtOriginStr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.txtOriginStr.Name = "txtOriginStr";
-			this.txtOriginStr.Size = new System.Drawing.Size(252, 25);
-			this.txtOriginStr.TabIndex = 0;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(2, 5);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(22, 15);
-			this.label1.TabIndex = 1;
-			this.label1.Text = "将";
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(2, 60);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(52, 15);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "替换为";
-			// 
-			// tabPage4
-			// 
-			this.tabPage4.Location = new System.Drawing.Point(4, 25);
-			this.tabPage4.Name = "tabPage4";
-			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage4.Size = new System.Drawing.Size(325, 200);
-			this.tabPage4.TabIndex = 1;
-			this.tabPage4.UseVisualStyleBackColor = true;
-			// 
-			// tabControl1
-			// 
-			this.tabControl1.Controls.Add(this.tabPage1);
-			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Location = new System.Drawing.Point(12, 529);
-			this.tabControl1.Name = "tabControl1";
-			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(333, 397);
-			this.tabControl1.TabIndex = 52;
+			this.tabCtrl_02.Controls.Add(this.tabPage1);
+			this.tabCtrl_02.Controls.Add(this.tabPage2);
+			this.tabCtrl_02.Location = new System.Drawing.Point(12, 529);
+			this.tabCtrl_02.Name = "tabCtrl_02";
+			this.tabCtrl_02.SelectedIndex = 0;
+			this.tabCtrl_02.Size = new System.Drawing.Size(333, 397);
+			this.tabCtrl_02.TabIndex = 52;
 			// 
 			// tabPage1
 			// 
@@ -1005,9 +916,8 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1469, 862);
-			this.Controls.Add(this.tabControl3);
-			this.Controls.Add(this.tabControl2);
-			this.Controls.Add(this.tabControl1);
+			this.Controls.Add(this.tabCtrl_01);
+			this.Controls.Add(this.tabCtrl_02);
 			this.Controls.Add(this.button10);
 			this.Controls.Add(this.richOriginContent);
 			this.Controls.Add(this.button9);
@@ -1046,14 +956,11 @@
 			this.Name = "FrmReplaceOracleSql";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FrmReplaceOracleSql";
-			this.tabControl3.ResumeLayout(false);
+			this.tabCtrl_01.ResumeLayout(false);
 			this.tabPage5.ResumeLayout(false);
 			this.tabPage5.PerformLayout();
 			this.tabPage6.ResumeLayout(false);
-			this.tabControl2.ResumeLayout(false);
-			this.tabPage3.ResumeLayout(false);
-			this.tabPage3.PerformLayout();
-			this.tabControl1.ResumeLayout(false);
+			this.tabCtrl_02.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
@@ -1098,7 +1005,7 @@
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button9;
 		private System.Windows.Forms.Button button10;
-		private System.Windows.Forms.TabControl tabControl3;
+		private System.Windows.Forms.TabControl tabCtrl_01;
 		private System.Windows.Forms.TabPage tabPage5;
 		private System.Windows.Forms.Button btnSortAll;
 		private System.Windows.Forms.TextBox txtContentLength;
@@ -1108,9 +1015,6 @@
 		private System.Windows.Forms.Button btnSixSpaceToBreakLine;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.TextBox txtLinkStr;
-		private System.Windows.Forms.TextBox textBox8;
-		private System.Windows.Forms.CheckBox checkBox1;
-		private System.Windows.Forms.TextBox textBox9;
 		private System.Windows.Forms.Label label15;
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Button btnReplace;
@@ -1118,15 +1022,10 @@
 		private System.Windows.Forms.Button btnTransferParticularChar;
 		private System.Windows.Forms.RichTextBox txtCodeTypeNames;
 		private System.Windows.Forms.Button btnReplaceCodeType;
-		private System.Windows.Forms.TabControl tabControl2;
-		private System.Windows.Forms.TabPage tabPage3;
 		private System.Windows.Forms.TextBox txtFinalStr;
 		private System.Windows.Forms.CheckBox chkIgnoreCase;
 		private System.Windows.Forms.TextBox txtOriginStr;
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TabPage tabPage4;
-		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabControl tabCtrl_02;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.CheckBox chkContainThatSuffixStr;
 		private System.Windows.Forms.Button btnRemoveEveryRowSuffixStrExeceptEmptyRow;

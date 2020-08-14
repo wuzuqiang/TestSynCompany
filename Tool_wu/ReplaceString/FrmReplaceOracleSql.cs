@@ -184,19 +184,19 @@ namespace ReplaceString
 			StringBuilder sbOutput = new StringBuilder();
 
 			//将需要的改动的内容转义成strTemp ，防止出错       //如果内容中包含*号等转义字符，替换就会出错了。
-			string strTempOriginEncry = "";
-			string strTempFinalEncry = "";
+			string strTempOriginEncry = txtOriginStr.Text;
+			string strTempFinalEncry = txtFinalStr.Text;
 			if (chkIgnoreCase.Checked)
 			{
-				strTempOriginEncry = txtOriginStr.Text.ToLower();
-				strTempFinalEncry = txtFinalStr.Text.ToLower();
+				strTempOriginEncry = strTempOriginEncry.ToLower();
+				strTempFinalEncry = strTempFinalEncry.ToLower();
 			}
 			strTempOriginEncry = strTempOriginEncry.ToEncryInneredParticularWord();
 			strTempFinalEncry = strTempFinalEncry.ToEncryInneredParticularWord();
 
 			foreach (string str in richInput.Text.ToEncryInneredParticularWord().GetSplitLineKeepEmptyRow())
 			{
-				sbOutput.AppendLine(str.Replace(strTempFinalEncry, strTempFinalEncry));
+				sbOutput.AppendLine(str.Replace(strTempOriginEncry, strTempFinalEncry));
 			}
 			string strChangeTextThatTransfer = txtAppendToBefore.Text.ToEncryInneredParticularWord();
 
@@ -431,7 +431,7 @@ namespace ReplaceString
 				if (afterRowNum > 0)
 				{
 					int temp = 1;
-					while (operIndex + temp < list.Count && temp <= beforeRowNum)
+					while (operIndex + temp < list.Count && temp <= afterRowNum)
 					{
 						listNeedRemoveIndexS2.Add(operIndex + temp);
 						temp++;
@@ -457,6 +457,8 @@ namespace ReplaceString
 		private void btnSaveByContainAnyStr_Click(object sender, EventArgs e)
 		{
 			//某行带这些内容则保留，以 | 符号组合
+
+			saveBeforeContent();
 			//获取每行内容组成的List
 			List<string> list = richInput.Text.Split('\n').ToList();
 			List<string> listNeedExistedString = txtOperContent.Text.Split('|').ToList();

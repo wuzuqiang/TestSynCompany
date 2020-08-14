@@ -308,6 +308,7 @@ namespace ReplaceString
 		/// <param name="e"></param>
 		private void btnSaveByNotContainAnyStr_Click(object sender, EventArgs e)
 		{
+			saveBeforeContent();
 			//获取每行内容组成的List
 			List<string> list = richInput.Text.Split('\n').ToList();
 			List<string> listNeedExistedString = txtOperNotContained.Text.Split('|').ToList();
@@ -356,7 +357,7 @@ namespace ReplaceString
 				if (afterRowNum > 0)
 				{
 					int temp = 1;
-					while (operIndex + temp < list.Count && temp <= beforeRowNum)
+					while (operIndex + temp < list.Count && temp <= afterRowNum)
 					{
 						listNeedRemoveIndexS2.Add(operIndex + temp);
 						temp++;
