@@ -76,7 +76,9 @@
     <EmbeddedResource Include="StoreInLEDForm.resx">
       <DependentUpon>StoreInLEDForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="EQ2008_Dll_Set.ini" />
+    <None Include="EQ2008_Dll_Set.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,7 +95,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EQ2008_Dll.dll" />
+    <Content Include="EQ2008_Dll.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Framework\Fusion.Common.Util\Fusion.Common.Util.csproj">

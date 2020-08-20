@@ -8,10 +8,14 @@ using WindowsFormsApp1;
 
 namespace Fusion.Desktop.GZTR.TV
 {
-    public class HttpUtil
-    {
-        private static string LEDURL = ConfigurationManager.AppSettings["LEDURL"];
-
+	public class HttpUtil
+	{
+		private static string LEDURL = ConfigurationManager.AppSettings["LEDURL"];
+		public static int sequence { get; set; }
+		public static string GetTestLedData()
+		{
+			return sequence++.ToString();
+		}
 
         public static T HttpRequest<T>(string url)
         {
