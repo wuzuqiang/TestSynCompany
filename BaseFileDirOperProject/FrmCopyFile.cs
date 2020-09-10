@@ -196,7 +196,14 @@ namespace BaseFileDirOperProject
                 {
                     filePath = Path.Combine(txtBaseDir.Text, str);
                 }
-                System.Diagnostics.Process.Start(filePath);
+				try
+				{
+					System.Diagnostics.Process.Start(filePath);
+				}
+				catch(System.ComponentModel.Win32Exception ex)
+				{
+					MessageBox.Show($"打开文件：{filePath}，出现错误：{ex.Message}");
+				}
             }
         }
 
