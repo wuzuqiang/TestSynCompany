@@ -121,7 +121,7 @@ namespace ReplaceString
 
 			foreach (string str in richInput.Text.ToEncryInneredParticularWord().GetSplitLineKeepEmptyRow())
 			{
-				sbOutput.AppendLine(str.Replace(strTempFinalEncry, strTempFinalEncry));
+				sbOutput.AppendLine(str.Replace(strTempOriginEncry, strTempFinalEncry));
 			}
 			string strChangeTextThatTransfer = txtAppendToBefore.Text.ToEncryInneredParticularWord();
 
