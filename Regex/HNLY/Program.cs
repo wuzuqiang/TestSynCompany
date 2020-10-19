@@ -35,13 +35,49 @@ namespace HNLY
         }
 
         public static void Func3()
-        {
-            string strTest = "<HM>  <ID>30</ID>  <TC>MS</TC>  <LY>    <ID>1</ID>    <LO>      <ID>0000</ID>    </LO>    <NA>      <ID>0002</ID>    </NA>    <SS>      <ID>0000</ID>    </SS>    <EB>      <ID>0000</ID>    </EB>    <BL>      <ID>0000</ID>    </BL>    <LB>      <ID>0000</ID>    </LB>    <SR>      <ID>0000</ID>    </SR>    <SSF>      <ID>0000</ID>    </SSF>    <SRS>      <ID>0009</ID>    </SRS>    <FE>      <ID>0000</ID>    </FE>  </LY></HM>";
+		{
+			string strMiddle = "^_^";
+			string strTest = "<HM>  <ID>30</ID>  <TC>MS</TC>  <LY>    <ID>4</ID>    <LO>      <ID>0001</ID>    </LO>    <NA>      <ID>0002</ID>    </NA>    <SS>      <ID>0300</ID>    </SS>    <EB>      <ID>0004</ID>    </EB>    <BL>      <ID>5000</ID>    </BL>    <LB>      <ID>0006</ID>    </LB>    <SR>      <ID>0070</ID>    </SR>    <SSF>      <ID>0800</ID>    </SSF>    <SRS>      <ID>0009</ID>    </SRS>    <FE>      <ID>1000</ID>    </FE>  </LY></HM>";
 
-            string strMiddle = "^_^";
-            strTest = new Regex("<HM>|</HM>|<ID>30</ID>|<TC>MS</TC>|<ID>|</ID>").Replace(strTest.Replace("<ID>1</ID>", strMiddle), "");
-            AGVStatus agvStatus = XMLUtils.XmlDeSerializer<AGVStatus>(strTest.Replace("<ID>1</ID>", strMiddle).Replace("LY>", "AGVStatus>").Replace(strMiddle, "<ID>1</ID>"));
-        }
+			#region listAgvAlarmCode、listAgvStatus
+			strTest = strTest.Replace("<ID>1</ID>", strMiddle + "1");
+			strTest = strTest.Replace("<ID>2</ID>", strMiddle + "2");
+			strTest = strTest.Replace("<ID>3</ID>", strMiddle + "3");
+			strTest = strTest.Replace("<ID>4</ID>", strMiddle + "4");
+			strTest = new Regex("<HM>|</HM>|<ID>30</ID>|<TC>MS</TC>|<ID>|</ID>").Replace(strTest, "");
+			strTest = strTest.Replace("<ID>1</ID>", strMiddle).Replace("LY>", "AGVStatus>");
+			strTest = strTest.Replace(strMiddle + "1", "<ID>1</ID>");
+			strTest = strTest.Replace(strMiddle + "2", "<ID>2</ID>");
+			strTest = strTest.Replace(strMiddle + "3", "<ID>3</ID>");
+			strTest = strTest.Replace(strMiddle + "4", "<ID>4</ID>");
+			AGVStatus agvStatus = XMLUtils.XmlDeSerializer<AGVStatus>(strTest);
+
+			var agvCode = $"AGV{agvStatus.ID.PadLeft(2, '0')}";
+
+			//检查设备都有哪些信息反馈
+			List<string> listAgvAlarmCode = new List<string>();
+			AGVStatus temp = new AGVStatus();
+
+			var tempAgvStatus = new string[] { "", agvStatus.LO, agvStatus.NA, agvStatus.SS, agvStatus.EB, agvStatus.BL, agvStatus.LB, agvStatus.SR, agvStatus.SSF, agvStatus.SRS, agvStatus.FE };
+			var listAgvStatus = new List<string>();
+
+			foreach (string str in tempAgvStatus)
+			{
+				listAgvStatus.Add(str.Trim());
+				if (!string.IsNullOrEmpty(str))
+				{
+					listAgvAlarmCode.Add("AGV_" + str.Trim());
+				}
+			}
+			#endregion
+
+			var agvStatusToWriteDataservice = new Boolean[10];
+			for (int i = 0; i < listAgvAlarmCode.Count(); i++)
+			{
+				agvStatusToWriteDataservice[i] = listAgvAlarmCode[i] != "AGV_" + "0000";
+			}
+			string agvStatusInData = string.Join("、", listAgvAlarmCode);
+		}
 
         public static void Func2()
         {
@@ -140,55 +176,53 @@ namespace HNLY
             XMLUtils.Main();
         }
     }
-
-
-
-    public class AGVStatus
-    {
-        /// <summary>
-        /// 车号
-        /// </summary>
-        public string ID = "ID";
-        /// <summary>
-        /// 有货--[loaded]
-        /// </summary>
-        public string LO = "LO";
-        /// <summary>
-        /// 手动--[noAuto]
-        /// </summary>
-        public string NA = "NA";
-        /// <summary>
-        /// 软停--[stopSoft]
-        /// </summary>
-        public string SS = "SS";
-        /// <summary>
-        /// 急停--[stopEstopButton]
-        /// </summary>
-        public string EB = "EB";
-        /// <summary>
-        /// 排队--[blocked]
-        /// </summary>
-        public string BL = "BL";
-        /// <summary>
-        /// 电量低--[lowBattery]
-        /// </summary>
-        public string LB = "LB";
-        /// <summary>
-        /// 后方障碍--[stopRear]
-        /// </summary>
-        public string SR = "SR";
-        /// <summary>
-        /// 前方SICK障碍--[stopSafety]
-        /// </summary>
-        public string SSF = "SSF";
-        /// <summary>
-        /// AGV需要复位--[stopReset]
-        /// </summary>
-        public string SRS = "SRS";
-        /// <summary>
-        /// 举升编码器错误 --[stopForkEncoder]
-        /// </summary>
-        public string FE = "FE";
-    }
+	
+	public class AGVStatus
+	{
+		/// <summary>
+		/// 车号
+		/// </summary>
+		public string ID = "ID";
+		/// <summary>
+		/// 有货--[loaded]
+		/// </summary>
+		public string LO = "0001";
+		/// <summary>
+		/// 手动--[noAuto]
+		/// </summary>
+		public string NA = "0002";
+		/// <summary>
+		/// 软停--[stopSoft]
+		/// </summary>
+		public string SS = "0003";
+		/// <summary>
+		/// 急停--[stopEstopButton]
+		/// </summary>
+		public string EB = "0004";
+		/// <summary>
+		/// 排队--[blocked]
+		/// </summary>
+		public string BL = "0005";
+		/// <summary>
+		/// 电量低--[lowBattery]
+		/// </summary>
+		public string LB = "0006";
+		/// <summary>
+		/// 后方障碍--[stopRear]
+		/// </summary>
+		public string SR = "0007";
+		/// <summary>
+		/// 前方SICK障碍--[stopSafety]
+		/// </summary>
+		public string SSF = "0008";
+		/// <summary>
+		/// AGV需要复位--[stopReset]
+		/// </summary>
+		public string SRS = "0009";
+		/// <summary>
+		/// 举升编码器错误 --[stopForkEncoder]
+		/// </summary>
+		public string FE = "0010";
+	}
 
 }
