@@ -1,0 +1,20 @@
+应该看数据的使用
+如果要用你自己数据库的数据,就用连接
+如果要用用户自建的数据库,就用acess,sqlerver Compact,Sqlite等等
+
+
+简单的总结一下，就是：
+
+1.数据库的连接，不同连接之间的表的同步需要一定的时间。
+
+2.Access数据库确实不是那么的好用，除了可以Office直观的操作外。
+
+3.在软件的前期开发中，当使用一个数据库搞定不了一些事情的时候，就应该考虑一下换数据库。
+
+4.Access的效率还是可以满足一些简单的需求的，或许在C++中使用Access能让Access发挥得更好。
+
+
+
+没并发的话，首推sqlite，执行效率远高于Access，而且无需安装别的组件（Access需要装有数据访问组件，不过对于access2003，一般windows里自带了。。。）
+
+sqlite的用法：http://blog.csdn.net/zhoufoxcn/article/details/5464443
