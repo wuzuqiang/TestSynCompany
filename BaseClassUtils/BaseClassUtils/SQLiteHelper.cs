@@ -336,17 +336,17 @@ namespace BaseClassUtils
 			if (cmd.Transaction == null)
 			{
 				int i = 0;
-				if (cmd.SureOpen())
-				{
-					lock (writeLock)
-						i = cmd.ExecuteNonQuery();
-					cmd.SureClose();
-				}
-				else
-				{
-					lock (writeLock)
-						i = cmd.ExecuteNonQuery();
-				}
+				//if (cmd.SureOpen())
+				//{
+				//	lock (writeLock)
+				//		i = cmd.ExecuteNonQuery();
+				//	cmd.SureClose();
+				//}
+				//else
+				//{
+				//	lock (writeLock)
+				//		i = cmd.ExecuteNonQuery();
+				//}
 				return i;
 			}
 			else
@@ -369,7 +369,7 @@ namespace BaseClassUtils
 			using (SQLiteConnection connection = GetSQLiteConnection())
 			{
 				PrepareCommand(cmd, connection, cmdText, p);
-				connection.SureOpen();
+				//connection.SureOpen();
 				lock (writeLock)
 					return cmd.ExecuteNonQuery();
 			}
@@ -386,9 +386,9 @@ namespace BaseClassUtils
 		public static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			PrepareCommand(cmd, commandType, cmdText, p);
-			if (cmd.SureOpen())
-				return cmd.ExecuteReader(CommandBehavior.CloseConnection);
-			else
+			//if (cmd.SureOpen())
+			//	return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+			//else
 				return cmd.ExecuteReader();
 		}
 		public static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, string cmdText, params object[] p)
@@ -407,9 +407,9 @@ namespace BaseClassUtils
 			try
 			{
 				PrepareCommand(cmd, connection, cmdText, p);
-				if (cmd.SureOpen())
-					return cmd.ExecuteReader(CommandBehavior.CloseConnection);
-				else
+				//if (cmd.SureOpen())
+				//	return cmd.ExecuteReader(CommandBehavior.CloseConnection);
+				//else
 					return cmd.ExecuteReader();
 			}
 			catch
@@ -431,15 +431,15 @@ namespace BaseClassUtils
 		{
 			PrepareCommand(cmd, commandType, cmdText, p);
 			object o = null;
-			if (cmd.SureOpen())
-			{
-				o = cmd.ExecuteScalar();
-				cmd.SureClose();
-			}
-			else
-			{
-				o = cmd.ExecuteScalar();
-			}
+			//if (cmd.SureOpen())
+			//{
+			//	o = cmd.ExecuteScalar();
+			//	cmd.SureClose();
+			//}
+			//else
+			//{
+			//	o = cmd.ExecuteScalar();
+			//}
 			return o;
 		}
 		public static object ExecuteScalar(SQLiteCommand cmd, string cmdText, params object[] p)
@@ -457,7 +457,7 @@ namespace BaseClassUtils
 			using (SQLiteConnection connection = GetSQLiteConnection())
 			{
 				PrepareCommand(cmd, connection, cmdText, p);
-				connection.SureOpen();
+				//connection.SureOpen();
 				return cmd.ExecuteScalar();
 			}
 		}
