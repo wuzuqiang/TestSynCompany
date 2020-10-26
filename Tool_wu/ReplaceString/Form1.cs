@@ -1,5 +1,6 @@
 ﻿using BaseClassUtils;
 using OfficeOpenXml;
+using ReplaceString.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -271,32 +272,50 @@ namespace ReplaceString
 			{
 				string dbFileName = "SynCompany.db";
 				string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, dbFileName);
+
 				//如果不存在，则创建数据库
 				SQLiteHelper.CreateDB(dbFilePath);
+
 				//如果不存在此表，则创建表
-				string tableName = "Demo";
-				List<string> tableColumnNames = new List<string>() { "Col_01", "Col_02"};
+				string tableName = "ReplaceString";
+				List<string> tableColumnNames = new List<string>() { "ActionCode", "ActionName", "ActionParamJson", "GroupCode", "TabCode", "ReplaceDate" };
 				if (!SQLiteHelper.CreateTable(dbFilePath, tableName, tableColumnNames))
 				{
 					MessageBox.Show("创建数据库中的表失败！");
 				}
+
 				//插入数据
 				Dictionary<string, object> dicTableColumnData = new Dictionary<string, object>();
-				dicTableColumnData.Add("Col_01", "Col_01_Value");
-				dicTableColumnData.Add("Col_02", "Col_02_Value");
-				var i = SQLiteHelper.ExecuteInsert(tableName, dicTableColumnData);
+				var i = SQLiteHelper.ExecuteInsert(tableName, ReplaceHistoryModelToDic(new ReplaceHistoryModel("ActionCode", "ActionParamJson")));
+
 				//读取所有数据
 				string cmdText01 = $"select * from {tableName}";
 				var a01 = SQLiteHelper.ExecuteDataSet(cmdText01);
+
 				//带条件读取数据
-				string cmdText = $"select * from {tableName} where {tableColumnName[0]}=@{tableColumnName[0]}";
+				string cmdText = $"select * from {tableName} where {tableColumnNames[0]}=@{tableColumnNames[0]}";
 				var a = SQLiteHelper.ExecuteDataSet(cmdText, "3223");
-				var b = SQLiteHelper.GetSchema();
+				//var b = SQLiteHelper.GetSchema();
+
+				SQLiteHelper.CloseConnect();
 			}
 			catch(Exception ex)
 			{
 				MessageBox.Show(ex.Message);
 			}
 		}
+
+		public Dictionary<string, object> ReplaceHistoryModelToDic(ReplaceHistoryModel model)
+		{
+			Dictionary<string, object> dicTableColumnData = new Dictionary<string, object>();
+			dicTableColumnData.Add("ActionCode", model.ActionCode);
+			dicTableColumnData.Add("ActionName", model.ActionName);
+			dicTableColumnData.Add("ActionParamJson", model.ActionParamJson);
+			dicTableColumnData.Add("GroupCode", model.GroupCode);
+			dicTableColumnData.Add("TabCode", model.TabCode);
+			dicTableColumnData.Add("ReplaceDate", model.ReplaceDate);
+			return dicTableColumnData;
+		}
+
 	}
 }

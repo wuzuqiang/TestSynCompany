@@ -269,14 +269,6 @@ namespace BaseClassUtils
 			}
 			return ds;
 		}
-		public static DataSet ExecuteDataSet(string cmdText, params object[] p)
-		{
-			//comm.CommandText = "select * from Users where UserName=@UserName";
-			////传值 username，不指定参数长度
-			////查询计划为(@UserName varchar(8))select * from Users where UserName=@UserName
-			//comm.Parameters.Add(new SqlParameter("@UserName", SqlDbType.VarChar) { Value = "username" });
-			return ExecuteDataSet(CommandType.Text, cmdText, p);
-		}
 
 		private static DataTable ExecuteDataTable(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
@@ -668,6 +660,20 @@ namespace BaseClassUtils
 					}
 				}
 			}
+		}
+		public static DataSet ExecuteDataSet(string cmdText, params object[] p)
+		{
+			//comm.CommandText = "select * from Users where UserName=@UserName";
+			////传值 username，不指定参数长度
+			////查询计划为(@UserName varchar(8))select * from Users where UserName=@UserName
+			//comm.Parameters.Add(new SqlParameter("@UserName", SqlDbType.VarChar) { Value = "username" });
+			return ExecuteDataSet(CommandType.Text, cmdText, p);
+		}
+		public static bool CloseConnect()
+		{
+			SQLiteConnection connection = GetSQLiteConnection();
+			connection.Close();
+			return true;
 		}
 
 
