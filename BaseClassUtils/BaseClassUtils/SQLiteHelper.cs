@@ -557,7 +557,7 @@ namespace BaseClassUtils
 			}
 		}
 
-		private static void ExecuteUpdate(this Dictionary<string, object> dic, string tableName, string pkName)
+		public static void ExecuteUpdate(this Dictionary<string, object> dic, string tableName, string pkName)
 		{
 			using (SQLiteConnection connection = GetSQLiteConnection())
 			{
