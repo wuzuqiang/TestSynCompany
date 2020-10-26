@@ -353,9 +353,9 @@
 			// 
 			this.button16.Location = new System.Drawing.Point(557, 12);
 			this.button16.Name = "button16";
-			this.button16.Size = new System.Drawing.Size(107, 24);
+			this.button16.Size = new System.Drawing.Size(141, 24);
 			this.button16.TabIndex = 31;
-			this.button16.Text = "测试SQLite";
+			this.button16.Text = "初始化SQLite";
 			this.button16.UseVisualStyleBackColor = true;
 			this.button16.Click += new System.EventHandler(this.button16_Click);
 			// 

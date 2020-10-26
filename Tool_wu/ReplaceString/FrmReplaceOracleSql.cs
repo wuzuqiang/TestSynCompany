@@ -201,6 +201,8 @@ namespace ReplaceString
 			string strChangeTextThatTransfer = txtAppendToBefore.Text.ToEncryInneredParticularWord();
 
 			richInput.Text = sbOutput.ToString().RemoveLastChar().ToDecodeInneredParticularWord();
+
+			TransferHelper.ExecuteInsert("Replace", $"{strTempOriginEncry},{strTempFinalEncry}");
 		}
 
 		private void btnCombineAllLineToOneLine_Click(object sender, EventArgs e)
@@ -230,6 +232,8 @@ namespace ReplaceString
 			//将六个空格替换为换行
 			//中文全角空格为\u3000，英文半角空格为\u0020，
 			richInput.Text = (new Regex("[\u0020\u3000]{6}")).Replace(richInput.Text, "\n");
+
+			TransferHelper.ExecuteInsert("SixSpaceToBreakLine");
 		}
 
 		private void btnSortAll_Click(object sender, EventArgs e)
@@ -291,6 +295,7 @@ namespace ReplaceString
 			}
 			richInput.Text = sbOutput.ToString().RemoveLastChar();
 
+			TransferHelper.ExecuteInsert("AddBeforeExceptEmpty", txtAppendToBefore.Text);
 		}
 
 		private void btnRemoveEveryRowPreviousStrExeceptEmptyRow_Click(object sender, EventArgs e)
@@ -321,6 +326,8 @@ namespace ReplaceString
 				}
 			}
 			richInput.Text = sb.ToString().RemoveLastChar();
+
+			TransferHelper.ExecuteInsert("RemoveEveryRowPreviousStrExeceptEmptyRow", txtAppendToBefore.Text);
 		}
 
 		private void btnAddEverRowSuffixStrExceptEmptyRow_Click(object sender, EventArgs e)
@@ -341,6 +348,8 @@ namespace ReplaceString
 				sb.AppendLine(line + txtAppendToEnd.Text.ToString().Trim());
 			}
 			richInput.Text = sb.ToString().RemoveLastChar();
+
+			TransferHelper.ExecuteInsert("AddEverRowSuffixStrExceptEmptyRow", txtAppendToEnd.Text);
 		}
 
 		private void btnRemoveEveryRowSuffixStrExeceptEmptyRow_Click(object sender, EventArgs e)
@@ -371,6 +380,8 @@ namespace ReplaceString
 				}
 			}
 			richInput.Text = sb.ToString().RemoveLastChar();
+
+			TransferHelper.ExecuteInsert("RemoveEveryRowSuffixStrExeceptEmptyRow", txtAppendToEnd.Text);
 		}
 		#endregion
 
@@ -452,6 +463,8 @@ namespace ReplaceString
 				sb.Append($"{saveRow}\n");
 			}
 			richInput.Text = sb.ToString().RemoveLastChar();
+
+			TransferHelper.ExecuteInsert("SaveByNotContainAnyStr", $"{txtOperNotContained.Text}");
 		}
 
 		private void btnSaveByContainAnyStr_Click(object sender, EventArgs e)
@@ -481,6 +494,8 @@ namespace ReplaceString
 				}
 			}
 			richInput.Text = sb.ToString();
+
+			TransferHelper.ExecuteInsert("SaveByContainAnyStr", $"{txtOperContent.Text}");
 		}
 		#endregion
 
