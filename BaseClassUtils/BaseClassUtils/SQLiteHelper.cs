@@ -12,9 +12,9 @@ namespace BaseClassUtils
 {
 	public static class SQLiteHelper
 	{
-		public static readonly object WriteLock = new object();
+		private static readonly object WriteLock = new object();
 		static readonly object writeLock = new object();
-		public static char[] SplitChars = new char[] { ',', ' ', ')', '(', '+', '-', '*', '/' };
+		private static char[] SplitChars = new char[] { ',', ' ', ')', '(', '+', '-', '*', '/' };
 
 		static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings[0].ToString();
 		public static string ConnectionString
@@ -29,11 +29,11 @@ namespace BaseClassUtils
 			}
 		}
 
-		public static bool SureOpen(DbConnection conn)
+		private static bool SureOpen(DbConnection conn)
 		{
 			return Open(conn);
 		}
-		public static bool Open(DbConnection conn)
+		private static bool Open(DbConnection conn)
 		{
 			if (conn != null && conn.State != ConnectionState.Open)
 			{
@@ -42,11 +42,11 @@ namespace BaseClassUtils
 			}
 			return false;
 		}
-		public static bool SureClose(DbConnection conn)
+		private static bool SureClose(DbConnection conn)
 		{
 			return Close(conn);
 		}
-		public static bool Close(DbConnection conn)
+		private static bool Close(DbConnection conn)
 		{
 			if (conn != null && conn.State != ConnectionState.Closed)
 			{
@@ -56,14 +56,14 @@ namespace BaseClassUtils
 			return false;
 		}
 
-		public static object GetDbValue(object o)
+		private static object GetDbValue(object o)
 		{
 			if (o == null)
 				return DBNull.Value;
 			return o;
 		}
 
-		public static string GetSortString(Dictionary<string, bool> dic, bool isReverse)
+		private static string GetSortString(Dictionary<string, bool> dic, bool isReverse)
 		{
 			StringBuilder sb = new StringBuilder();
 			System.Collections.IEnumerator ienum = dic.GetEnumerator();
@@ -77,7 +77,7 @@ namespace BaseClassUtils
 		}
 
 		//static readonly SQLiteTransaction singleton = GetSQLiteTransaction();
-		//public static SQLiteTransaction Singleton
+		//private static SQLiteTransaction Singleton
 		//{
 		//    get
 		//    {
@@ -89,44 +89,44 @@ namespace BaseClassUtils
 		/// 获得连接对象
 		/// </summary>
 		/// <returns></returns>
-		public static SQLiteConnection GetSQLiteConnection(string connectionString)
+		private static SQLiteConnection GetSQLiteConnection(string connectionString)
 		{
 			return new SQLiteConnection(connectionString);
 		}
-		public static SQLiteConnection GetSQLiteConnection()
+		private static SQLiteConnection GetSQLiteConnection()
 		{
 			return GetSQLiteConnection(ConnectionString);
 		}
-		public static SQLiteConnection CreateConnection(string connectionString)
+		private static SQLiteConnection CreateConnection(string connectionString)
 		{
 			return new SQLiteConnection(connectionString);
 		}
-		public static SQLiteConnection CreateConnection()
+		private static SQLiteConnection CreateConnection()
 		{
 			return CreateConnection(ConnectionString);
 		}
-		public static SQLiteTransaction GetSQLiteTransaction(string connectionString)
+		private static SQLiteTransaction GetSQLiteTransaction(string connectionString)
 		{
 			SQLiteConnection conn = GetSQLiteConnection(connectionString);
 			conn.Open();
 			return conn.BeginTransaction();
 		}
-		public static SQLiteTransaction GetSQLiteTransaction()
+		private static SQLiteTransaction GetSQLiteTransaction()
 		{
 			return GetSQLiteTransaction(ConnectionString);
 		}
-		public static SQLiteTransaction CreateTransaction(string connectionString)
+		private static SQLiteTransaction CreateTransaction(string connectionString)
 		{
 			SQLiteConnection conn = GetSQLiteConnection(connectionString);
 			conn.Open();
 			return conn.BeginTransaction(true);
 		}
-		public static SQLiteTransaction CreateTransaction()
+		private static SQLiteTransaction CreateTransaction()
 		{
 			return CreateTransaction(ConnectionString);
 		}
 
-		public static SQLiteCommand PrepareCommand(SQLiteCommand cmd, SQLiteConnection conn, string cmdText, params object[] p)
+		private static SQLiteCommand PrepareCommand(SQLiteCommand cmd, SQLiteConnection conn, string cmdText, params object[] p)
 		{
 			//if (conn.State != ConnectionState.Open)
 			//    conn.Open();
@@ -175,6 +175,10 @@ namespace BaseClassUtils
 					cmd.CommandText = sb.ToString();
 				}
 
+				//comm.CommandText = "select * from Users where UserName=@UserName";
+				////传值 username，不指定参数长度
+				////查询计划为(@UserName varchar(8))select * from Users where UserName=@UserName
+				//comm.Parameters.Add(new SqlParameter("@UserName", SqlDbType.VarChar) { Value = "username" });
 				string[] tempStr = cmd.CommandText.Split('@');
 				for (int i = 0; i < list.Count; i++)
 				{
@@ -197,28 +201,28 @@ namespace BaseClassUtils
 			}
 			return cmd;
 		}
-		public static SQLiteCommand PrepareCommand(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static SQLiteCommand PrepareCommand(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return PrepareCommand(PrepareCommand(trans), cmdText, p);
 		}
-		public static SQLiteCommand PrepareCommand(this SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static SQLiteCommand PrepareCommand(this SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			cmd.CommandType = commandType;
 			return PrepareCommand(cmd, cmd.Connection, cmdText, p);
 		}
-		public static SQLiteCommand PrepareCommand(this SQLiteCommand cmd, string cmdText, params object[] p)
+		private static SQLiteCommand PrepareCommand(this SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return PrepareCommand(cmd, cmd.Connection, cmdText, p);
 		}
-		public static SQLiteCommand PrepareCommand(this SQLiteConnection conn, string cmdText, params object[] p)
+		private static SQLiteCommand PrepareCommand(this SQLiteConnection conn, string cmdText, params object[] p)
 		{
 			return PrepareCommand(conn.CreateCommand(), cmdText, p);
 		}
-		public static SQLiteCommand PrepareCommand(this SQLiteCommand cmd, params object[] p)
+		private static SQLiteCommand PrepareCommand(this SQLiteCommand cmd, params object[] p)
 		{
 			return PrepareCommand(cmd, cmd.Connection, cmd.CommandText, p);
 		}
-		public static SQLiteCommand PrepareCommand(this SQLiteTransaction trans)
+		private static SQLiteCommand PrepareCommand(this SQLiteTransaction trans)
 		{
 			if (trans == null)
 			{
@@ -232,11 +236,11 @@ namespace BaseClassUtils
 			}
 		}
 
-		public static DataSet ExecuteDataSet(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static DataSet ExecuteDataSet(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return ExecuteDataSet(PrepareCommand(trans), cmdText, p);
 		}
-		public static DataSet ExecuteDataSet(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static DataSet ExecuteDataSet(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			DataSet ds = new DataSet();
 			PrepareCommand(cmd, commandType, cmdText, p);
@@ -244,15 +248,15 @@ namespace BaseClassUtils
 			da.Fill(ds);
 			return ds;
 		}
-		public static DataSet ExecuteDataSet(SQLiteCommand cmd, string cmdText, params object[] p)
+		private static DataSet ExecuteDataSet(SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return ExecuteDataSet(cmd, CommandType.Text, cmdText, p);
 		}
-		public static DataSet ExecuteDataSet(SQLiteCommand cmd, params object[] p)
+		private static DataSet ExecuteDataSet(SQLiteCommand cmd, params object[] p)
 		{
 			return ExecuteDataSet(cmd, cmd.CommandText, p);
 		}
-		public static DataSet ExecuteDataSet(CommandType commandType, string cmdText, params object[] p)
+		private static DataSet ExecuteDataSet(CommandType commandType, string cmdText, params object[] p)
 		{
 			DataSet ds = new DataSet();
 			SQLiteCommand cmd = new SQLiteCommand();
@@ -267,70 +271,74 @@ namespace BaseClassUtils
 		}
 		public static DataSet ExecuteDataSet(string cmdText, params object[] p)
 		{
+			//comm.CommandText = "select * from Users where UserName=@UserName";
+			////传值 username，不指定参数长度
+			////查询计划为(@UserName varchar(8))select * from Users where UserName=@UserName
+			//comm.Parameters.Add(new SqlParameter("@UserName", SqlDbType.VarChar) { Value = "username" });
 			return ExecuteDataSet(CommandType.Text, cmdText, p);
 		}
 
-		public static DataTable ExecuteDataTable(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static DataTable ExecuteDataTable(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return ExecuteDataTable(PrepareCommand(trans), cmdText, p);
 		}
-		public static DataTable ExecuteDataTable(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static DataTable ExecuteDataTable(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			return ExecuteDataSet(cmd, commandType, cmdText, p).Tables[0];
 		}
-		public static DataTable ExecuteDataTable(SQLiteCommand cmd, string cmdText, params object[] p)
+		private static DataTable ExecuteDataTable(SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return ExecuteDataSet(cmd, cmdText, p).Tables[0];
 		}
-		public static DataTable ExecuteDataTable(SQLiteCommand cmd, params object[] p)
+		private static DataTable ExecuteDataTable(SQLiteCommand cmd, params object[] p)
 		{
 			return ExecuteDataTable(cmd, cmd.CommandText, p);
 		}
-		public static DataTable ExecuteDataTable(CommandType commandType, string cmdText, params object[] p)
+		private static DataTable ExecuteDataTable(CommandType commandType, string cmdText, params object[] p)
 		{
 			return ExecuteDataSet(commandType, cmdText, p).Tables[0];
 		}
-		public static DataTable ExecuteDataTable(string cmdText, params object[] p)
+		private static DataTable ExecuteDataTable(string cmdText, params object[] p)
 		{
 			return ExecuteDataSet(cmdText, p).Tables[0];
 		}
 
-		public static DataRow ExecuteDataRow(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static DataRow ExecuteDataRow(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return ExecuteDataRow(PrepareCommand(trans), cmdText, p);
 		}
-		public static DataRow ExecuteDataRow(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static DataRow ExecuteDataRow(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			DataSet ds = ExecuteDataSet(cmd, commandType, cmdText, p);
 			if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
 				return ds.Tables[0].Rows[0];
 			return null;
 		}
-		public static DataRow ExecuteDataRow(SQLiteCommand cmd, string cmdText, params object[] p)
+		private static DataRow ExecuteDataRow(SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return ExecuteDataRow(cmd, CommandType.Text, cmdText, p);
 		}
-		public static DataRow ExecuteDataRow(SQLiteCommand cmd, params object[] p)
+		private static DataRow ExecuteDataRow(SQLiteCommand cmd, params object[] p)
 		{
 			return ExecuteDataRow(cmd, cmd.CommandText, p);
 		}
-		public static DataRow ExecuteDataRow(CommandType commandType, string cmdText, params object[] p)
+		private static DataRow ExecuteDataRow(CommandType commandType, string cmdText, params object[] p)
 		{
 			DataSet ds = ExecuteDataSet(commandType, cmdText, p);
 			if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
 				return ds.Tables[0].Rows[0];
 			return null;
 		}
-		public static DataRow ExecuteDataRow(string cmdText, params object[] p)
+		private static DataRow ExecuteDataRow(string cmdText, params object[] p)
 		{
 			return ExecuteDataRow(CommandType.Text, cmdText, p);
 		}
 
-		public static int ExecuteNonQuery(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static int ExecuteNonQuery(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return ExecuteNonQuery(PrepareCommand(trans), cmdText, p);
 		}
-		public static int ExecuteNonQuery(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static int ExecuteNonQuery(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			PrepareCommand(cmd, commandType, cmdText, p);
 			if (cmd.Transaction == null)
@@ -354,15 +362,15 @@ namespace BaseClassUtils
 				return cmd.ExecuteNonQuery();
 			}
 		}
-		public static int ExecuteNonQuery(SQLiteCommand cmd, string cmdText, params object[] p)
+		private static int ExecuteNonQuery(SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return ExecuteNonQuery(cmd, CommandType.Text, cmdText, p);
 		}
-		public static int ExecuteNonQuery(SQLiteCommand cmd, params object[] p)
+		private static int ExecuteNonQuery(SQLiteCommand cmd, params object[] p)
 		{
 			return ExecuteNonQuery(cmd, cmd.CommandText, p);
 		}
-		public static int ExecuteNonQuery(CommandType commandType, string cmdText, params object[] p)
+		private static int ExecuteNonQuery(CommandType commandType, string cmdText, params object[] p)
 		{
 			SQLiteCommand cmd = new SQLiteCommand();
 			cmd.CommandType = commandType;
@@ -374,16 +382,16 @@ namespace BaseClassUtils
 					return cmd.ExecuteNonQuery();
 			}
 		}
-		public static int ExecuteNonQuery(string cmdText, params object[] p)
+		private static int ExecuteNonQuery(string cmdText, params object[] p)
 		{
 			return ExecuteNonQuery(CommandType.Text, cmdText, p);
 		}
 
-		public static SQLiteDataReader ExecuteReader(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static SQLiteDataReader ExecuteReader(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return ExecuteReader(PrepareCommand(trans), cmdText, p);
 		}
-		public static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			PrepareCommand(cmd, commandType, cmdText, p);
 			//if (cmd.SureOpen())
@@ -391,15 +399,15 @@ namespace BaseClassUtils
 			//else
 				return cmd.ExecuteReader();
 		}
-		public static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, string cmdText, params object[] p)
+		private static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return ExecuteReader(cmd, CommandType.Text, cmdText, p);
 		}
-		public static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, params object[] p)
+		private static SQLiteDataReader ExecuteReader(SQLiteCommand cmd, params object[] p)
 		{
 			return ExecuteReader(cmd, cmd.CommandText, p);
 		}
-		public static SQLiteDataReader ExecuteReader(CommandType commandType, string cmdText, params object[] p)
+		private static SQLiteDataReader ExecuteReader(CommandType commandType, string cmdText, params object[] p)
 		{
 			SQLiteCommand cmd = new SQLiteCommand();
 			cmd.CommandType = commandType;
@@ -418,16 +426,16 @@ namespace BaseClassUtils
 				throw;
 			}
 		}
-		public static SQLiteDataReader ExecuteReader(string cmdText, params object[] p)
+		private static SQLiteDataReader ExecuteReader(string cmdText, params object[] p)
 		{
 			return ExecuteReader(CommandType.Text, cmdText, p);
 		}
 
-		public static object ExecuteScalar(this SQLiteTransaction trans, string cmdText, params object[] p)
+		private static object ExecuteScalar(this SQLiteTransaction trans, string cmdText, params object[] p)
 		{
 			return ExecuteScalar(PrepareCommand(trans), cmdText, p);
 		}
-		public static object ExecuteScalar(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
+		private static object ExecuteScalar(SQLiteCommand cmd, CommandType commandType, string cmdText, params object[] p)
 		{
 			PrepareCommand(cmd, commandType, cmdText, p);
 			object o = null;
@@ -442,15 +450,15 @@ namespace BaseClassUtils
 			//}
 			return o;
 		}
-		public static object ExecuteScalar(SQLiteCommand cmd, string cmdText, params object[] p)
+		private static object ExecuteScalar(SQLiteCommand cmd, string cmdText, params object[] p)
 		{
 			return ExecuteScalar(cmd, CommandType.Text, cmdText, p);
 		}
-		public static object ExecuteScalar(SQLiteCommand cmd, params object[] p)
+		private static object ExecuteScalar(SQLiteCommand cmd, params object[] p)
 		{
 			return ExecuteScalar(cmd, cmd.CommandText, p);
 		}
-		public static object ExecuteScalar(CommandType commandType, string cmdText, params object[] p)
+		private static object ExecuteScalar(CommandType commandType, string cmdText, params object[] p)
 		{
 			SQLiteCommand cmd = new SQLiteCommand();
 			cmd.CommandType = commandType;
@@ -461,17 +469,17 @@ namespace BaseClassUtils
 				return cmd.ExecuteScalar();
 			}
 		}
-		public static object ExecuteScalar(string cmdText, params object[] p)
+		private static object ExecuteScalar(string cmdText, params object[] p)
 		{
 			return ExecuteScalar(CommandType.Text, cmdText, p);
 		}
 
 
-		public static int ExecuteInsert(this SQLiteTransaction trans, string tableName, params Dictionary<string, object>[] dic)
+		private static int ExecuteInsert(this SQLiteTransaction trans, string tableName, params Dictionary<string, object>[] dic)
 		{
 			return ExecuteInsert(PrepareCommand(trans), tableName, dic);
 		}
-		public static int ExecuteInsert(this SQLiteCommand cmd, string tableName, params Dictionary<string, object>[] dic)
+		private static int ExecuteInsert(this SQLiteCommand cmd, string tableName, params Dictionary<string, object>[] dic)
 		{
 			cmd.Parameters.Clear();
 			cmd.CommandType = CommandType.Text;
@@ -526,11 +534,11 @@ namespace BaseClassUtils
 			}
 		}
 
-		public static void ExecuteUpdate(this SQLiteTransaction trans, Dictionary<string, object> dic, string tableName, string pkName)
+		private static void ExecuteUpdate(this SQLiteTransaction trans, Dictionary<string, object> dic, string tableName, string pkName)
 		{
 			ExecuteUpdate(PrepareCommand(trans), dic, tableName, pkName);
 		}
-		public static void ExecuteUpdate(this SQLiteCommand cmd, Dictionary<string, object> dic, string tableName, string pkName)
+		private static void ExecuteUpdate(this SQLiteCommand cmd, Dictionary<string, object> dic, string tableName, string pkName)
 		{
 			cmd.Parameters.Clear();
 			cmd.CommandType = CommandType.Text;
@@ -557,7 +565,7 @@ namespace BaseClassUtils
 			}
 		}
 
-		public static void ExecuteUpdate(this Dictionary<string, object> dic, string tableName, string pkName)
+		private static void ExecuteUpdate(this Dictionary<string, object> dic, string tableName, string pkName)
 		{
 			using (SQLiteConnection connection = GetSQLiteConnection())
 			{
@@ -600,59 +608,70 @@ namespace BaseClassUtils
 			}
 		}
 
-		public static string GetPageSql(string tableName, string columns, int pageSize, int currentPageIndex, string condition, Dictionary<string, bool> dic)
+		private static string GetPageSql(string tableName, string columns, int pageSize, int currentPageIndex, string condition, Dictionary<string, bool> dic)
 		{
 			return "select " + columns + " from " + tableName + " where " + condition + " order by " + GetSortString(dic, false) + " LIMIT " + (currentPageIndex * pageSize).ToString() + "," + ((currentPageIndex + 1) * pageSize).ToString();
 		}
-		public static string GetPageSql(string tableName, string columns, int pageSize, int currentPageIndex, string condition, string sort)
+		private static string GetPageSql(string tableName, string columns, int pageSize, int currentPageIndex, string condition, string sort)
 		{
 			return "select " + columns + " from " + tableName + " where " + condition + " order by " + sort + " LIMIT " + (currentPageIndex * pageSize).ToString() + "," + ((currentPageIndex + 1) * pageSize).ToString();
 		}
 
-		public static string GetPageSql(string tableName, string columns, int currentSize, int pageSize, int currentPageIndex, string condition, Dictionary<string, bool> dic)
+		private static string GetPageSql(string tableName, string columns, int currentSize, int pageSize, int currentPageIndex, string condition, Dictionary<string, bool> dic)
 		{
 			return "select " + columns + " from " + tableName + " where " + condition + " order by " + GetSortString(dic, false) + " LIMIT " + (currentPageIndex * pageSize).ToString() + "," + ((currentPageIndex * pageSize) + currentSize).ToString();
 		}
-		public static string GetPageSql(string tableName, string columns, int currentSize, int pageSize, int currentPageIndex, string condition, string sort)
+		private static string GetPageSql(string tableName, string columns, int currentSize, int pageSize, int currentPageIndex, string condition, string sort)
 		{
 			return "select " + columns + " from " + tableName + " where " + condition + " order by " + sort + " LIMIT " + (currentPageIndex * pageSize).ToString() + "," + ((currentPageIndex * pageSize) + currentSize).ToString();
 		}
 
 
-		public static bool CreateDB(string dbPath)
+		public static bool CreateDB(string dbFilePath)
 		{
-			if (System.IO.File.Exists(dbPath))
+			ConnectionString = "Data Source=" + dbFilePath + ";";
+			if (System.IO.File.Exists(dbFilePath))
 			{
 				return false;
 			}
 			else
 			{
-				System.Data.SQLite.SQLiteConnection.CreateFile(dbPath);
+				System.Data.SQLite.SQLiteConnection.CreateFile(dbFilePath);
 				return true;
 			}
-			//using (SQLiteConnection connection = new SQLiteConnection("Data Source=" + dbPath + ";"))
-			//{
-			//    connection.Open();
-			//    using (SQLiteCommand command = new SQLiteCommand(connection))
-			//    {
-			//        try
-			//        {
-			//            command.CommandText = "CREATE TABLE Demo(id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE)";
-			//            command.ExecuteNonQuery();
-			//            command.CommandText = "DROP TABLE Demo";
-			//            command.ExecuteNonQuery();
-			//            return true;
-			//        }
-			//        catch
-			//        {
-			//            return false;
-			//        }
-			//    }
-			//}
+		}
+
+		public static bool CreateTable(string dbFilePath, string tableName, List<string> listColumn)
+		{
+			using (SQLiteConnection connection = GetSQLiteConnection())
+			{
+				connection.Open();
+				using (SQLiteCommand command = new SQLiteCommand(connection))
+				{
+					try
+					{
+						string commandText = "CREATE TABLE IF NOT EXISTS " + tableName + " (id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE";
+						foreach(string columnName in listColumn)
+						{
+							commandText += $", {columnName} TEXT";
+						}
+						commandText = commandText + "); ";
+						command.CommandText = commandText;
+						command.ExecuteNonQuery();
+						//command.CommandText = "DROP TABLE Demo";
+						//command.ExecuteNonQuery();
+						return true;
+					}
+					catch(Exception ex)
+					{
+						return false;
+					}
+				}
+			}
 		}
 
 
-		public static bool CreateLogInfo(string dbPath)
+		private static bool CreateLogInfo(string dbPath)
 		{
 			SQLiteHelper.CreateDB(dbPath);
 			using (SQLiteConnection conn = new SQLiteConnection("Data Source=" + dbPath + ";"))
@@ -673,7 +692,7 @@ namespace BaseClassUtils
 			}
 		}
 
-		public static SQLiteDataReader GetLogInfo(int pageSize, int currentPageIndex, string condition, string sort)
+		private static SQLiteDataReader GetLogInfo(int pageSize, int currentPageIndex, string condition, string sort)
 		{
 			return ExecuteReader(GetPageSql("LogInfo", "*", pageSize, currentPageIndex, condition, sort));
 		}
