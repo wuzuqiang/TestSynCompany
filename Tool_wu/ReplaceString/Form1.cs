@@ -275,8 +275,8 @@ namespace ReplaceString
 				SQLiteHelper.CreateDB(dbFilePath);
 				//如果不存在此表，则创建表
 				string tableName = "Demo";
-				List<string> tableColumnName = new List<string>() { "Col_01", "Col_02"};
-				if (!SQLiteHelper.CreateTable(dbFilePath, tableName, tableColumnName))
+				List<string> tableColumnNames = new List<string>() { "Col_01", "Col_02"};
+				if (!SQLiteHelper.CreateTable(dbFilePath, tableName, tableColumnNames))
 				{
 					MessageBox.Show("创建数据库中的表失败！");
 				}
