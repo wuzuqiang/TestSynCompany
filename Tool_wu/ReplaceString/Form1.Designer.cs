@@ -58,6 +58,7 @@
 			this.button14 = new System.Windows.Forms.Button();
 			this.cbkToUper = new System.Windows.Forms.CheckBox();
 			this.button15 = new System.Windows.Forms.Button();
+			this.button16 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -348,11 +349,22 @@
 			this.button15.UseVisualStyleBackColor = true;
 			this.button15.Click += new System.EventHandler(this.button15_Click);
 			// 
+			// button16
+			// 
+			this.button16.Location = new System.Drawing.Point(557, 12);
+			this.button16.Name = "button16";
+			this.button16.Size = new System.Drawing.Size(107, 24);
+			this.button16.TabIndex = 31;
+			this.button16.Text = "测试SQLite";
+			this.button16.UseVisualStyleBackColor = true;
+			this.button16.Click += new System.EventHandler(this.button16_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1491, 740);
+			this.Controls.Add(this.button16);
 			this.Controls.Add(this.button15);
 			this.Controls.Add(this.cbkToUper);
 			this.Controls.Add(this.button14);
@@ -422,6 +434,7 @@
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.CheckBox cbkToUper;
         private System.Windows.Forms.Button button15;
-    }
+		private System.Windows.Forms.Button button16;
+	}
 }
 
