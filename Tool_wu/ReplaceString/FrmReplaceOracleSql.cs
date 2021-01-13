@@ -502,5 +502,12 @@ namespace ReplaceString
 		#endregion
 
 		#endregion
+
+		private void button11_Click_1(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+			//将从Excel复制两格相邻单元格到txt中的几个空格转换为空
+			richInput.Text = richInput.Text.Replace("	", "");
+		}
 	}
 }

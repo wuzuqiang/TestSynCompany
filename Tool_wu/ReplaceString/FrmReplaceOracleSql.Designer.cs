@@ -64,6 +64,7 @@
 			this.button10 = new System.Windows.Forms.Button();
 			this.tabCtrl_01 = new System.Windows.Forms.TabControl();
 			this.tabPage5 = new System.Windows.Forms.TabPage();
+			this.chkIgnoreCase = new System.Windows.Forms.CheckBox();
 			this.btnSortAll = new System.Windows.Forms.Button();
 			this.txtContentLength = new System.Windows.Forms.TextBox();
 			this.cbxOrderType = new System.Windows.Forms.CheckBox();
@@ -81,7 +82,6 @@
 			this.btnTransferParticularChar = new System.Windows.Forms.Button();
 			this.txtCodeTypeNames = new System.Windows.Forms.RichTextBox();
 			this.btnReplaceCodeType = new System.Windows.Forms.Button();
-			this.chkIgnoreCase = new System.Windows.Forms.CheckBox();
 			this.tabCtrl_02 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.chkContainThatSuffixStr = new System.Windows.Forms.CheckBox();
@@ -105,6 +105,7 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.txtConcludeBeforeRowNum = new System.Windows.Forms.TextBox();
+			this.button11 = new System.Windows.Forms.Button();
 			this.tabCtrl_01.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
@@ -481,6 +482,17 @@
 			this.tabPage5.Text = "替换";
 			this.tabPage5.UseVisualStyleBackColor = true;
 			// 
+			// chkIgnoreCase
+			// 
+			this.chkIgnoreCase.AutoSize = true;
+			this.chkIgnoreCase.Location = new System.Drawing.Point(10, 120);
+			this.chkIgnoreCase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.chkIgnoreCase.Name = "chkIgnoreCase";
+			this.chkIgnoreCase.Size = new System.Drawing.Size(104, 19);
+			this.chkIgnoreCase.TabIndex = 47;
+			this.chkIgnoreCase.Text = "忽略大小写";
+			this.chkIgnoreCase.UseVisualStyleBackColor = true;
+			// 
 			// btnSortAll
 			// 
 			this.btnSortAll.Location = new System.Drawing.Point(145, 265);
@@ -610,6 +622,7 @@
 			// tabPage6
 			// 
 			this.tabPage6.AutoScroll = true;
+			this.tabPage6.Controls.Add(this.button11);
 			this.tabPage6.Controls.Add(this.btnTransferParticularChar);
 			this.tabPage6.Controls.Add(this.txtCodeTypeNames);
 			this.tabPage6.Controls.Add(this.btnReplaceCodeType);
@@ -651,17 +664,6 @@
 			this.btnReplaceCodeType.Text = "将如下这些C#变量类型和其后的空格替换为空";
 			this.btnReplaceCodeType.UseVisualStyleBackColor = true;
 			this.btnReplaceCodeType.Click += new System.EventHandler(this.btnReplaceCodeType_Click);
-			// 
-			// chkIgnoreCase
-			// 
-			this.chkIgnoreCase.AutoSize = true;
-			this.chkIgnoreCase.Location = new System.Drawing.Point(10, 120);
-			this.chkIgnoreCase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.chkIgnoreCase.Name = "chkIgnoreCase";
-			this.chkIgnoreCase.Size = new System.Drawing.Size(104, 19);
-			this.chkIgnoreCase.TabIndex = 47;
-			this.chkIgnoreCase.Text = "忽略大小写";
-			this.chkIgnoreCase.UseVisualStyleBackColor = true;
 			// 
 			// tabCtrl_02
 			// 
@@ -911,6 +913,16 @@
 			this.txtConcludeBeforeRowNum.TabIndex = 36;
 			this.txtConcludeBeforeRowNum.Text = "0";
 			// 
+			// button11
+			// 
+			this.button11.Location = new System.Drawing.Point(8, 177);
+			this.button11.Name = "button11";
+			this.button11.Size = new System.Drawing.Size(291, 39);
+			this.button11.TabIndex = 24;
+			this.button11.Text = "将从Excel复制两格相邻单元格到txt中的几个空格转换为空";
+			this.button11.UseVisualStyleBackColor = true;
+			this.button11.Click += new System.EventHandler(this.button11_Click_1);
+			// 
 			// FrmReplaceOracleSql
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1048,5 +1060,6 @@
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.TextBox txtConcludeBeforeRowNum;
+		private System.Windows.Forms.Button button11;
 	}
 }

@@ -59,6 +59,7 @@
 			this.cbkToUper = new System.Windows.Forms.CheckBox();
 			this.button15 = new System.Windows.Forms.Button();
 			this.button16 = new System.Windows.Forms.Button();
+			this.button17 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -359,11 +360,21 @@
 			this.button16.UseVisualStyleBackColor = true;
 			this.button16.Click += new System.EventHandler(this.button16_Click);
 			// 
+			// button17
+			// 
+			this.button17.Location = new System.Drawing.Point(265, 13);
+			this.button17.Name = "button17";
+			this.button17.Size = new System.Drawing.Size(144, 23);
+			this.button17.TabIndex = 32;
+			this.button17.Text = "压缩";
+			this.button17.UseVisualStyleBackColor = true;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1491, 740);
+			this.Controls.Add(this.button17);
 			this.Controls.Add(this.button16);
 			this.Controls.Add(this.button15);
 			this.Controls.Add(this.cbkToUper);
@@ -435,6 +446,7 @@
         private System.Windows.Forms.CheckBox cbkToUper;
         private System.Windows.Forms.Button button15;
 		private System.Windows.Forms.Button button16;
+		private System.Windows.Forms.Button button17;
 	}
 }
 
