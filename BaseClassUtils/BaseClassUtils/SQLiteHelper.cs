@@ -16,7 +16,7 @@ namespace BaseClassUtils
 		static readonly object writeLock = new object();
 		private static char[] SplitChars = new char[] { ',', ' ', ')', '(', '+', '-', '*', '/' };
 
-		static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings[0].ToString();
+		static string connectionString = $"Data Source={System.IO.Path.GetFullPath(ConfigurationManager.ConnectionStrings["SQLiteConn"].ToString().Replace("Data Source=", ""))}";
 		public static string ConnectionString
 		{
 			get
