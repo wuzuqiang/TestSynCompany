@@ -316,5 +316,10 @@ namespace ReplaceString
 			return dicTableColumnData;
 		}
 
+		private void button18_Click(object sender, EventArgs e)
+		{
+			//转换成各类数据
+			(new FrmCommonTransfer()).Show();
+		}
 	}
 }

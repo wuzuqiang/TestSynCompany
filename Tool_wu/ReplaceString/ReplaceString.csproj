@@ -118,6 +118,9 @@
     <EmbeddedResource Include="FrmCodeFormat.resx">
       <DependentUpon>FrmCodeFormat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCommonTransfer.resx">
+      <DependentUpon>FrmCommonTransfer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEfficient.resx">
       <DependentUpon>FrmEfficient.cs</DependentUpon>
     </EmbeddedResource>
