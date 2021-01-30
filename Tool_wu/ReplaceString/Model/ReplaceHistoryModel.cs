@@ -8,13 +8,15 @@ namespace ReplaceString.Model
 {
 	public class ReplaceHistoryModel
 	{
-		public ReplaceHistoryModel(string ActionCode, string ActionParamJson, string ActionName="", string GroupCode = "Group01", string TabCode = "TabCode01")
+		public ReplaceHistoryModel(string ActionCode, string ActionParamJson, string ActionName="", string GroupCode = "Group01", string TabCode = "TabCode01", string InputText = "", string ResultText = "")
 		{
 			this.ActionCode = ActionCode;
 			this.ActionName = ActionName;
 			this.ActionParamJson = ActionParamJson;
 			this.GroupCode = GroupCode;
 			this.TabCode = TabCode;
+			this.InputText = InputText;
+			this.ResultText = ResultText;
 		}
 		/// <summary>
 		/// 动作编码
@@ -40,5 +42,7 @@ namespace ReplaceString.Model
 		/// 替换日期
 		/// </summary>
 		public string ReplaceDate { get; set; } = DateTime.Now.ToString("yyyy-MM-dd");
+		public string InputText { get; set; }
+		public string ResultText { get; set; }
 	}
 }

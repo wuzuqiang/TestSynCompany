@@ -20,12 +20,23 @@ namespace ReplaceString
 			dicTableColumnData.Add("GroupCode", model.GroupCode);
 			dicTableColumnData.Add("TabCode", model.TabCode);
 			dicTableColumnData.Add("ReplaceDate", model.ReplaceDate);
+			dicTableColumnData.Add("InputText", model.InputText);
+			dicTableColumnData.Add("ResultText", model.ResultText);
 			return dicTableColumnData;
 		}
 
 		public static void ExecuteInsert(string actionCode, string actionParamJson="", string tableName= "ReplaceString")
 		{
 			var i = SQLiteHelper.ExecuteInsert(tableName, ReplaceHistoryModelToDic(new ReplaceHistoryModel(actionCode, actionParamJson)));
+		}
+
+		public static void ExecuteInsert(ReplaceHistoryModel replaceHistoryModel, string tableName = "ReplaceString")
+		{
+			if (replaceHistoryModel.InputText.Length >= 500 || replaceHistoryModel.ResultText.Length >= 500)
+			{
+				throw new ExceptionEx("输入或输出超过500个字符！不再保存此数据！");
+			}
+			var i = SQLiteHelper.ExecuteInsert(tableName, ReplaceHistoryModelToDic(replaceHistoryModel));
 
 		}
 	}
