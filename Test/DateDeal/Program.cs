@@ -10,21 +10,21 @@ namespace DateUtils
     {
         static void Main(string[] args)
         {   //时间处理DateTime
-            //Console.WriteLine("(new DateTime()).ToString(\"yyyy - MM - dd HH: mm:ss\")：" + (new DateTime()).ToString("yyyy-MM-dd HH:mm:ss"));
-            //Console.WriteLine("DateTime.Now.ToString()：" + DateTime.Now.ToString());
-            //Console.WriteLine("DateTime.Now.ToString(\"yyyy-MM-dd HH: mm:ss\")：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+			Console.WriteLine("(new DateTime()).ToString(\"yyyy - MM - dd HH: mm:ss\")：" + (new DateTime()).ToString("yyyy-MM-dd HH:mm:ss"));//(new DateTime()).ToString("yyyy - MM - dd HH: mm:ss")：0001-01-01 00:00:00
+			Console.WriteLine("DateTime.Now.ToString()：" + DateTime.Now.ToString());//DateTime.Now.ToString()：2021/1/27 18:19:59
+			Console.WriteLine("DateTime.Now.ToString(\"yyyy-MM-dd HH: mm:ss\")：" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));//DateTime.Now.ToString("yyyy-MM-dd HH: mm:ss")：2021-01-27 18:19:59
+			Console.WriteLine("DateTime.Now.ToLongDateString()：" + DateTime.Now.ToLongDateString());//DateTime.Now.ToLongDateString()：2021年1月27日
+			Console.WriteLine("DateTime.Now.ToShortTimeString()：" + DateTime.Now.ToShortTimeString());//DateTime.Now.ToShortTimeString()：18:19
+			Console.WriteLine("DateTime.Now.ToShortDateString()：" + DateTime.Now.ToShortDateString());//DateTime.Now.ToShortDateString()：2021/1/27
+			Console.WriteLine("DateTime.Now.ToShortTimeString()：" + DateTime.Now.ToShortTimeString());//DateTime.Now.ToShortTimeString()：18:19
+			Console.WriteLine("DateTime.Now.ToUniversalTime()：" + DateTime.Now.ToUniversalTime());//DateTime.Now.ToUniversalTime()：2021/1/27 10:19:59
+			Console.WriteLine("DateTime.Now.ToOADate()：" + DateTime.Now.ToOADate());//DateTime.Now.ToOADate()：44223.7638785069
+			Console.WriteLine("DateTime.Now.ToLocalTime()：" + DateTime.Now.ToLocalTime());//DateTime.Now.ToLocalTime()：2021/1/27 18:19:59
 
-            //Console.WriteLine("DateTime.Now.ToLongDateString()：" + DateTime.Now.ToLongDateString());
-            //Console.WriteLine("DateTime.Now.ToShortTimeString()：" + DateTime.Now.ToShortTimeString());
-            //Console.WriteLine("DateTime.Now.ToShortDateString()：" + DateTime.Now.ToShortDateString());
-            //Console.WriteLine("DateTime.Now.ToShortTimeString()：" + DateTime.Now.ToShortTimeString());
-            //Console.WriteLine("DateTime.Now.ToUniversalTime()：" + DateTime.Now.ToUniversalTime());
-            //Console.WriteLine("DateTime.Now.ToOADate()：" + DateTime.Now.ToOADate());
-            //Console.WriteLine("DateTime.Now.ToLocalTime()：" + DateTime.Now.ToLocalTime());
 
-            Func1();
+			//Func1();
 
-            Console.ReadLine();
+			Console.ReadLine();
         }
         static void Func1()
         {
