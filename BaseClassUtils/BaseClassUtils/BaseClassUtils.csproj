@@ -79,6 +79,7 @@
     <Compile Include="BitUtils.cs" />
     <Compile Include="CallWebServiceHelper.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="ExceptionEx.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="ListUtil.cs" />
     <Compile Include="SomeClassSimuLinqTesting.cs" />
