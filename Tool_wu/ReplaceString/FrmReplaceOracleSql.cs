@@ -1,4 +1,5 @@
 ﻿using BaseClassUtils;
+using ReplaceString.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -179,14 +180,23 @@ namespace ReplaceString
 		#region 主要功能是替换功能的tabControl中所有click事件
 		private void btnReplace_Click(object sender, EventArgs e)
 		{
-			//替换字符串
 			saveBeforeContent();
+
+			string inputText = richInput.Text;
+			richInput.Text = ReplaceStr(richInput.Text, txtOriginStr.Text, txtFinalStr.Text, chkIgnoreCase.Checked);
+
+			ReplaceHistoryModel model = new ReplaceHistoryModel("ReplaceStr", $"{txtOriginStr.Text},{txtFinalStr.Text},isIgnoreCase:{chkIgnoreCase.Checked}", InputText:inputText, ResultText:richInput.Text);
+			FrmDatabase.InsertDatabase(model);
+		}
+		public static string ReplaceStr(string input, string replacedText, string replacText, bool isIgnoreCase = false)
+		{
+			//替换字符串
 			StringBuilder sbOutput = new StringBuilder();
 
 			//将需要的改动的内容转义成strTemp ，防止出错       //如果内容中包含*号等转义字符，替换就会出错了。
-			string strTempOriginEncry = txtOriginStr.Text;
-			string strTempFinalEncry = txtFinalStr.Text;
-			if (chkIgnoreCase.Checked)
+			string strTempOriginEncry = replacedText;
+			string strTempFinalEncry = replacedText;
+			if (isIgnoreCase)
 			{
 				strTempOriginEncry = strTempOriginEncry.ToLower();
 				strTempFinalEncry = strTempFinalEncry.ToLower();
@@ -194,15 +204,12 @@ namespace ReplaceString
 			strTempOriginEncry = strTempOriginEncry.ToEncryInneredParticularWord();
 			strTempFinalEncry = strTempFinalEncry.ToEncryInneredParticularWord();
 
-			foreach (string str in richInput.Text.ToEncryInneredParticularWord().GetSplitLineKeepEmptyRow())
+			foreach (string str in input.ToEncryInneredParticularWord().GetSplitLineKeepEmptyRow())
 			{
 				sbOutput.AppendLine(str.Replace(strTempOriginEncry, strTempFinalEncry));
 			}
-			string strChangeTextThatTransfer = txtAppendToBefore.Text.ToEncryInneredParticularWord();
 
-			richInput.Text = sbOutput.ToString().RemoveLastChar().ToDecodeInneredParticularWord();
-
-			TransferHelper.ExecuteInsert("Replace", $"{strTempOriginEncry},{strTempFinalEncry}");
+			return sbOutput.ToString().RemoveLastChar().ToDecodeInneredParticularWord();
 		}
 
 		private void btnCombineAllLineToOneLine_Click(object sender, EventArgs e)

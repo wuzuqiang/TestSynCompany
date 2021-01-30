@@ -277,7 +277,7 @@ namespace ReplaceString
 
 				//如果不存在此表，则创建表
 				string tableName = "ReplaceString";
-				List<string> tableColumnNames = new List<string>() { "ActionCode", "ActionName", "ActionParamJson", "GroupCode", "TabCode", "ReplaceDate" };
+				List<string> tableColumnNames = new List<string>() { "ActionCode", "ActionName", "ActionParamJson", "GroupCode", "TabCode", "ReplaceDate", "InputText", "ResultText" };
 				if (!SQLiteHelper.CreateTable(dbFilePath, tableName, tableColumnNames))
 				{
 					MessageBox.Show("创建数据库中的表失败！");
@@ -285,7 +285,7 @@ namespace ReplaceString
 
 				//插入数据
 				Dictionary<string, object> dicTableColumnData = new Dictionary<string, object>();
-				var i = SQLiteHelper.ExecuteInsert(tableName, ReplaceHistoryModelToDic(new ReplaceHistoryModel("ActionCode", "ActionParamJson")));
+				var i = SQLiteHelper.ExecuteInsert(tableName, ReplaceHistoryModelToDic(new ReplaceHistoryModel("ActionCode", "ActionParamJson", "Test", "", "", "","")));
 
 				//读取所有数据
 				string cmdText01 = $"select * from {tableName}";
