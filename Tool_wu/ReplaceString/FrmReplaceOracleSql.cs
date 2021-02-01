@@ -184,8 +184,8 @@ namespace ReplaceString
 
 			string inputText = richInput.Text;
 			richInput.Text = ReplaceStr(richInput.Text, txtOriginStr.Text, txtFinalStr.Text, chkIgnoreCase.Checked);
-
-			ReplaceHistoryModel model = new ReplaceHistoryModel("ReplaceStr", $"{txtOriginStr.Text},{txtFinalStr.Text},isIgnoreCase:{chkIgnoreCase.Checked}", InputText:inputText, ResultText:richInput.Text);
+			
+			ReplaceHistoryModel model = new ReplaceHistoryModel("ReplaceStr", JsonHelper.SerializeObject(new ActionParam(txtOriginStr.Text, txtFinalStr.Text, chkIgnoreCase.Checked)), InputText:inputText, ResultText:richInput.Text);
 			FrmDatabase.InsertDatabase(model);
 		}
 		public static string ReplaceStr(string input, string replacedText, string replacText, bool isIgnoreCase = false)

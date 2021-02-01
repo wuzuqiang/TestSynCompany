@@ -45,4 +45,17 @@ namespace ReplaceString.Model
 		public string InputText { get; set; }
 		public string ResultText { get; set; }
 	}
+
+	public class ActionParam
+	{
+		public ActionParam(string willBeReplaceStr, string replaceStr, bool isIgnoreCase)
+		{
+			WillBeReplaceStr = willBeReplaceStr;
+			ReplaceStr = replaceStr;
+			IsIgnoreCase = isIgnoreCase;
+		}
+		public string WillBeReplaceStr { get; set; } = "";
+		public string ReplaceStr { get; set; } = "";
+		public bool IsIgnoreCase { get; set; } = false;
+	}
 }

@@ -107,7 +107,12 @@ namespace BaseClassUtils
         {
             DateTime dt = DateTime.ParseExact(input, "yyyy-MM-dd hh:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
             return dt;
-        }
+		}
+
+		public static string ToJson(this string[] input)
+		{
+			return JsonHelper.SerializeObject<string[]>(input);
+		}
 		#endregion
 
 		#region GUID和RAW字符类互转
