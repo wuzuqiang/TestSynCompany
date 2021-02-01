@@ -27,9 +27,23 @@ namespace ReplaceString
             try
             {
                 matchCollection = Regex.Matches(input, pattern);
+				txtResult.Text += "匹配内容如下：\n";
                 foreach (Match match in matchCollection)
-                {
-                    txtResult.Text += string.Format("匹配到的字符串是{0};", match.Value) + "\n";
+				{
+					GroupCollection groups = match.Groups;
+					txtResult.Text += (string.Format("共有{1}个分组；match.Vale为{0}使用正则表达式：{2}\n"
+												, match.Value, groups.Count, pattern));
+
+					//提取匹配项内的分组信息
+					for (int i = 0; i < groups.Count; i++)
+					{
+						txtResult.Text += (
+							string.Format("分组{0}的内容为{1}，位置为{2}，长度为{3}\n"
+										, i
+										, groups[i].Value
+										, groups[i].Index
+										, groups[i].Length));
+					}
                 }
             }
             catch (Exception ex)
