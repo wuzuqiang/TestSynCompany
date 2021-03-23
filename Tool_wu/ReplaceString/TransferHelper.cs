@@ -34,7 +34,9 @@ namespace ReplaceString
 		{
 			if (replaceHistoryModel.InputText.Length >= 500 || replaceHistoryModel.ResultText.Length >= 500)
 			{
-				throw new ExceptionEx("输入或输出超过500个字符！不再保存此数据！");
+				//throw new ExceptionEx("输入或输出超过500个字符！不再保存此数据！");
+				replaceHistoryModel.InputText = "";
+				replaceHistoryModel.ResultText = "";
 			}
 			var i = SQLiteHelper.ExecuteInsert(tableName, ReplaceHistoryModelToDic(replaceHistoryModel));
 
