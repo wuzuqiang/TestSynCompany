@@ -9,7 +9,7 @@ namespace BaseClassUtils
     public static class ListUtil
     {
         /// <summary>
-        /// 将List中的内容以int值类型降序处理
+        /// 将List中的内容以int值类型降序处理    
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="listT"></param>
