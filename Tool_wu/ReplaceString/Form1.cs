@@ -321,5 +321,16 @@ namespace ReplaceString
 			//转换成各类数据
 			(new FrmCommonTransfer()).Show();
 		}
+
+		private void button19_Click(object sender, EventArgs e)
+		{   //Test
+			fun01();
+		}
+		#region Test
+		void fun01()
+		{
+			var a = SQLiteHelper.LoadTables();
+		}
+		#endregion
 	}
 }

@@ -7,6 +7,7 @@ using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
+using System.Text.RegularExpressions;
 
 namespace BaseClassUtils
 {
@@ -702,6 +703,102 @@ namespace BaseClassUtils
 		{
 			return ExecuteReader(GetPageSql("LogInfo", "*", pageSize, currentPageIndex, condition, sort));
 		}
+
+		#region 模拟vs的T4模板，//读取的所有表结构
+		public static Tables LoadTables()
+		{
+			string ConnectionString = "";
+			string TableFilter = "";
+			string TopNamespace = "";
+			string Namespace = "";
+			string ClassPrefix = "";
+			string ClassSuffix = "";
+			string SchemaName = null;
+			bool IncludeViews;
+			string[] ExcludeTablePrefixes = new string[] { };
+			string _connectionString = "";
+			string _providerName = "";
+
+			Regex rxCleanUp = new Regex(@"[^\w\d_]", RegexOptions.Compiled);
+
+			Func<string, string> CleanUp = (str) =>
+			{
+				str = rxCleanUp.Replace(str, "_");
+				if (char.IsDigit(str[0])) str = "_" + str;
+
+				return str;
+			};
+
+			string CheckNullable(Column col)
+			{
+				string result01 = "";
+				if (col.IsNullable &&
+					col.PropertyType != "byte[]" &&
+					col.PropertyType != "string" &&
+					col.PropertyType != "Microsoft.SqlServer.Types.SqlGeography" &&
+					col.PropertyType != "Microsoft.SqlServer.Types.SqlGeometry"
+					)
+					result01 = "?";
+				return result01;
+			}
+
+			bool IsExcluded(string tablename, string[] ExcludeTablePrefixes1)
+			{
+				for (int i = 0; i < ExcludeTablePrefixes1.Length; i++)
+				{
+					string s = ExcludeTablePrefixes1[i];
+					if (tablename.StartsWith(s)) return true;
+				}
+				return false;
+			}
+
+			// 初始化文件 一个库对应一个ttinclude文件 
+			// Settings  初始化配置 
+			ConnectionString = @"Data Source=E:\repository\FileSaveV1\LotterySite\SQLiteDatabase\Test.db";  // 连接串
+			TableFilter = " ";// and name in ('LuckDraw') ";  // 过滤表
+			TopNamespace = "FW";  // 顶级命名空间
+			ClassPrefix = "";
+			ClassSuffix = "";
+			IncludeViews = true;
+			ExcludeTablePrefixes = new string[] { "aspnet_", "webpages_" };
+
+			Tables result;
+
+			SchemaReader reader = new SqliteSchemaReader();
+			result = reader.ReadSchema(ConnectionString, TableFilter);
+
+			for (int i = result.Count - 1; i >= 0; i--)
+			{
+				if (SchemaName != null && string.Compare(result[i].Schema, SchemaName, true) != 0)
+				{
+					result.RemoveAt(i);
+					continue;
+				}
+				if (!IncludeViews && result[i].IsView)
+				{
+					result.RemoveAt(i);
+					continue;
+				}
+			}
+			
+			var rxClean = new Regex("^(Equals|GetHashCode|GetType|ToString|repo|Save|IsNew|Insert|Update|Delete|Exists|SingleOrDefault|Single|First|FirstOrDefault|Fetch|Page|Query)$");
+			foreach (var t in result)
+			{
+				t.ClassName = ClassPrefix + t.ClassName + ClassSuffix;
+				foreach (var c in t.Columns)
+				{
+					c.PropertyName = rxClean.Replace(c.PropertyName, "_$1");
+
+					// Make sure property name doesn't clash with class name
+					if (c.PropertyName == t.ClassName)
+						c.PropertyName = "_" + c.PropertyName;
+				}
+			}
+
+			return result;
+		}
+
+		#endregion
 
 	}
 }

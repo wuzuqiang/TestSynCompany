@@ -84,6 +84,7 @@
     <Compile Include="ListUtil.cs" />
     <Compile Include="SomeClassSimuLinqTesting.cs" />
     <Compile Include="SQLiteHelper.cs" />
+    <Compile Include="SqliteSchemaReader.cs" />
     <Compile Include="TranslatorHelper.cs" />
     <Compile Include="WebSvcCaller.cs" />
     <Compile Include="DirUtil.cs" />
