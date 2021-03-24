@@ -187,6 +187,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "基础类型的使用", "�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestParamsUse", "Test\基础类型的使用\TestParamsUse\TestParamsUse.csproj", "{5E778957-9CD9-4A39-9966-EA8C7A68A925}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStringProcess", "..\Test\TestStringProcess\TestStringProcess.csproj", "{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1109,6 +1111,18 @@ Global
 		{5E778957-9CD9-4A39-9966-EA8C7A68A925}.Release|x64.Build.0 = Release|Any CPU
 		{5E778957-9CD9-4A39-9966-EA8C7A68A925}.Release|x86.ActiveCfg = Release|Any CPU
 		{5E778957-9CD9-4A39-9966-EA8C7A68A925}.Release|x86.Build.0 = Release|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Debug|x64.Build.0 = Debug|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Debug|x86.Build.0 = Debug|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Release|x64.ActiveCfg = Release|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Release|x64.Build.0 = Release|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Release|x86.ActiveCfg = Release|Any CPU
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1171,6 +1185,7 @@ Global
 		{46A9BC88-3C59-4B9E-96FD-3E99C5D5C030} = {BAF11480-A3AC-4C75-BA80-1E123B2EFB15}
 		{45691A1D-E915-473F-85D6-CD542CF214E0} = {BAF11480-A3AC-4C75-BA80-1E123B2EFB15}
 		{5E778957-9CD9-4A39-9966-EA8C7A68A925} = {45691A1D-E915-473F-85D6-CD542CF214E0}
+		{C9503CE5-286E-4B24-8DC8-F7BFCC935DCC} = {BAF11480-A3AC-4C75-BA80-1E123B2EFB15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75000B95-AC5E-4F9B-95FD-58F23892C137}
