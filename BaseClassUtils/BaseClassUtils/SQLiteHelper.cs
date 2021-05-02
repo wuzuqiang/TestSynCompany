@@ -704,7 +704,7 @@ namespace BaseClassUtils
 			return ExecuteReader(GetPageSql("LogInfo", "*", pageSize, currentPageIndex, condition, sort));
 		}
 
-		#region 模拟vs的T4模板，//读取的所有表结构
+		#region 模拟vs的T4模板，//读取的所有表结构	//执行sql读取数据
 		public static Tables LoadTables()
 		{
 			string ConnectionString = "";
@@ -796,6 +796,16 @@ namespace BaseClassUtils
 			}
 
 			return result;
+		}
+
+		public static DataTable GetDataTable()
+		{
+			string connstr = @"Data Source=E:\repository\FileSaveV1\LotterySite\SQLiteDatabase\Test.db";  // 连接串
+
+			SchemaReader reader = new SqliteSchemaReader();
+			DataTable table = reader.LoadTableData(connstr, "select * from ReplaceString");
+
+			return table;
 		}
 
 		#endregion

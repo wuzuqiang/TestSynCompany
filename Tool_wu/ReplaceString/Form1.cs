@@ -324,12 +324,18 @@ namespace ReplaceString
 
 		private void button19_Click(object sender, EventArgs e)
 		{   //Test
-			fun01();
+			//fun01();
+			fun02();
 		}
 		#region Test
 		void fun01()
 		{
 			var a = SQLiteHelper.LoadTables();
+		}
+
+		void fun02()
+		{
+			var a = SQLiteHelper.GetDataTable();
 		}
 		#endregion
 	}

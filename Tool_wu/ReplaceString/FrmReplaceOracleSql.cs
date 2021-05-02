@@ -188,14 +188,14 @@ namespace ReplaceString
 			ReplaceHistoryModel model = new ReplaceHistoryModel("ReplaceStr", JsonHelper.SerializeObject(new ActionParam(txtOriginStr.Text, txtFinalStr.Text, chkIgnoreCase.Checked)), InputText:inputText, ResultText:richInput.Text);
 			FrmDatabase.InsertDatabase(model);
 		}
-		public static string ReplaceStr(string input, string replacedText, string replacText, bool isIgnoreCase = false)
+		public static string ReplaceStr(string input, string replacedText, string replaceText, bool isIgnoreCase = false)
 		{
 			//替换字符串
 			StringBuilder sbOutput = new StringBuilder();
 
 			//将需要的改动的内容转义成strTemp ，防止出错       //如果内容中包含*号等转义字符，替换就会出错了。
 			string strTempOriginEncry = replacedText;
-			string strTempFinalEncry = replacedText;
+			string strTempFinalEncry = replaceText;
 			if (isIgnoreCase)
 			{
 				strTempOriginEncry = strTempOriginEncry.ToLower();
@@ -242,6 +242,27 @@ namespace ReplaceString
 			
 			//如果新的地方提示没有这数据库，记得在Form1那里初始化数据库
 			TransferHelper.ExecuteInsert("SixSpaceToBreakLine");
+		}
+
+		private void btnStringToBreakLine_Click(object sender, EventArgs e)
+		{
+			saveBeforeContent();
+
+			StringBuilder sb = new StringBuilder();
+			foreach (string str in richInput.Text.GetSplitLineKeepEmptyRow())
+			{
+				sb.Append(replaceToSpalce(ReplaceStr(str, txtOriginStr.Text, "      ")));
+			}
+			richInput.Text = sb.ToString();
+
+			//如果新的地方提示没有这数据库，记得在Form1那里初始化数据库
+			TransferHelper.ExecuteInsert("SixSpaceToBreakLine");
+		}
+		private string replaceToSpalce(string input)
+		{
+			//将六个空格替换为换行
+			//中文全角空格为\u3000，英文半角空格为\u0020，
+			return (new Regex("[\u0020\u3000]{6}")).Replace(input, "\n");
 		}
 
 		private void btnSortAll_Click(object sender, EventArgs e)

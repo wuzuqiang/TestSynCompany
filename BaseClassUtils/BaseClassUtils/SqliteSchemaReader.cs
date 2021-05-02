@@ -13,6 +13,22 @@ namespace BaseClassUtils
 	{
 		private string _connstr { get; set; }
 
+		public override DataTable LoadTableData(string connstr, string sql)
+		{
+			DataSet ds = new DataSet();
+			SQLiteCommand cmd = new SQLiteCommand();
+			cmd.Parameters.Clear();
+			using (SQLiteConnection connection = new SQLiteConnection(connstr))
+			{
+				cmd.Connection = connection;
+				cmd.CommandText = sql;
+				cmd.CommandType = CommandType.Text;
+				SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
+				da.Fill(ds);
+			}
+			return ds.Tables[0];
+		}
+
 		public override Tables ReadSchema(string connstr, string tableFilter)
 		{
 			_connstr = connstr;
@@ -130,6 +146,7 @@ namespace BaseClassUtils
 	internal abstract class SchemaReader
 	{
 		public abstract Tables ReadSchema(string connstr, string tableFilter);
+		public abstract DataTable LoadTableData(string connstr, string sql);
 		//public GeneratedTextTransformation outer;
 		//public void WriteLine(string o)
 		//{

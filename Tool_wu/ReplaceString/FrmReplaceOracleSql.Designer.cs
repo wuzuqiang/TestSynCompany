@@ -79,6 +79,7 @@
 			this.txtOriginStr = new System.Windows.Forms.TextBox();
 			this.txtFinalStr = new System.Windows.Forms.TextBox();
 			this.tabPage6 = new System.Windows.Forms.TabPage();
+			this.button11 = new System.Windows.Forms.Button();
 			this.btnTransferParticularChar = new System.Windows.Forms.Button();
 			this.txtCodeTypeNames = new System.Windows.Forms.RichTextBox();
 			this.btnReplaceCodeType = new System.Windows.Forms.Button();
@@ -105,7 +106,7 @@
 			this.label9 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.txtConcludeBeforeRowNum = new System.Windows.Forms.TextBox();
-			this.button11 = new System.Windows.Forms.Button();
+			this.button16 = new System.Windows.Forms.Button();
 			this.tabCtrl_01.SuspendLayout();
 			this.tabPage5.SuspendLayout();
 			this.tabPage6.SuspendLayout();
@@ -460,6 +461,7 @@
 			// 
 			// tabPage5
 			// 
+			this.tabPage5.Controls.Add(this.button16);
 			this.tabPage5.Controls.Add(this.chkIgnoreCase);
 			this.tabPage5.Controls.Add(this.btnSortAll);
 			this.tabPage5.Controls.Add(this.txtContentLength);
@@ -547,10 +549,10 @@
 			// 
 			// btnSixSpaceToBreakLine
 			// 
-			this.btnSixSpaceToBreakLine.Location = new System.Drawing.Point(10, 219);
+			this.btnSixSpaceToBreakLine.Location = new System.Drawing.Point(121, 216);
 			this.btnSixSpaceToBreakLine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.btnSixSpaceToBreakLine.Name = "btnSixSpaceToBreakLine";
-			this.btnSixSpaceToBreakLine.Size = new System.Drawing.Size(217, 29);
+			this.btnSixSpaceToBreakLine.Size = new System.Drawing.Size(196, 29);
 			this.btnSixSpaceToBreakLine.TabIndex = 49;
 			this.btnSixSpaceToBreakLine.Text = "将六个空格替换为换行符号";
 			this.btnSixSpaceToBreakLine.UseVisualStyleBackColor = true;
@@ -633,6 +635,16 @@
 			this.tabPage6.TabIndex = 1;
 			this.tabPage6.Text = "常用转换";
 			this.tabPage6.UseVisualStyleBackColor = true;
+			// 
+			// button11
+			// 
+			this.button11.Location = new System.Drawing.Point(8, 177);
+			this.button11.Name = "button11";
+			this.button11.Size = new System.Drawing.Size(291, 39);
+			this.button11.TabIndex = 24;
+			this.button11.Text = "将从Excel复制两格相邻单元格到txt中的几个空格转换为空";
+			this.button11.UseVisualStyleBackColor = true;
+			this.button11.Click += new System.EventHandler(this.button11_Click_1);
 			// 
 			// btnTransferParticularChar
 			// 
@@ -913,15 +925,15 @@
 			this.txtConcludeBeforeRowNum.TabIndex = 36;
 			this.txtConcludeBeforeRowNum.Text = "0";
 			// 
-			// button11
+			// button16
 			// 
-			this.button11.Location = new System.Drawing.Point(8, 177);
-			this.button11.Name = "button11";
-			this.button11.Size = new System.Drawing.Size(291, 39);
-			this.button11.TabIndex = 24;
-			this.button11.Text = "将从Excel复制两格相邻单元格到txt中的几个空格转换为空";
-			this.button11.UseVisualStyleBackColor = true;
-			this.button11.Click += new System.EventHandler(this.button11_Click_1);
+			this.button16.Location = new System.Drawing.Point(10, 221);
+			this.button16.Name = "button16";
+			this.button16.Size = new System.Drawing.Size(105, 23);
+			this.button16.TabIndex = 56;
+			this.button16.Text = "替换为换行符";
+			this.button16.UseVisualStyleBackColor = true;
+			this.button16.Click += new System.EventHandler(this.btnStringToBreakLine_Click);
 			// 
 			// FrmReplaceOracleSql
 			// 
@@ -1061,5 +1073,6 @@
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.TextBox txtConcludeBeforeRowNum;
 		private System.Windows.Forms.Button button11;
+		private System.Windows.Forms.Button button16;
 	}
 }
