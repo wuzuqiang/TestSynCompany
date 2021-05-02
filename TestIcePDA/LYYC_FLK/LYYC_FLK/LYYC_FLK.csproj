@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFB8880B-9B7F-4483-B054-E5E5D21986A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LYYC_FLK</RootNamespace>
+    <AssemblyName>LYYC_FLK</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CompactFormatter, Version=1.0.0.27374, Culture=neutral" />
+    <Reference Include="Ice, Version=3.4.2.0, Culture=neutral, PublicKeyToken=cdd571ade22f2f16, processorArchitecture=MSIL" />
+    <Reference Include="Invengo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Invengo.Barcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Invengo.Common, Version=2.0.4223.30418, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Invengo.Core.Devices, Version=2.0.4223.30418, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Invengo.Devices.ModuleControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Invengo.Ports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="IRP1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MotoSDL, Version=1.0.5063.25512, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factories\ScanBarFactory.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScanCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScanCode.designer.cs">
+      <DependentUpon>FrmScanCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generated\Slice\PDAService.cs" />
+    <Compile Include="Glob.cs" />
+    <Compile Include="IceFramework\AbstractIceRuntime.cs" />
+    <Compile Include="IceFramework\IceRuntime.cs" />
+    <Compile Include="IceFramework\IIceRuntime.cs" />
+    <Compile Include="Interface\IAssortedService.cs" />
+    <Compile Include="Interface\IScanBar.cs" />
+    <Compile Include="Model\AssortedBillModel.cs" />
+    <Compile Include="Model\AssortedProductModel.cs" />
+    <Compile Include="Model\Config.cs" />
+    <Compile Include="Model\FacturerModel.cs" />
+    <Compile Include="Model\FormulaOutDetailModel.cs" />
+    <Compile Include="Model\FormulaOutModel.cs" />
+    <Compile Include="Model\FormulaStaticModel.cs" />
+    <Compile Include="Model\LocationModel.cs" />
+    <Compile Include="Model\MatchPalletPlanDetailModel.cs" />
+    <Compile Include="Model\MatchPalletPlanModel.cs" />
+    <Compile Include="Model\PageModel.cs" />
+    <Compile Include="Model\PalletBarcodeModel.cs" />
+    <Compile Include="Model\ProductBarCodeModel.cs" />
+    <Compile Include="Model\RelocationModel.cs" />
+    <Compile Include="Model\ScanBarModel.cs" />
+    <Compile Include="Model\SearchModel.cs" />
+    <Compile Include="Model\StandardDataModel.cs" />
+    <Compile Include="Model\StaticModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScanCode.resx">
+      <DependentUpon>FrmScanCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmAssorted.resx">
+      <DependentUpon>FrmAssorted.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmAssortedDetail.resx">
+      <DependentUpon>FrmAssortedDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmFactureSelect.resx">
+      <DependentUpon>FrmFactureSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmGetInventoryBarCode.resx">
+      <DependentUpon>FrmGetInventoryBarCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmPalletBar.resx">
+      <DependentUpon>FrmPalletBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmProductFacture.resx">
+      <DependentUpon>FrmProductFacture.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmSimuScanCode.resx">
+      <DependentUpon>FrmSimuScanCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmInventoryPalletDetail.resx">
+      <DependentUpon>FrmInventoryPalletDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmPalletDetail.resx">
+      <DependentUpon>FrmPalletDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmEmptyPalletStoreOut.resx">
+      <DependentUpon>FrmEmptyPalletStoreOut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmScanPalletBarcode.resx">
+      <DependentUpon>FrmScanPalletBarcode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Assorted\FrmGetMatchPalletCode.resx">
+      <DependentUpon>FrmGetMatchPalletCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Slice\PDAService.ice" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Proxy\PDAServiceIceProxy.cs" />
+    <Compile Include="Service\AssortedService.cs" />
+    <Compile Include="Service\InventoryService.cs" />
+    <Compile Include="Tools\HttpTool.cs" />
+    <Compile Include="Tools\ScanBarTool.cs" />
+    <Compile Include="Tools\SearchTool.cs" />
+    <Compile Include="Tools\SerizlizableTool.cs" />
+    <Compile Include="UI\Assorted\FrmAssorted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmAssorted.Designer.cs">
+      <DependentUpon>FrmAssorted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmAssortedDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmAssortedDetail.Designer.cs">
+      <DependentUpon>FrmAssortedDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmFactureSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmFactureSelect.Designer.cs">
+      <DependentUpon>FrmFactureSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmGetInventoryBarCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmGetInventoryBarCode.Designer.cs">
+      <DependentUpon>FrmGetInventoryBarCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmPalletBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmPalletBar.Designer.cs">
+      <DependentUpon>FrmPalletBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmProductFacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmProductFacture.Designer.cs">
+      <DependentUpon>FrmProductFacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmSimuScanCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmSimuScanCode.Designer.cs">
+      <DependentUpon>FrmSimuScanCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmInventoryPalletDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmInventoryPalletDetail.Designer.cs">
+      <DependentUpon>FrmInventoryPalletDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmPalletDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmPalletDetail.Designer.cs">
+      <DependentUpon>FrmPalletDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmEmptyPalletStoreOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmEmptyPalletStoreOut.Designer.cs">
+      <DependentUpon>FrmEmptyPalletStoreOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmScanPalletBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmScanPalletBarcode.Designer.cs">
+      <DependentUpon>FrmScanPalletBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmGetMatchPalletCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Assorted\FrmGetMatchPalletCode.Designer.cs">
+      <DependentUpon>FrmGetMatchPalletCode.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="IRP1Message.xml" />
+    <Content Include="Lib\Communication.dll" />
+    <Content Include="Lib\CompactFormatter.dll" />
+    <Content Include="Lib\Invengo.Barcode.dll" />
+    <Content Include="Lib\Invengo.Common.dll" />
+    <Content Include="Lib\Invengo.Core.Devices.dll" />
+    <Content Include="Lib\Invengo.Devices.ModuleControl.dll" />
+    <Content Include="Lib\Invengo.dll" />
+    <Content Include="Lib\Invengo.Ports.dll" />
+    <Content Include="Lib\IRP1.dll" />
+    <Content Include="Lib\MotoSDL.dll" />
+    <Content Include="Lib\NativeAPI.dll" />
+    <Content Include="Lib\Newtonsoft.Json.Compact.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ZerocIce_IncludePath=".\Slice" ZerocIce_Prefix="True" ZerocIce_OutputDir=".\Generated" ZerocIce_Enabled="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
