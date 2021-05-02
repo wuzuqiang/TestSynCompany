@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnBeforePage = new System.Windows.Forms.Button();
             this.BtnNextPage = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnComplete = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.TotalPage = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.tpgAssorted.Controls.Add(this.label5);
             this.tpgAssorted.Controls.Add(this.btnBeforePage);
             this.tpgAssorted.Controls.Add(this.BtnNextPage);
-            this.tpgAssorted.Controls.Add(this.btnExit);
+            this.tpgAssorted.Controls.Add(this.btnComplete);
             this.tpgAssorted.Controls.Add(this.btnBack);
             this.tpgAssorted.Controls.Add(this.TotalPage);
             this.tpgAssorted.Controls.Add(this.label4);
@@ -125,7 +125,6 @@
             this.btnBeforePage.Size = new System.Drawing.Size(66, 22);
             this.btnBeforePage.TabIndex = 16;
             this.btnBeforePage.Text = "上页";
-            this.btnBeforePage.Click += new System.EventHandler(this.btnBeforePage_Click);
             // 
             // BtnNextPage
             // 
@@ -134,16 +133,15 @@
             this.BtnNextPage.Size = new System.Drawing.Size(66, 22);
             this.BtnNextPage.TabIndex = 15;
             this.BtnNextPage.Text = "下页";
-            this.BtnNextPage.Click += new System.EventHandler(this.BtnNextPage_Click);
             // 
-            // btnExit
+            // btnComplete
             // 
-            this.btnExit.Location = new System.Drawing.Point(148, 196);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(66, 22);
-            this.btnExit.TabIndex = 11;
-            this.btnExit.Text = "完 成";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnComplete.Location = new System.Drawing.Point(148, 196);
+            this.btnComplete.Name = "btnComplete";
+            this.btnComplete.Size = new System.Drawing.Size(66, 22);
+            this.btnComplete.TabIndex = 11;
+            this.btnComplete.Text = "完 成";
+            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
             // 
             // btnBack
             // 
@@ -152,7 +150,6 @@
             this.btnBack.Size = new System.Drawing.Size(66, 23);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "返   回";
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // TotalPage
             // 
@@ -197,8 +194,6 @@
             this.lvwMathPalletList.TabIndex = 3;
             this.lvwMathPalletList.UseCompatibleStateImageBehavior = false;
             this.lvwMathPalletList.View = System.Windows.Forms.View.Details;
-            this.lvwMathPalletList.ItemActivate += new System.EventHandler(this.lvwMathPalletList_ItemActivate);
-            this.lvwMathPalletList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvwMathPalletList_KeyDown);
             // 
             // cloMathPalletCode
             // 
@@ -223,7 +218,7 @@
             this.colplanDate.Text = "盘位名称";
             this.colplanDate.Width = 100;
             // 
-            // FrmInventoryPallet
+            // FrmInventoryPalletDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -232,8 +227,8 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
-            this.Name = "FrmInventoryPallet";
-            this.Closed += new System.EventHandler(this.FrmAssorted_Closed);
+            this.Name = "FrmInventoryPalletDetail";
+            this.Load += new System.EventHandler(this.FrmInventoryPalletDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tpgAssorted.ResumeLayout(false);
@@ -253,7 +248,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.ColumnHeader colplanDate;
         private System.Windows.Forms.ColumnHeader colMatchPalletPlanNo;
         private System.Windows.Forms.Button BtnNextPage;

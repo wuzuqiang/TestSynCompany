@@ -33,7 +33,9 @@
   <ItemGroup>
     <Reference Include="Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="CompactFormatter, Version=1.0.0.27374, Culture=neutral" />
-    <Reference Include="Ice, Version=3.4.2.0, Culture=neutral, PublicKeyToken=cdd571ade22f2f16, processorArchitecture=MSIL" />
+    <Reference Include="Ice, Version=3.4.2.0, Culture=neutral, PublicKeyToken=cdd571ade22f2f16, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Invengo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Invengo.Barcode, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Invengo.Common, Version=2.0.4223.30418, Culture=neutral, processorArchitecture=MSIL" />
@@ -86,6 +88,8 @@
     <Compile Include="IceFramework\IIceRuntime.cs" />
     <Compile Include="Interface\IAssortedService.cs" />
     <Compile Include="Interface\IScanBar.cs" />
+    <Compile Include="InventoryModel\InventoryBillDetailModel.cs" />
+    <Compile Include="InventoryModel\InventoryBillDetailStatus.cs" />
     <Compile Include="Model\AssortedBillModel.cs" />
     <Compile Include="Model\AssortedProductModel.cs" />
     <Compile Include="Model\Config.cs" />
@@ -131,7 +135,7 @@
       <DependentUpon>FrmFactureSelect.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Assorted\FrmGetInventoryBarCode.resx">
+    <EmbeddedResource Include="UI\Inventory\FrmGetInventoryBarCode.resx">
       <DependentUpon>FrmGetInventoryBarCode.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -147,7 +151,7 @@
       <DependentUpon>FrmSimuScanCode.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Assorted\FrmInventoryPalletDetail.resx">
+    <EmbeddedResource Include="UI\Inventory\FrmInventoryPalletDetail.resx">
       <DependentUpon>FrmInventoryPalletDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -159,7 +163,7 @@
       <DependentUpon>FrmEmptyPalletStoreOut.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Assorted\FrmScanPalletBarcode.resx">
+    <EmbeddedResource Include="UI\Inventory\FrmScanPalletBarcode.resx">
       <DependentUpon>FrmScanPalletBarcode.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -206,10 +210,10 @@
     <Compile Include="UI\Assorted\FrmFactureSelect.Designer.cs">
       <DependentUpon>FrmFactureSelect.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Assorted\FrmGetInventoryBarCode.cs">
+    <Compile Include="UI\Inventory\FrmGetInventoryBarCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Assorted\FrmGetInventoryBarCode.Designer.cs">
+    <Compile Include="UI\Inventory\FrmGetInventoryBarCode.Designer.cs">
       <DependentUpon>FrmGetInventoryBarCode.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Assorted\FrmPalletBar.cs">
@@ -230,10 +234,10 @@
     <Compile Include="UI\Assorted\FrmSimuScanCode.Designer.cs">
       <DependentUpon>FrmSimuScanCode.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Assorted\FrmInventoryPalletDetail.cs">
+    <Compile Include="UI\Inventory\FrmInventoryPalletDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Assorted\FrmInventoryPalletDetail.Designer.cs">
+    <Compile Include="UI\Inventory\FrmInventoryPalletDetail.Designer.cs">
       <DependentUpon>FrmInventoryPalletDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Assorted\FrmPalletDetail.cs">
@@ -248,10 +252,10 @@
     <Compile Include="UI\Assorted\FrmEmptyPalletStoreOut.Designer.cs">
       <DependentUpon>FrmEmptyPalletStoreOut.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Assorted\FrmScanPalletBarcode.cs">
+    <Compile Include="UI\Inventory\FrmScanPalletBarcode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Assorted\FrmScanPalletBarcode.Designer.cs">
+    <Compile Include="UI\Inventory\FrmScanPalletBarcode.Designer.cs">
       <DependentUpon>FrmScanPalletBarcode.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Assorted\FrmGetMatchPalletCode.cs">
@@ -287,7 +291,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ZerocIce_IncludePath=".\Slice" ZerocIce_Prefix="True" ZerocIce_OutputDir=".\Generated" ZerocIce_Enabled="True" />
+      <UserProperties ZerocIce_Enabled="True" ZerocIce_OutputDir=".\Generated" ZerocIce_Prefix="True" ZerocIce_IncludePath="E:\repository\TestSynCompany\TestIcePDA\LYYC_FLK\LYYC_FLK\Slice" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

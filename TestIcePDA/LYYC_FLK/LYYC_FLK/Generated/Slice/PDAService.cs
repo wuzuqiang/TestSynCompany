@@ -57,7 +57,7 @@ namespace PDA
     public delegate void Callback_PDAService_ApplyRelocation(string ret__);
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
-    public delegate void Callback_PDAService_GetPalletByBarcode(string ret__);
+    public delegate void Callback_PDAService_GetLocationByBarcode(string ret__);
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
     public delegate void Callback_PDAService_GetMatchPalletPlan(string ret__);
@@ -75,6 +75,18 @@ namespace PDA
     public delegate void Callback_PDAService_GetAssortedBillByBarcode(string ret__);
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetPalletByBarcode(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetBigSmallBar(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetInventoryBillDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_UpdateInventoryBillDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
     public delegate void Callback_PDAService_GetFormulaOut(string ret__);
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
@@ -82,6 +94,123 @@ namespace PDA
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
     public delegate void Callback_PDAService_UpdateFormulaOutDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_WarehouseRemovalOrder(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_UpdateWarehouseRemovalOrder(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_CreateOutBill(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetInventorySurplusDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_SyncRealProductInfo(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_CreateAssortedBill(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetMatchPallet(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetMatchPalletDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_AddAssortedBillAndDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetStations(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetRegions(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_StoreInByPda(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetProductionPlan(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetProductionPlanDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetMachines(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetMachinePallets(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_MachineCall(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_MachineInit(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetProduct(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_AddKeepAccountBillIncludeTask(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetProducts(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetCanInLocationPalletList(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_DirectInBill(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetCanOutLocationStoragePalletList(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_DirectOutBill(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_FindInBillByPda(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_FindInBillAllot(string ret__, int total);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_CompleteInBill(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_FindOutBillByPda(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_FindOutBillAllot(string ret__, int total);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_CompleteOutBill(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetInTaskDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetOutTaskDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_ApplyTask();
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_CancelTask();
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_CompleteTask();
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetStockInTaskDetails(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_GetStockOutTaskDetails(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PDAService_UpdateBillBarcodes();
 }
 
 namespace PDA
@@ -133,16 +262,16 @@ namespace PDA
 
         string end_ApplyRelocation(Ice.AsyncResult r__);
 
-        string GetPalletByBarcode(string barcode);
-        string GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetLocationByBarcode(string barcode);
+        string GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        Ice.AsyncResult<PDA.Callback_PDAService_GetPalletByBarcode> begin_GetPalletByBarcode(string barcode);
-        Ice.AsyncResult<PDA.Callback_PDAService_GetPalletByBarcode> begin_GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetLocationByBarcode> begin_GetLocationByBarcode(string barcode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetLocationByBarcode> begin_GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
 
-        Ice.AsyncResult begin_GetPalletByBarcode(string barcode, Ice.AsyncCallback cb__, object cookie__);
-        Ice.AsyncResult begin_GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetLocationByBarcode(string barcode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
 
-        string end_GetPalletByBarcode(Ice.AsyncResult r__);
+        string end_GetLocationByBarcode(Ice.AsyncResult r__);
 
         string GetMatchPalletPlan(string matchPalletPlanNo, int page, int start, int limit, string sort, string filter);
         string GetMatchPalletPlan(string matchPalletPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
@@ -199,38 +328,511 @@ namespace PDA
 
         string end_GetAssortedBillByBarcode(Ice.AsyncResult r__);
 
-        string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter);
-        string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetPalletByBarcode(string barcode);
+        string GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter);
-        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetPalletByBarcode> begin_GetPalletByBarcode(string barcode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetPalletByBarcode> begin_GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
 
-        Ice.AsyncResult begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
-        Ice.AsyncResult begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetPalletByBarcode(string barcode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetPalletByBarcode(Ice.AsyncResult r__);
+
+        string GetBigSmallBar(string barCode);
+        string GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetBigSmallBar> begin_GetBigSmallBar(string barCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetBigSmallBar> begin_GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetBigSmallBar(string barCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetBigSmallBar(Ice.AsyncResult r__);
+
+        string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter);
+        string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetInventoryBillDetail> begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetInventoryBillDetail> begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetInventoryBillDetail(Ice.AsyncResult r__);
+
+        string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails);
+        string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateInventoryBillDetail> begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails);
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateInventoryBillDetail> begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_UpdateInventoryBillDetail(Ice.AsyncResult r__);
+
+        string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter);
+        string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
 
         string end_GetFormulaOut(Ice.AsyncResult r__);
 
-        string GetFormulaOutDetail(string formulaCode);
-        string GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetFormulaOutDetail(string fromulaCode);
+        string GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string formulaCode);
-        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string fromulaCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
 
-        Ice.AsyncResult begin_GetFormulaOutDetail(string formulaCode, Ice.AsyncCallback cb__, object cookie__);
-        Ice.AsyncResult begin_GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetFormulaOutDetail(string fromulaCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
 
         string end_GetFormulaOutDetail(Ice.AsyncResult r__);
 
-        string UpdateFormulaOutDetail(string formulaCode, string data);
-        string UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__);
+        string UpdateFormulaOutDetail(string fromulaCode, string data);
+        string UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string formulaCode, string data);
-        Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__);
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string fromulaCode, string data);
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__);
 
-        Ice.AsyncResult begin_UpdateFormulaOutDetail(string formulaCode, string data, Ice.AsyncCallback cb__, object cookie__);
-        Ice.AsyncResult begin_UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_UpdateFormulaOutDetail(string fromulaCode, string data, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
 
         string end_UpdateFormulaOutDetail(Ice.AsyncResult r__);
+
+        string WarehouseRemovalOrder(string barcode);
+        string WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_WarehouseRemovalOrder> begin_WarehouseRemovalOrder(string barcode);
+        Ice.AsyncResult<PDA.Callback_PDAService_WarehouseRemovalOrder> begin_WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_WarehouseRemovalOrder(string barcode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_WarehouseRemovalOrder(Ice.AsyncResult r__);
+
+        string UpdateWarehouseRemovalOrder(string billNo);
+        string UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder> begin_UpdateWarehouseRemovalOrder(string billNo);
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder> begin_UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_UpdateWarehouseRemovalOrder(string billNo, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_UpdateWarehouseRemovalOrder(Ice.AsyncResult r__);
+
+        string CreateOutBill(string[] barcodes);
+        string CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_CreateOutBill> begin_CreateOutBill(string[] barcodes);
+        Ice.AsyncResult<PDA.Callback_PDAService_CreateOutBill> begin_CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_CreateOutBill(string[] barcodes, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_CreateOutBill(Ice.AsyncResult r__);
+
+        string GetInventorySurplusDetail(string barcode);
+        string GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetInventorySurplusDetail> begin_GetInventorySurplusDetail(string barcode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetInventorySurplusDetail> begin_GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetInventorySurplusDetail(string barcode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetInventorySurplusDetail(Ice.AsyncResult r__);
+
+        string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes);
+        string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_SyncRealProductInfo> begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes);
+        Ice.AsyncResult<PDA.Callback_PDAService_SyncRealProductInfo> begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_SyncRealProductInfo(Ice.AsyncResult r__);
+
+        string CreateAssortedBill(string[] barcodes);
+        string CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_CreateAssortedBill> begin_CreateAssortedBill(string[] barcodes);
+        Ice.AsyncResult<PDA.Callback_PDAService_CreateAssortedBill> begin_CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_CreateAssortedBill(string[] barcodes, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_CreateAssortedBill(Ice.AsyncResult r__);
+
+        string GetMatchPallet(int page, int start, int limit, string sort, string filter);
+        string GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPallet> begin_GetMatchPallet(int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPallet> begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetMatchPallet(Ice.AsyncResult r__);
+
+        string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter);
+        string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPalletDetail> begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPalletDetail> begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetMatchPalletDetail(Ice.AsyncResult r__);
+
+        string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails);
+        string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_AddAssortedBillAndDetail> begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails);
+        Ice.AsyncResult<PDA.Callback_PDAService_AddAssortedBillAndDetail> begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_AddAssortedBillAndDetail(Ice.AsyncResult r__);
+
+        string GetStations(string stationClassify);
+        string GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetStations> begin_GetStations(string stationClassify);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetStations> begin_GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetStations(string stationClassify, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetStations(Ice.AsyncResult r__);
+
+        string GetRegions();
+        string GetRegions(_System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetRegions> begin_GetRegions();
+        Ice.AsyncResult<PDA.Callback_PDAService_GetRegions> begin_GetRegions(_System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetRegions(Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetRegions(_System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetRegions(Ice.AsyncResult r__);
+
+        string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes);
+        string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_StoreInByPda> begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes);
+        Ice.AsyncResult<PDA.Callback_PDAService_StoreInByPda> begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_StoreInByPda(Ice.AsyncResult r__);
+
+        string GetProductionPlan(int page, int start, int limit, string sort, string filter);
+        string GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlan> begin_GetProductionPlan(int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlan> begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetProductionPlan(Ice.AsyncResult r__);
+
+        string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter);
+        string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlanDetail> begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlanDetail> begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetProductionPlanDetail(Ice.AsyncResult r__);
+
+        string GetMachines(string ip);
+        string GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMachines> begin_GetMachines(string ip);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMachines> begin_GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetMachines(string ip, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetMachines(Ice.AsyncResult r__);
+
+        string GetMachinePallets(string machineCode);
+        string GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMachinePallets> begin_GetMachinePallets(string machineCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetMachinePallets> begin_GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetMachinePallets(string machineCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetMachinePallets(Ice.AsyncResult r__);
+
+        string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp);
+        string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_MachineCall> begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp);
+        Ice.AsyncResult<PDA.Callback_PDAService_MachineCall> begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_MachineCall(Ice.AsyncResult r__);
+
+        string MachineInit(int palletPosition, string clientIp);
+        string MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_MachineInit> begin_MachineInit(int palletPosition, string clientIp);
+        Ice.AsyncResult<PDA.Callback_PDAService_MachineInit> begin_MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_MachineInit(int palletPosition, string clientIp, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_MachineInit(Ice.AsyncResult r__);
+
+        string GetProduct(string productCode);
+        string GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProduct> begin_GetProduct(string productCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProduct> begin_GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetProduct(string productCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetProduct(Ice.AsyncResult r__);
+
+        string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition);
+        string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask> begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition);
+        Ice.AsyncResult<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask> begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_AddKeepAccountBillIncludeTask(Ice.AsyncResult r__);
+
+        string GetProducts(string productCode);
+        string GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProducts> begin_GetProducts(string productCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetProducts> begin_GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetProducts(string productCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetProducts(Ice.AsyncResult r__);
+
+        string GetCanInLocationPalletList(int page, int start, int limit, string product);
+        string GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetCanInLocationPalletList> begin_GetCanInLocationPalletList(int page, int start, int limit, string product);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetCanInLocationPalletList> begin_GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetCanInLocationPalletList(int page, int start, int limit, string product, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetCanInLocationPalletList(Ice.AsyncResult r__);
+
+        string DirectInBill(string productCode, string quantity, string locationCode);
+        string DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_DirectInBill> begin_DirectInBill(string productCode, string quantity, string locationCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_DirectInBill> begin_DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_DirectInBill(string productCode, string quantity, string locationCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_DirectInBill(Ice.AsyncResult r__);
+
+        string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit);
+        string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList> begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList> begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetCanOutLocationStoragePalletList(Ice.AsyncResult r__);
+
+        string DirectOutBill(string productCode, string quantity, string locationCode);
+        string DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_DirectOutBill> begin_DirectOutBill(string productCode, string quantity, string locationCode);
+        Ice.AsyncResult<PDA.Callback_PDAService_DirectOutBill> begin_DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_DirectOutBill(string productCode, string quantity, string locationCode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_DirectOutBill(Ice.AsyncResult r__);
+
+        string FindInBillByPda(string inBillNo, int page, int start, int limit);
+        string FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_FindInBillByPda> begin_FindInBillByPda(string inBillNo, int page, int start, int limit);
+        Ice.AsyncResult<PDA.Callback_PDAService_FindInBillByPda> begin_FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_FindInBillByPda(string inBillNo, int page, int start, int limit, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_FindInBillByPda(Ice.AsyncResult r__);
+
+        string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total);
+        string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_FindInBillAllot> begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_FindInBillAllot> begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_FindInBillAllot(out int total, Ice.AsyncResult r__);
+
+        string CompleteInBill(string productCode, string inBillNo);
+        string CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_CompleteInBill> begin_CompleteInBill(string productCode, string inBillNo);
+        Ice.AsyncResult<PDA.Callback_PDAService_CompleteInBill> begin_CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_CompleteInBill(string productCode, string inBillNo, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_CompleteInBill(Ice.AsyncResult r__);
+
+        string FindOutBillByPda(string outBillNo, int page, int start, int limit);
+        string FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillByPda> begin_FindOutBillByPda(string outBillNo, int page, int start, int limit);
+        Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillByPda> begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_FindOutBillByPda(Ice.AsyncResult r__);
+
+        string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total);
+        string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillAllot> begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter);
+        Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillAllot> begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_FindOutBillAllot(out int total, Ice.AsyncResult r__);
+
+        string CompleteOutBill(string productCode, string outBillNo);
+        string CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_CompleteOutBill> begin_CompleteOutBill(string productCode, string outBillNo);
+        Ice.AsyncResult<PDA.Callback_PDAService_CompleteOutBill> begin_CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_CompleteOutBill(string productCode, string outBillNo, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_CompleteOutBill(Ice.AsyncResult r__);
+
+        string GetInTaskDetail(string barcode);
+        string GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetInTaskDetail> begin_GetInTaskDetail(string barcode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetInTaskDetail> begin_GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetInTaskDetail(string barcode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetInTaskDetail(Ice.AsyncResult r__);
+
+        string GetOutTaskDetail(string barcode);
+        string GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetOutTaskDetail> begin_GetOutTaskDetail(string barcode);
+        Ice.AsyncResult<PDA.Callback_PDAService_GetOutTaskDetail> begin_GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetOutTaskDetail(string barcode, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetOutTaskDetail(Ice.AsyncResult r__);
+
+        void ApplyTask(string billNo, string user, string[] taskIds, int billType);
+        void ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_ApplyTask> begin_ApplyTask(string billNo, string user, string[] taskIds, int billType);
+        Ice.AsyncResult<PDA.Callback_PDAService_ApplyTask> begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        void end_ApplyTask(Ice.AsyncResult r__);
+
+        void CancelTask(string billNo, string[] taskIds, int billType);
+        void CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_CancelTask> begin_CancelTask(string billNo, string[] taskIds, int billType);
+        Ice.AsyncResult<PDA.Callback_PDAService_CancelTask> begin_CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_CancelTask(string billNo, string[] taskIds, int billType, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        void end_CancelTask(Ice.AsyncResult r__);
+
+        void CompleteTask(string billNo, string[] taskIds, int billType);
+        void CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_CompleteTask> begin_CompleteTask(string billNo, string[] taskIds, int billType);
+        Ice.AsyncResult<PDA.Callback_PDAService_CompleteTask> begin_CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_CompleteTask(string billNo, string[] taskIds, int billType, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        void end_CompleteTask(Ice.AsyncResult r__);
+
+        string GetStockInTaskDetails();
+        string GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetStockInTaskDetails> begin_GetStockInTaskDetails();
+        Ice.AsyncResult<PDA.Callback_PDAService_GetStockInTaskDetails> begin_GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetStockInTaskDetails(Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetStockInTaskDetails(Ice.AsyncResult r__);
+
+        string GetStockOutTaskDetails();
+        string GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_GetStockOutTaskDetails> begin_GetStockOutTaskDetails();
+        Ice.AsyncResult<PDA.Callback_PDAService_GetStockOutTaskDetails> begin_GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_GetStockOutTaskDetails(Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        string end_GetStockOutTaskDetails(Ice.AsyncResult r__);
+
+        void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes);
+        void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateBillBarcodes> begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes);
+        Ice.AsyncResult<PDA.Callback_PDAService_UpdateBillBarcodes> begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        void end_UpdateBillBarcodes(Ice.AsyncResult r__);
     }
 }
 
@@ -247,7 +849,7 @@ namespace PDA
 
         string ApplyRelocation(string productCode, string billTypeCode, string barcode, Ice.Current current__);
 
-        string GetPalletByBarcode(string barcode, Ice.Current current__);
+        string GetLocationByBarcode(string barcode, Ice.Current current__);
 
         string GetMatchPalletPlan(string matchPalletPlanNo, int page, int start, int limit, string sort, string filter, Ice.Current current__);
 
@@ -259,11 +861,97 @@ namespace PDA
 
         string GetAssortedBillByBarcode(string barcode, Ice.Current current__);
 
-        string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+        string GetPalletByBarcode(string barcode, Ice.Current current__);
 
-        string GetFormulaOutDetail(string formulaCode, Ice.Current current__);
+        string GetBigSmallBar(string barCode, Ice.Current current__);
 
-        string UpdateFormulaOutDetail(string formulaCode, string data, Ice.Current current__);
+        string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, Ice.Current current__);
+
+        string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        string GetFormulaOutDetail(string fromulaCode, Ice.Current current__);
+
+        string UpdateFormulaOutDetail(string fromulaCode, string data, Ice.Current current__);
+
+        string WarehouseRemovalOrder(string barcode, Ice.Current current__);
+
+        string UpdateWarehouseRemovalOrder(string billNo, Ice.Current current__);
+
+        string CreateOutBill(string[] barcodes, Ice.Current current__);
+
+        string GetInventorySurplusDetail(string barcode, Ice.Current current__);
+
+        string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, Ice.Current current__);
+
+        string CreateAssortedBill(string[] barcodes, Ice.Current current__);
+
+        string GetMatchPallet(int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, Ice.Current current__);
+
+        string GetStations(string stationClassify, Ice.Current current__);
+
+        string GetRegions(Ice.Current current__);
+
+        string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, Ice.Current current__);
+
+        string GetProductionPlan(int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        string GetMachines(string ip, Ice.Current current__);
+
+        string GetMachinePallets(string machineCode, Ice.Current current__);
+
+        string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, Ice.Current current__);
+
+        string MachineInit(int palletPosition, string clientIp, Ice.Current current__);
+
+        string GetProduct(string productCode, Ice.Current current__);
+
+        string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, Ice.Current current__);
+
+        string GetProducts(string productCode, Ice.Current current__);
+
+        string GetCanInLocationPalletList(int page, int start, int limit, string product, Ice.Current current__);
+
+        string DirectInBill(string productCode, string quantity, string locationCode, Ice.Current current__);
+
+        string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, Ice.Current current__);
+
+        string DirectOutBill(string productCode, string quantity, string locationCode, Ice.Current current__);
+
+        string FindInBillByPda(string inBillNo, int page, int start, int limit, Ice.Current current__);
+
+        string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, Ice.Current current__);
+
+        string CompleteInBill(string productCode, string inBillNo, Ice.Current current__);
+
+        string FindOutBillByPda(string outBillNo, int page, int start, int limit, Ice.Current current__);
+
+        string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, Ice.Current current__);
+
+        string CompleteOutBill(string productCode, string outBillNo, Ice.Current current__);
+
+        string GetInTaskDetail(string barcode, Ice.Current current__);
+
+        string GetOutTaskDetail(string barcode, Ice.Current current__);
+
+        void ApplyTask(string billNo, string user, string[] taskIds, int billType, Ice.Current current__);
+
+        void CancelTask(string billNo, string[] taskIds, int billType, Ice.Current current__);
+
+        void CompleteTask(string billNo, string[] taskIds, int billType, Ice.Current current__);
+
+        string GetStockInTaskDetails(Ice.Current current__);
+
+        string GetStockOutTaskDetails(Ice.Current current__);
+
+        void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, Ice.Current current__);
     }
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
@@ -277,7 +965,7 @@ namespace PDA
 
         string ApplyRelocation(string productCode, string billTypeCode, string barcode);
 
-        string GetPalletByBarcode(string barcode);
+        string GetLocationByBarcode(string barcode);
 
         string GetMatchPalletPlan(string matchPalletPlanNo, int page, int start, int limit, string sort, string filter);
 
@@ -289,11 +977,97 @@ namespace PDA
 
         string GetAssortedBillByBarcode(string barcode);
 
-        string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter);
+        string GetPalletByBarcode(string barcode);
 
-        string GetFormulaOutDetail(string formulaCode);
+        string GetBigSmallBar(string barCode);
 
-        string UpdateFormulaOutDetail(string formulaCode, string data);
+        string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter);
+
+        string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails);
+
+        string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter);
+
+        string GetFormulaOutDetail(string fromulaCode);
+
+        string UpdateFormulaOutDetail(string fromulaCode, string data);
+
+        string WarehouseRemovalOrder(string barcode);
+
+        string UpdateWarehouseRemovalOrder(string billNo);
+
+        string CreateOutBill(string[] barcodes);
+
+        string GetInventorySurplusDetail(string barcode);
+
+        string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes);
+
+        string CreateAssortedBill(string[] barcodes);
+
+        string GetMatchPallet(int page, int start, int limit, string sort, string filter);
+
+        string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter);
+
+        string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails);
+
+        string GetStations(string stationClassify);
+
+        string GetRegions();
+
+        string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes);
+
+        string GetProductionPlan(int page, int start, int limit, string sort, string filter);
+
+        string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter);
+
+        string GetMachines(string ip);
+
+        string GetMachinePallets(string machineCode);
+
+        string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp);
+
+        string MachineInit(int palletPosition, string clientIp);
+
+        string GetProduct(string productCode);
+
+        string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition);
+
+        string GetProducts(string productCode);
+
+        string GetCanInLocationPalletList(int page, int start, int limit, string product);
+
+        string DirectInBill(string productCode, string quantity, string locationCode);
+
+        string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit);
+
+        string DirectOutBill(string productCode, string quantity, string locationCode);
+
+        string FindInBillByPda(string inBillNo, int page, int start, int limit);
+
+        string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total);
+
+        string CompleteInBill(string productCode, string inBillNo);
+
+        string FindOutBillByPda(string outBillNo, int page, int start, int limit);
+
+        string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total);
+
+        string CompleteOutBill(string productCode, string outBillNo);
+
+        string GetInTaskDetail(string barcode);
+
+        string GetOutTaskDetail(string barcode);
+
+        void ApplyTask(string billNo, string user, string[] taskIds, int billType);
+
+        void CancelTask(string billNo, string[] taskIds, int billType);
+
+        void CompleteTask(string billNo, string[] taskIds, int billType);
+
+        string GetStockInTaskDetails();
+
+        string GetStockOutTaskDetails();
+
+        void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes);
     }
 }
 
@@ -347,6 +1121,82 @@ namespace PDA
                     delBase__ = getDelegate__(false);
                     PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
                     return del__.AddAssertedAndDetail(mathPalletCode, barCode, matchPalletPlanNo, productBarCodes, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails)
+        {
+            return AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, null, false);
+        }
+
+        public string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, context__, true);
+        }
+
+        private string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("AddAssortedBillAndDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition)
+        {
+            return AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, null, false);
+        }
+
+        public string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, context__, true);
+        }
+
+        private string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("AddKeepAccountBillIncludeTask");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, context__);
                 }
                 catch(IceInternal.LocalExceptionWrapper ex__)
                 {
@@ -473,6 +1323,234 @@ namespace PDA
             }
         }
 
+        public void ApplyTask(string billNo, string user, string[] taskIds, int billType)
+        {
+            ApplyTask(billNo, user, taskIds, billType, null, false);
+        }
+
+        public void ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            ApplyTask(billNo, user, taskIds, billType, context__, true);
+        }
+
+        private void ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    del__.ApplyTask(billNo, user, taskIds, billType, context__);
+                    return;
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public void CancelTask(string billNo, string[] taskIds, int billType)
+        {
+            CancelTask(billNo, taskIds, billType, null, false);
+        }
+
+        public void CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            CancelTask(billNo, taskIds, billType, context__, true);
+        }
+
+        private void CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    del__.CancelTask(billNo, taskIds, billType, context__);
+                    return;
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string CompleteInBill(string productCode, string inBillNo)
+        {
+            return CompleteInBill(productCode, inBillNo, null, false);
+        }
+
+        public string CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return CompleteInBill(productCode, inBillNo, context__, true);
+        }
+
+        private string CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("CompleteInBill");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.CompleteInBill(productCode, inBillNo, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string CompleteOutBill(string productCode, string outBillNo)
+        {
+            return CompleteOutBill(productCode, outBillNo, null, false);
+        }
+
+        public string CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return CompleteOutBill(productCode, outBillNo, context__, true);
+        }
+
+        private string CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("CompleteOutBill");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.CompleteOutBill(productCode, outBillNo, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public void CompleteTask(string billNo, string[] taskIds, int billType)
+        {
+            CompleteTask(billNo, taskIds, billType, null, false);
+        }
+
+        public void CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            CompleteTask(billNo, taskIds, billType, context__, true);
+        }
+
+        private void CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    del__.CompleteTask(billNo, taskIds, billType, context__);
+                    return;
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string CreateAssortedBill(string[] barcodes)
+        {
+            return CreateAssortedBill(barcodes, null, false);
+        }
+
+        public string CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return CreateAssortedBill(barcodes, context__, true);
+        }
+
+        private string CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("CreateAssortedBill");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.CreateAssortedBill(barcodes, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
         public string CreateAssortedBillByScanBarcode(string uniqueId, string matchPalletCode, string matchPalletPlanNo, string assortedProductModels)
         {
             return CreateAssortedBillByScanBarcode(uniqueId, matchPalletCode, matchPalletPlanNo, assortedProductModels, null, false);
@@ -503,6 +1581,272 @@ namespace PDA
                 catch(IceInternal.LocalExceptionWrapper ex__)
                 {
                     handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string CreateOutBill(string[] barcodes)
+        {
+            return CreateOutBill(barcodes, null, false);
+        }
+
+        public string CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return CreateOutBill(barcodes, context__, true);
+        }
+
+        private string CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("CreateOutBill");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.CreateOutBill(barcodes, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string DirectInBill(string productCode, string quantity, string locationCode)
+        {
+            return DirectInBill(productCode, quantity, locationCode, null, false);
+        }
+
+        public string DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return DirectInBill(productCode, quantity, locationCode, context__, true);
+        }
+
+        private string DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("DirectInBill");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.DirectInBill(productCode, quantity, locationCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string DirectOutBill(string productCode, string quantity, string locationCode)
+        {
+            return DirectOutBill(productCode, quantity, locationCode, null, false);
+        }
+
+        public string DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return DirectOutBill(productCode, quantity, locationCode, context__, true);
+        }
+
+        private string DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("DirectOutBill");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.DirectOutBill(productCode, quantity, locationCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total)
+        {
+            return FindInBillAllot(inBillNo, page, start, limit, sort, filter, out total, null, false);
+        }
+
+        public string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return FindInBillAllot(inBillNo, page, start, limit, sort, filter, out total, context__, true);
+        }
+
+        private string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("FindInBillAllot");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.FindInBillAllot(inBillNo, page, start, limit, sort, filter, out total, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string FindInBillByPda(string inBillNo, int page, int start, int limit)
+        {
+            return FindInBillByPda(inBillNo, page, start, limit, null, false);
+        }
+
+        public string FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return FindInBillByPda(inBillNo, page, start, limit, context__, true);
+        }
+
+        private string FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("FindInBillByPda");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.FindInBillByPda(inBillNo, page, start, limit, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total)
+        {
+            return FindOutBillAllot(outBillNo, page, start, limit, sort, filter, out total, null, false);
+        }
+
+        public string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return FindOutBillAllot(outBillNo, page, start, limit, sort, filter, out total, context__, true);
+        }
+
+        private string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("FindOutBillAllot");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.FindOutBillAllot(outBillNo, page, start, limit, sort, filter, out total, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string FindOutBillByPda(string outBillNo, int page, int start, int limit)
+        {
+            return FindOutBillByPda(outBillNo, page, start, limit, null, false);
+        }
+
+        public string FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return FindOutBillByPda(outBillNo, page, start, limit, context__, true);
+        }
+
+        private string FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("FindOutBillByPda");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.FindOutBillByPda(outBillNo, page, start, limit, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
                 }
                 catch(Ice.LocalException ex__)
                 {
@@ -549,6 +1893,120 @@ namespace PDA
             }
         }
 
+        public string GetBigSmallBar(string barCode)
+        {
+            return GetBigSmallBar(barCode, null, false);
+        }
+
+        public string GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetBigSmallBar(barCode, context__, true);
+        }
+
+        private string GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetBigSmallBar");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetBigSmallBar(barCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetCanInLocationPalletList(int page, int start, int limit, string product)
+        {
+            return GetCanInLocationPalletList(page, start, limit, product, null, false);
+        }
+
+        public string GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetCanInLocationPalletList(page, start, limit, product, context__, true);
+        }
+
+        private string GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetCanInLocationPalletList");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetCanInLocationPalletList(page, start, limit, product, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit)
+        {
+            return GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, null, false);
+        }
+
+        public string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, context__, true);
+        }
+
+        private string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetCanOutLocationStoragePalletList");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
         public string GetFacturers()
         {
             return GetFacturers(null, false);
@@ -587,17 +2045,17 @@ namespace PDA
             }
         }
 
-        public string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter)
+        public string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter)
         {
-            return GetFormulaOut(formulaCode, page, start, limit, sort, filter, null, false);
+            return GetFormulaOut(fromulaCode, page, start, limit, sort, filter, null, false);
         }
 
-        public string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
         {
-            return GetFormulaOut(formulaCode, page, start, limit, sort, filter, context__, true);
+            return GetFormulaOut(fromulaCode, page, start, limit, sort, filter, context__, true);
         }
 
-        private string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        private string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
         {
             if(explicitContext__ && context__ == null)
             {
@@ -612,7 +2070,7 @@ namespace PDA
                     checkTwowayOnly__("GetFormulaOut");
                     delBase__ = getDelegate__(false);
                     PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
-                    return del__.GetFormulaOut(formulaCode, page, start, limit, sort, filter, context__);
+                    return del__.GetFormulaOut(fromulaCode, page, start, limit, sort, filter, context__);
                 }
                 catch(IceInternal.LocalExceptionWrapper ex__)
                 {
@@ -625,17 +2083,17 @@ namespace PDA
             }
         }
 
-        public string GetFormulaOutDetail(string formulaCode)
+        public string GetFormulaOutDetail(string fromulaCode)
         {
-            return GetFormulaOutDetail(formulaCode, null, false);
+            return GetFormulaOutDetail(fromulaCode, null, false);
         }
 
-        public string GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> context__)
         {
-            return GetFormulaOutDetail(formulaCode, context__, true);
+            return GetFormulaOutDetail(fromulaCode, context__, true);
         }
 
-        private string GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        private string GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
         {
             if(explicitContext__ && context__ == null)
             {
@@ -650,7 +2108,311 @@ namespace PDA
                     checkTwowayOnly__("GetFormulaOutDetail");
                     delBase__ = getDelegate__(false);
                     PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
-                    return del__.GetFormulaOutDetail(formulaCode, context__);
+                    return del__.GetFormulaOutDetail(fromulaCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetInTaskDetail(string barcode)
+        {
+            return GetInTaskDetail(barcode, null, false);
+        }
+
+        public string GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetInTaskDetail(barcode, context__, true);
+        }
+
+        private string GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetInTaskDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetInTaskDetail(barcode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter)
+        {
+            return GetInventoryBillDetail(barCode, page, start, limit, sort, filter, null, false);
+        }
+
+        public string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetInventoryBillDetail(barCode, page, start, limit, sort, filter, context__, true);
+        }
+
+        private string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetInventoryBillDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetInventoryBillDetail(barCode, page, start, limit, sort, filter, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetInventorySurplusDetail(string barcode)
+        {
+            return GetInventorySurplusDetail(barcode, null, false);
+        }
+
+        public string GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetInventorySurplusDetail(barcode, context__, true);
+        }
+
+        private string GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetInventorySurplusDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetInventorySurplusDetail(barcode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetLocationByBarcode(string barcode)
+        {
+            return GetLocationByBarcode(barcode, null, false);
+        }
+
+        public string GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetLocationByBarcode(barcode, context__, true);
+        }
+
+        private string GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetLocationByBarcode");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetLocationByBarcode(barcode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetMachinePallets(string machineCode)
+        {
+            return GetMachinePallets(machineCode, null, false);
+        }
+
+        public string GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetMachinePallets(machineCode, context__, true);
+        }
+
+        private string GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetMachinePallets");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetMachinePallets(machineCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetMachines(string ip)
+        {
+            return GetMachines(ip, null, false);
+        }
+
+        public string GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetMachines(ip, context__, true);
+        }
+
+        private string GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetMachines");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetMachines(ip, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetMatchPallet(int page, int start, int limit, string sort, string filter)
+        {
+            return GetMatchPallet(page, start, limit, sort, filter, null, false);
+        }
+
+        public string GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetMatchPallet(page, start, limit, sort, filter, context__, true);
+        }
+
+        private string GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetMatchPallet");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetMatchPallet(page, start, limit, sort, filter, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter)
+        {
+            return GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, null, false);
+        }
+
+        public string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, context__, true);
+        }
+
+        private string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetMatchPalletDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, context__);
                 }
                 catch(IceInternal.LocalExceptionWrapper ex__)
                 {
@@ -739,6 +2501,44 @@ namespace PDA
             }
         }
 
+        public string GetOutTaskDetail(string barcode)
+        {
+            return GetOutTaskDetail(barcode, null, false);
+        }
+
+        public string GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetOutTaskDetail(barcode, context__, true);
+        }
+
+        private string GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetOutTaskDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetOutTaskDetail(barcode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
         public string GetPalletByBarcode(string barcode)
         {
             return GetPalletByBarcode(barcode, null, false);
@@ -777,17 +2577,511 @@ namespace PDA
             }
         }
 
-        public string UpdateFormulaOutDetail(string formulaCode, string data)
+        public string GetProduct(string productCode)
         {
-            return UpdateFormulaOutDetail(formulaCode, data, null, false);
+            return GetProduct(productCode, null, false);
         }
 
-        public string UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> context__)
         {
-            return UpdateFormulaOutDetail(formulaCode, data, context__, true);
+            return GetProduct(productCode, context__, true);
         }
 
-        private string UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        private string GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetProduct");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetProduct(productCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetProductionPlan(int page, int start, int limit, string sort, string filter)
+        {
+            return GetProductionPlan(page, start, limit, sort, filter, null, false);
+        }
+
+        public string GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetProductionPlan(page, start, limit, sort, filter, context__, true);
+        }
+
+        private string GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetProductionPlan");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetProductionPlan(page, start, limit, sort, filter, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter)
+        {
+            return GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, null, false);
+        }
+
+        public string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, context__, true);
+        }
+
+        private string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetProductionPlanDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetProducts(string productCode)
+        {
+            return GetProducts(productCode, null, false);
+        }
+
+        public string GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetProducts(productCode, context__, true);
+        }
+
+        private string GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetProducts");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetProducts(productCode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetRegions()
+        {
+            return GetRegions(null, false);
+        }
+
+        public string GetRegions(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetRegions(context__, true);
+        }
+
+        private string GetRegions(_System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetRegions");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetRegions(context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetStations(string stationClassify)
+        {
+            return GetStations(stationClassify, null, false);
+        }
+
+        public string GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetStations(stationClassify, context__, true);
+        }
+
+        private string GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetStations");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetStations(stationClassify, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetStockInTaskDetails()
+        {
+            return GetStockInTaskDetails(null, false);
+        }
+
+        public string GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetStockInTaskDetails(context__, true);
+        }
+
+        private string GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetStockInTaskDetails");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetStockInTaskDetails(context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string GetStockOutTaskDetails()
+        {
+            return GetStockOutTaskDetails(null, false);
+        }
+
+        public string GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return GetStockOutTaskDetails(context__, true);
+        }
+
+        private string GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("GetStockOutTaskDetails");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.GetStockOutTaskDetails(context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp)
+        {
+            return MachineCall(userName, productionPlanNo, palletPosition, clientIp, null, false);
+        }
+
+        public string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return MachineCall(userName, productionPlanNo, palletPosition, clientIp, context__, true);
+        }
+
+        private string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("MachineCall");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.MachineCall(userName, productionPlanNo, palletPosition, clientIp, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string MachineInit(int palletPosition, string clientIp)
+        {
+            return MachineInit(palletPosition, clientIp, null, false);
+        }
+
+        public string MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return MachineInit(palletPosition, clientIp, context__, true);
+        }
+
+        private string MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("MachineInit");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.MachineInit(palletPosition, clientIp, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes)
+        {
+            return StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, null, false);
+        }
+
+        public string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, context__, true);
+        }
+
+        private string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("StoreInByPda");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes)
+        {
+            return SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, null, false);
+        }
+
+        public string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, context__, true);
+        }
+
+        private string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("SyncRealProductInfo");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes)
+        {
+            UpdateBillBarcodes(billType, billNo, taskIds, barcodes, null, false);
+        }
+
+        public void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            UpdateBillBarcodes(billType, billNo, taskIds, barcodes, context__, true);
+        }
+
+        private void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    del__.UpdateBillBarcodes(billType, billNo, taskIds, barcodes, context__);
+                    return;
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string UpdateFormulaOutDetail(string fromulaCode, string data)
+        {
+            return UpdateFormulaOutDetail(fromulaCode, data, null, false);
+        }
+
+        public string UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return UpdateFormulaOutDetail(fromulaCode, data, context__, true);
+        }
+
+        private string UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
         {
             if(explicitContext__ && context__ == null)
             {
@@ -802,11 +3096,125 @@ namespace PDA
                     checkTwowayOnly__("UpdateFormulaOutDetail");
                     delBase__ = getDelegate__(false);
                     PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
-                    return del__.UpdateFormulaOutDetail(formulaCode, data, context__);
+                    return del__.UpdateFormulaOutDetail(fromulaCode, data, context__);
                 }
                 catch(IceInternal.LocalExceptionWrapper ex__)
                 {
                     handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails)
+        {
+            return UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, null, false);
+        }
+
+        public string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, context__, true);
+        }
+
+        private string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("UpdateInventoryBillDetail");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string UpdateWarehouseRemovalOrder(string billNo)
+        {
+            return UpdateWarehouseRemovalOrder(billNo, null, false);
+        }
+
+        public string UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return UpdateWarehouseRemovalOrder(billNo, context__, true);
+        }
+
+        private string UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("UpdateWarehouseRemovalOrder");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.UpdateWarehouseRemovalOrder(billNo, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapper__(delBase__, ex__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public string WarehouseRemovalOrder(string barcode)
+        {
+            return WarehouseRemovalOrder(barcode, null, false);
+        }
+
+        public string WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            return WarehouseRemovalOrder(barcode, context__, true);
+        }
+
+        private string WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    checkTwowayOnly__("WarehouseRemovalOrder");
+                    delBase__ = getDelegate__(false);
+                    PDAServiceDel_ del__ = (PDAServiceDel_)delBase__;
+                    return del__.WarehouseRemovalOrder(barcode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
                 }
                 catch(Ice.LocalException ex__)
                 {
@@ -896,6 +3304,187 @@ namespace PDA
             try
             {
                 ret__ = end_AddAssertedAndDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_AddAssortedBillAndDetail> begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails)
+        {
+            return begin_AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_AddAssortedBillAndDetail> begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __AddAssortedBillAndDetail_name = "AddAssortedBillAndDetail";
+
+        public string end_AddAssortedBillAndDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __AddAssortedBillAndDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_AddAssortedBillAndDetail> begin_AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__AddAssortedBillAndDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_AddAssortedBillAndDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_AddAssortedBillAndDetail>(this, __AddAssortedBillAndDetail_name, AddAssortedBillAndDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__AddAssortedBillAndDetail_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(mathPalletCode);
+                os__.writeString(mathpalletDetails);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void AddAssortedBillAndDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_AddAssortedBillAndDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_AddAssortedBillAndDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask> begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition)
+        {
+            return begin_AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask> begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __AddKeepAccountBillIncludeTask_name = "AddKeepAccountBillIncludeTask";
+
+        public string end_AddKeepAccountBillIncludeTask(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __AddKeepAccountBillIncludeTask_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask> begin_AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__AddKeepAccountBillIncludeTask_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_AddKeepAccountBillIncludeTask>(this, __AddKeepAccountBillIncludeTask_name, AddKeepAccountBillIncludeTask_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__AddKeepAccountBillIncludeTask_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(keepAccountBillModel);
+                os__.writeInt(origionPosition);
+                os__.writeInt(targetPosition);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void AddKeepAccountBillIncludeTask_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_AddKeepAccountBillIncludeTask cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_AddKeepAccountBillIncludeTask(r__);
             }
             catch(Ice.Exception ex__)
             {
@@ -1186,6 +3775,453 @@ namespace PDA
             }
         }
 
+        public Ice.AsyncResult<PDA.Callback_PDAService_ApplyTask> begin_ApplyTask(string billNo, string user, string[] taskIds, int billType)
+        {
+            return begin_ApplyTask(billNo, user, taskIds, billType, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_ApplyTask> begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_ApplyTask(billNo, user, taskIds, billType, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_ApplyTask(billNo, user, taskIds, billType, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_ApplyTask(billNo, user, taskIds, billType, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __ApplyTask_name = "ApplyTask";
+
+        public void end_ApplyTask(Ice.AsyncResult r__)
+        {
+            end__(r__, __ApplyTask_name);
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_ApplyTask> begin_ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_ApplyTask> result__ = new IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_ApplyTask>(this, __ApplyTask_name, ApplyTask_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__ApplyTask_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(billNo);
+                os__.writeString(user);
+                os__.writeStringSeq(taskIds);
+                os__.writeInt(billType);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void ApplyTask_completed__(PDA.Callback_PDAService_ApplyTask cb__)
+        {
+            if(cb__ != null)
+            {
+                cb__();
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CancelTask> begin_CancelTask(string billNo, string[] taskIds, int billType)
+        {
+            return begin_CancelTask(billNo, taskIds, billType, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CancelTask> begin_CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_CancelTask(billNo, taskIds, billType, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_CancelTask(string billNo, string[] taskIds, int billType, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CancelTask(billNo, taskIds, billType, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CancelTask(billNo, taskIds, billType, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __CancelTask_name = "CancelTask";
+
+        public void end_CancelTask(Ice.AsyncResult r__)
+        {
+            end__(r__, __CancelTask_name);
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_CancelTask> begin_CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_CancelTask> result__ = new IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_CancelTask>(this, __CancelTask_name, CancelTask_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__CancelTask_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(billNo);
+                os__.writeStringSeq(taskIds);
+                os__.writeInt(billType);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void CancelTask_completed__(PDA.Callback_PDAService_CancelTask cb__)
+        {
+            if(cb__ != null)
+            {
+                cb__();
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CompleteInBill> begin_CompleteInBill(string productCode, string inBillNo)
+        {
+            return begin_CompleteInBill(productCode, inBillNo, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CompleteInBill> begin_CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_CompleteInBill(productCode, inBillNo, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_CompleteInBill(string productCode, string inBillNo, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CompleteInBill(productCode, inBillNo, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CompleteInBill(productCode, inBillNo, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __CompleteInBill_name = "CompleteInBill";
+
+        public string end_CompleteInBill(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __CompleteInBill_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_CompleteInBill> begin_CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__CompleteInBill_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CompleteInBill> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CompleteInBill>(this, __CompleteInBill_name, CompleteInBill_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__CompleteInBill_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.writeString(inBillNo);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void CompleteInBill_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_CompleteInBill cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_CompleteInBill(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CompleteOutBill> begin_CompleteOutBill(string productCode, string outBillNo)
+        {
+            return begin_CompleteOutBill(productCode, outBillNo, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CompleteOutBill> begin_CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_CompleteOutBill(productCode, outBillNo, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_CompleteOutBill(string productCode, string outBillNo, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CompleteOutBill(productCode, outBillNo, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CompleteOutBill(productCode, outBillNo, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __CompleteOutBill_name = "CompleteOutBill";
+
+        public string end_CompleteOutBill(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __CompleteOutBill_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_CompleteOutBill> begin_CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__CompleteOutBill_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CompleteOutBill> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CompleteOutBill>(this, __CompleteOutBill_name, CompleteOutBill_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__CompleteOutBill_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.writeString(outBillNo);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void CompleteOutBill_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_CompleteOutBill cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_CompleteOutBill(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CompleteTask> begin_CompleteTask(string billNo, string[] taskIds, int billType)
+        {
+            return begin_CompleteTask(billNo, taskIds, billType, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CompleteTask> begin_CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_CompleteTask(billNo, taskIds, billType, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_CompleteTask(string billNo, string[] taskIds, int billType, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CompleteTask(billNo, taskIds, billType, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CompleteTask(billNo, taskIds, billType, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __CompleteTask_name = "CompleteTask";
+
+        public void end_CompleteTask(Ice.AsyncResult r__)
+        {
+            end__(r__, __CompleteTask_name);
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_CompleteTask> begin_CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_CompleteTask> result__ = new IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_CompleteTask>(this, __CompleteTask_name, CompleteTask_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__CompleteTask_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(billNo);
+                os__.writeStringSeq(taskIds);
+                os__.writeInt(billType);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void CompleteTask_completed__(PDA.Callback_PDAService_CompleteTask cb__)
+        {
+            if(cb__ != null)
+            {
+                cb__();
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CreateAssortedBill> begin_CreateAssortedBill(string[] barcodes)
+        {
+            return begin_CreateAssortedBill(barcodes, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CreateAssortedBill> begin_CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_CreateAssortedBill(barcodes, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_CreateAssortedBill(string[] barcodes, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CreateAssortedBill(barcodes, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CreateAssortedBill(barcodes, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __CreateAssortedBill_name = "CreateAssortedBill";
+
+        public string end_CreateAssortedBill(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __CreateAssortedBill_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_CreateAssortedBill> begin_CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__CreateAssortedBill_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CreateAssortedBill> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CreateAssortedBill>(this, __CreateAssortedBill_name, CreateAssortedBill_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__CreateAssortedBill_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeStringSeq(barcodes);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void CreateAssortedBill_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_CreateAssortedBill cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_CreateAssortedBill(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
         public Ice.AsyncResult<PDA.Callback_PDAService_CreateAssortedBillByScanBarcode> begin_CreateAssortedBillByScanBarcode(string uniqueId, string matchPalletCode, string matchPalletPlanNo, string assortedProductModels)
         {
             return begin_CreateAssortedBillByScanBarcode(uniqueId, matchPalletCode, matchPalletPlanNo, assortedProductModels, null, false, null, null);
@@ -1263,6 +4299,653 @@ namespace PDA
             try
             {
                 ret__ = end_CreateAssortedBillByScanBarcode(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CreateOutBill> begin_CreateOutBill(string[] barcodes)
+        {
+            return begin_CreateOutBill(barcodes, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_CreateOutBill> begin_CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_CreateOutBill(barcodes, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_CreateOutBill(string[] barcodes, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CreateOutBill(barcodes, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_CreateOutBill(barcodes, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __CreateOutBill_name = "CreateOutBill";
+
+        public string end_CreateOutBill(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __CreateOutBill_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_CreateOutBill> begin_CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__CreateOutBill_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CreateOutBill> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_CreateOutBill>(this, __CreateOutBill_name, CreateOutBill_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__CreateOutBill_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeStringSeq(barcodes);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void CreateOutBill_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_CreateOutBill cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_CreateOutBill(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_DirectInBill> begin_DirectInBill(string productCode, string quantity, string locationCode)
+        {
+            return begin_DirectInBill(productCode, quantity, locationCode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_DirectInBill> begin_DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_DirectInBill(productCode, quantity, locationCode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_DirectInBill(string productCode, string quantity, string locationCode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_DirectInBill(productCode, quantity, locationCode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_DirectInBill(productCode, quantity, locationCode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __DirectInBill_name = "DirectInBill";
+
+        public string end_DirectInBill(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __DirectInBill_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_DirectInBill> begin_DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__DirectInBill_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_DirectInBill> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_DirectInBill>(this, __DirectInBill_name, DirectInBill_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__DirectInBill_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.writeString(quantity);
+                os__.writeString(locationCode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void DirectInBill_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_DirectInBill cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_DirectInBill(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_DirectOutBill> begin_DirectOutBill(string productCode, string quantity, string locationCode)
+        {
+            return begin_DirectOutBill(productCode, quantity, locationCode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_DirectOutBill> begin_DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_DirectOutBill(productCode, quantity, locationCode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_DirectOutBill(string productCode, string quantity, string locationCode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_DirectOutBill(productCode, quantity, locationCode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_DirectOutBill(productCode, quantity, locationCode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __DirectOutBill_name = "DirectOutBill";
+
+        public string end_DirectOutBill(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __DirectOutBill_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_DirectOutBill> begin_DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__DirectOutBill_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_DirectOutBill> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_DirectOutBill>(this, __DirectOutBill_name, DirectOutBill_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__DirectOutBill_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.writeString(quantity);
+                os__.writeString(locationCode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void DirectOutBill_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_DirectOutBill cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_DirectOutBill(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindInBillAllot> begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter)
+        {
+            return begin_FindInBillAllot(inBillNo, page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindInBillAllot> begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_FindInBillAllot(inBillNo, page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindInBillAllot(inBillNo, page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindInBillAllot(inBillNo, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __FindInBillAllot_name = "FindInBillAllot";
+
+        public string end_FindInBillAllot(out int total, Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __FindInBillAllot_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            total = is__.readInt();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_FindInBillAllot> begin_FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__FindInBillAllot_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindInBillAllot> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindInBillAllot>(this, __FindInBillAllot_name, FindInBillAllot_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__FindInBillAllot_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(inBillNo);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void FindInBillAllot_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_FindInBillAllot cb__, Ice.ExceptionCallback excb__)
+        {
+            int total;
+            string ret__;
+            try
+            {
+                ret__ = end_FindInBillAllot(out total, r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__, total);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindInBillByPda> begin_FindInBillByPda(string inBillNo, int page, int start, int limit)
+        {
+            return begin_FindInBillByPda(inBillNo, page, start, limit, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindInBillByPda> begin_FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_FindInBillByPda(inBillNo, page, start, limit, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_FindInBillByPda(string inBillNo, int page, int start, int limit, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindInBillByPda(inBillNo, page, start, limit, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindInBillByPda(inBillNo, page, start, limit, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __FindInBillByPda_name = "FindInBillByPda";
+
+        public string end_FindInBillByPda(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __FindInBillByPda_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_FindInBillByPda> begin_FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__FindInBillByPda_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindInBillByPda> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindInBillByPda>(this, __FindInBillByPda_name, FindInBillByPda_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__FindInBillByPda_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(inBillNo);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void FindInBillByPda_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_FindInBillByPda cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_FindInBillByPda(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillAllot> begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter)
+        {
+            return begin_FindOutBillAllot(outBillNo, page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillAllot> begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_FindOutBillAllot(outBillNo, page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindOutBillAllot(outBillNo, page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindOutBillAllot(outBillNo, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __FindOutBillAllot_name = "FindOutBillAllot";
+
+        public string end_FindOutBillAllot(out int total, Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __FindOutBillAllot_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            total = is__.readInt();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillAllot> begin_FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__FindOutBillAllot_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindOutBillAllot> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindOutBillAllot>(this, __FindOutBillAllot_name, FindOutBillAllot_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__FindOutBillAllot_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(outBillNo);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void FindOutBillAllot_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_FindOutBillAllot cb__, Ice.ExceptionCallback excb__)
+        {
+            int total;
+            string ret__;
+            try
+            {
+                ret__ = end_FindOutBillAllot(out total, r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__, total);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillByPda> begin_FindOutBillByPda(string outBillNo, int page, int start, int limit)
+        {
+            return begin_FindOutBillByPda(outBillNo, page, start, limit, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillByPda> begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_FindOutBillByPda(outBillNo, page, start, limit, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindOutBillByPda(outBillNo, page, start, limit, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_FindOutBillByPda(outBillNo, page, start, limit, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __FindOutBillByPda_name = "FindOutBillByPda";
+
+        public string end_FindOutBillByPda(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __FindOutBillByPda_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_FindOutBillByPda> begin_FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__FindOutBillByPda_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindOutBillByPda> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_FindOutBillByPda>(this, __FindOutBillByPda_name, FindOutBillByPda_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__FindOutBillByPda_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(outBillNo);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void FindOutBillByPda_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_FindOutBillByPda cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_FindOutBillByPda(r__);
             }
             catch(Ice.Exception ex__)
             {
@@ -1367,6 +5050,282 @@ namespace PDA
             }
         }
 
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetBigSmallBar> begin_GetBigSmallBar(string barCode)
+        {
+            return begin_GetBigSmallBar(barCode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetBigSmallBar> begin_GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetBigSmallBar(barCode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetBigSmallBar(string barCode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetBigSmallBar(barCode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetBigSmallBar(barCode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetBigSmallBar_name = "GetBigSmallBar";
+
+        public string end_GetBigSmallBar(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetBigSmallBar_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetBigSmallBar> begin_GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetBigSmallBar_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetBigSmallBar> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetBigSmallBar>(this, __GetBigSmallBar_name, GetBigSmallBar_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetBigSmallBar_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barCode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetBigSmallBar_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetBigSmallBar cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetBigSmallBar(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetCanInLocationPalletList> begin_GetCanInLocationPalletList(int page, int start, int limit, string product)
+        {
+            return begin_GetCanInLocationPalletList(page, start, limit, product, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetCanInLocationPalletList> begin_GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetCanInLocationPalletList(page, start, limit, product, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetCanInLocationPalletList(int page, int start, int limit, string product, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetCanInLocationPalletList(page, start, limit, product, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetCanInLocationPalletList(page, start, limit, product, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetCanInLocationPalletList_name = "GetCanInLocationPalletList";
+
+        public string end_GetCanInLocationPalletList(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetCanInLocationPalletList_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetCanInLocationPalletList> begin_GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetCanInLocationPalletList_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetCanInLocationPalletList> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetCanInLocationPalletList>(this, __GetCanInLocationPalletList_name, GetCanInLocationPalletList_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetCanInLocationPalletList_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(product);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetCanInLocationPalletList_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetCanInLocationPalletList cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetCanInLocationPalletList(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList> begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit)
+        {
+            return begin_GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList> begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetCanOutLocationStoragePalletList_name = "GetCanOutLocationStoragePalletList";
+
+        public string end_GetCanOutLocationStoragePalletList(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetCanOutLocationStoragePalletList_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList> begin_GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetCanOutLocationStoragePalletList_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetCanOutLocationStoragePalletList>(this, __GetCanOutLocationStoragePalletList_name, GetCanOutLocationStoragePalletList_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetCanOutLocationStoragePalletList_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeBool(onlyLocationInfo);
+                os__.writeString(locationName);
+                os__.writeString(workOrder);
+                os__.writeString(cargoOwnerName);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetCanOutLocationStoragePalletList_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetCanOutLocationStoragePalletList cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetCanOutLocationStoragePalletList(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
         public Ice.AsyncResult<PDA.Callback_PDAService_GetFacturers> begin_GetFacturers()
         {
             return begin_GetFacturers(null, false, null, null);
@@ -1455,24 +5414,24 @@ namespace PDA
             }
         }
 
-        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter)
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter)
         {
-            return begin_GetFormulaOut(formulaCode, page, start, limit, sort, filter, null, false, null, null);
+            return begin_GetFormulaOut(fromulaCode, page, start, limit, sort, filter, null, false, null, null);
         }
 
-        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
         {
-            return begin_GetFormulaOut(formulaCode, page, start, limit, sort, filter, ctx__, true, null, null);
+            return begin_GetFormulaOut(fromulaCode, page, start, limit, sort, filter, ctx__, true, null, null);
         }
 
-        public Ice.AsyncResult begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        public Ice.AsyncResult begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
         {
-            return begin_GetFormulaOut(formulaCode, page, start, limit, sort, filter, null, false, cb__, cookie__);
+            return begin_GetFormulaOut(fromulaCode, page, start, limit, sort, filter, null, false, cb__, cookie__);
         }
 
-        public Ice.AsyncResult begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        public Ice.AsyncResult begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
         {
-            return begin_GetFormulaOut(formulaCode, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+            return begin_GetFormulaOut(fromulaCode, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
         }
 
         private const string __GetFormulaOut_name = "GetFormulaOut";
@@ -1500,7 +5459,7 @@ namespace PDA
             return ret__;
         }
 
-        private Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOut> begin_GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
         {
             checkAsyncTwowayOnly__(__GetFormulaOut_name);
             IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetFormulaOut> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetFormulaOut>(this, __GetFormulaOut_name, GetFormulaOut_completed__, cookie__);
@@ -1512,7 +5471,7 @@ namespace PDA
             {
                 result__.prepare__(__GetFormulaOut_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
                 IceInternal.BasicStream os__ = result__.ostr__;
-                os__.writeString(formulaCode);
+                os__.writeString(fromulaCode);
                 os__.writeInt(page);
                 os__.writeInt(start);
                 os__.writeInt(limit);
@@ -1549,24 +5508,24 @@ namespace PDA
             }
         }
 
-        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string formulaCode)
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string fromulaCode)
         {
-            return begin_GetFormulaOutDetail(formulaCode, null, false, null, null);
+            return begin_GetFormulaOutDetail(fromulaCode, null, false, null, null);
         }
 
-        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
         {
-            return begin_GetFormulaOutDetail(formulaCode, ctx__, true, null, null);
+            return begin_GetFormulaOutDetail(fromulaCode, ctx__, true, null, null);
         }
 
-        public Ice.AsyncResult begin_GetFormulaOutDetail(string formulaCode, Ice.AsyncCallback cb__, object cookie__)
+        public Ice.AsyncResult begin_GetFormulaOutDetail(string fromulaCode, Ice.AsyncCallback cb__, object cookie__)
         {
-            return begin_GetFormulaOutDetail(formulaCode, null, false, cb__, cookie__);
+            return begin_GetFormulaOutDetail(fromulaCode, null, false, cb__, cookie__);
         }
 
-        public Ice.AsyncResult begin_GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        public Ice.AsyncResult begin_GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
         {
-            return begin_GetFormulaOutDetail(formulaCode, ctx__, true, cb__, cookie__);
+            return begin_GetFormulaOutDetail(fromulaCode, ctx__, true, cb__, cookie__);
         }
 
         private const string __GetFormulaOutDetail_name = "GetFormulaOutDetail";
@@ -1594,7 +5553,7 @@ namespace PDA
             return ret__;
         }
 
-        private Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetFormulaOutDetail> begin_GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
         {
             checkAsyncTwowayOnly__(__GetFormulaOutDetail_name);
             IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetFormulaOutDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetFormulaOutDetail>(this, __GetFormulaOutDetail_name, GetFormulaOutDetail_completed__, cookie__);
@@ -1606,7 +5565,7 @@ namespace PDA
             {
                 result__.prepare__(__GetFormulaOutDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
                 IceInternal.BasicStream os__ = result__.ostr__;
-                os__.writeString(formulaCode);
+                os__.writeString(fromulaCode);
                 os__.endWriteEncaps();
                 result__.send__(true);
             }
@@ -1623,6 +5582,732 @@ namespace PDA
             try
             {
                 ret__ = end_GetFormulaOutDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetInTaskDetail> begin_GetInTaskDetail(string barcode)
+        {
+            return begin_GetInTaskDetail(barcode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetInTaskDetail> begin_GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetInTaskDetail(barcode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetInTaskDetail(string barcode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetInTaskDetail(barcode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetInTaskDetail(barcode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetInTaskDetail_name = "GetInTaskDetail";
+
+        public string end_GetInTaskDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetInTaskDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetInTaskDetail> begin_GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetInTaskDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetInTaskDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetInTaskDetail>(this, __GetInTaskDetail_name, GetInTaskDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetInTaskDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barcode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetInTaskDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetInTaskDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetInTaskDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetInventoryBillDetail> begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter)
+        {
+            return begin_GetInventoryBillDetail(barCode, page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetInventoryBillDetail> begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetInventoryBillDetail(barCode, page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetInventoryBillDetail(barCode, page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetInventoryBillDetail(barCode, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetInventoryBillDetail_name = "GetInventoryBillDetail";
+
+        public string end_GetInventoryBillDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetInventoryBillDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetInventoryBillDetail> begin_GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetInventoryBillDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetInventoryBillDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetInventoryBillDetail>(this, __GetInventoryBillDetail_name, GetInventoryBillDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetInventoryBillDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barCode);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetInventoryBillDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetInventoryBillDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetInventoryBillDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetInventorySurplusDetail> begin_GetInventorySurplusDetail(string barcode)
+        {
+            return begin_GetInventorySurplusDetail(barcode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetInventorySurplusDetail> begin_GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetInventorySurplusDetail(barcode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetInventorySurplusDetail(string barcode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetInventorySurplusDetail(barcode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetInventorySurplusDetail(barcode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetInventorySurplusDetail_name = "GetInventorySurplusDetail";
+
+        public string end_GetInventorySurplusDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetInventorySurplusDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetInventorySurplusDetail> begin_GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetInventorySurplusDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetInventorySurplusDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetInventorySurplusDetail>(this, __GetInventorySurplusDetail_name, GetInventorySurplusDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetInventorySurplusDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barcode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetInventorySurplusDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetInventorySurplusDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetInventorySurplusDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetLocationByBarcode> begin_GetLocationByBarcode(string barcode)
+        {
+            return begin_GetLocationByBarcode(barcode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetLocationByBarcode> begin_GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetLocationByBarcode(barcode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetLocationByBarcode(string barcode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetLocationByBarcode(barcode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetLocationByBarcode(barcode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetLocationByBarcode_name = "GetLocationByBarcode";
+
+        public string end_GetLocationByBarcode(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetLocationByBarcode_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetLocationByBarcode> begin_GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetLocationByBarcode_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetLocationByBarcode> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetLocationByBarcode>(this, __GetLocationByBarcode_name, GetLocationByBarcode_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetLocationByBarcode_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barcode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetLocationByBarcode_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetLocationByBarcode cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetLocationByBarcode(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMachinePallets> begin_GetMachinePallets(string machineCode)
+        {
+            return begin_GetMachinePallets(machineCode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMachinePallets> begin_GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetMachinePallets(machineCode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetMachinePallets(string machineCode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMachinePallets(machineCode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMachinePallets(machineCode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetMachinePallets_name = "GetMachinePallets";
+
+        public string end_GetMachinePallets(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetMachinePallets_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetMachinePallets> begin_GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetMachinePallets_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMachinePallets> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMachinePallets>(this, __GetMachinePallets_name, GetMachinePallets_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetMachinePallets_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(machineCode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetMachinePallets_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetMachinePallets cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetMachinePallets(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMachines> begin_GetMachines(string ip)
+        {
+            return begin_GetMachines(ip, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMachines> begin_GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetMachines(ip, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetMachines(string ip, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMachines(ip, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMachines(ip, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetMachines_name = "GetMachines";
+
+        public string end_GetMachines(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetMachines_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetMachines> begin_GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetMachines_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMachines> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMachines>(this, __GetMachines_name, GetMachines_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetMachines_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(ip);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetMachines_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetMachines cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetMachines(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPallet> begin_GetMatchPallet(int page, int start, int limit, string sort, string filter)
+        {
+            return begin_GetMatchPallet(page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPallet> begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetMatchPallet(page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMatchPallet(page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMatchPallet(page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetMatchPallet_name = "GetMatchPallet";
+
+        public string end_GetMatchPallet(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetMatchPallet_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPallet> begin_GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetMatchPallet_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMatchPallet> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMatchPallet>(this, __GetMatchPallet_name, GetMatchPallet_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetMatchPallet_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetMatchPallet_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetMatchPallet cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetMatchPallet(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPalletDetail> begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter)
+        {
+            return begin_GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPalletDetail> begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetMatchPalletDetail_name = "GetMatchPalletDetail";
+
+        public string end_GetMatchPalletDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetMatchPalletDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetMatchPalletDetail> begin_GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetMatchPalletDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMatchPalletDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetMatchPalletDetail>(this, __GetMatchPalletDetail_name, GetMatchPalletDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetMatchPalletDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(matchPalletCode);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetMatchPalletDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetMatchPalletDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetMatchPalletDetail(r__);
             }
             catch(Ice.Exception ex__)
             {
@@ -1826,6 +6511,95 @@ namespace PDA
             }
         }
 
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetOutTaskDetail> begin_GetOutTaskDetail(string barcode)
+        {
+            return begin_GetOutTaskDetail(barcode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetOutTaskDetail> begin_GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetOutTaskDetail(barcode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetOutTaskDetail(string barcode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetOutTaskDetail(barcode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetOutTaskDetail(barcode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetOutTaskDetail_name = "GetOutTaskDetail";
+
+        public string end_GetOutTaskDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetOutTaskDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetOutTaskDetail> begin_GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetOutTaskDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetOutTaskDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetOutTaskDetail>(this, __GetOutTaskDetail_name, GetOutTaskDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetOutTaskDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barcode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetOutTaskDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetOutTaskDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetOutTaskDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
         public Ice.AsyncResult<PDA.Callback_PDAService_GetPalletByBarcode> begin_GetPalletByBarcode(string barcode)
         {
             return begin_GetPalletByBarcode(barcode, null, false, null, null);
@@ -1915,24 +6689,1168 @@ namespace PDA
             }
         }
 
-        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string formulaCode, string data)
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProduct> begin_GetProduct(string productCode)
         {
-            return begin_UpdateFormulaOutDetail(formulaCode, data, null, false, null, null);
+            return begin_GetProduct(productCode, null, false, null, null);
         }
 
-        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProduct> begin_GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
         {
-            return begin_UpdateFormulaOutDetail(formulaCode, data, ctx__, true, null, null);
+            return begin_GetProduct(productCode, ctx__, true, null, null);
         }
 
-        public Ice.AsyncResult begin_UpdateFormulaOutDetail(string formulaCode, string data, Ice.AsyncCallback cb__, object cookie__)
+        public Ice.AsyncResult begin_GetProduct(string productCode, Ice.AsyncCallback cb__, object cookie__)
         {
-            return begin_UpdateFormulaOutDetail(formulaCode, data, null, false, cb__, cookie__);
+            return begin_GetProduct(productCode, null, false, cb__, cookie__);
         }
 
-        public Ice.AsyncResult begin_UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        public Ice.AsyncResult begin_GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
         {
-            return begin_UpdateFormulaOutDetail(formulaCode, data, ctx__, true, cb__, cookie__);
+            return begin_GetProduct(productCode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetProduct_name = "GetProduct";
+
+        public string end_GetProduct(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetProduct_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetProduct> begin_GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetProduct_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProduct> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProduct>(this, __GetProduct_name, GetProduct_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetProduct_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetProduct_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetProduct cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetProduct(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlan> begin_GetProductionPlan(int page, int start, int limit, string sort, string filter)
+        {
+            return begin_GetProductionPlan(page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlan> begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetProductionPlan(page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetProductionPlan(page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetProductionPlan(page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetProductionPlan_name = "GetProductionPlan";
+
+        public string end_GetProductionPlan(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetProductionPlan_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlan> begin_GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetProductionPlan_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProductionPlan> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProductionPlan>(this, __GetProductionPlan_name, GetProductionPlan_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetProductionPlan_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetProductionPlan_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetProductionPlan cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetProductionPlan(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlanDetail> begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter)
+        {
+            return begin_GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlanDetail> begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetProductionPlanDetail_name = "GetProductionPlanDetail";
+
+        public string end_GetProductionPlanDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetProductionPlanDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetProductionPlanDetail> begin_GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetProductionPlanDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProductionPlanDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProductionPlanDetail>(this, __GetProductionPlanDetail_name, GetProductionPlanDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetProductionPlanDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productionPlanNo);
+                os__.writeInt(page);
+                os__.writeInt(start);
+                os__.writeInt(limit);
+                os__.writeString(sort);
+                os__.writeString(filter);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetProductionPlanDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetProductionPlanDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetProductionPlanDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProducts> begin_GetProducts(string productCode)
+        {
+            return begin_GetProducts(productCode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetProducts> begin_GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetProducts(productCode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetProducts(string productCode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetProducts(productCode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetProducts(productCode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetProducts_name = "GetProducts";
+
+        public string end_GetProducts(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetProducts_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetProducts> begin_GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetProducts_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProducts> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetProducts>(this, __GetProducts_name, GetProducts_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetProducts_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetProducts_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetProducts cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetProducts(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetRegions> begin_GetRegions()
+        {
+            return begin_GetRegions(null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetRegions> begin_GetRegions(_System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetRegions(ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetRegions(Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetRegions(null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetRegions(_System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetRegions(ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetRegions_name = "GetRegions";
+
+        public string end_GetRegions(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetRegions_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetRegions> begin_GetRegions(_System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetRegions_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetRegions> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetRegions>(this, __GetRegions_name, GetRegions_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetRegions_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetRegions_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetRegions cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetRegions(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetStations> begin_GetStations(string stationClassify)
+        {
+            return begin_GetStations(stationClassify, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetStations> begin_GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetStations(stationClassify, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetStations(string stationClassify, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetStations(stationClassify, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetStations(stationClassify, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetStations_name = "GetStations";
+
+        public string end_GetStations(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetStations_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetStations> begin_GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetStations_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetStations> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetStations>(this, __GetStations_name, GetStations_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetStations_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(stationClassify);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetStations_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetStations cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetStations(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetStockInTaskDetails> begin_GetStockInTaskDetails()
+        {
+            return begin_GetStockInTaskDetails(null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetStockInTaskDetails> begin_GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetStockInTaskDetails(ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetStockInTaskDetails(Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetStockInTaskDetails(null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetStockInTaskDetails(ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetStockInTaskDetails_name = "GetStockInTaskDetails";
+
+        public string end_GetStockInTaskDetails(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetStockInTaskDetails_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetStockInTaskDetails> begin_GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetStockInTaskDetails_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetStockInTaskDetails> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetStockInTaskDetails>(this, __GetStockInTaskDetails_name, GetStockInTaskDetails_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetStockInTaskDetails_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetStockInTaskDetails_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetStockInTaskDetails cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetStockInTaskDetails(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetStockOutTaskDetails> begin_GetStockOutTaskDetails()
+        {
+            return begin_GetStockOutTaskDetails(null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_GetStockOutTaskDetails> begin_GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_GetStockOutTaskDetails(ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_GetStockOutTaskDetails(Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetStockOutTaskDetails(null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_GetStockOutTaskDetails(ctx__, true, cb__, cookie__);
+        }
+
+        private const string __GetStockOutTaskDetails_name = "GetStockOutTaskDetails";
+
+        public string end_GetStockOutTaskDetails(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __GetStockOutTaskDetails_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_GetStockOutTaskDetails> begin_GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__GetStockOutTaskDetails_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetStockOutTaskDetails> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_GetStockOutTaskDetails>(this, __GetStockOutTaskDetails_name, GetStockOutTaskDetails_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__GetStockOutTaskDetails_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void GetStockOutTaskDetails_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_GetStockOutTaskDetails cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_GetStockOutTaskDetails(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_MachineCall> begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp)
+        {
+            return begin_MachineCall(userName, productionPlanNo, palletPosition, clientIp, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_MachineCall> begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_MachineCall(userName, productionPlanNo, palletPosition, clientIp, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_MachineCall(userName, productionPlanNo, palletPosition, clientIp, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_MachineCall(userName, productionPlanNo, palletPosition, clientIp, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __MachineCall_name = "MachineCall";
+
+        public string end_MachineCall(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __MachineCall_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_MachineCall> begin_MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__MachineCall_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_MachineCall> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_MachineCall>(this, __MachineCall_name, MachineCall_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__MachineCall_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(userName);
+                os__.writeString(productionPlanNo);
+                os__.writeInt(palletPosition);
+                os__.writeString(clientIp);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void MachineCall_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_MachineCall cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_MachineCall(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_MachineInit> begin_MachineInit(int palletPosition, string clientIp)
+        {
+            return begin_MachineInit(palletPosition, clientIp, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_MachineInit> begin_MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_MachineInit(palletPosition, clientIp, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_MachineInit(int palletPosition, string clientIp, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_MachineInit(palletPosition, clientIp, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_MachineInit(palletPosition, clientIp, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __MachineInit_name = "MachineInit";
+
+        public string end_MachineInit(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __MachineInit_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_MachineInit> begin_MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__MachineInit_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_MachineInit> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_MachineInit>(this, __MachineInit_name, MachineInit_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__MachineInit_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeInt(palletPosition);
+                os__.writeString(clientIp);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void MachineInit_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_MachineInit cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_MachineInit(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_StoreInByPda> begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes)
+        {
+            return begin_StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_StoreInByPda> begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __StoreInByPda_name = "StoreInByPda";
+
+        public string end_StoreInByPda(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __StoreInByPda_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_StoreInByPda> begin_StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__StoreInByPda_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_StoreInByPda> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_StoreInByPda>(this, __StoreInByPda_name, StoreInByPda_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__StoreInByPda_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeInt(workPositionNo);
+                os__.writeString(uniqueId);
+                os__.writeStringSeq(equipmentCodes);
+                os__.writeStringSeq(regionCodes);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void StoreInByPda_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_StoreInByPda cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_StoreInByPda(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_SyncRealProductInfo> begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes)
+        {
+            return begin_SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_SyncRealProductInfo> begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __SyncRealProductInfo_name = "SyncRealProductInfo";
+
+        public string end_SyncRealProductInfo(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __SyncRealProductInfo_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_SyncRealProductInfo> begin_SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__SyncRealProductInfo_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_SyncRealProductInfo> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_SyncRealProductInfo>(this, __SyncRealProductInfo_name, SyncRealProductInfo_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__SyncRealProductInfo_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeStringSeq(recordBarcodes);
+                os__.writeString(productCode);
+                os__.writeInt(quantity);
+                os__.writeStringSeq(realBarcodes);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void SyncRealProductInfo_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_SyncRealProductInfo cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_SyncRealProductInfo(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateBillBarcodes> begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes)
+        {
+            return begin_UpdateBillBarcodes(billType, billNo, taskIds, barcodes, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateBillBarcodes> begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_UpdateBillBarcodes(billType, billNo, taskIds, barcodes, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateBillBarcodes(billType, billNo, taskIds, barcodes, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateBillBarcodes(billType, billNo, taskIds, barcodes, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __UpdateBillBarcodes_name = "UpdateBillBarcodes";
+
+        public void end_UpdateBillBarcodes(Ice.AsyncResult r__)
+        {
+            end__(r__, __UpdateBillBarcodes_name);
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_UpdateBillBarcodes> begin_UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_UpdateBillBarcodes> result__ = new IceInternal.OnewayOutgoingAsync<PDA.Callback_PDAService_UpdateBillBarcodes>(this, __UpdateBillBarcodes_name, UpdateBillBarcodes_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__UpdateBillBarcodes_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeInt(billType);
+                os__.writeString(billNo);
+                os__.writeStringSeq(taskIds);
+                os__.writeStringSeq(barcodes);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void UpdateBillBarcodes_completed__(PDA.Callback_PDAService_UpdateBillBarcodes cb__)
+        {
+            if(cb__ != null)
+            {
+                cb__();
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string fromulaCode, string data)
+        {
+            return begin_UpdateFormulaOutDetail(fromulaCode, data, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_UpdateFormulaOutDetail(fromulaCode, data, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_UpdateFormulaOutDetail(string fromulaCode, string data, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateFormulaOutDetail(fromulaCode, data, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateFormulaOutDetail(fromulaCode, data, ctx__, true, cb__, cookie__);
         }
 
         private const string __UpdateFormulaOutDetail_name = "UpdateFormulaOutDetail";
@@ -1960,7 +7878,7 @@ namespace PDA
             return ret__;
         }
 
-        private Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        private Ice.AsyncResult<PDA.Callback_PDAService_UpdateFormulaOutDetail> begin_UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
         {
             checkAsyncTwowayOnly__(__UpdateFormulaOutDetail_name);
             IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_UpdateFormulaOutDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_UpdateFormulaOutDetail>(this, __UpdateFormulaOutDetail_name, UpdateFormulaOutDetail_completed__, cookie__);
@@ -1972,7 +7890,7 @@ namespace PDA
             {
                 result__.prepare__(__UpdateFormulaOutDetail_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
                 IceInternal.BasicStream os__ = result__.ostr__;
-                os__.writeString(formulaCode);
+                os__.writeString(fromulaCode);
                 os__.writeString(data);
                 os__.endWriteEncaps();
                 result__.send__(true);
@@ -1990,6 +7908,274 @@ namespace PDA
             try
             {
                 ret__ = end_UpdateFormulaOutDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateInventoryBillDetail> begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails)
+        {
+            return begin_UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateInventoryBillDetail> begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __UpdateInventoryBillDetail_name = "UpdateInventoryBillDetail";
+
+        public string end_UpdateInventoryBillDetail(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __UpdateInventoryBillDetail_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_UpdateInventoryBillDetail> begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__UpdateInventoryBillDetail_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_UpdateInventoryBillDetail> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_UpdateInventoryBillDetail>(this, __UpdateInventoryBillDetail_name, UpdateInventoryBillDetail_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__UpdateInventoryBillDetail_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(inventoryBillNo);
+                os__.writeString(inventroyBillDetails);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void UpdateInventoryBillDetail_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_UpdateInventoryBillDetail cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_UpdateInventoryBillDetail(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder> begin_UpdateWarehouseRemovalOrder(string billNo)
+        {
+            return begin_UpdateWarehouseRemovalOrder(billNo, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder> begin_UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_UpdateWarehouseRemovalOrder(billNo, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_UpdateWarehouseRemovalOrder(string billNo, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateWarehouseRemovalOrder(billNo, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_UpdateWarehouseRemovalOrder(billNo, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __UpdateWarehouseRemovalOrder_name = "UpdateWarehouseRemovalOrder";
+
+        public string end_UpdateWarehouseRemovalOrder(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __UpdateWarehouseRemovalOrder_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder> begin_UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__UpdateWarehouseRemovalOrder_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_UpdateWarehouseRemovalOrder>(this, __UpdateWarehouseRemovalOrder_name, UpdateWarehouseRemovalOrder_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__UpdateWarehouseRemovalOrder_name, Ice.OperationMode.Normal, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(billNo);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void UpdateWarehouseRemovalOrder_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_UpdateWarehouseRemovalOrder cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_UpdateWarehouseRemovalOrder(r__);
+            }
+            catch(Ice.Exception ex__)
+            {
+                if(excb__ != null)
+                {
+                    excb__(ex__);
+                }
+                return;
+            }
+            if(cb__ != null)
+            {
+                cb__(ret__);
+            }
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_WarehouseRemovalOrder> begin_WarehouseRemovalOrder(string barcode)
+        {
+            return begin_WarehouseRemovalOrder(barcode, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<PDA.Callback_PDAService_WarehouseRemovalOrder> begin_WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_WarehouseRemovalOrder(barcode, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_WarehouseRemovalOrder(string barcode, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_WarehouseRemovalOrder(barcode, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_WarehouseRemovalOrder(barcode, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __WarehouseRemovalOrder_name = "WarehouseRemovalOrder";
+
+        public string end_WarehouseRemovalOrder(Ice.AsyncResult r__)
+        {
+            IceInternal.OutgoingAsync outAsync__ = (IceInternal.OutgoingAsync)r__;
+            IceInternal.OutgoingAsync.check__(outAsync__, this, __WarehouseRemovalOrder_name);
+            if(!outAsync__.wait__())
+            {
+                try
+                {
+                    outAsync__.throwUserException__();
+                }
+                catch(Ice.UserException ex__)
+                {
+                    throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                }
+            }
+            string ret__;
+            IceInternal.BasicStream is__ = outAsync__.istr__;
+            is__.startReadEncaps();
+            ret__ = is__.readString();
+            is__.endReadEncaps();
+            return ret__;
+        }
+
+        private Ice.AsyncResult<PDA.Callback_PDAService_WarehouseRemovalOrder> begin_WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            checkAsyncTwowayOnly__(__WarehouseRemovalOrder_name);
+            IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_WarehouseRemovalOrder> result__ =  new IceInternal.TwowayOutgoingAsync<PDA.Callback_PDAService_WarehouseRemovalOrder>(this, __WarehouseRemovalOrder_name, WarehouseRemovalOrder_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__WarehouseRemovalOrder_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(barcode);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void WarehouseRemovalOrder_completed__(Ice.AsyncResult r__, PDA.Callback_PDAService_WarehouseRemovalOrder cb__, Ice.ExceptionCallback excb__)
+        {
+            string ret__;
+            try
+            {
+                ret__ = end_WarehouseRemovalOrder(r__);
             }
             catch(Ice.Exception ex__)
             {
@@ -2172,7 +8358,7 @@ namespace PDA
 
         string ApplyRelocation(string productCode, string billTypeCode, string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        string GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
 
         string GetMatchPalletPlan(string matchPalletPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
 
@@ -2184,11 +8370,97 @@ namespace PDA
 
         string GetAssortedBillByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        string GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> context__);
 
-        string UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__);
+        string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetRegions(_System.Collections.Generic.Dictionary<string, string> context__);
+
+        string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        void ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        void CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        void CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__);
+
+        string GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__);
+
+        void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__);
     }
 }
 
@@ -2210,6 +8482,101 @@ namespace PDA
                     os__.writeString(barCode);
                     os__.writeString(matchPalletPlanNo);
                     os__.writeString(productBarCodes);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("AddAssortedBillAndDetail", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(mathPalletCode);
+                    os__.writeString(mathpalletDetails);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("AddKeepAccountBillIncludeTask", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(keepAccountBillModel);
+                    os__.writeInt(origionPosition);
+                    os__.writeInt(targetPosition);
                 }
                 catch(Ice.LocalException ex__)
                 {
@@ -2393,6 +8760,285 @@ namespace PDA
             }
         }
 
+        public void ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("ApplyTask", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(billNo);
+                    os__.writeString(user);
+                    os__.writeStringSeq(taskIds);
+                    os__.writeInt(billType);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                if(!og__.istr().isEmpty())
+                {
+                    try
+                    {
+                        if(!ok__)
+                        {
+                            try
+                            {
+                                og__.throwUserException();
+                            }
+                            catch(Ice.UserException ex__)
+                            {
+                                throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                            }
+                        }
+                        og__.istr().skipEmptyEncaps();
+                    }
+                    catch(Ice.LocalException ex__)
+                    {
+                        throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                    }
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public void CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("CancelTask", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(billNo);
+                    os__.writeStringSeq(taskIds);
+                    os__.writeInt(billType);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                if(!og__.istr().isEmpty())
+                {
+                    try
+                    {
+                        if(!ok__)
+                        {
+                            try
+                            {
+                                og__.throwUserException();
+                            }
+                            catch(Ice.UserException ex__)
+                            {
+                                throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                            }
+                        }
+                        og__.istr().skipEmptyEncaps();
+                    }
+                    catch(Ice.LocalException ex__)
+                    {
+                        throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                    }
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("CompleteInBill", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                    os__.writeString(inBillNo);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("CompleteOutBill", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                    os__.writeString(outBillNo);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public void CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("CompleteTask", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(billNo);
+                    os__.writeStringSeq(taskIds);
+                    os__.writeInt(billType);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                if(!og__.istr().isEmpty())
+                {
+                    try
+                    {
+                        if(!ok__)
+                        {
+                            try
+                            {
+                                og__.throwUserException();
+                            }
+                            catch(Ice.UserException ex__)
+                            {
+                                throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                            }
+                        }
+                        og__.istr().skipEmptyEncaps();
+                    }
+                    catch(Ice.LocalException ex__)
+                    {
+                        throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                    }
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("CreateAssortedBill", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeStringSeq(barcodes);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
         public string CreateAssortedBillByScanBarcode(string uniqueId, string matchPalletCode, string matchPalletPlanNo, string assortedProductModels, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             IceInternal.Outgoing og__ = handler__.getOutgoing("CreateAssortedBillByScanBarcode", Ice.OperationMode.Normal, context__);
@@ -2405,6 +9051,350 @@ namespace PDA
                     os__.writeString(matchPalletCode);
                     os__.writeString(matchPalletPlanNo);
                     os__.writeString(assortedProductModels);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("CreateOutBill", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeStringSeq(barcodes);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("DirectInBill", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                    os__.writeString(quantity);
+                    os__.writeString(locationCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("DirectOutBill", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                    os__.writeString(quantity);
+                    os__.writeString(locationCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("FindInBillAllot", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(inBillNo);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    total = is__.readInt();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("FindInBillByPda", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(inBillNo);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("FindOutBillAllot", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(outBillNo);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    total = is__.readInt();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("FindOutBillByPda", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(outBillNo);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
                 }
                 catch(Ice.LocalException ex__)
                 {
@@ -2488,6 +9478,153 @@ namespace PDA
             }
         }
 
+        public string GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetBigSmallBar", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetCanInLocationPalletList", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(product);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetCanOutLocationStoragePalletList", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeBool(onlyLocationInfo);
+                    os__.writeString(locationName);
+                    os__.writeString(workOrder);
+                    os__.writeString(cargoOwnerName);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
         public string GetFacturers(_System.Collections.Generic.Dictionary<string, string> context__)
         {
             IceInternal.Outgoing og__ = handler__.getOutgoing("GetFacturers", Ice.OperationMode.Idempotent, context__);
@@ -2525,7 +9662,7 @@ namespace PDA
             }
         }
 
-        public string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             IceInternal.Outgoing og__ = handler__.getOutgoing("GetFormulaOut", Ice.OperationMode.Idempotent, context__);
             try
@@ -2533,7 +9670,7 @@ namespace PDA
                 try
                 {
                     IceInternal.BasicStream os__ = og__.ostr();
-                    os__.writeString(formulaCode);
+                    os__.writeString(fromulaCode);
                     os__.writeInt(page);
                     os__.writeInt(start);
                     os__.writeInt(limit);
@@ -2576,7 +9713,7 @@ namespace PDA
             }
         }
 
-        public string GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             IceInternal.Outgoing og__ = handler__.getOutgoing("GetFormulaOutDetail", Ice.OperationMode.Idempotent, context__);
             try
@@ -2584,7 +9721,389 @@ namespace PDA
                 try
                 {
                     IceInternal.BasicStream os__ = og__.ostr();
-                    os__.writeString(formulaCode);
+                    os__.writeString(fromulaCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetInTaskDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barcode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetInventoryBillDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barCode);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetInventorySurplusDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barcode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetLocationByBarcode", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barcode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetMachinePallets", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(machineCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetMachines", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(ip);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetMatchPallet", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetMatchPalletDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(matchPalletCode);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
                 }
                 catch(Ice.LocalException ex__)
                 {
@@ -2724,6 +10243,52 @@ namespace PDA
             }
         }
 
+        public string GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetOutTaskDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barcode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
         public string GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             IceInternal.Outgoing og__ = handler__.getOutgoing("GetPalletByBarcode", Ice.OperationMode.Idempotent, context__);
@@ -2770,7 +10335,598 @@ namespace PDA
             }
         }
 
-        public string UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetProduct", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetProductionPlan", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetProductionPlanDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productionPlanNo);
+                    os__.writeInt(page);
+                    os__.writeInt(start);
+                    os__.writeInt(limit);
+                    os__.writeString(sort);
+                    os__.writeString(filter);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetProducts", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetRegions(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetRegions", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetStations", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(stationClassify);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetStockInTaskDetails", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("GetStockOutTaskDetails", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("MachineCall", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(userName);
+                    os__.writeString(productionPlanNo);
+                    os__.writeInt(palletPosition);
+                    os__.writeString(clientIp);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("MachineInit", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeInt(palletPosition);
+                    os__.writeString(clientIp);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("StoreInByPda", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeInt(workPositionNo);
+                    os__.writeString(uniqueId);
+                    os__.writeStringSeq(equipmentCodes);
+                    os__.writeStringSeq(regionCodes);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("SyncRealProductInfo", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeStringSeq(recordBarcodes);
+                    os__.writeString(productCode);
+                    os__.writeInt(quantity);
+                    os__.writeStringSeq(realBarcodes);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("UpdateBillBarcodes", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeInt(billType);
+                    os__.writeString(billNo);
+                    os__.writeStringSeq(taskIds);
+                    os__.writeStringSeq(barcodes);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                if(!og__.istr().isEmpty())
+                {
+                    try
+                    {
+                        if(!ok__)
+                        {
+                            try
+                            {
+                                og__.throwUserException();
+                            }
+                            catch(Ice.UserException ex__)
+                            {
+                                throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                            }
+                        }
+                        og__.istr().skipEmptyEncaps();
+                    }
+                    catch(Ice.LocalException ex__)
+                    {
+                        throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                    }
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             IceInternal.Outgoing og__ = handler__.getOutgoing("UpdateFormulaOutDetail", Ice.OperationMode.Normal, context__);
             try
@@ -2778,8 +10934,147 @@ namespace PDA
                 try
                 {
                     IceInternal.BasicStream os__ = og__.ostr();
-                    os__.writeString(formulaCode);
+                    os__.writeString(fromulaCode);
                     os__.writeString(data);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("UpdateInventoryBillDetail", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(inventoryBillNo);
+                    os__.writeString(inventroyBillDetails);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("UpdateWarehouseRemovalOrder", Ice.OperationMode.Normal, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(billNo);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                try
+                {
+                    if(!ok__)
+                    {
+                        try
+                        {
+                            og__.throwUserException();
+                        }
+                        catch(Ice.UserException ex__)
+                        {
+                            throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                        }
+                    }
+                    IceInternal.BasicStream is__ = og__.istr();
+                    is__.startReadEncaps();
+                    string ret__;
+                    ret__ = is__.readString();
+                    is__.endReadEncaps();
+                    return ret__;
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public string WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("WarehouseRemovalOrder", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(barcode);
                 }
                 catch(Ice.LocalException ex__)
                 {
@@ -2843,6 +11138,96 @@ namespace PDA
                     throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
                 }
                 result__ = servant__.AddAssertedAndDetail(mathPalletCode, barCode, matchPalletPlanNo, productBarCodes, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "AddAssortedBillAndDetail", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "AddKeepAccountBillIncludeTask", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, current__);
                 return Ice.DispatchStatus.DispatchOK;
             };
             IceInternal.Direct direct__ = null;
@@ -3006,6 +11391,270 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public void ApplyTask(string billNo, string user, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "ApplyTask", Ice.OperationMode.Normal, context__);
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                servant__.ApplyTask(billNo, user, taskIds, billType, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public void CancelTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "CancelTask", Ice.OperationMode.Normal, context__);
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                servant__.CancelTask(billNo, taskIds, billType, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string CompleteInBill(string productCode, string inBillNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "CompleteInBill", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.CompleteInBill(productCode, inBillNo, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string CompleteOutBill(string productCode, string outBillNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "CompleteOutBill", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.CompleteOutBill(productCode, outBillNo, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public void CompleteTask(string billNo, string[] taskIds, int billType, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "CompleteTask", Ice.OperationMode.Normal, context__);
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                servant__.CompleteTask(billNo, taskIds, billType, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string CreateAssortedBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "CreateAssortedBill", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.CreateAssortedBill(barcodes, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
         public string CreateAssortedBillByScanBarcode(string uniqueId, string matchPalletCode, string matchPalletPlanNo, string assortedProductModels, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
@@ -3023,6 +11672,325 @@ namespace PDA
                     throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
                 }
                 result__ = servant__.CreateAssortedBillByScanBarcode(uniqueId, matchPalletCode, matchPalletPlanNo, assortedProductModels, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string CreateOutBill(string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "CreateOutBill", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.CreateOutBill(barcodes, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string DirectInBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "DirectInBill", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.DirectInBill(productCode, quantity, locationCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string DirectOutBill(string productCode, string quantity, string locationCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "DirectOutBill", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.DirectOutBill(productCode, quantity, locationCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "FindInBillAllot", Ice.OperationMode.Idempotent, context__);
+            int totalHolder__ = 0;
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.FindInBillAllot(inBillNo, page, start, limit, sort, filter, out totalHolder__, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            total = totalHolder__;
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string FindInBillByPda(string inBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "FindInBillByPda", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.FindInBillByPda(inBillNo, page, start, limit, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "FindOutBillAllot", Ice.OperationMode.Idempotent, context__);
+            int totalHolder__ = 0;
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.FindOutBillAllot(outBillNo, page, start, limit, sort, filter, out totalHolder__, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            total = totalHolder__;
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string FindOutBillByPda(string outBillNo, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "FindOutBillByPda", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.FindOutBillByPda(outBillNo, page, start, limit, current__);
                 return Ice.DispatchStatus.DispatchOK;
             };
             IceInternal.Direct direct__ = null;
@@ -3096,6 +12064,141 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetBigSmallBar(string barCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetBigSmallBar", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetBigSmallBar(barCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetCanInLocationPalletList(int page, int start, int limit, string product, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetCanInLocationPalletList", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetCanInLocationPalletList(page, start, limit, product, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetCanOutLocationStoragePalletList", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
         public string GetFacturers(_System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
@@ -3141,7 +12244,7 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
-        public string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
             initCurrent__(ref current__, "GetFormulaOut", Ice.OperationMode.Idempotent, context__);
@@ -3157,7 +12260,7 @@ namespace PDA
                 {
                     throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
                 }
-                result__ = servant__.GetFormulaOut(formulaCode, page, start, limit, sort, filter, current__);
+                result__ = servant__.GetFormulaOut(fromulaCode, page, start, limit, sort, filter, current__);
                 return Ice.DispatchStatus.DispatchOK;
             };
             IceInternal.Direct direct__ = null;
@@ -3186,7 +12289,7 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
-        public string GetFormulaOutDetail(string formulaCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetFormulaOutDetail(string fromulaCode, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
             initCurrent__(ref current__, "GetFormulaOutDetail", Ice.OperationMode.Idempotent, context__);
@@ -3202,7 +12305,367 @@ namespace PDA
                 {
                     throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
                 }
-                result__ = servant__.GetFormulaOutDetail(formulaCode, current__);
+                result__ = servant__.GetFormulaOutDetail(fromulaCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetInTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetInTaskDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetInTaskDetail(barcode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetInventoryBillDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetInventoryBillDetail(barCode, page, start, limit, sort, filter, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetInventorySurplusDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetInventorySurplusDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetInventorySurplusDetail(barcode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetLocationByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetLocationByBarcode", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetLocationByBarcode(barcode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetMachinePallets(string machineCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetMachinePallets", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetMachinePallets(machineCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetMachines(string ip, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetMachines", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetMachines(ip, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetMatchPallet(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetMatchPallet", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetMatchPallet(page, start, limit, sort, filter, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetMatchPalletDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, current__);
                 return Ice.DispatchStatus.DispatchOK;
             };
             IceInternal.Direct direct__ = null;
@@ -3321,6 +12784,51 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetOutTaskDetail(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetOutTaskDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetOutTaskDetail(barcode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
         public string GetPalletByBarcode(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
@@ -3366,7 +12874,590 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
-        public string UpdateFormulaOutDetail(string formulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__)
+        public string GetProduct(string productCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetProduct", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetProduct(productCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetProductionPlan(int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetProductionPlan", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetProductionPlan(page, start, limit, sort, filter, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetProductionPlanDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetProducts(string productCode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetProducts", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetProducts(productCode, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetRegions(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetRegions", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetRegions(current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetStations(string stationClassify, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetStations", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetStations(stationClassify, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetStockInTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetStockInTaskDetails", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetStockInTaskDetails(current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string GetStockOutTaskDetails(_System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "GetStockOutTaskDetails", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.GetStockOutTaskDetails(current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "MachineCall", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.MachineCall(userName, productionPlanNo, palletPosition, clientIp, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string MachineInit(int palletPosition, string clientIp, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "MachineInit", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.MachineInit(palletPosition, clientIp, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "StoreInByPda", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "SyncRealProductInfo", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "UpdateBillBarcodes", Ice.OperationMode.Normal, context__);
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                servant__.UpdateBillBarcodes(billType, billNo, taskIds, barcodes, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string UpdateFormulaOutDetail(string fromulaCode, string data, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
             initCurrent__(ref current__, "UpdateFormulaOutDetail", Ice.OperationMode.Normal, context__);
@@ -3382,7 +13473,142 @@ namespace PDA
                 {
                     throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
                 }
-                result__ = servant__.UpdateFormulaOutDetail(formulaCode, data, current__);
+                result__ = servant__.UpdateFormulaOutDetail(fromulaCode, data, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "UpdateInventoryBillDetail", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string UpdateWarehouseRemovalOrder(string billNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "UpdateWarehouseRemovalOrder", Ice.OperationMode.Normal, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.UpdateWarehouseRemovalOrder(billNo, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+            return result__;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public string WarehouseRemovalOrder(string barcode, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "WarehouseRemovalOrder", Ice.OperationMode.Idempotent, context__);
+            string result__ = null;
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PDAService servant__ = null;
+                try
+                {
+                    servant__ = (PDAService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                result__ = servant__.WarehouseRemovalOrder(barcode, current__);
                 return Ice.DispatchStatus.DispatchOK;
             };
             IceInternal.Direct direct__ = null;
@@ -3448,12 +13674,12 @@ namespace PDA
 
         public abstract string ApplyRelocation(string productCode, string billTypeCode, string barcode, Ice.Current current__);
 
-        public string GetPalletByBarcode(string barcode)
+        public string GetLocationByBarcode(string barcode)
         {
-            return GetPalletByBarcode(barcode, Ice.ObjectImpl.defaultCurrent);
+            return GetLocationByBarcode(barcode, Ice.ObjectImpl.defaultCurrent);
         }
 
-        public abstract string GetPalletByBarcode(string barcode, Ice.Current current__);
+        public abstract string GetLocationByBarcode(string barcode, Ice.Current current__);
 
         public string GetMatchPalletPlan(string matchPalletPlanNo, int page, int start, int limit, string sort, string filter)
         {
@@ -3490,26 +13716,327 @@ namespace PDA
 
         public abstract string GetAssortedBillByBarcode(string barcode, Ice.Current current__);
 
-        public string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter)
+        public string GetPalletByBarcode(string barcode)
         {
-            return GetFormulaOut(formulaCode, page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
+            return GetPalletByBarcode(barcode, Ice.ObjectImpl.defaultCurrent);
         }
 
-        public abstract string GetFormulaOut(string formulaCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+        public abstract string GetPalletByBarcode(string barcode, Ice.Current current__);
 
-        public string GetFormulaOutDetail(string formulaCode)
+        public string GetBigSmallBar(string barCode)
         {
-            return GetFormulaOutDetail(formulaCode, Ice.ObjectImpl.defaultCurrent);
+            return GetBigSmallBar(barCode, Ice.ObjectImpl.defaultCurrent);
         }
 
-        public abstract string GetFormulaOutDetail(string formulaCode, Ice.Current current__);
+        public abstract string GetBigSmallBar(string barCode, Ice.Current current__);
 
-        public string UpdateFormulaOutDetail(string formulaCode, string data)
+        public string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter)
         {
-            return UpdateFormulaOutDetail(formulaCode, data, Ice.ObjectImpl.defaultCurrent);
+            return GetInventoryBillDetail(barCode, page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
         }
 
-        public abstract string UpdateFormulaOutDetail(string formulaCode, string data, Ice.Current current__);
+        public abstract string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        public string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails)
+        {
+            return UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, Ice.Current current__);
+
+        public string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter)
+        {
+            return GetFormulaOut(fromulaCode, page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetFormulaOut(string fromulaCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        public string GetFormulaOutDetail(string fromulaCode)
+        {
+            return GetFormulaOutDetail(fromulaCode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetFormulaOutDetail(string fromulaCode, Ice.Current current__);
+
+        public string UpdateFormulaOutDetail(string fromulaCode, string data)
+        {
+            return UpdateFormulaOutDetail(fromulaCode, data, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string UpdateFormulaOutDetail(string fromulaCode, string data, Ice.Current current__);
+
+        public string WarehouseRemovalOrder(string barcode)
+        {
+            return WarehouseRemovalOrder(barcode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string WarehouseRemovalOrder(string barcode, Ice.Current current__);
+
+        public string UpdateWarehouseRemovalOrder(string billNo)
+        {
+            return UpdateWarehouseRemovalOrder(billNo, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string UpdateWarehouseRemovalOrder(string billNo, Ice.Current current__);
+
+        public string CreateOutBill(string[] barcodes)
+        {
+            return CreateOutBill(barcodes, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string CreateOutBill(string[] barcodes, Ice.Current current__);
+
+        public string GetInventorySurplusDetail(string barcode)
+        {
+            return GetInventorySurplusDetail(barcode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetInventorySurplusDetail(string barcode, Ice.Current current__);
+
+        public string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes)
+        {
+            return SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string SyncRealProductInfo(string[] recordBarcodes, string productCode, int quantity, string[] realBarcodes, Ice.Current current__);
+
+        public string CreateAssortedBill(string[] barcodes)
+        {
+            return CreateAssortedBill(barcodes, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string CreateAssortedBill(string[] barcodes, Ice.Current current__);
+
+        public string GetMatchPallet(int page, int start, int limit, string sort, string filter)
+        {
+            return GetMatchPallet(page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetMatchPallet(int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        public string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter)
+        {
+            return GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetMatchPalletDetail(string matchPalletCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        public string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails)
+        {
+            return AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string AddAssortedBillAndDetail(string mathPalletCode, string mathpalletDetails, Ice.Current current__);
+
+        public string GetStations(string stationClassify)
+        {
+            return GetStations(stationClassify, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetStations(string stationClassify, Ice.Current current__);
+
+        public string GetRegions()
+        {
+            return GetRegions(Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetRegions(Ice.Current current__);
+
+        public string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes)
+        {
+            return StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string StoreInByPda(int workPositionNo, string uniqueId, string[] equipmentCodes, string[] regionCodes, Ice.Current current__);
+
+        public string GetProductionPlan(int page, int start, int limit, string sort, string filter)
+        {
+            return GetProductionPlan(page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetProductionPlan(int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        public string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter)
+        {
+            return GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetProductionPlanDetail(string productionPlanNo, int page, int start, int limit, string sort, string filter, Ice.Current current__);
+
+        public string GetMachines(string ip)
+        {
+            return GetMachines(ip, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetMachines(string ip, Ice.Current current__);
+
+        public string GetMachinePallets(string machineCode)
+        {
+            return GetMachinePallets(machineCode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetMachinePallets(string machineCode, Ice.Current current__);
+
+        public string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp)
+        {
+            return MachineCall(userName, productionPlanNo, palletPosition, clientIp, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string MachineCall(string userName, string productionPlanNo, int palletPosition, string clientIp, Ice.Current current__);
+
+        public string MachineInit(int palletPosition, string clientIp)
+        {
+            return MachineInit(palletPosition, clientIp, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string MachineInit(int palletPosition, string clientIp, Ice.Current current__);
+
+        public string GetProduct(string productCode)
+        {
+            return GetProduct(productCode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetProduct(string productCode, Ice.Current current__);
+
+        public string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition)
+        {
+            return AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string AddKeepAccountBillIncludeTask(string keepAccountBillModel, int origionPosition, int targetPosition, Ice.Current current__);
+
+        public string GetProducts(string productCode)
+        {
+            return GetProducts(productCode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetProducts(string productCode, Ice.Current current__);
+
+        public string GetCanInLocationPalletList(int page, int start, int limit, string product)
+        {
+            return GetCanInLocationPalletList(page, start, limit, product, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetCanInLocationPalletList(int page, int start, int limit, string product, Ice.Current current__);
+
+        public string DirectInBill(string productCode, string quantity, string locationCode)
+        {
+            return DirectInBill(productCode, quantity, locationCode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string DirectInBill(string productCode, string quantity, string locationCode, Ice.Current current__);
+
+        public string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit)
+        {
+            return GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetCanOutLocationStoragePalletList(bool onlyLocationInfo, string locationName, string workOrder, string cargoOwnerName, int page, int start, int limit, Ice.Current current__);
+
+        public string DirectOutBill(string productCode, string quantity, string locationCode)
+        {
+            return DirectOutBill(productCode, quantity, locationCode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string DirectOutBill(string productCode, string quantity, string locationCode, Ice.Current current__);
+
+        public string FindInBillByPda(string inBillNo, int page, int start, int limit)
+        {
+            return FindInBillByPda(inBillNo, page, start, limit, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string FindInBillByPda(string inBillNo, int page, int start, int limit, Ice.Current current__);
+
+        public string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total)
+        {
+            return FindInBillAllot(inBillNo, page, start, limit, sort, filter, out total, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string FindInBillAllot(string inBillNo, int page, int start, int limit, string sort, string filter, out int total, Ice.Current current__);
+
+        public string CompleteInBill(string productCode, string inBillNo)
+        {
+            return CompleteInBill(productCode, inBillNo, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string CompleteInBill(string productCode, string inBillNo, Ice.Current current__);
+
+        public string FindOutBillByPda(string outBillNo, int page, int start, int limit)
+        {
+            return FindOutBillByPda(outBillNo, page, start, limit, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string FindOutBillByPda(string outBillNo, int page, int start, int limit, Ice.Current current__);
+
+        public string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total)
+        {
+            return FindOutBillAllot(outBillNo, page, start, limit, sort, filter, out total, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string FindOutBillAllot(string outBillNo, int page, int start, int limit, string sort, string filter, out int total, Ice.Current current__);
+
+        public string CompleteOutBill(string productCode, string outBillNo)
+        {
+            return CompleteOutBill(productCode, outBillNo, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string CompleteOutBill(string productCode, string outBillNo, Ice.Current current__);
+
+        public string GetInTaskDetail(string barcode)
+        {
+            return GetInTaskDetail(barcode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetInTaskDetail(string barcode, Ice.Current current__);
+
+        public string GetOutTaskDetail(string barcode)
+        {
+            return GetOutTaskDetail(barcode, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetOutTaskDetail(string barcode, Ice.Current current__);
+
+        public void ApplyTask(string billNo, string user, string[] taskIds, int billType)
+        {
+            ApplyTask(billNo, user, taskIds, billType, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract void ApplyTask(string billNo, string user, string[] taskIds, int billType, Ice.Current current__);
+
+        public void CancelTask(string billNo, string[] taskIds, int billType)
+        {
+            CancelTask(billNo, taskIds, billType, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract void CancelTask(string billNo, string[] taskIds, int billType, Ice.Current current__);
+
+        public void CompleteTask(string billNo, string[] taskIds, int billType)
+        {
+            CompleteTask(billNo, taskIds, billType, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract void CompleteTask(string billNo, string[] taskIds, int billType, Ice.Current current__);
+
+        public string GetStockInTaskDetails()
+        {
+            return GetStockInTaskDetails(Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetStockInTaskDetails(Ice.Current current__);
+
+        public string GetStockOutTaskDetails()
+        {
+            return GetStockOutTaskDetails(Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract string GetStockOutTaskDetails(Ice.Current current__);
+
+        public void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes)
+        {
+            UpdateBillBarcodes(billType, billNo, taskIds, barcodes, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract void UpdateBillBarcodes(int billType, string billNo, string[] taskIds, string[] barcodes, Ice.Current current__);
 
         #endregion
 
@@ -3633,7 +14160,7 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-        public static Ice.DispatchStatus GetPalletByBarcode___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        public static Ice.DispatchStatus GetLocationByBarcode___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
         {
             checkMode__(Ice.OperationMode.Idempotent, current__.mode);
             IceInternal.BasicStream is__ = inS__.istr();
@@ -3642,7 +14169,7 @@ namespace PDA
             barcode = is__.readString();
             is__.endReadEncaps();
             IceInternal.BasicStream os__ = inS__.ostr();
-            string ret__ = obj__.GetPalletByBarcode(barcode, current__);
+            string ret__ = obj__.GetLocationByBarcode(barcode, current__);
             os__.writeString(ret__);
             return Ice.DispatchStatus.DispatchOK;
         }
@@ -3755,13 +14282,43 @@ namespace PDA
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-        public static Ice.DispatchStatus GetFormulaOut___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        public static Ice.DispatchStatus GetPalletByBarcode___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
         {
             checkMode__(Ice.OperationMode.Idempotent, current__.mode);
             IceInternal.BasicStream is__ = inS__.istr();
             is__.startReadEncaps();
-            string formulaCode;
-            formulaCode = is__.readString();
+            string barcode;
+            barcode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetPalletByBarcode(barcode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetBigSmallBar___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string barCode;
+            barCode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetBigSmallBar(barCode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetInventoryBillDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string barCode;
+            barCode = is__.readString();
             int page;
             page = is__.readInt();
             int start;
@@ -3774,7 +14331,49 @@ namespace PDA
             filter = is__.readString();
             is__.endReadEncaps();
             IceInternal.BasicStream os__ = inS__.ostr();
-            string ret__ = obj__.GetFormulaOut(formulaCode, page, start, limit, sort, filter, current__);
+            string ret__ = obj__.GetInventoryBillDetail(barCode, page, start, limit, sort, filter, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus UpdateInventoryBillDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string inventoryBillNo;
+            inventoryBillNo = is__.readString();
+            string inventroyBillDetails;
+            inventroyBillDetails = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetFormulaOut___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string fromulaCode;
+            fromulaCode = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetFormulaOut(fromulaCode, page, start, limit, sort, filter, current__);
             os__.writeString(ret__);
             return Ice.DispatchStatus.DispatchOK;
         }
@@ -3785,11 +14384,11 @@ namespace PDA
             checkMode__(Ice.OperationMode.Idempotent, current__.mode);
             IceInternal.BasicStream is__ = inS__.istr();
             is__.startReadEncaps();
-            string formulaCode;
-            formulaCode = is__.readString();
+            string fromulaCode;
+            fromulaCode = is__.readString();
             is__.endReadEncaps();
             IceInternal.BasicStream os__ = inS__.ostr();
-            string ret__ = obj__.GetFormulaOutDetail(formulaCode, current__);
+            string ret__ = obj__.GetFormulaOutDetail(fromulaCode, current__);
             os__.writeString(ret__);
             return Ice.DispatchStatus.DispatchOK;
         }
@@ -3800,32 +14399,788 @@ namespace PDA
             checkMode__(Ice.OperationMode.Normal, current__.mode);
             IceInternal.BasicStream is__ = inS__.istr();
             is__.startReadEncaps();
-            string formulaCode;
-            formulaCode = is__.readString();
+            string fromulaCode;
+            fromulaCode = is__.readString();
             string data;
             data = is__.readString();
             is__.endReadEncaps();
             IceInternal.BasicStream os__ = inS__.ostr();
-            string ret__ = obj__.UpdateFormulaOutDetail(formulaCode, data, current__);
+            string ret__ = obj__.UpdateFormulaOutDetail(fromulaCode, data, current__);
             os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus WarehouseRemovalOrder___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string barcode;
+            barcode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.WarehouseRemovalOrder(barcode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus UpdateWarehouseRemovalOrder___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string billNo;
+            billNo = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.UpdateWarehouseRemovalOrder(billNo, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus CreateOutBill___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string[] barcodes;
+            barcodes = is__.readStringSeq();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.CreateOutBill(barcodes, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetInventorySurplusDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string barcode;
+            barcode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetInventorySurplusDetail(barcode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus SyncRealProductInfo___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string[] recordBarcodes;
+            recordBarcodes = is__.readStringSeq();
+            string productCode;
+            productCode = is__.readString();
+            int quantity;
+            quantity = is__.readInt();
+            string[] realBarcodes;
+            realBarcodes = is__.readStringSeq();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.SyncRealProductInfo(recordBarcodes, productCode, quantity, realBarcodes, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus CreateAssortedBill___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string[] barcodes;
+            barcodes = is__.readStringSeq();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.CreateAssortedBill(barcodes, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetMatchPallet___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetMatchPallet(page, start, limit, sort, filter, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetMatchPalletDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string matchPalletCode;
+            matchPalletCode = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetMatchPalletDetail(matchPalletCode, page, start, limit, sort, filter, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus AddAssortedBillAndDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string mathPalletCode;
+            mathPalletCode = is__.readString();
+            string mathpalletDetails;
+            mathpalletDetails = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.AddAssortedBillAndDetail(mathPalletCode, mathpalletDetails, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetStations___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string stationClassify;
+            stationClassify = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetStations(stationClassify, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetRegions___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            inS__.istr().skipEmptyEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetRegions(current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus StoreInByPda___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            int workPositionNo;
+            workPositionNo = is__.readInt();
+            string uniqueId;
+            uniqueId = is__.readString();
+            string[] equipmentCodes;
+            equipmentCodes = is__.readStringSeq();
+            string[] regionCodes;
+            regionCodes = is__.readStringSeq();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.StoreInByPda(workPositionNo, uniqueId, equipmentCodes, regionCodes, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetProductionPlan___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetProductionPlan(page, start, limit, sort, filter, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetProductionPlanDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productionPlanNo;
+            productionPlanNo = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetProductionPlanDetail(productionPlanNo, page, start, limit, sort, filter, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetMachines___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string ip;
+            ip = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetMachines(ip, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetMachinePallets___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string machineCode;
+            machineCode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetMachinePallets(machineCode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus MachineCall___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string userName;
+            userName = is__.readString();
+            string productionPlanNo;
+            productionPlanNo = is__.readString();
+            int palletPosition;
+            palletPosition = is__.readInt();
+            string clientIp;
+            clientIp = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.MachineCall(userName, productionPlanNo, palletPosition, clientIp, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus MachineInit___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            int palletPosition;
+            palletPosition = is__.readInt();
+            string clientIp;
+            clientIp = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.MachineInit(palletPosition, clientIp, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetProduct___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetProduct(productCode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus AddKeepAccountBillIncludeTask___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string keepAccountBillModel;
+            keepAccountBillModel = is__.readString();
+            int origionPosition;
+            origionPosition = is__.readInt();
+            int targetPosition;
+            targetPosition = is__.readInt();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.AddKeepAccountBillIncludeTask(keepAccountBillModel, origionPosition, targetPosition, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetProducts___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetProducts(productCode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetCanInLocationPalletList___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string product;
+            product = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetCanInLocationPalletList(page, start, limit, product, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus DirectInBill___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            string quantity;
+            quantity = is__.readString();
+            string locationCode;
+            locationCode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.DirectInBill(productCode, quantity, locationCode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetCanOutLocationStoragePalletList___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            bool onlyLocationInfo;
+            onlyLocationInfo = is__.readBool();
+            string locationName;
+            locationName = is__.readString();
+            string workOrder;
+            workOrder = is__.readString();
+            string cargoOwnerName;
+            cargoOwnerName = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetCanOutLocationStoragePalletList(onlyLocationInfo, locationName, workOrder, cargoOwnerName, page, start, limit, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus DirectOutBill___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            string quantity;
+            quantity = is__.readString();
+            string locationCode;
+            locationCode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.DirectOutBill(productCode, quantity, locationCode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus FindInBillByPda___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string inBillNo;
+            inBillNo = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.FindInBillByPda(inBillNo, page, start, limit, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus FindInBillAllot___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string inBillNo;
+            inBillNo = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            int total;
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.FindInBillAllot(inBillNo, page, start, limit, sort, filter, out total, current__);
+            os__.writeInt(total);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus CompleteInBill___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            string inBillNo;
+            inBillNo = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.CompleteInBill(productCode, inBillNo, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus FindOutBillByPda___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string outBillNo;
+            outBillNo = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.FindOutBillByPda(outBillNo, page, start, limit, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus FindOutBillAllot___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string outBillNo;
+            outBillNo = is__.readString();
+            int page;
+            page = is__.readInt();
+            int start;
+            start = is__.readInt();
+            int limit;
+            limit = is__.readInt();
+            string sort;
+            sort = is__.readString();
+            string filter;
+            filter = is__.readString();
+            is__.endReadEncaps();
+            int total;
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.FindOutBillAllot(outBillNo, page, start, limit, sort, filter, out total, current__);
+            os__.writeInt(total);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus CompleteOutBill___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            string outBillNo;
+            outBillNo = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.CompleteOutBill(productCode, outBillNo, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetInTaskDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string barcode;
+            barcode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetInTaskDetail(barcode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetOutTaskDetail___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string barcode;
+            barcode = is__.readString();
+            is__.endReadEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetOutTaskDetail(barcode, current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus ApplyTask___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string billNo;
+            billNo = is__.readString();
+            string user;
+            user = is__.readString();
+            string[] taskIds;
+            taskIds = is__.readStringSeq();
+            int billType;
+            billType = is__.readInt();
+            is__.endReadEncaps();
+            obj__.ApplyTask(billNo, user, taskIds, billType, current__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus CancelTask___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string billNo;
+            billNo = is__.readString();
+            string[] taskIds;
+            taskIds = is__.readStringSeq();
+            int billType;
+            billType = is__.readInt();
+            is__.endReadEncaps();
+            obj__.CancelTask(billNo, taskIds, billType, current__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus CompleteTask___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string billNo;
+            billNo = is__.readString();
+            string[] taskIds;
+            taskIds = is__.readStringSeq();
+            int billType;
+            billType = is__.readInt();
+            is__.endReadEncaps();
+            obj__.CompleteTask(billNo, taskIds, billType, current__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetStockInTaskDetails___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            inS__.istr().skipEmptyEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetStockInTaskDetails(current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus GetStockOutTaskDetails___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            inS__.istr().skipEmptyEncaps();
+            IceInternal.BasicStream os__ = inS__.ostr();
+            string ret__ = obj__.GetStockOutTaskDetails(current__);
+            os__.writeString(ret__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus UpdateBillBarcodes___(PDAService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Normal, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            int billType;
+            billType = is__.readInt();
+            string billNo;
+            billNo = is__.readString();
+            string[] taskIds;
+            taskIds = is__.readStringSeq();
+            string[] barcodes;
+            barcodes = is__.readStringSeq();
+            is__.endReadEncaps();
+            obj__.UpdateBillBarcodes(billType, billNo, taskIds, barcodes, current__);
             return Ice.DispatchStatus.DispatchOK;
         }
 
         private static string[] all__ =
         {
             "AddAssertedAndDetail",
+            "AddAssortedBillAndDetail",
+            "AddKeepAccountBillIncludeTask",
             "ApplyRelocation",
             "ApplyStoreIn",
             "ApplyStoreOut",
+            "ApplyTask",
+            "CancelTask",
+            "CompleteInBill",
+            "CompleteOutBill",
+            "CompleteTask",
+            "CreateAssortedBill",
             "CreateAssortedBillByScanBarcode",
+            "CreateOutBill",
+            "DirectInBill",
+            "DirectOutBill",
+            "FindInBillAllot",
+            "FindInBillByPda",
+            "FindOutBillAllot",
+            "FindOutBillByPda",
             "GetAssortedBillByBarcode",
+            "GetBigSmallBar",
+            "GetCanInLocationPalletList",
+            "GetCanOutLocationStoragePalletList",
             "GetFacturers",
             "GetFormulaOut",
             "GetFormulaOutDetail",
+            "GetInTaskDetail",
+            "GetInventoryBillDetail",
+            "GetInventorySurplusDetail",
+            "GetLocationByBarcode",
+            "GetMachinePallets",
+            "GetMachines",
+            "GetMatchPallet",
+            "GetMatchPalletDetail",
             "GetMatchPalletPlan",
             "GetMatchPalletPlanDetail",
+            "GetOutTaskDetail",
             "GetPalletByBarcode",
+            "GetProduct",
+            "GetProductionPlan",
+            "GetProductionPlanDetail",
+            "GetProducts",
+            "GetRegions",
+            "GetStations",
+            "GetStockInTaskDetails",
+            "GetStockOutTaskDetails",
+            "MachineCall",
+            "MachineInit",
+            "StoreInByPda",
+            "SyncRealProductInfo",
+            "UpdateBillBarcodes",
             "UpdateFormulaOutDetail",
+            "UpdateInventoryBillDetail",
+            "UpdateWarehouseRemovalOrder",
+            "WarehouseRemovalOrder",
             "ice_id",
             "ice_ids",
             "ice_isA",
@@ -3848,65 +15203,237 @@ namespace PDA
                 }
                 case 1:
                 {
-                    return ApplyRelocation___(this, inS__, current__);
+                    return AddAssortedBillAndDetail___(this, inS__, current__);
                 }
                 case 2:
                 {
-                    return ApplyStoreIn___(this, inS__, current__);
+                    return AddKeepAccountBillIncludeTask___(this, inS__, current__);
                 }
                 case 3:
                 {
-                    return ApplyStoreOut___(this, inS__, current__);
+                    return ApplyRelocation___(this, inS__, current__);
                 }
                 case 4:
                 {
-                    return CreateAssortedBillByScanBarcode___(this, inS__, current__);
+                    return ApplyStoreIn___(this, inS__, current__);
                 }
                 case 5:
                 {
-                    return GetAssortedBillByBarcode___(this, inS__, current__);
+                    return ApplyStoreOut___(this, inS__, current__);
                 }
                 case 6:
                 {
-                    return GetFacturers___(this, inS__, current__);
+                    return ApplyTask___(this, inS__, current__);
                 }
                 case 7:
                 {
-                    return GetFormulaOut___(this, inS__, current__);
+                    return CancelTask___(this, inS__, current__);
                 }
                 case 8:
                 {
-                    return GetFormulaOutDetail___(this, inS__, current__);
+                    return CompleteInBill___(this, inS__, current__);
                 }
                 case 9:
                 {
-                    return GetMatchPalletPlan___(this, inS__, current__);
+                    return CompleteOutBill___(this, inS__, current__);
                 }
                 case 10:
                 {
-                    return GetMatchPalletPlanDetail___(this, inS__, current__);
+                    return CompleteTask___(this, inS__, current__);
                 }
                 case 11:
                 {
-                    return GetPalletByBarcode___(this, inS__, current__);
+                    return CreateAssortedBill___(this, inS__, current__);
                 }
                 case 12:
                 {
-                    return UpdateFormulaOutDetail___(this, inS__, current__);
+                    return CreateAssortedBillByScanBarcode___(this, inS__, current__);
                 }
                 case 13:
                 {
-                    return ice_id___(this, inS__, current__);
+                    return CreateOutBill___(this, inS__, current__);
                 }
                 case 14:
                 {
-                    return ice_ids___(this, inS__, current__);
+                    return DirectInBill___(this, inS__, current__);
                 }
                 case 15:
                 {
-                    return ice_isA___(this, inS__, current__);
+                    return DirectOutBill___(this, inS__, current__);
                 }
                 case 16:
+                {
+                    return FindInBillAllot___(this, inS__, current__);
+                }
+                case 17:
+                {
+                    return FindInBillByPda___(this, inS__, current__);
+                }
+                case 18:
+                {
+                    return FindOutBillAllot___(this, inS__, current__);
+                }
+                case 19:
+                {
+                    return FindOutBillByPda___(this, inS__, current__);
+                }
+                case 20:
+                {
+                    return GetAssortedBillByBarcode___(this, inS__, current__);
+                }
+                case 21:
+                {
+                    return GetBigSmallBar___(this, inS__, current__);
+                }
+                case 22:
+                {
+                    return GetCanInLocationPalletList___(this, inS__, current__);
+                }
+                case 23:
+                {
+                    return GetCanOutLocationStoragePalletList___(this, inS__, current__);
+                }
+                case 24:
+                {
+                    return GetFacturers___(this, inS__, current__);
+                }
+                case 25:
+                {
+                    return GetFormulaOut___(this, inS__, current__);
+                }
+                case 26:
+                {
+                    return GetFormulaOutDetail___(this, inS__, current__);
+                }
+                case 27:
+                {
+                    return GetInTaskDetail___(this, inS__, current__);
+                }
+                case 28:
+                {
+                    return GetInventoryBillDetail___(this, inS__, current__);
+                }
+                case 29:
+                {
+                    return GetInventorySurplusDetail___(this, inS__, current__);
+                }
+                case 30:
+                {
+                    return GetLocationByBarcode___(this, inS__, current__);
+                }
+                case 31:
+                {
+                    return GetMachinePallets___(this, inS__, current__);
+                }
+                case 32:
+                {
+                    return GetMachines___(this, inS__, current__);
+                }
+                case 33:
+                {
+                    return GetMatchPallet___(this, inS__, current__);
+                }
+                case 34:
+                {
+                    return GetMatchPalletDetail___(this, inS__, current__);
+                }
+                case 35:
+                {
+                    return GetMatchPalletPlan___(this, inS__, current__);
+                }
+                case 36:
+                {
+                    return GetMatchPalletPlanDetail___(this, inS__, current__);
+                }
+                case 37:
+                {
+                    return GetOutTaskDetail___(this, inS__, current__);
+                }
+                case 38:
+                {
+                    return GetPalletByBarcode___(this, inS__, current__);
+                }
+                case 39:
+                {
+                    return GetProduct___(this, inS__, current__);
+                }
+                case 40:
+                {
+                    return GetProductionPlan___(this, inS__, current__);
+                }
+                case 41:
+                {
+                    return GetProductionPlanDetail___(this, inS__, current__);
+                }
+                case 42:
+                {
+                    return GetProducts___(this, inS__, current__);
+                }
+                case 43:
+                {
+                    return GetRegions___(this, inS__, current__);
+                }
+                case 44:
+                {
+                    return GetStations___(this, inS__, current__);
+                }
+                case 45:
+                {
+                    return GetStockInTaskDetails___(this, inS__, current__);
+                }
+                case 46:
+                {
+                    return GetStockOutTaskDetails___(this, inS__, current__);
+                }
+                case 47:
+                {
+                    return MachineCall___(this, inS__, current__);
+                }
+                case 48:
+                {
+                    return MachineInit___(this, inS__, current__);
+                }
+                case 49:
+                {
+                    return StoreInByPda___(this, inS__, current__);
+                }
+                case 50:
+                {
+                    return SyncRealProductInfo___(this, inS__, current__);
+                }
+                case 51:
+                {
+                    return UpdateBillBarcodes___(this, inS__, current__);
+                }
+                case 52:
+                {
+                    return UpdateFormulaOutDetail___(this, inS__, current__);
+                }
+                case 53:
+                {
+                    return UpdateInventoryBillDetail___(this, inS__, current__);
+                }
+                case 54:
+                {
+                    return UpdateWarehouseRemovalOrder___(this, inS__, current__);
+                }
+                case 55:
+                {
+                    return WarehouseRemovalOrder___(this, inS__, current__);
+                }
+                case 56:
+                {
+                    return ice_id___(this, inS__, current__);
+                }
+                case 57:
+                {
+                    return ice_ids___(this, inS__, current__);
+                }
+                case 58:
+                {
+                    return ice_isA___(this, inS__, current__);
+                }
+                case 59:
                 {
                     return ice_ping___(this, inS__, current__);
                 }

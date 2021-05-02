@@ -5,7 +5,6 @@ using Fusion.LYYC.PDA.Scanner.Model;
 using Newtonsoft.Json;
 using Fusion.LYYC.PDA.Scanner.Proxy;
 using Fusion.LYYC.PDA.Scanner.Interface;
-using Fusion.LYYC.PDA.Scanner.Model;
 
 namespace Fusion.LYYC.PDA.Scanner.Service
 {

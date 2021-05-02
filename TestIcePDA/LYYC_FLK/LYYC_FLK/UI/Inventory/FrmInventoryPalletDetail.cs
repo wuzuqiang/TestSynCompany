@@ -11,12 +11,11 @@ using Fusion.LYYC.PDA.Scanner;
 
 namespace Fusion.LYYC.PDA.Scanner.UI.Assorted
 {
-    public partial class FrmEmptyPalletStoreOut : Form
+    public partial class FrmInventoryPalletDetail : Form
     {
         private FrmMain FrmMain;
-        private FrmGetMatchPalletCode FrmScanBarCode;
-        private AssortedService AssortedService = new AssortedService();
-        public FrmEmptyPalletStoreOut()
+        public List<InventoryBillDetailModel> listInventoryBillDetail;
+        public FrmInventoryPalletDetail()
         {
             InitializeComponent();
         }
@@ -25,6 +24,15 @@ namespace Fusion.LYYC.PDA.Scanner.UI.Assorted
         {
             FrmMain.Show();
             this.Hide();
+        }
+
+        private void btnComplete_Click(object sender, EventArgs e)
+        {
+            //foreach(Inventory)
+        }
+
+        private void FrmInventoryPalletDetail_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -118,7 +118,6 @@
             this.MaximizeBox = false;
             this.Name = "FrmEmptyPalletStoreOut";
             this.Text = "空托盘组出库";
-            this.Closed += new System.EventHandler(this.FrmAssorted_Closed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
