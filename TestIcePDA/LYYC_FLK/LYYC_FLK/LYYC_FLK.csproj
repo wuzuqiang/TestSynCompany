@@ -81,6 +81,7 @@
     <Compile Include="FrmScanCode.designer.cs">
       <DependentUpon>FrmScanCode.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generated\Slice\PartsOfAndroidService.cs" />
     <Compile Include="Generated\Slice\PDAService.cs" />
     <Compile Include="Glob.cs" />
     <Compile Include="IceFramework\AbstractIceRuntime.cs" />
@@ -179,6 +180,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Slice\PartsOfAndroidService.ice" />
     <None Include="Slice\PDAService.ice" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -10,10 +10,10 @@ namespace Fusion.LYYC.PDA.Scanner.Service
 {
     public class InventoryService
     {
-        PDAServiceIceProxy PDAServiceIceProxy = null;
+        PartsOfAndroidServiceIceProxy PartsOfAndroidServiceIceProxy = null;
         public InventoryService()
         {
-            PDAServiceIceProxy = new PDAServiceIceProxy();
+            PartsOfAndroidServiceIceProxy = new PartsOfAndroidServiceIceProxy();
         }
 
         public List<InventoryBillDetailModel> GetInventoryBillDetail(string barCode)
@@ -21,7 +21,7 @@ namespace Fusion.LYYC.PDA.Scanner.Service
             var list = new List<InventoryBillDetailModel>();
             try
             {
-                var standardDataModel = PDAServiceIceProxy.GetInventoryBillDetail(barCode, 1, 0, int.MaxValue, "", "");
+                var standardDataModel = PartsOfAndroidServiceIceProxy.GetInventoryBillDetail(barCode, 1, 0, int.MaxValue, "", "");
                 if (!standardDataModel.success)
                 {
                     throw new Exception(standardDataModel.msg);
