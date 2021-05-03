@@ -186,6 +186,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Proxy\PDAServiceIceProxy.cs" />
+    <Compile Include="Proxy\PartsOfAndroidServiceIceProxy.cs" />
     <Compile Include="Service\AssortedService.cs" />
     <Compile Include="Service\InventoryService.cs" />
     <Compile Include="Tools\HttpTool.cs" />
@@ -291,7 +292,7 @@
   -->
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ZerocIce_Enabled="True" ZerocIce_OutputDir=".\Generated" ZerocIce_Prefix="True" ZerocIce_IncludePath="E:\repository\TestSynCompany\TestIcePDA\LYYC_FLK\LYYC_FLK\Slice" />
+      <UserProperties ZerocIce_IncludePath="E:\repository\TestSynCompany\TestIcePDA\LYYC_FLK\LYYC_FLK\Slice" ZerocIce_Prefix="True" ZerocIce_OutputDir=".\Generated" ZerocIce_Enabled="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
