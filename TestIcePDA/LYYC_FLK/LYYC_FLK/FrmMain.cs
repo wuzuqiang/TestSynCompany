@@ -11,12 +11,11 @@ namespace Fusion.LYYC.PDA.Scanner
         public FrmMain()
         {
             InitializeComponent();
-
-            FrmAssorted = new FrmAssorted(this);
         }
 
         private void btnAssorted_Click(object sender, EventArgs e)
         {
+            FrmAssorted = new FrmAssorted(this);
             FrmAssorted.Show();
             this.Hide();
         }
