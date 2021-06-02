@@ -10,18 +10,28 @@ namespace TestBasic
 	{
 		static void Main(string[] args)
 		{
+			Fun01();
+
+			Console.ReadLine();
+		}
+
+		public void Fun()
+		{
 			Console.WriteLine("123456789".Substring(2, 2)); //34//索引是从0开始的。
 			Console.WriteLine("123456789".Substring(0, 1)); //1
 			Console.ReadLine();
 
 
-			string[] array = new string[] { "1", "2", "one", "two"};
+			string[] array = new string[] { "1", "2", "one", "two" };
 			Console.WriteLine(string.Join("、", array));
 			Console.WriteLine(string.Join("、", new string[] { }));
-			Console.WriteLine(string.Join("、", new string[] { "1"}));
+			Console.WriteLine(string.Join("、", new string[] { "1" }));
+		}
 
-
-			Console.ReadLine();
+		public static void Fun01()
+		{
+			bool isExist = false;
+			Console.WriteLine(isExist.ToString());
 		}
 	}
 }
