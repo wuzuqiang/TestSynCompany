@@ -35,5 +35,9 @@ namespace Fusion.LYYC.PDA.Scanner.Proxy
             return JsonConvert.DeserializeObject<StandardDataModel>(result);
         }
 
+        public void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo)
+        {   //盘点站台是2114 
+            getProxy().StoreOutMutiPallet(productCode, quantity, stationPositionNo);
+        }
     }
 }

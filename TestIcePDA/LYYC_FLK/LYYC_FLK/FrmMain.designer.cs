@@ -72,6 +72,7 @@
             this.button2.Size = new System.Drawing.Size(167, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "空托盘出库";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -80,6 +81,7 @@
             this.button3.Size = new System.Drawing.Size(167, 36);
             this.button3.TabIndex = 6;
             this.button3.Text = "退出系统";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FrmMain
             // 
@@ -95,6 +97,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmMain";
             this.Text = "智能手持系统";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

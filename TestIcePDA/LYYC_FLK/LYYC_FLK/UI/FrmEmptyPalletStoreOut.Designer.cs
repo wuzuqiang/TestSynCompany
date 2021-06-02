@@ -30,13 +30,13 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txtPalletQuatity = new System.Windows.Forms.NumericUpDown();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPalletQuatity)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -57,13 +57,13 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "出库数量（组）：";
             // 
-            // numericUpDown1
+            // txtPalletQuatity
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(30, 57);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 21);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.txtPalletQuatity.Location = new System.Drawing.Point(30, 57);
+            this.txtPalletQuatity.Name = "txtPalletQuatity";
+            this.txtPalletQuatity.Size = new System.Drawing.Size(120, 21);
+            this.txtPalletQuatity.TabIndex = 7;
+            this.txtPalletQuatity.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -76,6 +76,7 @@
             this.btnExit.Size = new System.Drawing.Size(90, 26);
             this.btnExit.TabIndex = 9;
             this.btnExit.Text = "<-返回";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnNext
             // 
@@ -84,6 +85,7 @@
             this.btnNext.Size = new System.Drawing.Size(90, 26);
             this.btnNext.TabIndex = 8;
             this.btnNext.Text = "出库";
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // label2
             // 
@@ -112,14 +114,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.txtPalletQuatity);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "FrmEmptyPalletStoreOut";
             this.Text = "空托盘组出库";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPalletQuatity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +131,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown txtPalletQuatity;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label2;

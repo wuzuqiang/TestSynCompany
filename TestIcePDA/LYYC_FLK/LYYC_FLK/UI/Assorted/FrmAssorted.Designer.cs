@@ -48,6 +48,7 @@
             this.colplanDate = new System.Windows.Forms.ColumnHeader();
             this.colMatchPalletPlanNo = new System.Windows.Forms.ColumnHeader();
             this.cloMathPalletCode = new System.Windows.Forms.ColumnHeader();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tpgAssorted.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +59,8 @@
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 261);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // tabControl1
             // 
@@ -88,30 +91,34 @@
             this.tpgAssorted.Location = new System.Drawing.Point(4, 23);
             this.tpgAssorted.Name = "tpgAssorted";
             this.tpgAssorted.Size = new System.Drawing.Size(227, 221);
+            this.tpgAssorted.TabIndex = 0;
             this.tpgAssorted.Text = "配盘计划";
             // 
             // PageCount
             // 
-            this.PageCount.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular);
+            this.PageCount.Font = new System.Drawing.Font("宋体", 12F);
             this.PageCount.Location = new System.Drawing.Point(33, 175);
             this.PageCount.Name = "PageCount";
             this.PageCount.Size = new System.Drawing.Size(16, 16);
+            this.PageCount.TabIndex = 0;
             this.PageCount.Text = "0";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular);
+            this.label2.Font = new System.Drawing.Font("宋体", 12F);
             this.label2.Location = new System.Drawing.Point(51, 196);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 16);
+            this.label2.TabIndex = 1;
             this.label2.Text = "页";
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular);
+            this.label5.Font = new System.Drawing.Font("宋体", 12F);
             this.label5.Location = new System.Drawing.Point(-2, 195);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 16);
+            this.label5.TabIndex = 2;
             this.label5.Text = "共:";
             // 
             // btnBeforePage
@@ -152,33 +159,36 @@
             // 
             // TotalPage
             // 
-            this.TotalPage.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular);
+            this.TotalPage.Font = new System.Drawing.Font("宋体", 12F);
             this.TotalPage.Location = new System.Drawing.Point(32, 196);
             this.TotalPage.Name = "TotalPage";
             this.TotalPage.Size = new System.Drawing.Size(16, 16);
+            this.TotalPage.TabIndex = 17;
             this.TotalPage.Text = "0";
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular);
+            this.label4.Font = new System.Drawing.Font("宋体", 12F);
             this.label4.Location = new System.Drawing.Point(51, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(24, 16);
+            this.label4.TabIndex = 18;
             this.label4.Text = "页";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular);
+            this.label3.Font = new System.Drawing.Font("宋体", 12F);
             this.label3.Location = new System.Drawing.Point(0, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 16);
+            this.label3.TabIndex = 19;
             this.label3.Text = "第:";
             // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(3, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(164, 23);
+            this.txtSearch.Size = new System.Drawing.Size(164, 22);
             this.txtSearch.TabIndex = 5;
             // 
             // btnSearch
@@ -192,10 +202,11 @@
             // 
             // lvwMathPalletList
             // 
-            this.lvwMathPalletList.Columns.Add(this.cloMathPalletName);
-            this.lvwMathPalletList.Columns.Add(this.colplanDate);
-            this.lvwMathPalletList.Columns.Add(this.colMatchPalletPlanNo);
-            this.lvwMathPalletList.Columns.Add(this.cloMathPalletCode);
+            this.lvwMathPalletList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.cloMathPalletName,
+            this.colplanDate,
+            this.colMatchPalletPlanNo,
+            this.cloMathPalletCode});
             this.lvwMathPalletList.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.lvwMathPalletList.FullRowSelect = true;
             this.lvwMathPalletList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -203,6 +214,7 @@
             this.lvwMathPalletList.Name = "lvwMathPalletList";
             this.lvwMathPalletList.Size = new System.Drawing.Size(227, 129);
             this.lvwMathPalletList.TabIndex = 3;
+            this.lvwMathPalletList.UseCompatibleStateImageBehavior = false;
             this.lvwMathPalletList.View = System.Windows.Forms.View.Details;
             this.lvwMathPalletList.ItemActivate += new System.EventHandler(this.lvwMathPalletList_ItemActivate);
             this.lvwMathPalletList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvwMathPalletList_KeyDown);
@@ -238,9 +250,12 @@
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "FrmAssorted";
+            this.Load += new System.EventHandler(this.FrmAssorted_Load);
             this.Closed += new System.EventHandler(this.FrmAssorted_Closed);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tpgAssorted.ResumeLayout(false);
+            this.tpgAssorted.PerformLayout();
             this.ResumeLayout(false);
 
         }

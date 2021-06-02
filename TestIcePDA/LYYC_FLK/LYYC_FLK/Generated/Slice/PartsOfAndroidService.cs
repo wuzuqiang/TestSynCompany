@@ -61,6 +61,9 @@ namespace Warehouse
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
     public delegate void Callback_PartsOfAndroidService_UpdateInventoryBillDetail(string ret__);
+
+    [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
+    public delegate void Callback_PartsOfAndroidService_StoreOutMutiPallet();
 }
 
 namespace Warehouse
@@ -133,6 +136,17 @@ namespace Warehouse
         Ice.AsyncResult begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
 
         string end_UpdateInventoryBillDetail(Ice.AsyncResult r__);
+
+        void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo);
+        void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        Ice.AsyncResult<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet> begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo);
+        Ice.AsyncResult<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet> begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> ctx__);
+
+        Ice.AsyncResult begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, Ice.AsyncCallback cb__, object cookie__);
+        Ice.AsyncResult begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__);
+
+        void end_StoreOutMutiPallet(Ice.AsyncResult r__);
     }
 }
 
@@ -152,6 +166,8 @@ namespace Warehouse
         string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, Ice.Current current__);
 
         string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, Ice.Current current__);
+
+        void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, Ice.Current current__);
     }
 
     [_System.CodeDom.Compiler.GeneratedCodeAttribute("slice2cs", "3.4.2")]
@@ -168,6 +184,8 @@ namespace Warehouse
         string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter);
 
         string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails);
+
+        void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo);
     }
 }
 
@@ -373,6 +391,44 @@ namespace Warehouse
                     delBase__ = getDelegate__(false);
                     PartsOfAndroidServiceDel_ del__ = (PartsOfAndroidServiceDel_)delBase__;
                     return del__.GetOutTaskDetailForAndroid(barcode, context__);
+                }
+                catch(IceInternal.LocalExceptionWrapper ex__)
+                {
+                    handleExceptionWrapperRelaxed__(delBase__, ex__, true, ref cnt__);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    handleException__(delBase__, ex__, true, ref cnt__);
+                }
+            }
+        }
+
+        public void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo)
+        {
+            StoreOutMutiPallet(productCode, quantity, stationPositionNo, null, false);
+        }
+
+        public void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            StoreOutMutiPallet(productCode, quantity, stationPositionNo, context__, true);
+        }
+
+        private void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> context__, bool explicitContext__)
+        {
+            if(explicitContext__ && context__ == null)
+            {
+                context__ = emptyContext_;
+            }
+            int cnt__ = 0;
+            while(true)
+            {
+                Ice.ObjectDel_ delBase__ = null;
+                try
+                {
+                    delBase__ = getDelegate__(false);
+                    PartsOfAndroidServiceDel_ del__ = (PartsOfAndroidServiceDel_)delBase__;
+                    del__.StoreOutMutiPallet(productCode, quantity, stationPositionNo, context__);
+                    return;
                 }
                 catch(IceInternal.LocalExceptionWrapper ex__)
                 {
@@ -818,6 +874,65 @@ namespace Warehouse
             }
         }
 
+        public Ice.AsyncResult<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet> begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo)
+        {
+            return begin_StoreOutMutiPallet(productCode, quantity, stationPositionNo, null, false, null, null);
+        }
+
+        public Ice.AsyncResult<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet> begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> ctx__)
+        {
+            return begin_StoreOutMutiPallet(productCode, quantity, stationPositionNo, ctx__, true, null, null);
+        }
+
+        public Ice.AsyncResult begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_StoreOutMutiPallet(productCode, quantity, stationPositionNo, null, false, cb__, cookie__);
+        }
+
+        public Ice.AsyncResult begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> ctx__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            return begin_StoreOutMutiPallet(productCode, quantity, stationPositionNo, ctx__, true, cb__, cookie__);
+        }
+
+        private const string __StoreOutMutiPallet_name = "StoreOutMutiPallet";
+
+        public void end_StoreOutMutiPallet(Ice.AsyncResult r__)
+        {
+            end__(r__, __StoreOutMutiPallet_name);
+        }
+
+        private Ice.AsyncResult<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet> begin_StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> ctx__, bool explicitContext__, Ice.AsyncCallback cb__, object cookie__)
+        {
+            IceInternal.OnewayOutgoingAsync<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet> result__ = new IceInternal.OnewayOutgoingAsync<Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet>(this, __StoreOutMutiPallet_name, StoreOutMutiPallet_completed__, cookie__);
+            if(cb__ != null)
+            {
+                result__.whenCompletedWithAsyncCallback(cb__);
+            }
+            try
+            {
+                result__.prepare__(__StoreOutMutiPallet_name, Ice.OperationMode.Idempotent, ctx__, explicitContext__);
+                IceInternal.BasicStream os__ = result__.ostr__;
+                os__.writeString(productCode);
+                os__.writeInt(quantity);
+                os__.writeInt(stationPositionNo);
+                os__.endWriteEncaps();
+                result__.send__(true);
+            }
+            catch(Ice.LocalException ex__)
+            {
+                result__.exceptionAsync__(ex__);
+            }
+            return result__;
+        }
+
+        private void StoreOutMutiPallet_completed__(Warehouse.Callback_PartsOfAndroidService_StoreOutMutiPallet cb__)
+        {
+            if(cb__ != null)
+            {
+                cb__();
+            }
+        }
+
         public Ice.AsyncResult<Warehouse.Callback_PartsOfAndroidService_UpdateInventoryBillDetail> begin_UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails)
         {
             return begin_UpdateInventoryBillDetail(inventoryBillNo, inventroyBillDetails, null, false, null, null);
@@ -1078,6 +1193,8 @@ namespace Warehouse
         string GetInventoryBillDetail(string barCode, int page, int start, int limit, string sort, string filter, _System.Collections.Generic.Dictionary<string, string> context__);
 
         string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__);
+
+        void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> context__);
     }
 }
 
@@ -1315,6 +1432,52 @@ namespace Warehouse
                 catch(Ice.LocalException ex__)
                 {
                     throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                }
+            }
+            finally
+            {
+                handler__.reclaimOutgoing(og__);
+            }
+        }
+
+        public void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            IceInternal.Outgoing og__ = handler__.getOutgoing("StoreOutMutiPallet", Ice.OperationMode.Idempotent, context__);
+            try
+            {
+                try
+                {
+                    IceInternal.BasicStream os__ = og__.ostr();
+                    os__.writeString(productCode);
+                    os__.writeInt(quantity);
+                    os__.writeInt(stationPositionNo);
+                }
+                catch(Ice.LocalException ex__)
+                {
+                    og__.abort(ex__);
+                }
+                bool ok__ = og__.invoke();
+                if(!og__.istr().isEmpty())
+                {
+                    try
+                    {
+                        if(!ok__)
+                        {
+                            try
+                            {
+                                og__.throwUserException();
+                            }
+                            catch(Ice.UserException ex__)
+                            {
+                                throw new Ice.UnknownUserException(ex__.ice_name(), ex__);
+                            }
+                        }
+                        og__.istr().skipEmptyEncaps();
+                    }
+                    catch(Ice.LocalException ex__)
+                    {
+                        throw new IceInternal.LocalExceptionWrapper(ex__, false);
+                    }
                 }
             }
             finally
@@ -1600,6 +1763,49 @@ namespace Warehouse
         }
 
         [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
+        public void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, _System.Collections.Generic.Dictionary<string, string> context__)
+        {
+            Ice.Current current__ = new Ice.Current();
+            initCurrent__(ref current__, "StoreOutMutiPallet", Ice.OperationMode.Idempotent, context__);
+            IceInternal.Direct.RunDelegate run__ = delegate(Ice.Object obj__)
+            {
+                PartsOfAndroidService servant__ = null;
+                try
+                {
+                    servant__ = (PartsOfAndroidService)obj__;
+                }
+                catch(_System.InvalidCastException)
+                {
+                    throw new Ice.OperationNotExistException(current__.id, current__.facet, current__.operation);
+                }
+                servant__.StoreOutMutiPallet(productCode, quantity, stationPositionNo, current__);
+                return Ice.DispatchStatus.DispatchOK;
+            };
+            IceInternal.Direct direct__ = null;
+            try
+            {
+                direct__ = new IceInternal.Direct(current__, run__);
+                try
+                {
+                    Ice.DispatchStatus status__ = direct__.servant().collocDispatch__(direct__);
+                    _System.Diagnostics.Debug.Assert(status__ == Ice.DispatchStatus.DispatchOK);
+                }
+                finally
+                {
+                    direct__.destroy();
+                }
+            }
+            catch(Ice.SystemException)
+            {
+                throw;
+            }
+            catch(_System.Exception ex__)
+            {
+                IceInternal.LocalExceptionWrapper.throwWrapper(ex__);
+            }
+        }
+
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1031")]
         public string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, _System.Collections.Generic.Dictionary<string, string> context__)
         {
             Ice.Current current__ = new Ice.Current();
@@ -1695,6 +1901,13 @@ namespace Warehouse
         }
 
         public abstract string UpdateInventoryBillDetail(string inventoryBillNo, string inventroyBillDetails, Ice.Current current__);
+
+        public void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo)
+        {
+            StoreOutMutiPallet(productCode, quantity, stationPositionNo, Ice.ObjectImpl.defaultCurrent);
+        }
+
+        public abstract void StoreOutMutiPallet(string productCode, int quantity, int stationPositionNo, Ice.Current current__);
 
         #endregion
 
@@ -1853,6 +2066,23 @@ namespace Warehouse
             return Ice.DispatchStatus.DispatchOK;
         }
 
+        [_System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+        public static Ice.DispatchStatus StoreOutMutiPallet___(PartsOfAndroidService obj__, IceInternal.Incoming inS__, Ice.Current current__)
+        {
+            checkMode__(Ice.OperationMode.Idempotent, current__.mode);
+            IceInternal.BasicStream is__ = inS__.istr();
+            is__.startReadEncaps();
+            string productCode;
+            productCode = is__.readString();
+            int quantity;
+            quantity = is__.readInt();
+            int stationPositionNo;
+            stationPositionNo = is__.readInt();
+            is__.endReadEncaps();
+            obj__.StoreOutMutiPallet(productCode, quantity, stationPositionNo, current__);
+            return Ice.DispatchStatus.DispatchOK;
+        }
+
         private static string[] all__ =
         {
             "ApplyTaskForAndroid",
@@ -1860,6 +2090,7 @@ namespace Warehouse
             "GetInTaskDetailForAndroid",
             "GetInventoryBillDetail",
             "GetOutTaskDetailForAndroid",
+            "StoreOutMutiPallet",
             "UpdateInventoryBillDetail",
             "ice_id",
             "ice_ids",
@@ -1899,21 +2130,25 @@ namespace Warehouse
                 }
                 case 5:
                 {
-                    return UpdateInventoryBillDetail___(this, inS__, current__);
+                    return StoreOutMutiPallet___(this, inS__, current__);
                 }
                 case 6:
                 {
-                    return ice_id___(this, inS__, current__);
+                    return UpdateInventoryBillDetail___(this, inS__, current__);
                 }
                 case 7:
                 {
-                    return ice_ids___(this, inS__, current__);
+                    return ice_id___(this, inS__, current__);
                 }
                 case 8:
                 {
-                    return ice_isA___(this, inS__, current__);
+                    return ice_ids___(this, inS__, current__);
                 }
                 case 9:
+                {
+                    return ice_isA___(this, inS__, current__);
+                }
+                case 10:
                 {
                     return ice_ping___(this, inS__, current__);
                 }

@@ -29,5 +29,28 @@ namespace Fusion.LYYC.PDA.Scanner
         {   //货物盘点
             (new FrmScanPalletBarcode()).Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //空托盘出库
+            (new FrmEmptyPalletStoreOut()).Show();
+        }
     }
 }

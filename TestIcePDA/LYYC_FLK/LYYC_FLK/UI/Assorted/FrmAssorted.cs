@@ -29,15 +29,15 @@ namespace Fusion.LYYC.PDA.Scanner.UI.Assorted
             FrmMain = frmMain;
 
             PageModel.Init();
-            this.GetMatchPalletPlan(null);
-            try
-            {
-                Glob.SetFacturer();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("获取数据异常，异常信息：" + ex.Message);
-            }
+            //this.GetMatchPalletPlan(null);
+            //try
+            //{
+            //    Glob.SetFacturer();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("获取数据异常，异常信息：" + ex.Message);
+            //}
 
             Cursor.Current = Cursors.Default;
         }
@@ -212,6 +212,11 @@ namespace Fusion.LYYC.PDA.Scanner.UI.Assorted
                 PageCount.Text = PageModel.Page.ToString();
                 this.GetMatchPalletPlan(null);
             }
+        }
+
+        private void FrmAssorted_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
