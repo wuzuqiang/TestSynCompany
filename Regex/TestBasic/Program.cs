@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,8 @@ namespace TestBasic
 	{
 		static void Main(string[] args)
 		{
-			Fun01();
+			//Fun01();
+			TestHashTable();
 
 			Console.ReadLine();
 		}
@@ -32,6 +34,15 @@ namespace TestBasic
 		{
 			bool isExist = false;
 			Console.WriteLine(isExist.ToString());
+		}
+
+		public static void TestHashTable()
+		{
+			Hashtable hs = new Hashtable();
+			hs.Add("01", "01");
+			hs.Add("02", "02");
+			var val01 = hs[0];	//结果为null
+			Console.WriteLine(val01);
 		}
 	}
 }
